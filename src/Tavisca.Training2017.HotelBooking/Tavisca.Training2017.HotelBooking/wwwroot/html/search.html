@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Hotel Search
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header starts here   -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="col-md-5">
+                    <a class="navbar-brand" href="#"><img src="../img/brand-img.PNG" alt=""></a>
+                </div>
+                <div class="col-md-7 margin-top">
+                    <h1 class="font-blue">Hotel Search</h1>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--     Tab section starts here    -->
+    <div class="container-fluid bg-img">
+        <div class="row" id="tabs">
+            <div class="col-md-10 col-md-offset-1 form-container" id="">
+                <div class="container-fluid">
+                    <form id="hotel">
+                        <div class="row margin-top">
+                            <div class="col-md-10">
+                                <label>City / Hotel Name / Landmark</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                    <input id="destination" type="text" class="form-control" name="destination" placeholder="City / Hotel /Are">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin-top">
+                            <div class="col-md-6">
+                                <label for="dateofbirth">Check-In</label>
+                                <div class="input-group">
+                                    <input type="date" name="check-in" id="check-in" class="add-on" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="dateofbirth">Check-Out</label>
+                                <div class="input-group">
+                                    <input type="date" name="check-out" id="check-out" class="add-on" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin-top">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="sel1">Room</label>
+                                    <select class="form-control" id="sel1">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9+">9+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="sel1">Adults(18+)</label>
+                                    <select class="form-control" id="sel1">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="sel1">Children(0-17)</label>
+                                    <select class="form-control" id="sel1">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button type="button" id="searchClick" class="btn btn-info margin-bottom">Search</button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="../js/search.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</body>
+</html>
