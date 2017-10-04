@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelEngineApi
+namespace Engines
 {
     using System.Runtime.Serialization;
     
@@ -15,22 +15,22 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRQ", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelRoomAvailRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelRoomPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelSearchViewRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelItinerarySearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelRoomAvailRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelRoomPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchViewRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItinerarySearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchRQ))]
     public partial class WebServiceRQ : object
     {
         
-        private HotelEngineApi.StateBag[] AdditionalInfoField;
+        private Engines.StateBag[] AdditionalInfoField;
         
-        private HotelEngineApi.ResponseType ResultRequestedField;
+        private Engines.ResponseType ResultRequestedField;
         
         private string SessionIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] AdditionalInfo
+        public Engines.StateBag[] AdditionalInfo
         {
             get
             {
@@ -43,7 +43,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.ResponseType ResultRequested
+        public Engines.ResponseType ResultRequested
         {
             get
             {
@@ -72,15 +72,15 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRQ : HotelEngineApi.WebServiceRQ
+    public partial class HotelRoomAvailRQ : Engines.WebServiceRQ
     {
         
-        private HotelEngineApi.HotelSearchCriterion HotelSearchCriterionField;
+        private Engines.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelEngineApi.HotelItinerary ItineraryField;
+        private Engines.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelSearchCriterion HotelSearchCriterion
+        public Engines.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -93,7 +93,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelItinerary Itinerary
+        public Engines.HotelItinerary Itinerary
         {
             get
             {
@@ -109,15 +109,15 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRQ : HotelEngineApi.WebServiceRQ
+    public partial class HotelRoomPriceRQ : Engines.WebServiceRQ
     {
         
-        private HotelEngineApi.HotelSearchCriterion HotelSearchCriterionField;
+        private Engines.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelEngineApi.HotelItinerary ItineraryField;
+        private Engines.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelSearchCriterion HotelSearchCriterion
+        public Engines.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -130,7 +130,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelItinerary Itinerary
+        public Engines.HotelItinerary Itinerary
         {
             get
             {
@@ -146,23 +146,23 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchViewRQ", Namespace="http://tavisca.com")]
-    public partial class HotelSearchViewRQ : HotelEngineApi.WebServiceRQ
+    public partial class HotelSearchViewRQ : Engines.WebServiceRQ
     {
         
-        private HotelEngineApi.HotelFilter[] FiltersField;
+        private Engines.HotelFilter[] FiltersField;
         
-        private HotelEngineApi.HotelSearchCriterion HotelSearchCriterionField;
+        private Engines.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelEngineApi.PagingInfo PagingInfoField;
+        private Engines.PagingInfo PagingInfoField;
         
         private string PasswordField;
         
-        private HotelEngineApi.HotelTransform[] TransformsField;
+        private Engines.HotelTransform[] TransformsField;
         
         private string UserNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelFilter[] Filters
+        public Engines.HotelFilter[] Filters
         {
             get
             {
@@ -175,7 +175,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelSearchCriterion HotelSearchCriterion
+        public Engines.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -188,7 +188,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PagingInfo PagingInfo
+        public Engines.PagingInfo PagingInfo
         {
             get
             {
@@ -214,7 +214,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelTransform[] Transforms
+        public Engines.HotelTransform[] Transforms
         {
             get
             {
@@ -243,7 +243,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRQ : HotelEngineApi.WebServiceRQ
+    public partial class HotelItinerarySearchRQ : Engines.WebServiceRQ
     {
         
         private int ItineraryIdField;
@@ -265,17 +265,17 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRQ : HotelEngineApi.WebServiceRQ
+    public partial class HotelSearchRQ : Engines.WebServiceRQ
     {
         
-        private HotelEngineApi.HotelFilter[] FiltersField;
+        private Engines.HotelFilter[] FiltersField;
         
-        private HotelEngineApi.HotelSearchCriterion HotelSearchCriterionField;
+        private Engines.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelEngineApi.PagingInfo PagingInfoField;
+        private Engines.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelFilter[] Filters
+        public Engines.HotelFilter[] Filters
         {
             get
             {
@@ -288,7 +288,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelSearchCriterion HotelSearchCriterion
+        public Engines.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -301,7 +301,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PagingInfo PagingInfo
+        public Engines.PagingInfo PagingInfo
         {
             get
             {
@@ -369,39 +369,39 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class HotelSearchCriterion : HotelEngineApi.TripSearchCriterion
+    public partial class HotelSearchCriterion : Engines.TripSearchCriterion
     {
         
-        private HotelEngineApi.PassengerTypeQuantity[] GuestsField;
+        private Engines.PassengerTypeQuantity[] GuestsField;
         
         private bool IsReturnRoomsField;
         
-        private HotelEngineApi.Location LocationField;
+        private Engines.Location LocationField;
         
         private string NoOfBedRoomsField;
         
         private int NoOfRoomsField;
         
-        private HotelEngineApi.HotelSearchProcessingInfo ProcessingInfoField;
+        private Engines.HotelSearchProcessingInfo ProcessingInfoField;
         
-        private HotelEngineApi.HotelProperty[] PropertiesToSearchField;
+        private Engines.HotelProperty[] PropertiesToSearchField;
         
-        private HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
         
         private string SearchBehaviorField;
         
         private string[] SearchCategoriesField;
         
-        private HotelEngineApi.HotelSearchType SearchTypeField;
+        private Engines.HotelSearchType SearchTypeField;
         
-        private HotelEngineApi.DateTimeSpan StayPeriodField;
+        private Engines.DateTimeSpan StayPeriodField;
         
-        private HotelEngineApi.Tag[] TagsField;
+        private Engines.Tag[] TagsField;
         
-        private HotelEngineApi.HotelSearchPreference TravelPreferenceField;
+        private Engines.HotelSearchPreference TravelPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PassengerTypeQuantity[] Guests
+        public Engines.PassengerTypeQuantity[] Guests
         {
             get
             {
@@ -427,7 +427,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Location Location
+        public Engines.Location Location
         {
             get
             {
@@ -466,7 +466,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelSearchProcessingInfo ProcessingInfo
+        public Engines.HotelSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -479,7 +479,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelProperty[] PropertiesToSearch
+        public Engines.HotelProperty[] PropertiesToSearch
         {
             get
             {
@@ -492,7 +492,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypes
+        public Engines.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -531,7 +531,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelSearchType SearchType
+        public Engines.HotelSearchType SearchType
         {
             get
             {
@@ -544,7 +544,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.DateTimeSpan StayPeriod
+        public Engines.DateTimeSpan StayPeriod
         {
             get
             {
@@ -557,7 +557,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Tag[] Tags
+        public Engines.Tag[] Tags
         {
             get
             {
@@ -570,7 +570,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelSearchPreference TravelPreference
+        public Engines.HotelSearchPreference TravelPreference
         {
             get
             {
@@ -668,8 +668,8 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFilter", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.AvailabilityFilter))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.ViewPortFilter))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.AvailabilityFilter))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.ViewPortFilter))]
     public partial class HotelFilter : object
     {
     }
@@ -677,59 +677,59 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerary", Namespace="http://tavisca.com")]
-    public partial class HotelItinerary : HotelEngineApi.TripItinerary
+    public partial class HotelItinerary : Engines.TripItinerary
     {
         
-        private HotelEngineApi.Deposit[] AcceptableDepositsField;
+        private Engines.Deposit[] AcceptableDepositsField;
         
-        private HotelEngineApi.Guarantee[] AcceptableGuaranteesField;
+        private Engines.Guarantee[] AcceptableGuaranteesField;
         
         private bool AllPaxDetailsRequiredField;
         
-        private HotelEngineApi.AllowedCountry[] AllowedCountriesField;
+        private Engines.AllowedCountry[] AllowedCountriesField;
         
-        private HotelEngineApi.HotelContract ContractField;
+        private Engines.HotelContract ContractField;
         
-        private HotelEngineApi.Deal[] DealsField;
+        private Engines.Deal[] DealsField;
         
         private bool DepositRequiredField;
         
         private string[] DepositTextField;
         
-        private HotelEngineApi.HotelDiscountCode DiscountCodeField;
+        private Engines.HotelDiscountCode DiscountCodeField;
         
-        private HotelEngineApi.HotelFare FareField;
+        private Engines.HotelFare FareField;
         
         private bool GuaranteeRequiredField;
         
         private string[] GuaranteeTextField;
         
-        private HotelEngineApi.HotelCancellationPolicy HotelCancellationPolicyField;
+        private Engines.HotelCancellationPolicy HotelCancellationPolicyField;
         
-        private HotelEngineApi.PromotionalHotelDeal[] HotelDealsField;
+        private Engines.PromotionalHotelDeal[] HotelDealsField;
         
-        private HotelEngineApi.HotelFareSource HotelFareSourceField;
+        private Engines.HotelFareSource HotelFareSourceField;
         
-        private HotelEngineApi.HotelProperty HotelPropertyField;
+        private Engines.HotelProperty HotelPropertyField;
         
         private string ItineraryTypeField;
         
-        private HotelEngineApi.MarkupPlan MarkupPlanField;
+        private Engines.MarkupPlan MarkupPlanField;
         
-        private HotelEngineApi.HotelPolicy[] PoliciesField;
+        private Engines.HotelPolicy[] PoliciesField;
         
-        private HotelEngineApi.Room[] RoomsField;
+        private Engines.Room[] RoomsField;
         
-        private HotelEngineApi.Season[] SeasonsField;
+        private Engines.Season[] SeasonsField;
         
         private string SegmentRefField;
         
         private bool ShippingAddressRequiredField;
         
-        private HotelEngineApi.DateTimeSpan StayPeriodField;
+        private Engines.DateTimeSpan StayPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Deposit[] AcceptableDeposits
+        public Engines.Deposit[] AcceptableDeposits
         {
             get
             {
@@ -742,7 +742,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Guarantee[] AcceptableGuarantees
+        public Engines.Guarantee[] AcceptableGuarantees
         {
             get
             {
@@ -768,7 +768,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.AllowedCountry[] AllowedCountries
+        public Engines.AllowedCountry[] AllowedCountries
         {
             get
             {
@@ -781,7 +781,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelContract Contract
+        public Engines.HotelContract Contract
         {
             get
             {
@@ -794,7 +794,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Deal[] Deals
+        public Engines.Deal[] Deals
         {
             get
             {
@@ -833,7 +833,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelDiscountCode DiscountCode
+        public Engines.HotelDiscountCode DiscountCode
         {
             get
             {
@@ -846,7 +846,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelFare Fare
+        public Engines.HotelFare Fare
         {
             get
             {
@@ -885,7 +885,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelCancellationPolicy HotelCancellationPolicy
+        public Engines.HotelCancellationPolicy HotelCancellationPolicy
         {
             get
             {
@@ -898,7 +898,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PromotionalHotelDeal[] HotelDeals
+        public Engines.PromotionalHotelDeal[] HotelDeals
         {
             get
             {
@@ -911,7 +911,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelFareSource HotelFareSource
+        public Engines.HotelFareSource HotelFareSource
         {
             get
             {
@@ -924,7 +924,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelProperty HotelProperty
+        public Engines.HotelProperty HotelProperty
         {
             get
             {
@@ -950,7 +950,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.MarkupPlan MarkupPlan
+        public Engines.MarkupPlan MarkupPlan
         {
             get
             {
@@ -963,7 +963,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelPolicy[] Policies
+        public Engines.HotelPolicy[] Policies
         {
             get
             {
@@ -976,7 +976,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Room[] Rooms
+        public Engines.Room[] Rooms
         {
             get
             {
@@ -989,7 +989,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Season[] Seasons
+        public Engines.Season[] Seasons
         {
             get
             {
@@ -1028,7 +1028,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.DateTimeSpan StayPeriod
+        public Engines.DateTimeSpan StayPeriod
         {
             get
             {
@@ -1044,22 +1044,22 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripSearchCriterion", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchCriterion))]
     public partial class TripSearchCriterion : object
     {
         
-        private HotelEngineApi.StateBag[] AttributesField;
+        private Engines.StateBag[] AttributesField;
         
         private bool MatrixResultsField;
         
         private int MaximumResultsField;
         
-        private HotelEngineApi.PointOfSale PosField;
+        private Engines.PointOfSale PosField;
         
         private string PriceCurrencyCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] Attributes
+        public Engines.StateBag[] Attributes
         {
             get
             {
@@ -1098,7 +1098,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PointOfSale Pos
+        public Engines.PointOfSale Pos
         {
             get
             {
@@ -1130,16 +1130,16 @@ namespace HotelEngineApi
     public partial class PointOfSale : object
     {
         
-        private HotelEngineApi.StateBag[] AdditionalInfoField;
+        private Engines.StateBag[] AdditionalInfoField;
         
         private string AgentSignField;
         
         private int PosIdField;
         
-        private HotelEngineApi.Company RequesterField;
+        private Engines.Company RequesterField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] AdditionalInfo
+        public Engines.StateBag[] AdditionalInfo
         {
             get
             {
@@ -1178,7 +1178,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Company Requester
+        public Engines.Company Requester
         {
             get
             {
@@ -1194,17 +1194,17 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Location", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.Airport))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.City))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.Address))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Airport))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.City))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Address))]
     public partial class Location : object
     {
         
         private string CodeField;
         
-        private HotelEngineApi.LocationCodeContext CodeContextField;
+        private Engines.LocationCodeContext CodeContextField;
         
-        private HotelEngineApi.GeoCode GeoCodeField;
+        private Engines.GeoCode GeoCodeField;
         
         private int GmtOffsetMinutesField;
         
@@ -1212,9 +1212,9 @@ namespace HotelEngineApi
         
         private string NameField;
         
-        private HotelEngineApi.Distance RadiusField;
+        private Engines.Distance RadiusField;
         
-        private HotelEngineApi.StateBag[] SupplierSideDataField;
+        private Engines.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -1230,7 +1230,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.LocationCodeContext CodeContext
+        public Engines.LocationCodeContext CodeContext
         {
             get
             {
@@ -1243,7 +1243,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.GeoCode GeoCode
+        public Engines.GeoCode GeoCode
         {
             get
             {
@@ -1295,7 +1295,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Distance Radius
+        public Engines.Distance Radius
         {
             get
             {
@@ -1308,7 +1308,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] SupplierSideData
+        public Engines.StateBag[] SupplierSideData
         {
             get
             {
@@ -1327,22 +1327,22 @@ namespace HotelEngineApi
     public partial class HotelSearchProcessingInfo : object
     {
         
-        private HotelEngineApi.HotelDisplayOrder DisplayOrderField;
+        private Engines.HotelDisplayOrder DisplayOrderField;
         
-        private HotelEngineApi.HotelFareSource[] FareSourcesField;
+        private Engines.HotelFareSource[] FareSourcesField;
         
-        private HotelEngineApi.FareType[] FareTypesField;
+        private Engines.FareType[] FareTypesField;
         
-        private HotelEngineApi.HotelContentPreference[] HotelContentPreferencesField;
+        private Engines.HotelContentPreference[] HotelContentPreferencesField;
         
-        private HotelEngineApi.HotelSearchNearByDates HotelSearchNearByDatesField;
+        private Engines.HotelSearchNearByDates HotelSearchNearByDatesField;
         
-        private HotelEngineApi.GeoCode POIGeoCodeField;
+        private Engines.GeoCode POIGeoCodeField;
         
-        private HotelEngineApi.PreferenceSortInfo[] PreferenceSortInfoListField;
+        private Engines.PreferenceSortInfo[] PreferenceSortInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelDisplayOrder DisplayOrder
+        public Engines.HotelDisplayOrder DisplayOrder
         {
             get
             {
@@ -1355,7 +1355,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelFareSource[] FareSources
+        public Engines.HotelFareSource[] FareSources
         {
             get
             {
@@ -1368,7 +1368,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.FareType[] FareTypes
+        public Engines.FareType[] FareTypes
         {
             get
             {
@@ -1381,7 +1381,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelContentPreference[] HotelContentPreferences
+        public Engines.HotelContentPreference[] HotelContentPreferences
         {
             get
             {
@@ -1394,7 +1394,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelSearchNearByDates HotelSearchNearByDates
+        public Engines.HotelSearchNearByDates HotelSearchNearByDates
         {
             get
             {
@@ -1407,7 +1407,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.GeoCode POIGeoCode
+        public Engines.GeoCode POIGeoCode
         {
             get
             {
@@ -1420,7 +1420,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PreferenceSortInfo[] PreferenceSortInfoList
+        public Engines.PreferenceSortInfo[] PreferenceSortInfoList
         {
             get
             {
@@ -1488,41 +1488,41 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchPreference", Namespace="http://tavisca.com")]
-    public partial class HotelSearchPreference : HotelEngineApi.TravelPreference
+    public partial class HotelSearchPreference : Engines.TravelPreference
     {
         
-        private HotelEngineApi.AmenityPreference[] AmenitiesField;
+        private Engines.AmenityPreference[] AmenitiesField;
         
         private string[] CityNamePreferenceListField;
         
-        private HotelEngineApi.FareType[] FareTypeListField;
+        private Engines.FareType[] FareTypeListField;
         
-        private HotelEngineApi.CompanyPreference[] HotelChainsField;
+        private Engines.CompanyPreference[] HotelChainsField;
         
-        private HotelEngineApi.HotelNamePreference HotelNamePreferenceField;
+        private Engines.HotelNamePreference HotelNamePreferenceField;
         
         private string[] ItineraryRphListToFilterField;
         
-        private HotelEngineApi.Distance MaxDistanceField;
+        private Engines.Distance MaxDistanceField;
         
         private int MaxNumberOfBedRoomsField;
         
         private int MaxOccupancyField;
         
-        private HotelEngineApi.Distance MinDistanceField;
+        private Engines.Distance MinDistanceField;
         
         private int MinNumberOfBedRoomsField;
         
         private int MinOccupancyField;
         
-        private HotelEngineApi.HotelPaymentType[] PaymentTypesField;
+        private Engines.HotelPaymentType[] PaymentTypesField;
         
-        private HotelEngineApi.RateRangePreference RateRangePreferenceField;
+        private Engines.RateRangePreference RateRangePreferenceField;
         
-        private HotelEngineApi.HotelRating[] RatingListField;
+        private Engines.HotelRating[] RatingListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.AmenityPreference[] Amenities
+        public Engines.AmenityPreference[] Amenities
         {
             get
             {
@@ -1548,7 +1548,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.FareType[] FareTypeList
+        public Engines.FareType[] FareTypeList
         {
             get
             {
@@ -1561,7 +1561,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.CompanyPreference[] HotelChains
+        public Engines.CompanyPreference[] HotelChains
         {
             get
             {
@@ -1574,7 +1574,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelNamePreference HotelNamePreference
+        public Engines.HotelNamePreference HotelNamePreference
         {
             get
             {
@@ -1600,7 +1600,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Distance MaxDistance
+        public Engines.Distance MaxDistance
         {
             get
             {
@@ -1639,7 +1639,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Distance MinDistance
+        public Engines.Distance MinDistance
         {
             get
             {
@@ -1678,7 +1678,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelPaymentType[] PaymentTypes
+        public Engines.HotelPaymentType[] PaymentTypes
         {
             get
             {
@@ -1691,7 +1691,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RateRangePreference RateRangePreference
+        public Engines.RateRangePreference RateRangePreference
         {
             get
             {
@@ -1704,7 +1704,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelRating[] RatingList
+        public Engines.HotelRating[] RatingList
         {
             get
             {
@@ -1725,7 +1725,7 @@ namespace HotelEngineApi
         
         private int[] AgesField;
         
-        private HotelEngineApi.PassengerType PassengerTypeField;
+        private Engines.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
@@ -1743,7 +1743,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PassengerType PassengerType
+        public Engines.PassengerType PassengerType
         {
             get
             {
@@ -1772,41 +1772,41 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelProperty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.VacationRentalProperty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.VacationRentalProperty))]
     public partial class HotelProperty : object
     {
         
-        private HotelEngineApi.Activity[] ActivityOptionsField;
+        private Engines.Activity[] ActivityOptionsField;
         
-        private HotelEngineApi.Address AddressField;
+        private Engines.Address AddressField;
         
-        private HotelEngineApi.Amenity[] AmenitiesField;
+        private Engines.Amenity[] AmenitiesField;
         
-        private HotelEngineApi.AreaAttraction[] AreaAttractionsField;
+        private Engines.AreaAttraction[] AreaAttractionsField;
         
-        private HotelEngineApi.AvailabilityCalender AvailabilityCalenderField;
+        private Engines.AvailabilityCalender AvailabilityCalenderField;
         
-        private HotelEngineApi.TimeDetail[] CheckInOptionsField;
+        private Engines.TimeDetail[] CheckInOptionsField;
         
-        private HotelEngineApi.TimeDetail[] CheckOutOptionsField;
+        private Engines.TimeDetail[] CheckOutOptionsField;
         
-        private HotelEngineApi.HotelDescription[] DescriptionsField;
+        private Engines.HotelDescription[] DescriptionsField;
         
-        private HotelEngineApi.Distance DistanceField;
+        private Engines.Distance DistanceField;
         
         private string FaxNumberField;
         
-        private HotelEngineApi.GeoCode GeoCodeField;
+        private Engines.GeoCode GeoCodeField;
         
-        private HotelEngineApi.HotelChain HotelChainField;
+        private Engines.HotelChain HotelChainField;
         
-        private HotelEngineApi.HotelMultimedia HotelMultiMediaField;
+        private Engines.HotelMultimedia HotelMultiMediaField;
         
-        private HotelEngineApi.HotelRating HotelRatingField;
+        private Engines.HotelRating HotelRatingField;
         
         private int IdField;
         
-        private HotelEngineApi.Media[] MediaContentField;
+        private Engines.Media[] MediaContentField;
         
         private string NameField;
         
@@ -1814,20 +1814,20 @@ namespace HotelEngineApi
         
         private string PhoneNumberField;
         
-        private HotelEngineApi.Review[] ReviewsField;
+        private Engines.Review[] ReviewsField;
         
-        private HotelEngineApi.StateBag[] StateBagField;
+        private Engines.StateBag[] StateBagField;
         
         private string SupplierHotelIdField;
         
-        private HotelEngineApi.Tag[] TagsField;
+        private Engines.Tag[] TagsField;
         
-        private HotelEngineApi.Media ThumbnailField;
+        private Engines.Media ThumbnailField;
         
         private string WebsiteUrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Activity[] ActivityOptions
+        public Engines.Activity[] ActivityOptions
         {
             get
             {
@@ -1840,7 +1840,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Address Address
+        public Engines.Address Address
         {
             get
             {
@@ -1853,7 +1853,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Amenity[] Amenities
+        public Engines.Amenity[] Amenities
         {
             get
             {
@@ -1866,7 +1866,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.AreaAttraction[] AreaAttractions
+        public Engines.AreaAttraction[] AreaAttractions
         {
             get
             {
@@ -1879,7 +1879,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.AvailabilityCalender AvailabilityCalender
+        public Engines.AvailabilityCalender AvailabilityCalender
         {
             get
             {
@@ -1892,7 +1892,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.TimeDetail[] CheckInOptions
+        public Engines.TimeDetail[] CheckInOptions
         {
             get
             {
@@ -1905,7 +1905,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.TimeDetail[] CheckOutOptions
+        public Engines.TimeDetail[] CheckOutOptions
         {
             get
             {
@@ -1918,7 +1918,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelDescription[] Descriptions
+        public Engines.HotelDescription[] Descriptions
         {
             get
             {
@@ -1931,7 +1931,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Distance Distance
+        public Engines.Distance Distance
         {
             get
             {
@@ -1957,7 +1957,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.GeoCode GeoCode
+        public Engines.GeoCode GeoCode
         {
             get
             {
@@ -1970,7 +1970,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelChain HotelChain
+        public Engines.HotelChain HotelChain
         {
             get
             {
@@ -1983,7 +1983,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelMultimedia HotelMultiMedia
+        public Engines.HotelMultimedia HotelMultiMedia
         {
             get
             {
@@ -1996,7 +1996,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelRating HotelRating
+        public Engines.HotelRating HotelRating
         {
             get
             {
@@ -2022,7 +2022,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Media[] MediaContent
+        public Engines.Media[] MediaContent
         {
             get
             {
@@ -2074,7 +2074,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Review[] Reviews
+        public Engines.Review[] Reviews
         {
             get
             {
@@ -2087,7 +2087,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] StateBag
+        public Engines.StateBag[] StateBag
         {
             get
             {
@@ -2113,7 +2113,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Tag[] Tags
+        public Engines.Tag[] Tags
         {
             get
             {
@@ -2126,7 +2126,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Media Thumbnail
+        public Engines.Media Thumbnail
         {
             get
             {
@@ -2160,7 +2160,7 @@ namespace HotelEngineApi
         
         private string OccupancyCodeField;
         
-        private HotelEngineApi.PassengerTypeQuantity[] PaxQuantitiesField;
+        private Engines.PassengerTypeQuantity[] PaxQuantitiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string OccupancyCode
@@ -2176,7 +2176,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PassengerTypeQuantity[] PaxQuantities
+        public Engines.PassengerTypeQuantity[] PaxQuantities
         {
             get
             {
@@ -2274,16 +2274,16 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelChain))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.CompanyPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelChain))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.CompanyPreference))]
     public partial class Company : object
     {
         
-        private HotelEngineApi.Agency AgencyField;
+        private Engines.Agency AgencyField;
         
         private string CodeField;
         
-        private HotelEngineApi.CompanyCodeContext CodeContextField;
+        private Engines.CompanyCodeContext CodeContextField;
         
         private string DKField;
         
@@ -2295,12 +2295,12 @@ namespace HotelEngineApi
         
         private int IDField;
         
-        private HotelEngineApi.Media LogoField;
+        private Engines.Media LogoField;
         
         private string ShortNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Agency Agency
+        public Engines.Agency Agency
         {
             get
             {
@@ -2326,7 +2326,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.CompanyCodeContext CodeContext
+        public Engines.CompanyCodeContext CodeContext
         {
             get
             {
@@ -2404,7 +2404,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Media Logo
+        public Engines.Media Logo
         {
             get
             {
@@ -2436,14 +2436,14 @@ namespace HotelEngineApi
     public partial class Agency : object
     {
         
-        private HotelEngineApi.Address AgencyAddressField;
+        private Engines.Address AgencyAddressField;
         
         private int AgencyIdField;
         
         private string AgencyNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Address AgencyAddress
+        public Engines.Address AgencyAddress
         {
             get
             {
@@ -2488,16 +2488,16 @@ namespace HotelEngineApi
     public partial class Media : object
     {
         
-        private HotelEngineApi.MediaCaptionType CaptionField;
+        private Engines.MediaCaptionType CaptionField;
         
         private string MimeTypeField;
         
-        private HotelEngineApi.MediaType TypeField;
+        private Engines.MediaType TypeField;
         
         private string UrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.MediaCaptionType Caption
+        public Engines.MediaCaptionType Caption
         {
             get
             {
@@ -2523,7 +2523,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.MediaType Type
+        public Engines.MediaType Type
         {
             get
             {
@@ -2552,20 +2552,20 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelChain", Namespace="http://tavisca.com")]
-    public partial class HotelChain : HotelEngineApi.Company
+    public partial class HotelChain : Engines.Company
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompanyPreference", Namespace="http://tavisca.com")]
-    public partial class CompanyPreference : HotelEngineApi.Company
+    public partial class CompanyPreference : Engines.Company
     {
         
-        private HotelEngineApi.PreferLevel PreferLevelField;
+        private Engines.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PreferLevel PreferLevel
+        public Engines.PreferLevel PreferLevel
         {
             get
             {
@@ -2602,7 +2602,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://tavisca.com")]
-    public partial class Address : HotelEngineApi.Location
+    public partial class Address : Engines.Location
     {
         
         private string AddressLine1Field;
@@ -2611,7 +2611,7 @@ namespace HotelEngineApi
         
         private string AddressSchemeField;
         
-        private HotelEngineApi.City CityField;
+        private Engines.City CityField;
         
         private string CompleteAddressField;
         
@@ -2659,7 +2659,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.City City
+        public Engines.City City
         {
             get
             {
@@ -2756,9 +2756,9 @@ namespace HotelEngineApi
         
         private float AmountField;
         
-        private HotelEngineApi.LocationCodeContext FromField;
+        private Engines.LocationCodeContext FromField;
         
-        private HotelEngineApi.DistanceUnit UnitField;
+        private Engines.DistanceUnit UnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Amount
@@ -2774,7 +2774,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.LocationCodeContext From
+        public Engines.LocationCodeContext From
         {
             get
             {
@@ -2787,7 +2787,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.DistanceUnit Unit
+        public Engines.DistanceUnit Unit
         {
             get
             {
@@ -2803,15 +2803,15 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Airport", Namespace="http://tavisca.com")]
-    public partial class Airport : HotelEngineApi.Location
+    public partial class Airport : Engines.Location
     {
         
-        private HotelEngineApi.AirportType AirportTypeField;
+        private Engines.AirportType AirportTypeField;
         
-        private HotelEngineApi.City CityField;
+        private Engines.City CityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.AirportType AirportType
+        public Engines.AirportType AirportType
         {
             get
             {
@@ -2824,7 +2824,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.City City
+        public Engines.City City
         {
             get
             {
@@ -2840,7 +2840,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="City", Namespace="http://tavisca.com")]
-    public partial class City : HotelEngineApi.Location
+    public partial class City : Engines.Location
     {
         
         private string CountryField;
@@ -3394,7 +3394,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFareSource", Namespace="http://tavisca.com")]
-    public partial class HotelFareSource : HotelEngineApi.FareSource
+    public partial class HotelFareSource : Engines.FareSource
     {
     }
     
@@ -3461,14 +3461,14 @@ namespace HotelEngineApi
     public partial class PreferenceSortInfo : object
     {
         
-        private HotelEngineApi.FareType FareTypeField;
+        private Engines.FareType FareTypeField;
         
         private bool FareTypeSpecifiedField;
         
         private string VendorCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.FareType FareType
+        public Engines.FareType FareType
         {
             get
             {
@@ -3510,7 +3510,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="FareSource", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelFareSource))]
     public partial class FareSource : object
     {
         
@@ -3566,12 +3566,12 @@ namespace HotelEngineApi
     public partial class AvailabilityCalender : object
     {
         
-        private HotelEngineApi.AvailabilityStatus AvailabilityStatusField;
+        private Engines.AvailabilityStatus AvailabilityStatusField;
         
-        private HotelEngineApi.DateRange[] TimeSpansField;
+        private Engines.DateRange[] TimeSpansField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.AvailabilityStatus AvailabilityStatus
+        public Engines.AvailabilityStatus AvailabilityStatus
         {
             get
             {
@@ -3584,7 +3584,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.DateRange[] TimeSpans
+        public Engines.DateRange[] TimeSpans
         {
             get
             {
@@ -3777,7 +3777,7 @@ namespace HotelEngineApi
         
         private float RatingField;
         
-        private HotelEngineApi.RatingType RatingTypeField;
+        private Engines.RatingType RatingTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Rating
@@ -3793,7 +3793,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RatingType RatingType
+        public Engines.RatingType RatingType
         {
             get
             {
@@ -3809,7 +3809,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="VacationRentalProperty", Namespace="http://tavisca.com")]
-    public partial class VacationRentalProperty : HotelEngineApi.HotelProperty
+    public partial class VacationRentalProperty : Engines.HotelProperty
     {
         
         private int BathroomsField;
@@ -3820,11 +3820,11 @@ namespace HotelEngineApi
         
         private int MaxOccupancyField;
         
-        private HotelEngineApi.PropertyOwner OwnerField;
+        private Engines.PropertyOwner OwnerField;
         
-        private HotelEngineApi.Area PropertyAreaField;
+        private Engines.Area PropertyAreaField;
         
-        private HotelEngineApi.SeasonalRate[] SeasonalRatesField;
+        private Engines.SeasonalRate[] SeasonalRatesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Bathrooms
@@ -3879,7 +3879,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PropertyOwner Owner
+        public Engines.PropertyOwner Owner
         {
             get
             {
@@ -3892,7 +3892,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Area PropertyArea
+        public Engines.Area PropertyArea
         {
             get
             {
@@ -3905,7 +3905,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.SeasonalRate[] SeasonalRates
+        public Engines.SeasonalRate[] SeasonalRates
         {
             get
             {
@@ -3928,13 +3928,13 @@ namespace HotelEngineApi
         
         private string DescriptionField;
         
-        private HotelEngineApi.Distance DistanceField;
+        private Engines.Distance DistanceField;
         
-        private HotelEngineApi.GeoCode GeoCodeField;
+        private Engines.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private HotelEngineApi.Tag[] TagsField;
+        private Engines.Tag[] TagsField;
         
         private string TypeField;
         
@@ -3965,7 +3965,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Distance Distance
+        public Engines.Distance Distance
         {
             get
             {
@@ -3978,7 +3978,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.GeoCode GeoCode
+        public Engines.GeoCode GeoCode
         {
             get
             {
@@ -4004,7 +4004,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Tag[] Tags
+        public Engines.Tag[] Tags
         {
             get
             {
@@ -4033,7 +4033,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Amenity", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.AmenityPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.AmenityPreference))]
     public partial class Amenity : object
     {
         
@@ -4168,11 +4168,11 @@ namespace HotelEngineApi
         
         private string DescriptionField;
         
-        private HotelEngineApi.GeoCode GeoCodeField;
+        private Engines.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private HotelEngineApi.Tag[] TagsField;
+        private Engines.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Address
@@ -4201,7 +4201,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.GeoCode GeoCode
+        public Engines.GeoCode GeoCode
         {
             get
             {
@@ -4227,7 +4227,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Tag[] Tags
+        public Engines.Tag[] Tags
         {
             get
             {
@@ -4248,7 +4248,7 @@ namespace HotelEngineApi
         
         private System.DateTime BeginDateField;
         
-        private HotelEngineApi.Day DayField;
+        private Engines.Day DayField;
         
         private System.DateTime EndDateField;
         
@@ -4268,7 +4268,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Day Day
+        public Engines.Day Day
         {
             get
             {
@@ -4350,20 +4350,20 @@ namespace HotelEngineApi
     public partial class Review : object
     {
         
-        private HotelEngineApi.HelpfulVotes HelpfulVotesField;
+        private Engines.HelpfulVotes HelpfulVotesField;
         
         private decimal RatingField;
         
-        private HotelEngineApi.ReviewRating[] RatingsField;
+        private Engines.ReviewRating[] RatingsField;
         
-        private HotelEngineApi.Reviewer ReviewerField;
+        private Engines.Reviewer ReviewerField;
         
         private string TextField;
         
         private string TitleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HelpfulVotes HelpfulVotes
+        public Engines.HelpfulVotes HelpfulVotes
         {
             get
             {
@@ -4389,7 +4389,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.ReviewRating[] Ratings
+        public Engines.ReviewRating[] Ratings
         {
             get
             {
@@ -4402,7 +4402,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Reviewer Reviewer
+        public Engines.Reviewer Reviewer
         {
             get
             {
@@ -4444,13 +4444,13 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AmenityPreference", Namespace="http://tavisca.com")]
-    public partial class AmenityPreference : HotelEngineApi.Amenity
+    public partial class AmenityPreference : Engines.Amenity
     {
         
-        private HotelEngineApi.PreferLevel PreferLevelField;
+        private Engines.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PreferLevel PreferLevel
+        public Engines.PreferLevel PreferLevel
         {
             get
             {
@@ -4603,7 +4603,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Reviewer", Namespace="http://tavisca.com")]
-    public partial class Reviewer : HotelEngineApi.Person
+    public partial class Reviewer : Engines.Person
     {
         
         private System.DateTime StayDateField;
@@ -4662,8 +4662,8 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.PropertyOwner))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.Reviewer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.PropertyOwner))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Reviewer))]
     public partial class Person : object
     {
         
@@ -4731,7 +4731,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PropertyOwner", Namespace="http://tavisca.com")]
-    public partial class PropertyOwner : HotelEngineApi.Person
+    public partial class PropertyOwner : Engines.Person
     {
     }
     
@@ -4782,11 +4782,11 @@ namespace HotelEngineApi
         
         private System.DateTime EndDateField;
         
-        private HotelEngineApi.StayDuration MinimumStayField;
+        private Engines.StayDuration MinimumStayField;
         
         private string PeriodNameField;
         
-        private HotelEngineApi.Money RateField;
+        private Engines.Money RateField;
         
         private string RateTypeField;
         
@@ -4817,7 +4817,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StayDuration MinimumStay
+        public Engines.StayDuration MinimumStay
         {
             get
             {
@@ -4843,7 +4843,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money Rate
+        public Engines.Money Rate
         {
             get
             {
@@ -4909,14 +4909,14 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Money", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.DailyRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.BaseFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.Commission))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.Fee))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.Discount))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.Markup))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.Tax))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.MatrixCellData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.DailyRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.BaseFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Commission))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Fee))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Discount))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Markup))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Tax))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.MatrixCellData))]
     public partial class Money : object
     {
         
@@ -5029,7 +5029,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DailyRate", Namespace="http://tavisca.com")]
-    public partial class DailyRate : HotelEngineApi.Money
+    public partial class DailyRate : Engines.Money
     {
         
         private System.DateTime EndDateField;
@@ -5066,14 +5066,14 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseFare", Namespace="http://tavisca.com")]
-    public partial class BaseFare : HotelEngineApi.Money
+    public partial class BaseFare : Engines.Money
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Commission", Namespace="http://tavisca.com")]
-    public partial class Commission : HotelEngineApi.Money
+    public partial class Commission : Engines.Money
     {
         
         private long IdField;
@@ -5125,7 +5125,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fee", Namespace="http://tavisca.com")]
-    public partial class Fee : HotelEngineApi.Money
+    public partial class Fee : Engines.Money
     {
         
         private long IdField;
@@ -5192,7 +5192,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Discount", Namespace="http://tavisca.com")]
-    public partial class Discount : HotelEngineApi.Money
+    public partial class Discount : Engines.Money
     {
         
         private long IdField;
@@ -5244,7 +5244,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Markup", Namespace="http://tavisca.com")]
-    public partial class Markup : HotelEngineApi.Money
+    public partial class Markup : Engines.Money
     {
         
         private long IdField;
@@ -5296,7 +5296,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Tax", Namespace="http://tavisca.com")]
-    public partial class Tax : HotelEngineApi.Money
+    public partial class Tax : Engines.Money
     {
         
         private string CodeField;
@@ -5348,7 +5348,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixCellData", Namespace="http://tavisca.com")]
-    public partial class MatrixCellData : HotelEngineApi.Money
+    public partial class MatrixCellData : Engines.Money
     {
         
         private string RemarksField;
@@ -5370,13 +5370,13 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TravelPreference", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchPreference))]
     public partial class TravelPreference : object
     {
         
         private string SpecialRequestField;
         
-        private HotelEngineApi.CompanyPreference[] VendorPreferencesField;
+        private Engines.CompanyPreference[] VendorPreferencesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string SpecialRequest
@@ -5392,7 +5392,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.CompanyPreference[] VendorPreferences
+        public Engines.CompanyPreference[] VendorPreferences
         {
             get
             {
@@ -5413,7 +5413,7 @@ namespace HotelEngineApi
         
         private string NameField;
         
-        private HotelEngineApi.PreferLevel PreferLevelField;
+        private Engines.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Name
@@ -5429,7 +5429,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PreferLevel PreferLevel
+        public Engines.PreferLevel PreferLevel
         {
             get
             {
@@ -5448,14 +5448,14 @@ namespace HotelEngineApi
     public partial class RateRangePreference : object
     {
         
-        private HotelEngineApi.Money MaxRateField;
+        private Engines.Money MaxRateField;
         
-        private HotelEngineApi.Money MinRateField;
+        private Engines.Money MinRateField;
         
-        private HotelEngineApi.PreferLevel PreferLevelField;
+        private Engines.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money MaxRate
+        public Engines.Money MaxRate
         {
             get
             {
@@ -5468,7 +5468,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money MinRate
+        public Engines.Money MinRate
         {
             get
             {
@@ -5481,7 +5481,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PreferLevel PreferLevel
+        public Engines.PreferLevel PreferLevel
         {
             get
             {
@@ -5509,28 +5509,28 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripItinerary", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItinerary))]
     public partial class TripItinerary : object
     {
         
-        private HotelEngineApi.StateBag[] AdditionalInformationField;
+        private Engines.StateBag[] AdditionalInformationField;
         
-        private HotelEngineApi.TripAddOn[] AvailableAddonsField;
+        private Engines.TripAddOn[] AvailableAddonsField;
         
         private System.Guid IdField;
         
-        private HotelEngineApi.ItineraryStatusType ItineraryStatusField;
+        private Engines.ItineraryStatusType ItineraryStatusField;
         
         private string NotesField;
         
         private int RphField;
         
-        private HotelEngineApi.TripAddOn[] SelectedAddonsField;
+        private Engines.TripAddOn[] SelectedAddonsField;
         
-        private HotelEngineApi.Tag[] TagsField;
+        private Engines.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] AdditionalInformation
+        public Engines.StateBag[] AdditionalInformation
         {
             get
             {
@@ -5543,7 +5543,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.TripAddOn[] AvailableAddons
+        public Engines.TripAddOn[] AvailableAddons
         {
             get
             {
@@ -5569,7 +5569,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.ItineraryStatusType ItineraryStatus
+        public Engines.ItineraryStatusType ItineraryStatus
         {
             get
             {
@@ -5608,7 +5608,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.TripAddOn[] SelectedAddons
+        public Engines.TripAddOn[] SelectedAddons
         {
             get
             {
@@ -5621,7 +5621,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Tag[] Tags
+        public Engines.Tag[] Tags
         {
             get
             {
@@ -5637,20 +5637,20 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelAddOn))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.TransferAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.TransferAddOn))]
     public partial class TripAddOn : object
     {
         
-        private HotelEngineApi.StateBag[] AdditionalInformationField;
+        private Engines.StateBag[] AdditionalInformationField;
         
-        private HotelEngineApi.AddOnBookingInfo BookingInformationField;
+        private Engines.AddOnBookingInfo BookingInformationField;
         
         private string DescriptionField;
         
-        private HotelEngineApi.TripAddOnFare FareField;
+        private Engines.TripAddOnFare FareField;
         
-        private HotelEngineApi.FareSource FareSourceField;
+        private Engines.FareSource FareSourceField;
         
         private System.Guid IdField;
         
@@ -5661,7 +5661,7 @@ namespace HotelEngineApi
         private string TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] AdditionalInformation
+        public Engines.StateBag[] AdditionalInformation
         {
             get
             {
@@ -5674,7 +5674,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.AddOnBookingInfo BookingInformation
+        public Engines.AddOnBookingInfo BookingInformation
         {
             get
             {
@@ -5700,7 +5700,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.TripAddOnFare Fare
+        public Engines.TripAddOnFare Fare
         {
             get
             {
@@ -5713,7 +5713,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.FareSource FareSource
+        public Engines.FareSource FareSource
         {
             get
             {
@@ -5964,9 +5964,9 @@ namespace HotelEngineApi
         
         private string RateCodeField;
         
-        private HotelEngineApi.StateBag[] SupplierSideDataField;
+        private Engines.StateBag[] SupplierSideDataField;
         
-        private HotelEngineApi.HotelDiscountType TypeField;
+        private Engines.HotelDiscountType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ChainCode
@@ -6021,7 +6021,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] SupplierSideData
+        public Engines.StateBag[] SupplierSideData
         {
             get
             {
@@ -6034,7 +6034,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelDiscountType Type
+        public Engines.HotelDiscountType Type
         {
             get
             {
@@ -6050,17 +6050,17 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFare", Namespace="http://tavisca.com")]
-    public partial class HotelFare : HotelEngineApi.Fare
+    public partial class HotelFare : Engines.Fare
     {
         
-        private HotelEngineApi.Money AvgDailyRateField;
+        private Engines.Money AvgDailyRateField;
         
-        private HotelEngineApi.Money MaxDailyRateField;
+        private Engines.Money MaxDailyRateField;
         
-        private HotelEngineApi.Money MinDailyRateField;
+        private Engines.Money MinDailyRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money AvgDailyRate
+        public Engines.Money AvgDailyRate
         {
             get
             {
@@ -6073,7 +6073,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money MaxDailyRate
+        public Engines.Money MaxDailyRate
         {
             get
             {
@@ -6086,7 +6086,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money MinDailyRate
+        public Engines.Money MinDailyRate
         {
             get
             {
@@ -6102,7 +6102,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPolicy : HotelEngineApi.CancellationPolicy
+    public partial class HotelCancellationPolicy : Engines.CancellationPolicy
     {
     }
     
@@ -6114,13 +6114,13 @@ namespace HotelEngineApi
         
         private bool AllowDynamicField;
         
-        private HotelEngineApi.MarkupApplicationAmount ApplyOnAmountField;
+        private Engines.MarkupApplicationAmount ApplyOnAmountField;
         
         private string FareTypeField;
         
         private bool IsEnabledField;
         
-        private HotelEngineApi.MarkupApplicationType MarkupApplicationTypeField;
+        private Engines.MarkupApplicationType MarkupApplicationTypeField;
         
         private long MarkupPlanIdField;
         
@@ -6142,7 +6142,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.MarkupApplicationAmount ApplyOnAmount
+        public Engines.MarkupApplicationAmount ApplyOnAmount
         {
             get
             {
@@ -6181,7 +6181,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.MarkupApplicationType MarkupApplicationType
+        public Engines.MarkupApplicationType MarkupApplicationType
         {
             get
             {
@@ -6243,7 +6243,7 @@ namespace HotelEngineApi
         
         private string NameField;
         
-        private HotelEngineApi.DepositType TypeField;
+        private Engines.DepositType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -6272,7 +6272,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.DepositType Type
+        public Engines.DepositType Type
         {
             get
             {
@@ -6295,7 +6295,7 @@ namespace HotelEngineApi
         
         private string NameField;
         
-        private HotelEngineApi.GuaranteeType TypeField;
+        private Engines.GuaranteeType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -6324,7 +6324,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.GuaranteeType Type
+        public Engines.GuaranteeType Type
         {
             get
             {
@@ -6343,14 +6343,14 @@ namespace HotelEngineApi
     public partial class AllowedCountry : object
     {
         
-        private HotelEngineApi.AllowedState[] AllowedStatesField;
+        private Engines.AllowedState[] AllowedStatesField;
         
         private string CodeField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.AllowedState[] AllowedStates
+        public Engines.AllowedState[] AllowedStates
         {
             get
             {
@@ -6392,20 +6392,20 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Deal", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.PaystayDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.PercentageDiscountDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.OpaqueDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.DiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.PaystayDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.PercentageDiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.OpaqueDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.DiscountDeal))]
     public partial class Deal : object
     {
         
-        private HotelEngineApi.DealStatus DealStatusField;
+        private Engines.DealStatus DealStatusField;
         
         private string DealTypeField;
         
         private System.DateTime EndDateField;
         
-        private HotelEngineApi.Media ImageField;
+        private Engines.Media ImageField;
         
         private bool IsPackageOnlyField;
         
@@ -6419,7 +6419,7 @@ namespace HotelEngineApi
         
         private System.DateTime StartDateField;
         
-        private HotelEngineApi.Tag[] TagsField;
+        private Engines.Tag[] TagsField;
         
         private string TitleField;
         
@@ -6428,7 +6428,7 @@ namespace HotelEngineApi
         private System.DateTime UsageStartDateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.DealStatus DealStatus
+        public Engines.DealStatus DealStatus
         {
             get
             {
@@ -6467,7 +6467,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Media Image
+        public Engines.Media Image
         {
             get
             {
@@ -6558,7 +6558,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Tag[] Tags
+        public Engines.Tag[] Tags
         {
             get
             {
@@ -6618,21 +6618,21 @@ namespace HotelEngineApi
         
         private System.DateTime AddDateField;
         
-        private HotelEngineApi.DealStatus DealStatusField;
+        private Engines.DealStatus DealStatusField;
         
         private string DealTitleField;
         
         private System.DateTime EndDateField;
         
-        private HotelEngineApi.FareSource FareSourceField;
+        private Engines.FareSource FareSourceField;
         
         private int FreeNightsField;
         
-        private HotelEngineApi.HotelProperty HotelPropertyField;
+        private Engines.HotelProperty HotelPropertyField;
         
         private int IdField;
         
-        private HotelEngineApi.Money MinFareField;
+        private Engines.Money MinFareField;
         
         private string PromotionalTextField;
         
@@ -6654,7 +6654,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.DealStatus DealStatus
+        public Engines.DealStatus DealStatus
         {
             get
             {
@@ -6693,7 +6693,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.FareSource FareSource
+        public Engines.FareSource FareSource
         {
             get
             {
@@ -6719,7 +6719,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelProperty HotelProperty
+        public Engines.HotelProperty HotelProperty
         {
             get
             {
@@ -6745,7 +6745,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money MinFare
+        public Engines.Money MinFare
         {
             get
             {
@@ -6840,11 +6840,11 @@ namespace HotelEngineApi
     public partial class Room : object
     {
         
-        private HotelEngineApi.StateBag[] AdditionalInformationField;
+        private Engines.StateBag[] AdditionalInformationField;
         
-        private HotelEngineApi.AgeRestriction AgeRestrictionField;
+        private Engines.AgeRestriction AgeRestrictionField;
         
-        private HotelEngineApi.AllowedCreditCard[] AllowedCreditCardsField;
+        private Engines.AllowedCreditCard[] AllowedCreditCardsField;
         
         private int BaseOccupancyField;
         
@@ -6852,7 +6852,7 @@ namespace HotelEngineApi
         
         private bool DepositRequiredField;
         
-        private HotelEngineApi.RoomRate DisplayRoomRateField;
+        private Engines.RoomRate DisplayRoomRateField;
         
         private bool GuaranteeRequiredField;
         
@@ -6860,7 +6860,7 @@ namespace HotelEngineApi
         
         private int GuestCountField;
         
-        private HotelEngineApi.HotelFareSource HotelFareSourceField;
+        private Engines.HotelFareSource HotelFareSourceField;
         
         private bool IsRoomWithNearByDateField;
         
@@ -6876,7 +6876,7 @@ namespace HotelEngineApi
         
         private int[] PassengerRphsField;
         
-        private HotelEngineApi.HotelPolicy[] PoliciesField;
+        private Engines.HotelPolicy[] PoliciesField;
         
         private bool PrepaidField;
         
@@ -6892,12 +6892,12 @@ namespace HotelEngineApi
         
         private string RoomTypeField;
         
-        private HotelEngineApi.DateTimeSpan StayPeriodField;
+        private Engines.DateTimeSpan StayPeriodField;
         
-        private HotelEngineApi.RoomRate StdRoomRateField;
+        private Engines.RoomRate StdRoomRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] AdditionalInformation
+        public Engines.StateBag[] AdditionalInformation
         {
             get
             {
@@ -6910,7 +6910,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.AgeRestriction AgeRestriction
+        public Engines.AgeRestriction AgeRestriction
         {
             get
             {
@@ -6923,7 +6923,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.AllowedCreditCard[] AllowedCreditCards
+        public Engines.AllowedCreditCard[] AllowedCreditCards
         {
             get
             {
@@ -6975,7 +6975,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RoomRate DisplayRoomRate
+        public Engines.RoomRate DisplayRoomRate
         {
             get
             {
@@ -7027,7 +7027,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelFareSource HotelFareSource
+        public Engines.HotelFareSource HotelFareSource
         {
             get
             {
@@ -7131,7 +7131,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelPolicy[] Policies
+        public Engines.HotelPolicy[] Policies
         {
             get
             {
@@ -7235,7 +7235,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.DateTimeSpan StayPeriod
+        public Engines.DateTimeSpan StayPeriod
         {
             get
             {
@@ -7248,7 +7248,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RoomRate StdRoomRate
+        public Engines.RoomRate StdRoomRate
         {
             get
             {
@@ -7271,7 +7271,7 @@ namespace HotelEngineApi
         
         private string StartField;
         
-        private HotelEngineApi.SeasonType TypeField;
+        private Engines.SeasonType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string End
@@ -7300,7 +7300,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.SeasonType Type
+        public Engines.SeasonType Type
         {
             get
             {
@@ -7319,7 +7319,7 @@ namespace HotelEngineApi
     public partial class AddOnBookingInfo : object
     {
         
-        private HotelEngineApi.AddOnBookingStatusType BookingStatusField;
+        private Engines.AddOnBookingStatusType BookingStatusField;
         
         private int PassengerRphField;
         
@@ -7328,7 +7328,7 @@ namespace HotelEngineApi
         private string VendorConfirmationNumberField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.AddOnBookingStatusType BookingStatus
+        public Engines.AddOnBookingStatusType BookingStatus
         {
             get
             {
@@ -7383,17 +7383,17 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOnFare", Namespace="http://tavisca.com")]
-    public partial class TripAddOnFare : HotelEngineApi.Fare
+    public partial class TripAddOnFare : Engines.Fare
     {
         
-        private HotelEngineApi.Money BaseTotalFareField;
+        private Engines.Money BaseTotalFareField;
         
         private bool IsAlreadyIncludedField;
         
         private int QuantityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money BaseTotalFare
+        public Engines.Money BaseTotalFare
         {
             get
             {
@@ -7435,8 +7435,8 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.TransferAddOn))]
-    public partial class HotelAddOn : HotelEngineApi.TripAddOn
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.TransferAddOn))]
+    public partial class HotelAddOn : Engines.TripAddOn
     {
         
         private string[] RoomRphsField;
@@ -7458,21 +7458,21 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TransferAddOn", Namespace="http://tavisca.com")]
-    public partial class TransferAddOn : HotelEngineApi.HotelAddOn
+    public partial class TransferAddOn : Engines.HotelAddOn
     {
         
-        private HotelEngineApi.Location DestinationField;
+        private Engines.Location DestinationField;
         
         private System.DateTime DropOffField;
         
-        private HotelEngineApi.Location OriginField;
+        private Engines.Location OriginField;
         
-        private HotelEngineApi.PassengerTypeQuantity[] PassengersField;
+        private Engines.PassengerTypeQuantity[] PassengersField;
         
         private System.DateTime PickUpField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Location Destination
+        public Engines.Location Destination
         {
             get
             {
@@ -7498,7 +7498,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Location Origin
+        public Engines.Location Origin
         {
             get
             {
@@ -7511,7 +7511,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PassengerTypeQuantity[] Passengers
+        public Engines.PassengerTypeQuantity[] Passengers
         {
             get
             {
@@ -7555,64 +7555,64 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fare", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.RoomRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.TripAddOnFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.RoomRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.TripAddOnFare))]
     public partial class Fare : object
     {
         
-        private HotelEngineApi.BaseFare BaseFareField;
+        private Engines.BaseFare BaseFareField;
         
-        private HotelEngineApi.Commission[] CommissionsField;
+        private Engines.Commission[] CommissionsField;
         
-        private HotelEngineApi.Fee ConsolidatorFeeField;
+        private Engines.Fee ConsolidatorFeeField;
         
-        private HotelEngineApi.Discount[] DiscountsField;
+        private Engines.Discount[] DiscountsField;
         
-        private HotelEngineApi.Money EstimatedCommissionField;
+        private Engines.Money EstimatedCommissionField;
         
         private string FareCodeField;
         
-        private HotelEngineApi.FareRestrictionType[] FareRestrictionTypesField;
+        private Engines.FareRestrictionType[] FareRestrictionTypesField;
         
-        private HotelEngineApi.FareType FareTypeField;
+        private Engines.FareType FareTypeField;
         
-        private HotelEngineApi.Fee[] FeesField;
+        private Engines.Fee[] FeesField;
         
         private int IdField;
         
-        private HotelEngineApi.Money MarkupField;
+        private Engines.Money MarkupField;
         
-        private HotelEngineApi.Markup[] MarkupsField;
+        private Engines.Markup[] MarkupsField;
         
-        private HotelEngineApi.Fee PartnerFeeField;
+        private Engines.Fee PartnerFeeField;
         
-        private HotelEngineApi.Money PartnerMarkupField;
+        private Engines.Money PartnerMarkupField;
         
         private string RemarksField;
         
         private int RphField;
         
-        private HotelEngineApi.Money SavingsIncludedField;
+        private Engines.Money SavingsIncludedField;
         
-        private HotelEngineApi.Fee ServiceFeeField;
+        private Engines.Fee ServiceFeeField;
         
-        private HotelEngineApi.StateBag[] SupplierSideDataField;
+        private Engines.StateBag[] SupplierSideDataField;
         
-        private HotelEngineApi.Tax[] TaxesField;
+        private Engines.Tax[] TaxesField;
         
-        private HotelEngineApi.Commission TotalCommissionField;
+        private Engines.Commission TotalCommissionField;
         
-        private HotelEngineApi.Discount TotalDiscountField;
+        private Engines.Discount TotalDiscountField;
         
-        private HotelEngineApi.Money TotalFareField;
+        private Engines.Money TotalFareField;
         
-        private HotelEngineApi.Fee TotalFeeField;
+        private Engines.Fee TotalFeeField;
         
-        private HotelEngineApi.Money TotalTaxField;
+        private Engines.Money TotalTaxField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.BaseFare BaseFare
+        public Engines.BaseFare BaseFare
         {
             get
             {
@@ -7625,7 +7625,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Commission[] Commissions
+        public Engines.Commission[] Commissions
         {
             get
             {
@@ -7638,7 +7638,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Fee ConsolidatorFee
+        public Engines.Fee ConsolidatorFee
         {
             get
             {
@@ -7651,7 +7651,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Discount[] Discounts
+        public Engines.Discount[] Discounts
         {
             get
             {
@@ -7664,7 +7664,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money EstimatedCommission
+        public Engines.Money EstimatedCommission
         {
             get
             {
@@ -7690,7 +7690,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.FareRestrictionType[] FareRestrictionTypes
+        public Engines.FareRestrictionType[] FareRestrictionTypes
         {
             get
             {
@@ -7703,7 +7703,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.FareType FareType
+        public Engines.FareType FareType
         {
             get
             {
@@ -7716,7 +7716,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Fee[] Fees
+        public Engines.Fee[] Fees
         {
             get
             {
@@ -7742,7 +7742,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money Markup
+        public Engines.Money Markup
         {
             get
             {
@@ -7755,7 +7755,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Markup[] Markups
+        public Engines.Markup[] Markups
         {
             get
             {
@@ -7768,7 +7768,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Fee PartnerFee
+        public Engines.Fee PartnerFee
         {
             get
             {
@@ -7781,7 +7781,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money PartnerMarkup
+        public Engines.Money PartnerMarkup
         {
             get
             {
@@ -7820,7 +7820,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money SavingsIncluded
+        public Engines.Money SavingsIncluded
         {
             get
             {
@@ -7833,7 +7833,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Fee ServiceFee
+        public Engines.Fee ServiceFee
         {
             get
             {
@@ -7846,7 +7846,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] SupplierSideData
+        public Engines.StateBag[] SupplierSideData
         {
             get
             {
@@ -7859,7 +7859,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Tax[] Taxes
+        public Engines.Tax[] Taxes
         {
             get
             {
@@ -7872,7 +7872,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Commission TotalCommission
+        public Engines.Commission TotalCommission
         {
             get
             {
@@ -7885,7 +7885,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Discount TotalDiscount
+        public Engines.Discount TotalDiscount
         {
             get
             {
@@ -7898,7 +7898,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money TotalFare
+        public Engines.Money TotalFare
         {
             get
             {
@@ -7911,7 +7911,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Fee TotalFee
+        public Engines.Fee TotalFee
         {
             get
             {
@@ -7924,7 +7924,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money TotalTax
+        public Engines.Money TotalTax
         {
             get
             {
@@ -7940,14 +7940,14 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="RoomRate", Namespace="http://tavisca.com")]
-    public partial class RoomRate : HotelEngineApi.Fare
+    public partial class RoomRate : Engines.Fare
     {
         
         private string BookingCodeField;
         
-        private HotelEngineApi.DailyRate[] DailyRatesField;
+        private Engines.DailyRate[] DailyRatesField;
         
-        private HotelEngineApi.RateIndicatorType RateIndicatorTypeField;
+        private Engines.RateIndicatorType RateIndicatorTypeField;
         
         private string RatePlanCategoryField;
         
@@ -7975,7 +7975,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.DailyRate[] DailyRates
+        public Engines.DailyRate[] DailyRates
         {
             get
             {
@@ -7988,7 +7988,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RateIndicatorType RateIndicatorType
+        public Engines.RateIndicatorType RateIndicatorType
         {
             get
             {
@@ -8260,7 +8260,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PaystayDeal", Namespace="http://tavisca.com")]
-    public partial class PaystayDeal : HotelEngineApi.Deal
+    public partial class PaystayDeal : Engines.Deal
     {
         
         private int FreeNightsField;
@@ -8297,7 +8297,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PercentageDiscountDeal", Namespace="http://tavisca.com")]
-    public partial class PercentageDiscountDeal : HotelEngineApi.Deal
+    public partial class PercentageDiscountDeal : Engines.Deal
     {
         
         private string ApplyOnField;
@@ -8334,22 +8334,22 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OpaqueDeal", Namespace="http://tavisca.com")]
-    public partial class OpaqueDeal : HotelEngineApi.Deal
+    public partial class OpaqueDeal : Engines.Deal
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DiscountDeal", Namespace="http://tavisca.com")]
-    public partial class DiscountDeal : HotelEngineApi.Deal
+    public partial class DiscountDeal : Engines.Deal
     {
         
-        private HotelEngineApi.Money AmountField;
+        private Engines.Money AmountField;
         
         private string ApplyOnField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money Amount
+        public Engines.Money Amount
         {
             get
             {
@@ -8411,14 +8411,14 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationPolicy", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelCancellationPolicy))]
     public partial class CancellationPolicy : object
     {
         
-        private HotelEngineApi.CancellationRule[] CancellationRulesField;
+        private Engines.CancellationRule[] CancellationRulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.CancellationRule[] CancellationRules
+        public Engines.CancellationRule[] CancellationRules
         {
             get
             {
@@ -8434,24 +8434,24 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationRule", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelCancellationRule))]
     public partial class CancellationRule : object
     {
         
-        private HotelEngineApi.StateBag[] AdditionalInfoField;
+        private Engines.StateBag[] AdditionalInfoField;
         
         private string DescriptionField;
         
-        private HotelEngineApi.Penalty PenaltyField;
+        private Engines.Penalty PenaltyField;
         
         private int RphField;
         
-        private HotelEngineApi.ProviderCancellationRuleType TypeField;
+        private Engines.ProviderCancellationRuleType TypeField;
         
-        private HotelEngineApi.DateTimeSpan WindowField;
+        private Engines.DateTimeSpan WindowField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] AdditionalInfo
+        public Engines.StateBag[] AdditionalInfo
         {
             get
             {
@@ -8477,7 +8477,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Penalty Penalty
+        public Engines.Penalty Penalty
         {
             get
             {
@@ -8503,7 +8503,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.ProviderCancellationRuleType Type
+        public Engines.ProviderCancellationRuleType Type
         {
             get
             {
@@ -8516,7 +8516,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.DateTimeSpan Window
+        public Engines.DateTimeSpan Window
         {
             get
             {
@@ -8532,20 +8532,20 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Penalty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelCancellationPenalty))]
     public partial class Penalty : object
     {
         
-        private HotelEngineApi.Money BasePenaltyField;
+        private Engines.Money BasePenaltyField;
         
-        private HotelEngineApi.Fee[] FeesField;
+        private Engines.Fee[] FeesField;
         
-        private HotelEngineApi.Markup[] MarkupsField;
+        private Engines.Markup[] MarkupsField;
         
-        private HotelEngineApi.Money TotalPenaltyField;
+        private Engines.Money TotalPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money BasePenalty
+        public Engines.Money BasePenalty
         {
             get
             {
@@ -8558,7 +8558,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Fee[] Fees
+        public Engines.Fee[] Fees
         {
             get
             {
@@ -8571,7 +8571,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Markup[] Markups
+        public Engines.Markup[] Markups
         {
             get
             {
@@ -8584,7 +8584,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money TotalPenalty
+        public Engines.Money TotalPenalty
         {
             get
             {
@@ -8600,13 +8600,13 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationRule", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationRule : HotelEngineApi.CancellationRule
+    public partial class HotelCancellationRule : Engines.CancellationRule
     {
         
-        private HotelEngineApi.HotelCancellationPenalty HotelCancellationPenaltyField;
+        private Engines.HotelCancellationPenalty HotelCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelCancellationPenalty HotelCancellationPenalty
+        public Engines.HotelCancellationPenalty HotelCancellationPenalty
         {
             get
             {
@@ -8634,7 +8634,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPenalty : HotelEngineApi.Penalty
+    public partial class HotelCancellationPenalty : Engines.Penalty
     {
     }
     
@@ -8814,10 +8814,10 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelTransform", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelFilterTransform))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelMatrixTransform))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelItineraryTransform))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelComparisonMatrixTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelFilterTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelMatrixTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItineraryTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelComparisonMatrixTransform))]
     public partial class HotelTransform : object
     {
     }
@@ -8825,7 +8825,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AvailabilityFilter", Namespace="http://tavisca.com")]
-    public partial class AvailabilityFilter : HotelEngineApi.HotelFilter
+    public partial class AvailabilityFilter : Engines.HotelFilter
     {
         
         private bool ReturnOnlyAvailableItinerariesField;
@@ -8847,15 +8847,15 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ViewPortFilter", Namespace="http://tavisca.com")]
-    public partial class ViewPortFilter : HotelEngineApi.HotelFilter
+    public partial class ViewPortFilter : Engines.HotelFilter
     {
         
-        private HotelEngineApi.GeoCode BottomRightCornerField;
+        private Engines.GeoCode BottomRightCornerField;
         
-        private HotelEngineApi.GeoCode TopLeftCornerField;
+        private Engines.GeoCode TopLeftCornerField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.GeoCode BottomRightCorner
+        public Engines.GeoCode BottomRightCorner
         {
             get
             {
@@ -8868,7 +8868,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.GeoCode TopLeftCorner
+        public Engines.GeoCode TopLeftCorner
         {
             get
             {
@@ -8884,21 +8884,21 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFilterTransform", Namespace="http://tavisca.com")]
-    public partial class HotelFilterTransform : HotelEngineApi.HotelTransform
+    public partial class HotelFilterTransform : Engines.HotelTransform
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelMatrixTransform", Namespace="http://tavisca.com")]
-    public partial class HotelMatrixTransform : HotelEngineApi.HotelTransform
+    public partial class HotelMatrixTransform : Engines.HotelTransform
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItineraryTransform", Namespace="http://tavisca.com")]
-    public partial class HotelItineraryTransform : HotelEngineApi.HotelTransform
+    public partial class HotelItineraryTransform : Engines.HotelTransform
     {
         
         private bool GetPricelessHotelItinerariesField;
@@ -8950,7 +8950,7 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelComparisonMatrixTransform", Namespace="http://tavisca.com")]
-    public partial class HotelComparisonMatrixTransform : HotelEngineApi.HotelTransform
+    public partial class HotelComparisonMatrixTransform : Engines.HotelTransform
     {
         
         private string[] HotelComparisonAttributesField;
@@ -9017,19 +9017,19 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRS", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelRoomAvailRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelRoomPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelSearchViewRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelItinerarySearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelRoomAvailRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelRoomPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchViewRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItinerarySearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchRS))]
     public partial class WebServiceRS : object
     {
         
         private string CallIdField;
         
-        private HotelEngineApi.ResponseType ResponseRecievedField;
+        private Engines.ResponseType ResponseRecievedField;
         
-        private HotelEngineApi.ServiceStatus ServiceStatusField;
+        private Engines.ServiceStatus ServiceStatusField;
         
         private string SessionIdField;
         
@@ -9047,7 +9047,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.ResponseType ResponseRecieved
+        public Engines.ResponseType ResponseRecieved
         {
             get
             {
@@ -9060,7 +9060,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.ServiceStatus ServiceStatus
+        public Engines.ServiceStatus ServiceStatus
         {
             get
             {
@@ -9098,7 +9098,7 @@ namespace HotelEngineApi
         
         private string[] MissingItemsField;
         
-        private HotelEngineApi.ServiceStatusType StatusField;
+        private Engines.ServiceStatusType StatusField;
         
         private int StatusCodeField;
         
@@ -9144,7 +9144,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.ServiceStatusType Status
+        public Engines.ServiceStatusType Status
         {
             get
             {
@@ -9186,15 +9186,15 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRS : HotelEngineApi.WebServiceRS
+    public partial class HotelRoomAvailRS : Engines.WebServiceRS
     {
         
-        private HotelEngineApi.HotelItinerary ItineraryField;
+        private Engines.HotelItinerary ItineraryField;
         
-        private HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelItinerary Itinerary
+        public Engines.HotelItinerary Itinerary
         {
             get
             {
@@ -9207,7 +9207,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypes
+        public Engines.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9223,15 +9223,15 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRS : HotelEngineApi.WebServiceRS
+    public partial class HotelRoomPriceRS : Engines.WebServiceRS
     {
         
-        private HotelEngineApi.HotelItinerary ItineraryField;
+        private Engines.HotelItinerary ItineraryField;
         
-        private HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelItinerary Itinerary
+        public Engines.HotelItinerary Itinerary
         {
             get
             {
@@ -9244,7 +9244,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypes
+        public Engines.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9260,17 +9260,17 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchViewRS", Namespace="http://tavisca.com")]
-    public partial class HotelSearchViewRS : HotelEngineApi.WebServiceRS
+    public partial class HotelSearchViewRS : Engines.WebServiceRS
     {
         
-        private HotelEngineApi.PagingInfo PagingInfoField;
+        private Engines.PagingInfo PagingInfoField;
         
-        private HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
         
-        private HotelEngineApi.HotelView[] ViewsField;
+        private Engines.HotelView[] ViewsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PagingInfo PagingInfo
+        public Engines.PagingInfo PagingInfo
         {
             get
             {
@@ -9283,7 +9283,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypes
+        public Engines.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9296,7 +9296,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelView[] Views
+        public Engines.HotelView[] Views
         {
             get
             {
@@ -9312,15 +9312,15 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRS : HotelEngineApi.WebServiceRS
+    public partial class HotelItinerarySearchRS : Engines.WebServiceRS
     {
         
-        private HotelEngineApi.HotelItinerary ItineraryField;
+        private Engines.HotelItinerary ItineraryField;
         
-        private HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelItinerary Itinerary
+        public Engines.HotelItinerary Itinerary
         {
             get
             {
@@ -9333,7 +9333,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypes
+        public Engines.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9349,17 +9349,17 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRS : HotelEngineApi.WebServiceRS
+    public partial class HotelSearchRS : Engines.WebServiceRS
     {
         
-        private HotelEngineApi.HotelItinerary[] ItinerariesField;
+        private Engines.HotelItinerary[] ItinerariesField;
         
-        private HotelEngineApi.PagingInfo PagingInfoField;
+        private Engines.PagingInfo PagingInfoField;
         
-        private HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelItinerary[] Itineraries
+        public Engines.HotelItinerary[] Itineraries
         {
             get
             {
@@ -9372,7 +9372,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.PagingInfo PagingInfo
+        public Engines.PagingInfo PagingInfo
         {
             get
             {
@@ -9385,7 +9385,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RoomOccupancyType[] RoomOccupancyTypes
+        public Engines.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9416,22 +9416,22 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelView", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelFilterView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelMatrixView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelItineraryView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelComparisonMatrixView))]
-    public partial class HotelView : HotelEngineApi.BaseEntity
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelFilterView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelMatrixView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItineraryView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelComparisonMatrixView))]
+    public partial class HotelView : Engines.BaseEntity
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseEntity", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelFilterView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelMatrixView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelItineraryView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.HotelComparisonMatrixView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelFilterView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelMatrixView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItineraryView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelComparisonMatrixView))]
     public partial class BaseEntity : object
     {
         
@@ -9454,13 +9454,13 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFilterView", Namespace="http://tavisca.com")]
-    public partial class HotelFilterView : HotelEngineApi.HotelView
+    public partial class HotelFilterView : Engines.HotelView
     {
         
-        private HotelEngineApi.HotelFilterDisplayData HotelFilterDisplayDataField;
+        private Engines.HotelFilterDisplayData HotelFilterDisplayDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelFilterDisplayData HotelFilterDisplayData
+        public Engines.HotelFilterDisplayData HotelFilterDisplayData
         {
             get
             {
@@ -9476,13 +9476,13 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelMatrixView", Namespace="http://tavisca.com")]
-    public partial class HotelMatrixView : HotelEngineApi.HotelView
+    public partial class HotelMatrixView : Engines.HotelView
     {
         
-        private HotelEngineApi.ResultMatrix[] SummaryMatrixListField;
+        private Engines.ResultMatrix[] SummaryMatrixListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.ResultMatrix[] SummaryMatrixList
+        public Engines.ResultMatrix[] SummaryMatrixList
         {
             get
             {
@@ -9498,13 +9498,13 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItineraryView", Namespace="http://tavisca.com")]
-    public partial class HotelItineraryView : HotelEngineApi.HotelView
+    public partial class HotelItineraryView : Engines.HotelView
     {
         
-        private HotelEngineApi.HotelItinerary[] ItinerariesField;
+        private Engines.HotelItinerary[] ItinerariesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelItinerary[] Itineraries
+        public Engines.HotelItinerary[] Itineraries
         {
             get
             {
@@ -9521,13 +9521,13 @@ namespace HotelEngineApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelComparisonMatrixView", Namespace="http://schemas.datacontract.org/2004/07/Tavisca.TravelNxt.Hotel.Plugins.DataContr" +
         "acts")]
-    public partial class HotelComparisonMatrixView : HotelEngineApi.HotelView
+    public partial class HotelComparisonMatrixView : Engines.HotelView
     {
         
-        private HotelEngineApi.ComparisonMatrix ComparisonMatrixField;
+        private Engines.ComparisonMatrix ComparisonMatrixField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.ComparisonMatrix ComparisonMatrix
+        public Engines.ComparisonMatrix ComparisonMatrix
         {
             get
             {
@@ -9546,7 +9546,7 @@ namespace HotelEngineApi
     public partial class HotelFilterDisplayData : object
     {
         
-        private HotelEngineApi.BrandMinFare[] BrandMinFareListField;
+        private Engines.BrandMinFare[] BrandMinFareListField;
         
         private bool CheckFiveStarField;
         
@@ -9560,7 +9560,7 @@ namespace HotelEngineApi
         
         private bool CheckTwoStarField;
         
-        private HotelEngineApi.CityPropertyCount[] CityPropertyCountListField;
+        private Engines.CityPropertyCount[] CityPropertyCountListField;
         
         private bool EnableFiveStarField;
         
@@ -9578,26 +9578,26 @@ namespace HotelEngineApi
         
         private bool EnableTwoStarField;
         
-        private HotelEngineApi.Distance MaxDistanceField;
+        private Engines.Distance MaxDistanceField;
         
-        private HotelEngineApi.Money MaxFareField;
+        private Engines.Money MaxFareField;
         
         private int MaxNumberOfBedRoomsField;
         
         private int MaxOccupancyField;
         
-        private HotelEngineApi.Distance MinDistanceField;
+        private Engines.Distance MinDistanceField;
         
-        private HotelEngineApi.Money MinFareField;
+        private Engines.Money MinFareField;
         
         private int MinNumberOfBedRoomsField;
         
         private int MinOccupancyField;
         
-        private HotelEngineApi.RatingMinFare[] RatingMinFareListField;
+        private Engines.RatingMinFare[] RatingMinFareListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.BrandMinFare[] BrandMinFareList
+        public Engines.BrandMinFare[] BrandMinFareList
         {
             get
             {
@@ -9688,7 +9688,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.CityPropertyCount[] CityPropertyCountList
+        public Engines.CityPropertyCount[] CityPropertyCountList
         {
             get
             {
@@ -9805,7 +9805,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Distance MaxDistance
+        public Engines.Distance MaxDistance
         {
             get
             {
@@ -9818,7 +9818,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money MaxFare
+        public Engines.Money MaxFare
         {
             get
             {
@@ -9857,7 +9857,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Distance MinDistance
+        public Engines.Distance MinDistance
         {
             get
             {
@@ -9870,7 +9870,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money MinFare
+        public Engines.Money MinFare
         {
             get
             {
@@ -9909,7 +9909,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.RatingMinFare[] RatingMinFareList
+        public Engines.RatingMinFare[] RatingMinFareList
         {
             get
             {
@@ -9930,7 +9930,7 @@ namespace HotelEngineApi
         
         private string BrandNameField;
         
-        private HotelEngineApi.Money MinFareField;
+        private Engines.Money MinFareField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string BrandName
@@ -9946,7 +9946,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money MinFare
+        public Engines.Money MinFare
         {
             get
             {
@@ -10002,12 +10002,12 @@ namespace HotelEngineApi
     public partial class RatingMinFare : object
     {
         
-        private HotelEngineApi.Money MinFareField;
+        private Engines.Money MinFareField;
         
-        private HotelEngineApi.HotelRating RatingField;
+        private Engines.HotelRating RatingField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.Money MinFare
+        public Engines.Money MinFare
         {
             get
             {
@@ -10020,7 +10020,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.HotelRating Rating
+        public Engines.HotelRating Rating
         {
             get
             {
@@ -10039,14 +10039,14 @@ namespace HotelEngineApi
     public partial class ResultMatrix : object
     {
         
-        private HotelEngineApi.MatrixColumnInfo[] ColumnsField;
+        private Engines.MatrixColumnInfo[] ColumnsField;
         
-        private HotelEngineApi.MatrixRowInfo[] RowsField;
+        private Engines.MatrixRowInfo[] RowsField;
         
-        private HotelEngineApi.MatrixCell[] ValuesField;
+        private Engines.MatrixCell[] ValuesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.MatrixColumnInfo[] Columns
+        public Engines.MatrixColumnInfo[] Columns
         {
             get
             {
@@ -10059,7 +10059,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.MatrixRowInfo[] Rows
+        public Engines.MatrixRowInfo[] Rows
         {
             get
             {
@@ -10072,7 +10072,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.MatrixCell[] Values
+        public Engines.MatrixCell[] Values
         {
             get
             {
@@ -10088,14 +10088,14 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixColumnInfo", Namespace="http://tavisca.com")]
-    public partial class MatrixColumnInfo : HotelEngineApi.MatrixRowColumnInfo
+    public partial class MatrixColumnInfo : Engines.MatrixRowColumnInfo
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixRowInfo", Namespace="http://tavisca.com")]
-    public partial class MatrixRowInfo : HotelEngineApi.MatrixRowColumnInfo
+    public partial class MatrixRowInfo : Engines.MatrixRowColumnInfo
     {
     }
     
@@ -10109,7 +10109,7 @@ namespace HotelEngineApi
         
         private int RowRphField;
         
-        private HotelEngineApi.MatrixCellData[] ValuesField;
+        private Engines.MatrixCellData[] ValuesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int ColumnRph
@@ -10138,7 +10138,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.MatrixCellData[] Values
+        public Engines.MatrixCellData[] Values
         {
             get
             {
@@ -10154,23 +10154,23 @@ namespace HotelEngineApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixRowColumnInfo", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.MatrixRowInfo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelEngineApi.MatrixColumnInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.MatrixRowInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.MatrixColumnInfo))]
     public partial class MatrixRowColumnInfo : object
     {
         
-        private HotelEngineApi.StateBag[] AdditionalInfoField;
+        private Engines.StateBag[] AdditionalInfoField;
         
         private string CodeField;
         
         private int RphField;
         
-        private HotelEngineApi.MatrixInfoType TypeField;
+        private Engines.MatrixInfoType TypeField;
         
         private string ValueField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.StateBag[] AdditionalInfo
+        public Engines.StateBag[] AdditionalInfo
         {
             get
             {
@@ -10209,7 +10209,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.MatrixInfoType Type
+        public Engines.MatrixInfoType Type
         {
             get
             {
@@ -10268,16 +10268,16 @@ namespace HotelEngineApi
     public partial class ComparisonMatrix : object
     {
         
-        private HotelEngineApi.ComparisonMatrixCell[] CellsField;
+        private Engines.ComparisonMatrixCell[] CellsField;
         
-        private HotelEngineApi.ComparisonMatrixDimension[] ColumnsField;
+        private Engines.ComparisonMatrixDimension[] ColumnsField;
         
         private int TotalColumnsField;
         
         private int TotalRowsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.ComparisonMatrixCell[] Cells
+        public Engines.ComparisonMatrixCell[] Cells
         {
             get
             {
@@ -10290,7 +10290,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.ComparisonMatrixDimension[] Columns
+        public Engines.ComparisonMatrixDimension[] Columns
         {
             get
             {
@@ -10404,9 +10404,9 @@ namespace HotelEngineApi
         
         private string AttributeNameField;
         
-        private HotelEngineApi.BusinessType BusinessTypeField;
+        private Engines.BusinessType BusinessTypeField;
         
-        private HotelEngineApi.TypeCode CodeField;
+        private Engines.TypeCode CodeField;
         
         private int ColumnIdField;
         
@@ -10428,7 +10428,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.BusinessType BusinessType
+        public Engines.BusinessType BusinessType
         {
             get
             {
@@ -10441,7 +10441,7 @@ namespace HotelEngineApi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelEngineApi.TypeCode Code
+        public Engines.TypeCode Code
         {
             get
             {
@@ -10542,28 +10542,28 @@ namespace HotelEngineApi
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="HotelEngineApi.HotelEngine")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="Engines.HotelEngine")]
     public interface HotelEngine
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/HotelEngine/HotelAvail", ReplyAction="http://tavisca.com/HotelEngine/HotelAvailResponse")]
-        System.Threading.Tasks.Task<HotelEngineApi.HotelSearchRS> HotelAvailAsync(HotelEngineApi.HotelSearchRQ request);
+        System.Threading.Tasks.Task<Engines.HotelSearchRS> HotelAvailAsync(Engines.HotelSearchRQ request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/HotelEngine/HotelRoomAvail", ReplyAction="http://tavisca.com/HotelEngine/HotelRoomAvailResponse")]
-        System.Threading.Tasks.Task<HotelEngineApi.HotelRoomAvailRS> HotelRoomAvailAsync(HotelEngineApi.HotelRoomAvailRQ request);
+        System.Threading.Tasks.Task<Engines.HotelRoomAvailRS> HotelRoomAvailAsync(Engines.HotelRoomAvailRQ request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/HotelEngine/HotelRoomPrice", ReplyAction="http://tavisca.com/HotelEngine/HotelRoomPriceResponse")]
-        System.Threading.Tasks.Task<HotelEngineApi.HotelRoomPriceRS> HotelRoomPriceAsync(HotelEngineApi.HotelRoomPriceRQ request);
+        System.Threading.Tasks.Task<Engines.HotelRoomPriceRS> HotelRoomPriceAsync(Engines.HotelRoomPriceRQ request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public interface HotelEngineChannel : HotelEngineApi.HotelEngine, System.ServiceModel.IClientChannel
+    public interface HotelEngineChannel : Engines.HotelEngine, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public partial class HotelEngineClient : System.ServiceModel.ClientBase<HotelEngineApi.HotelEngine>, HotelEngineApi.HotelEngine
+    public partial class HotelEngineClient : System.ServiceModel.ClientBase<Engines.HotelEngine>, Engines.HotelEngine
     {
         
     /// <summary>
@@ -10606,17 +10606,17 @@ namespace HotelEngineApi
         {
         }
         
-        public System.Threading.Tasks.Task<HotelEngineApi.HotelSearchRS> HotelAvailAsync(HotelEngineApi.HotelSearchRQ request)
+        public System.Threading.Tasks.Task<Engines.HotelSearchRS> HotelAvailAsync(Engines.HotelSearchRQ request)
         {
             return base.Channel.HotelAvailAsync(request);
         }
         
-        public System.Threading.Tasks.Task<HotelEngineApi.HotelRoomAvailRS> HotelRoomAvailAsync(HotelEngineApi.HotelRoomAvailRQ request)
+        public System.Threading.Tasks.Task<Engines.HotelRoomAvailRS> HotelRoomAvailAsync(Engines.HotelRoomAvailRQ request)
         {
             return base.Channel.HotelRoomAvailAsync(request);
         }
         
-        public System.Threading.Tasks.Task<HotelEngineApi.HotelRoomPriceRS> HotelRoomPriceAsync(HotelEngineApi.HotelRoomPriceRQ request)
+        public System.Threading.Tasks.Task<Engines.HotelRoomPriceRS> HotelRoomPriceAsync(Engines.HotelRoomPriceRQ request)
         {
             return base.Channel.HotelRoomPriceAsync(request);
         }

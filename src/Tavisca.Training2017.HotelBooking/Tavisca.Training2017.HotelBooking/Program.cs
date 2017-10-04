@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace Tavisca.Training2017.HotelBooking
 {
@@ -12,7 +13,7 @@ namespace Tavisca.Training2017.HotelBooking
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
+                .UseStartup<Startup>().UseContentRoot(Directory.GetCurrentDirectory())
                 .Build();
     }
 }
