@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tavisca.Training2017.HotelBooking\Tavisca.Training2017.HotelBooking.csproj" />
+    <ProjectReference Include="..\Connectors\Connector.csproj" />
   </ItemGroup>
 
 </Project>

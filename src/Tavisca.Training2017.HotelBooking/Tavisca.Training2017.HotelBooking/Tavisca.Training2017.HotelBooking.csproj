@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Connected Services\" />
+    <Folder Include="Contracts\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -26,6 +31,10 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contract\Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

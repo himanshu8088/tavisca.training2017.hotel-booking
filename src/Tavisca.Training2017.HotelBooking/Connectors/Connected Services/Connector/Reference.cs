@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Engines
+namespace Connector
 {
     using System.Runtime.Serialization;
     
@@ -15,22 +15,22 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRQ", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelRoomAvailRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelRoomPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchViewRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItinerarySearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelRoomAvailRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelRoomPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelSearchViewRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelItinerarySearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelSearchRQ))]
     public partial class WebServiceRQ : object
     {
         
-        private Engines.StateBag[] AdditionalInfoField;
+        private Connector.StateBag[] AdditionalInfoField;
         
-        private Engines.ResponseType ResultRequestedField;
+        private Connector.ResponseType ResultRequestedField;
         
         private string SessionIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] AdditionalInfo
+        public Connector.StateBag[] AdditionalInfo
         {
             get
             {
@@ -43,7 +43,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.ResponseType ResultRequested
+        public Connector.ResponseType ResultRequested
         {
             get
             {
@@ -72,15 +72,15 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRQ : Engines.WebServiceRQ
+    public partial class HotelRoomAvailRQ : Connector.WebServiceRQ
     {
         
-        private Engines.HotelSearchCriterion HotelSearchCriterionField;
+        private Connector.HotelSearchCriterion HotelSearchCriterionField;
         
-        private Engines.HotelItinerary ItineraryField;
+        private Connector.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelSearchCriterion HotelSearchCriterion
+        public Connector.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -93,7 +93,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelItinerary Itinerary
+        public Connector.HotelItinerary Itinerary
         {
             get
             {
@@ -109,15 +109,15 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRQ : Engines.WebServiceRQ
+    public partial class HotelRoomPriceRQ : Connector.WebServiceRQ
     {
         
-        private Engines.HotelSearchCriterion HotelSearchCriterionField;
+        private Connector.HotelSearchCriterion HotelSearchCriterionField;
         
-        private Engines.HotelItinerary ItineraryField;
+        private Connector.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelSearchCriterion HotelSearchCriterion
+        public Connector.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -130,7 +130,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelItinerary Itinerary
+        public Connector.HotelItinerary Itinerary
         {
             get
             {
@@ -146,23 +146,23 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchViewRQ", Namespace="http://tavisca.com")]
-    public partial class HotelSearchViewRQ : Engines.WebServiceRQ
+    public partial class HotelSearchViewRQ : Connector.WebServiceRQ
     {
         
-        private Engines.HotelFilter[] FiltersField;
+        private Connector.HotelFilter[] FiltersField;
         
-        private Engines.HotelSearchCriterion HotelSearchCriterionField;
+        private Connector.HotelSearchCriterion HotelSearchCriterionField;
         
-        private Engines.PagingInfo PagingInfoField;
+        private Connector.PagingInfo PagingInfoField;
         
         private string PasswordField;
         
-        private Engines.HotelTransform[] TransformsField;
+        private Connector.HotelTransform[] TransformsField;
         
         private string UserNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelFilter[] Filters
+        public Connector.HotelFilter[] Filters
         {
             get
             {
@@ -175,7 +175,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelSearchCriterion HotelSearchCriterion
+        public Connector.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -188,7 +188,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PagingInfo PagingInfo
+        public Connector.PagingInfo PagingInfo
         {
             get
             {
@@ -214,7 +214,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelTransform[] Transforms
+        public Connector.HotelTransform[] Transforms
         {
             get
             {
@@ -243,7 +243,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRQ : Engines.WebServiceRQ
+    public partial class HotelItinerarySearchRQ : Connector.WebServiceRQ
     {
         
         private int ItineraryIdField;
@@ -265,17 +265,17 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRQ : Engines.WebServiceRQ
+    public partial class HotelSearchRQ : Connector.WebServiceRQ
     {
         
-        private Engines.HotelFilter[] FiltersField;
+        private Connector.HotelFilter[] FiltersField;
         
-        private Engines.HotelSearchCriterion HotelSearchCriterionField;
+        private Connector.HotelSearchCriterion HotelSearchCriterionField;
         
-        private Engines.PagingInfo PagingInfoField;
+        private Connector.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelFilter[] Filters
+        public Connector.HotelFilter[] Filters
         {
             get
             {
@@ -288,7 +288,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelSearchCriterion HotelSearchCriterion
+        public Connector.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -301,7 +301,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PagingInfo PagingInfo
+        public Connector.PagingInfo PagingInfo
         {
             get
             {
@@ -369,39 +369,39 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class HotelSearchCriterion : Engines.TripSearchCriterion
+    public partial class HotelSearchCriterion : Connector.TripSearchCriterion
     {
         
-        private Engines.PassengerTypeQuantity[] GuestsField;
+        private Connector.PassengerTypeQuantity[] GuestsField;
         
         private bool IsReturnRoomsField;
         
-        private Engines.Location LocationField;
+        private Connector.Location LocationField;
         
         private string NoOfBedRoomsField;
         
         private int NoOfRoomsField;
         
-        private Engines.HotelSearchProcessingInfo ProcessingInfoField;
+        private Connector.HotelSearchProcessingInfo ProcessingInfoField;
         
-        private Engines.HotelProperty[] PropertiesToSearchField;
+        private Connector.HotelProperty[] PropertiesToSearchField;
         
-        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Connector.RoomOccupancyType[] RoomOccupancyTypesField;
         
         private string SearchBehaviorField;
         
         private string[] SearchCategoriesField;
         
-        private Engines.HotelSearchType SearchTypeField;
+        private Connector.HotelSearchType SearchTypeField;
         
-        private Engines.DateTimeSpan StayPeriodField;
+        private Connector.DateTimeSpan StayPeriodField;
         
-        private Engines.Tag[] TagsField;
+        private Connector.Tag[] TagsField;
         
-        private Engines.HotelSearchPreference TravelPreferenceField;
+        private Connector.HotelSearchPreference TravelPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PassengerTypeQuantity[] Guests
+        public Connector.PassengerTypeQuantity[] Guests
         {
             get
             {
@@ -427,7 +427,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Location Location
+        public Connector.Location Location
         {
             get
             {
@@ -466,7 +466,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelSearchProcessingInfo ProcessingInfo
+        public Connector.HotelSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -479,7 +479,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelProperty[] PropertiesToSearch
+        public Connector.HotelProperty[] PropertiesToSearch
         {
             get
             {
@@ -492,7 +492,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RoomOccupancyType[] RoomOccupancyTypes
+        public Connector.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -531,7 +531,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelSearchType SearchType
+        public Connector.HotelSearchType SearchType
         {
             get
             {
@@ -544,7 +544,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.DateTimeSpan StayPeriod
+        public Connector.DateTimeSpan StayPeriod
         {
             get
             {
@@ -557,7 +557,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Tag[] Tags
+        public Connector.Tag[] Tags
         {
             get
             {
@@ -570,7 +570,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelSearchPreference TravelPreference
+        public Connector.HotelSearchPreference TravelPreference
         {
             get
             {
@@ -668,8 +668,8 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFilter", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.AvailabilityFilter))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.ViewPortFilter))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.AvailabilityFilter))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.ViewPortFilter))]
     public partial class HotelFilter : object
     {
     }
@@ -677,59 +677,59 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerary", Namespace="http://tavisca.com")]
-    public partial class HotelItinerary : Engines.TripItinerary
+    public partial class HotelItinerary : Connector.TripItinerary
     {
         
-        private Engines.Deposit[] AcceptableDepositsField;
+        private Connector.Deposit[] AcceptableDepositsField;
         
-        private Engines.Guarantee[] AcceptableGuaranteesField;
+        private Connector.Guarantee[] AcceptableGuaranteesField;
         
         private bool AllPaxDetailsRequiredField;
         
-        private Engines.AllowedCountry[] AllowedCountriesField;
+        private Connector.AllowedCountry[] AllowedCountriesField;
         
-        private Engines.HotelContract ContractField;
+        private Connector.HotelContract ContractField;
         
-        private Engines.Deal[] DealsField;
+        private Connector.Deal[] DealsField;
         
         private bool DepositRequiredField;
         
         private string[] DepositTextField;
         
-        private Engines.HotelDiscountCode DiscountCodeField;
+        private Connector.HotelDiscountCode DiscountCodeField;
         
-        private Engines.HotelFare FareField;
+        private Connector.HotelFare FareField;
         
         private bool GuaranteeRequiredField;
         
         private string[] GuaranteeTextField;
         
-        private Engines.HotelCancellationPolicy HotelCancellationPolicyField;
+        private Connector.HotelCancellationPolicy HotelCancellationPolicyField;
         
-        private Engines.PromotionalHotelDeal[] HotelDealsField;
+        private Connector.PromotionalHotelDeal[] HotelDealsField;
         
-        private Engines.HotelFareSource HotelFareSourceField;
+        private Connector.HotelFareSource HotelFareSourceField;
         
-        private Engines.HotelProperty HotelPropertyField;
+        private Connector.HotelProperty HotelPropertyField;
         
         private string ItineraryTypeField;
         
-        private Engines.MarkupPlan MarkupPlanField;
+        private Connector.MarkupPlan MarkupPlanField;
         
-        private Engines.HotelPolicy[] PoliciesField;
+        private Connector.HotelPolicy[] PoliciesField;
         
-        private Engines.Room[] RoomsField;
+        private Connector.Room[] RoomsField;
         
-        private Engines.Season[] SeasonsField;
+        private Connector.Season[] SeasonsField;
         
         private string SegmentRefField;
         
         private bool ShippingAddressRequiredField;
         
-        private Engines.DateTimeSpan StayPeriodField;
+        private Connector.DateTimeSpan StayPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Deposit[] AcceptableDeposits
+        public Connector.Deposit[] AcceptableDeposits
         {
             get
             {
@@ -742,7 +742,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Guarantee[] AcceptableGuarantees
+        public Connector.Guarantee[] AcceptableGuarantees
         {
             get
             {
@@ -768,7 +768,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.AllowedCountry[] AllowedCountries
+        public Connector.AllowedCountry[] AllowedCountries
         {
             get
             {
@@ -781,7 +781,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelContract Contract
+        public Connector.HotelContract Contract
         {
             get
             {
@@ -794,7 +794,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Deal[] Deals
+        public Connector.Deal[] Deals
         {
             get
             {
@@ -833,7 +833,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelDiscountCode DiscountCode
+        public Connector.HotelDiscountCode DiscountCode
         {
             get
             {
@@ -846,7 +846,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelFare Fare
+        public Connector.HotelFare Fare
         {
             get
             {
@@ -885,7 +885,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelCancellationPolicy HotelCancellationPolicy
+        public Connector.HotelCancellationPolicy HotelCancellationPolicy
         {
             get
             {
@@ -898,7 +898,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PromotionalHotelDeal[] HotelDeals
+        public Connector.PromotionalHotelDeal[] HotelDeals
         {
             get
             {
@@ -911,7 +911,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelFareSource HotelFareSource
+        public Connector.HotelFareSource HotelFareSource
         {
             get
             {
@@ -924,7 +924,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelProperty HotelProperty
+        public Connector.HotelProperty HotelProperty
         {
             get
             {
@@ -950,7 +950,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.MarkupPlan MarkupPlan
+        public Connector.MarkupPlan MarkupPlan
         {
             get
             {
@@ -963,7 +963,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelPolicy[] Policies
+        public Connector.HotelPolicy[] Policies
         {
             get
             {
@@ -976,7 +976,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Room[] Rooms
+        public Connector.Room[] Rooms
         {
             get
             {
@@ -989,7 +989,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Season[] Seasons
+        public Connector.Season[] Seasons
         {
             get
             {
@@ -1028,7 +1028,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.DateTimeSpan StayPeriod
+        public Connector.DateTimeSpan StayPeriod
         {
             get
             {
@@ -1044,22 +1044,22 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripSearchCriterion", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelSearchCriterion))]
     public partial class TripSearchCriterion : object
     {
         
-        private Engines.StateBag[] AttributesField;
+        private Connector.StateBag[] AttributesField;
         
         private bool MatrixResultsField;
         
         private int MaximumResultsField;
         
-        private Engines.PointOfSale PosField;
+        private Connector.PointOfSale PosField;
         
         private string PriceCurrencyCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] Attributes
+        public Connector.StateBag[] Attributes
         {
             get
             {
@@ -1098,7 +1098,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PointOfSale Pos
+        public Connector.PointOfSale Pos
         {
             get
             {
@@ -1130,16 +1130,16 @@ namespace Engines
     public partial class PointOfSale : object
     {
         
-        private Engines.StateBag[] AdditionalInfoField;
+        private Connector.StateBag[] AdditionalInfoField;
         
         private string AgentSignField;
         
         private int PosIdField;
         
-        private Engines.Company RequesterField;
+        private Connector.Company RequesterField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] AdditionalInfo
+        public Connector.StateBag[] AdditionalInfo
         {
             get
             {
@@ -1178,7 +1178,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Company Requester
+        public Connector.Company Requester
         {
             get
             {
@@ -1194,17 +1194,17 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Location", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Airport))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.City))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Address))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.Airport))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.City))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.Address))]
     public partial class Location : object
     {
         
         private string CodeField;
         
-        private Engines.LocationCodeContext CodeContextField;
+        private Connector.LocationCodeContext CodeContextField;
         
-        private Engines.GeoCode GeoCodeField;
+        private Connector.GeoCode GeoCodeField;
         
         private int GmtOffsetMinutesField;
         
@@ -1212,9 +1212,9 @@ namespace Engines
         
         private string NameField;
         
-        private Engines.Distance RadiusField;
+        private Connector.Distance RadiusField;
         
-        private Engines.StateBag[] SupplierSideDataField;
+        private Connector.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -1230,7 +1230,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.LocationCodeContext CodeContext
+        public Connector.LocationCodeContext CodeContext
         {
             get
             {
@@ -1243,7 +1243,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.GeoCode GeoCode
+        public Connector.GeoCode GeoCode
         {
             get
             {
@@ -1295,7 +1295,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Distance Radius
+        public Connector.Distance Radius
         {
             get
             {
@@ -1308,7 +1308,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] SupplierSideData
+        public Connector.StateBag[] SupplierSideData
         {
             get
             {
@@ -1327,22 +1327,22 @@ namespace Engines
     public partial class HotelSearchProcessingInfo : object
     {
         
-        private Engines.HotelDisplayOrder DisplayOrderField;
+        private Connector.HotelDisplayOrder DisplayOrderField;
         
-        private Engines.HotelFareSource[] FareSourcesField;
+        private Connector.HotelFareSource[] FareSourcesField;
         
-        private Engines.FareType[] FareTypesField;
+        private Connector.FareType[] FareTypesField;
         
-        private Engines.HotelContentPreference[] HotelContentPreferencesField;
+        private Connector.HotelContentPreference[] HotelContentPreferencesField;
         
-        private Engines.HotelSearchNearByDates HotelSearchNearByDatesField;
+        private Connector.HotelSearchNearByDates HotelSearchNearByDatesField;
         
-        private Engines.GeoCode POIGeoCodeField;
+        private Connector.GeoCode POIGeoCodeField;
         
-        private Engines.PreferenceSortInfo[] PreferenceSortInfoListField;
+        private Connector.PreferenceSortInfo[] PreferenceSortInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelDisplayOrder DisplayOrder
+        public Connector.HotelDisplayOrder DisplayOrder
         {
             get
             {
@@ -1355,7 +1355,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelFareSource[] FareSources
+        public Connector.HotelFareSource[] FareSources
         {
             get
             {
@@ -1368,7 +1368,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.FareType[] FareTypes
+        public Connector.FareType[] FareTypes
         {
             get
             {
@@ -1381,7 +1381,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelContentPreference[] HotelContentPreferences
+        public Connector.HotelContentPreference[] HotelContentPreferences
         {
             get
             {
@@ -1394,7 +1394,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelSearchNearByDates HotelSearchNearByDates
+        public Connector.HotelSearchNearByDates HotelSearchNearByDates
         {
             get
             {
@@ -1407,7 +1407,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.GeoCode POIGeoCode
+        public Connector.GeoCode POIGeoCode
         {
             get
             {
@@ -1420,7 +1420,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PreferenceSortInfo[] PreferenceSortInfoList
+        public Connector.PreferenceSortInfo[] PreferenceSortInfoList
         {
             get
             {
@@ -1488,41 +1488,41 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchPreference", Namespace="http://tavisca.com")]
-    public partial class HotelSearchPreference : Engines.TravelPreference
+    public partial class HotelSearchPreference : Connector.TravelPreference
     {
         
-        private Engines.AmenityPreference[] AmenitiesField;
+        private Connector.AmenityPreference[] AmenitiesField;
         
         private string[] CityNamePreferenceListField;
         
-        private Engines.FareType[] FareTypeListField;
+        private Connector.FareType[] FareTypeListField;
         
-        private Engines.CompanyPreference[] HotelChainsField;
+        private Connector.CompanyPreference[] HotelChainsField;
         
-        private Engines.HotelNamePreference HotelNamePreferenceField;
+        private Connector.HotelNamePreference HotelNamePreferenceField;
         
         private string[] ItineraryRphListToFilterField;
         
-        private Engines.Distance MaxDistanceField;
+        private Connector.Distance MaxDistanceField;
         
         private int MaxNumberOfBedRoomsField;
         
         private int MaxOccupancyField;
         
-        private Engines.Distance MinDistanceField;
+        private Connector.Distance MinDistanceField;
         
         private int MinNumberOfBedRoomsField;
         
         private int MinOccupancyField;
         
-        private Engines.HotelPaymentType[] PaymentTypesField;
+        private Connector.HotelPaymentType[] PaymentTypesField;
         
-        private Engines.RateRangePreference RateRangePreferenceField;
+        private Connector.RateRangePreference RateRangePreferenceField;
         
-        private Engines.HotelRating[] RatingListField;
+        private Connector.HotelRating[] RatingListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.AmenityPreference[] Amenities
+        public Connector.AmenityPreference[] Amenities
         {
             get
             {
@@ -1548,7 +1548,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.FareType[] FareTypeList
+        public Connector.FareType[] FareTypeList
         {
             get
             {
@@ -1561,7 +1561,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.CompanyPreference[] HotelChains
+        public Connector.CompanyPreference[] HotelChains
         {
             get
             {
@@ -1574,7 +1574,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelNamePreference HotelNamePreference
+        public Connector.HotelNamePreference HotelNamePreference
         {
             get
             {
@@ -1600,7 +1600,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Distance MaxDistance
+        public Connector.Distance MaxDistance
         {
             get
             {
@@ -1639,7 +1639,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Distance MinDistance
+        public Connector.Distance MinDistance
         {
             get
             {
@@ -1678,7 +1678,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelPaymentType[] PaymentTypes
+        public Connector.HotelPaymentType[] PaymentTypes
         {
             get
             {
@@ -1691,7 +1691,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RateRangePreference RateRangePreference
+        public Connector.RateRangePreference RateRangePreference
         {
             get
             {
@@ -1704,7 +1704,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelRating[] RatingList
+        public Connector.HotelRating[] RatingList
         {
             get
             {
@@ -1725,7 +1725,7 @@ namespace Engines
         
         private int[] AgesField;
         
-        private Engines.PassengerType PassengerTypeField;
+        private Connector.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
@@ -1743,7 +1743,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PassengerType PassengerType
+        public Connector.PassengerType PassengerType
         {
             get
             {
@@ -1772,41 +1772,41 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelProperty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.VacationRentalProperty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.VacationRentalProperty))]
     public partial class HotelProperty : object
     {
         
-        private Engines.Activity[] ActivityOptionsField;
+        private Connector.Activity[] ActivityOptionsField;
         
-        private Engines.Address AddressField;
+        private Connector.Address AddressField;
         
-        private Engines.Amenity[] AmenitiesField;
+        private Connector.Amenity[] AmenitiesField;
         
-        private Engines.AreaAttraction[] AreaAttractionsField;
+        private Connector.AreaAttraction[] AreaAttractionsField;
         
-        private Engines.AvailabilityCalender AvailabilityCalenderField;
+        private Connector.AvailabilityCalender AvailabilityCalenderField;
         
-        private Engines.TimeDetail[] CheckInOptionsField;
+        private Connector.TimeDetail[] CheckInOptionsField;
         
-        private Engines.TimeDetail[] CheckOutOptionsField;
+        private Connector.TimeDetail[] CheckOutOptionsField;
         
-        private Engines.HotelDescription[] DescriptionsField;
+        private Connector.HotelDescription[] DescriptionsField;
         
-        private Engines.Distance DistanceField;
+        private Connector.Distance DistanceField;
         
         private string FaxNumberField;
         
-        private Engines.GeoCode GeoCodeField;
+        private Connector.GeoCode GeoCodeField;
         
-        private Engines.HotelChain HotelChainField;
+        private Connector.HotelChain HotelChainField;
         
-        private Engines.HotelMultimedia HotelMultiMediaField;
+        private Connector.HotelMultimedia HotelMultiMediaField;
         
-        private Engines.HotelRating HotelRatingField;
+        private Connector.HotelRating HotelRatingField;
         
         private int IdField;
         
-        private Engines.Media[] MediaContentField;
+        private Connector.Media[] MediaContentField;
         
         private string NameField;
         
@@ -1814,20 +1814,20 @@ namespace Engines
         
         private string PhoneNumberField;
         
-        private Engines.Review[] ReviewsField;
+        private Connector.Review[] ReviewsField;
         
-        private Engines.StateBag[] StateBagField;
+        private Connector.StateBag[] StateBagField;
         
         private string SupplierHotelIdField;
         
-        private Engines.Tag[] TagsField;
+        private Connector.Tag[] TagsField;
         
-        private Engines.Media ThumbnailField;
+        private Connector.Media ThumbnailField;
         
         private string WebsiteUrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Activity[] ActivityOptions
+        public Connector.Activity[] ActivityOptions
         {
             get
             {
@@ -1840,7 +1840,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Address Address
+        public Connector.Address Address
         {
             get
             {
@@ -1853,7 +1853,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Amenity[] Amenities
+        public Connector.Amenity[] Amenities
         {
             get
             {
@@ -1866,7 +1866,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.AreaAttraction[] AreaAttractions
+        public Connector.AreaAttraction[] AreaAttractions
         {
             get
             {
@@ -1879,7 +1879,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.AvailabilityCalender AvailabilityCalender
+        public Connector.AvailabilityCalender AvailabilityCalender
         {
             get
             {
@@ -1892,7 +1892,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.TimeDetail[] CheckInOptions
+        public Connector.TimeDetail[] CheckInOptions
         {
             get
             {
@@ -1905,7 +1905,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.TimeDetail[] CheckOutOptions
+        public Connector.TimeDetail[] CheckOutOptions
         {
             get
             {
@@ -1918,7 +1918,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelDescription[] Descriptions
+        public Connector.HotelDescription[] Descriptions
         {
             get
             {
@@ -1931,7 +1931,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Distance Distance
+        public Connector.Distance Distance
         {
             get
             {
@@ -1957,7 +1957,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.GeoCode GeoCode
+        public Connector.GeoCode GeoCode
         {
             get
             {
@@ -1970,7 +1970,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelChain HotelChain
+        public Connector.HotelChain HotelChain
         {
             get
             {
@@ -1983,7 +1983,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelMultimedia HotelMultiMedia
+        public Connector.HotelMultimedia HotelMultiMedia
         {
             get
             {
@@ -1996,7 +1996,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelRating HotelRating
+        public Connector.HotelRating HotelRating
         {
             get
             {
@@ -2022,7 +2022,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Media[] MediaContent
+        public Connector.Media[] MediaContent
         {
             get
             {
@@ -2074,7 +2074,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Review[] Reviews
+        public Connector.Review[] Reviews
         {
             get
             {
@@ -2087,7 +2087,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] StateBag
+        public Connector.StateBag[] StateBag
         {
             get
             {
@@ -2113,7 +2113,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Tag[] Tags
+        public Connector.Tag[] Tags
         {
             get
             {
@@ -2126,7 +2126,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Media Thumbnail
+        public Connector.Media Thumbnail
         {
             get
             {
@@ -2160,7 +2160,7 @@ namespace Engines
         
         private string OccupancyCodeField;
         
-        private Engines.PassengerTypeQuantity[] PaxQuantitiesField;
+        private Connector.PassengerTypeQuantity[] PaxQuantitiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string OccupancyCode
@@ -2176,7 +2176,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PassengerTypeQuantity[] PaxQuantities
+        public Connector.PassengerTypeQuantity[] PaxQuantities
         {
             get
             {
@@ -2274,16 +2274,16 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelChain))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.CompanyPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelChain))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.CompanyPreference))]
     public partial class Company : object
     {
         
-        private Engines.Agency AgencyField;
+        private Connector.Agency AgencyField;
         
         private string CodeField;
         
-        private Engines.CompanyCodeContext CodeContextField;
+        private Connector.CompanyCodeContext CodeContextField;
         
         private string DKField;
         
@@ -2295,12 +2295,12 @@ namespace Engines
         
         private int IDField;
         
-        private Engines.Media LogoField;
+        private Connector.Media LogoField;
         
         private string ShortNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Agency Agency
+        public Connector.Agency Agency
         {
             get
             {
@@ -2326,7 +2326,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.CompanyCodeContext CodeContext
+        public Connector.CompanyCodeContext CodeContext
         {
             get
             {
@@ -2404,7 +2404,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Media Logo
+        public Connector.Media Logo
         {
             get
             {
@@ -2436,14 +2436,14 @@ namespace Engines
     public partial class Agency : object
     {
         
-        private Engines.Address AgencyAddressField;
+        private Connector.Address AgencyAddressField;
         
         private int AgencyIdField;
         
         private string AgencyNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Address AgencyAddress
+        public Connector.Address AgencyAddress
         {
             get
             {
@@ -2488,16 +2488,16 @@ namespace Engines
     public partial class Media : object
     {
         
-        private Engines.MediaCaptionType CaptionField;
+        private Connector.MediaCaptionType CaptionField;
         
         private string MimeTypeField;
         
-        private Engines.MediaType TypeField;
+        private Connector.MediaType TypeField;
         
         private string UrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.MediaCaptionType Caption
+        public Connector.MediaCaptionType Caption
         {
             get
             {
@@ -2523,7 +2523,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.MediaType Type
+        public Connector.MediaType Type
         {
             get
             {
@@ -2552,20 +2552,20 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelChain", Namespace="http://tavisca.com")]
-    public partial class HotelChain : Engines.Company
+    public partial class HotelChain : Connector.Company
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompanyPreference", Namespace="http://tavisca.com")]
-    public partial class CompanyPreference : Engines.Company
+    public partial class CompanyPreference : Connector.Company
     {
         
-        private Engines.PreferLevel PreferLevelField;
+        private Connector.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PreferLevel PreferLevel
+        public Connector.PreferLevel PreferLevel
         {
             get
             {
@@ -2602,7 +2602,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://tavisca.com")]
-    public partial class Address : Engines.Location
+    public partial class Address : Connector.Location
     {
         
         private string AddressLine1Field;
@@ -2611,7 +2611,7 @@ namespace Engines
         
         private string AddressSchemeField;
         
-        private Engines.City CityField;
+        private Connector.City CityField;
         
         private string CompleteAddressField;
         
@@ -2659,7 +2659,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.City City
+        public Connector.City City
         {
             get
             {
@@ -2756,9 +2756,9 @@ namespace Engines
         
         private float AmountField;
         
-        private Engines.LocationCodeContext FromField;
+        private Connector.LocationCodeContext FromField;
         
-        private Engines.DistanceUnit UnitField;
+        private Connector.DistanceUnit UnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Amount
@@ -2774,7 +2774,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.LocationCodeContext From
+        public Connector.LocationCodeContext From
         {
             get
             {
@@ -2787,7 +2787,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.DistanceUnit Unit
+        public Connector.DistanceUnit Unit
         {
             get
             {
@@ -2803,15 +2803,15 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Airport", Namespace="http://tavisca.com")]
-    public partial class Airport : Engines.Location
+    public partial class Airport : Connector.Location
     {
         
-        private Engines.AirportType AirportTypeField;
+        private Connector.AirportType AirportTypeField;
         
-        private Engines.City CityField;
+        private Connector.City CityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.AirportType AirportType
+        public Connector.AirportType AirportType
         {
             get
             {
@@ -2824,7 +2824,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.City City
+        public Connector.City City
         {
             get
             {
@@ -2840,7 +2840,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="City", Namespace="http://tavisca.com")]
-    public partial class City : Engines.Location
+    public partial class City : Connector.Location
     {
         
         private string CountryField;
@@ -3394,7 +3394,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFareSource", Namespace="http://tavisca.com")]
-    public partial class HotelFareSource : Engines.FareSource
+    public partial class HotelFareSource : Connector.FareSource
     {
     }
     
@@ -3461,14 +3461,14 @@ namespace Engines
     public partial class PreferenceSortInfo : object
     {
         
-        private Engines.FareType FareTypeField;
+        private Connector.FareType FareTypeField;
         
         private bool FareTypeSpecifiedField;
         
         private string VendorCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.FareType FareType
+        public Connector.FareType FareType
         {
             get
             {
@@ -3510,7 +3510,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="FareSource", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelFareSource))]
     public partial class FareSource : object
     {
         
@@ -3566,12 +3566,12 @@ namespace Engines
     public partial class AvailabilityCalender : object
     {
         
-        private Engines.AvailabilityStatus AvailabilityStatusField;
+        private Connector.AvailabilityStatus AvailabilityStatusField;
         
-        private Engines.DateRange[] TimeSpansField;
+        private Connector.DateRange[] TimeSpansField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.AvailabilityStatus AvailabilityStatus
+        public Connector.AvailabilityStatus AvailabilityStatus
         {
             get
             {
@@ -3584,7 +3584,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.DateRange[] TimeSpans
+        public Connector.DateRange[] TimeSpans
         {
             get
             {
@@ -3777,7 +3777,7 @@ namespace Engines
         
         private float RatingField;
         
-        private Engines.RatingType RatingTypeField;
+        private Connector.RatingType RatingTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Rating
@@ -3793,7 +3793,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RatingType RatingType
+        public Connector.RatingType RatingType
         {
             get
             {
@@ -3809,7 +3809,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="VacationRentalProperty", Namespace="http://tavisca.com")]
-    public partial class VacationRentalProperty : Engines.HotelProperty
+    public partial class VacationRentalProperty : Connector.HotelProperty
     {
         
         private int BathroomsField;
@@ -3820,11 +3820,11 @@ namespace Engines
         
         private int MaxOccupancyField;
         
-        private Engines.PropertyOwner OwnerField;
+        private Connector.PropertyOwner OwnerField;
         
-        private Engines.Area PropertyAreaField;
+        private Connector.Area PropertyAreaField;
         
-        private Engines.SeasonalRate[] SeasonalRatesField;
+        private Connector.SeasonalRate[] SeasonalRatesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Bathrooms
@@ -3879,7 +3879,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PropertyOwner Owner
+        public Connector.PropertyOwner Owner
         {
             get
             {
@@ -3892,7 +3892,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Area PropertyArea
+        public Connector.Area PropertyArea
         {
             get
             {
@@ -3905,7 +3905,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.SeasonalRate[] SeasonalRates
+        public Connector.SeasonalRate[] SeasonalRates
         {
             get
             {
@@ -3928,13 +3928,13 @@ namespace Engines
         
         private string DescriptionField;
         
-        private Engines.Distance DistanceField;
+        private Connector.Distance DistanceField;
         
-        private Engines.GeoCode GeoCodeField;
+        private Connector.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private Engines.Tag[] TagsField;
+        private Connector.Tag[] TagsField;
         
         private string TypeField;
         
@@ -3965,7 +3965,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Distance Distance
+        public Connector.Distance Distance
         {
             get
             {
@@ -3978,7 +3978,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.GeoCode GeoCode
+        public Connector.GeoCode GeoCode
         {
             get
             {
@@ -4004,7 +4004,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Tag[] Tags
+        public Connector.Tag[] Tags
         {
             get
             {
@@ -4033,7 +4033,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Amenity", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.AmenityPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.AmenityPreference))]
     public partial class Amenity : object
     {
         
@@ -4168,11 +4168,11 @@ namespace Engines
         
         private string DescriptionField;
         
-        private Engines.GeoCode GeoCodeField;
+        private Connector.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private Engines.Tag[] TagsField;
+        private Connector.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Address
@@ -4201,7 +4201,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.GeoCode GeoCode
+        public Connector.GeoCode GeoCode
         {
             get
             {
@@ -4227,7 +4227,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Tag[] Tags
+        public Connector.Tag[] Tags
         {
             get
             {
@@ -4248,7 +4248,7 @@ namespace Engines
         
         private System.DateTime BeginDateField;
         
-        private Engines.Day DayField;
+        private Connector.Day DayField;
         
         private System.DateTime EndDateField;
         
@@ -4268,7 +4268,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Day Day
+        public Connector.Day Day
         {
             get
             {
@@ -4350,20 +4350,20 @@ namespace Engines
     public partial class Review : object
     {
         
-        private Engines.HelpfulVotes HelpfulVotesField;
+        private Connector.HelpfulVotes HelpfulVotesField;
         
         private decimal RatingField;
         
-        private Engines.ReviewRating[] RatingsField;
+        private Connector.ReviewRating[] RatingsField;
         
-        private Engines.Reviewer ReviewerField;
+        private Connector.Reviewer ReviewerField;
         
         private string TextField;
         
         private string TitleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HelpfulVotes HelpfulVotes
+        public Connector.HelpfulVotes HelpfulVotes
         {
             get
             {
@@ -4389,7 +4389,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.ReviewRating[] Ratings
+        public Connector.ReviewRating[] Ratings
         {
             get
             {
@@ -4402,7 +4402,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Reviewer Reviewer
+        public Connector.Reviewer Reviewer
         {
             get
             {
@@ -4444,13 +4444,13 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AmenityPreference", Namespace="http://tavisca.com")]
-    public partial class AmenityPreference : Engines.Amenity
+    public partial class AmenityPreference : Connector.Amenity
     {
         
-        private Engines.PreferLevel PreferLevelField;
+        private Connector.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PreferLevel PreferLevel
+        public Connector.PreferLevel PreferLevel
         {
             get
             {
@@ -4603,7 +4603,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Reviewer", Namespace="http://tavisca.com")]
-    public partial class Reviewer : Engines.Person
+    public partial class Reviewer : Connector.Person
     {
         
         private System.DateTime StayDateField;
@@ -4662,8 +4662,8 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.PropertyOwner))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Reviewer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.PropertyOwner))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.Reviewer))]
     public partial class Person : object
     {
         
@@ -4731,7 +4731,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PropertyOwner", Namespace="http://tavisca.com")]
-    public partial class PropertyOwner : Engines.Person
+    public partial class PropertyOwner : Connector.Person
     {
     }
     
@@ -4782,11 +4782,11 @@ namespace Engines
         
         private System.DateTime EndDateField;
         
-        private Engines.StayDuration MinimumStayField;
+        private Connector.StayDuration MinimumStayField;
         
         private string PeriodNameField;
         
-        private Engines.Money RateField;
+        private Connector.Money RateField;
         
         private string RateTypeField;
         
@@ -4817,7 +4817,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StayDuration MinimumStay
+        public Connector.StayDuration MinimumStay
         {
             get
             {
@@ -4843,7 +4843,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money Rate
+        public Connector.Money Rate
         {
             get
             {
@@ -4909,14 +4909,14 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Money", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.DailyRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.BaseFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Commission))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Fee))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Discount))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Markup))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.Tax))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.MatrixCellData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.DailyRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.BaseFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.Commission))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.Fee))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.Discount))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.Markup))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.Tax))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.MatrixCellData))]
     public partial class Money : object
     {
         
@@ -5029,7 +5029,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DailyRate", Namespace="http://tavisca.com")]
-    public partial class DailyRate : Engines.Money
+    public partial class DailyRate : Connector.Money
     {
         
         private System.DateTime EndDateField;
@@ -5066,14 +5066,14 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseFare", Namespace="http://tavisca.com")]
-    public partial class BaseFare : Engines.Money
+    public partial class BaseFare : Connector.Money
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Commission", Namespace="http://tavisca.com")]
-    public partial class Commission : Engines.Money
+    public partial class Commission : Connector.Money
     {
         
         private long IdField;
@@ -5125,7 +5125,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fee", Namespace="http://tavisca.com")]
-    public partial class Fee : Engines.Money
+    public partial class Fee : Connector.Money
     {
         
         private long IdField;
@@ -5192,7 +5192,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Discount", Namespace="http://tavisca.com")]
-    public partial class Discount : Engines.Money
+    public partial class Discount : Connector.Money
     {
         
         private long IdField;
@@ -5244,7 +5244,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Markup", Namespace="http://tavisca.com")]
-    public partial class Markup : Engines.Money
+    public partial class Markup : Connector.Money
     {
         
         private long IdField;
@@ -5296,7 +5296,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Tax", Namespace="http://tavisca.com")]
-    public partial class Tax : Engines.Money
+    public partial class Tax : Connector.Money
     {
         
         private string CodeField;
@@ -5348,7 +5348,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixCellData", Namespace="http://tavisca.com")]
-    public partial class MatrixCellData : Engines.Money
+    public partial class MatrixCellData : Connector.Money
     {
         
         private string RemarksField;
@@ -5370,13 +5370,13 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TravelPreference", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelSearchPreference))]
     public partial class TravelPreference : object
     {
         
         private string SpecialRequestField;
         
-        private Engines.CompanyPreference[] VendorPreferencesField;
+        private Connector.CompanyPreference[] VendorPreferencesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string SpecialRequest
@@ -5392,7 +5392,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.CompanyPreference[] VendorPreferences
+        public Connector.CompanyPreference[] VendorPreferences
         {
             get
             {
@@ -5413,7 +5413,7 @@ namespace Engines
         
         private string NameField;
         
-        private Engines.PreferLevel PreferLevelField;
+        private Connector.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Name
@@ -5429,7 +5429,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PreferLevel PreferLevel
+        public Connector.PreferLevel PreferLevel
         {
             get
             {
@@ -5448,14 +5448,14 @@ namespace Engines
     public partial class RateRangePreference : object
     {
         
-        private Engines.Money MaxRateField;
+        private Connector.Money MaxRateField;
         
-        private Engines.Money MinRateField;
+        private Connector.Money MinRateField;
         
-        private Engines.PreferLevel PreferLevelField;
+        private Connector.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money MaxRate
+        public Connector.Money MaxRate
         {
             get
             {
@@ -5468,7 +5468,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money MinRate
+        public Connector.Money MinRate
         {
             get
             {
@@ -5481,7 +5481,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PreferLevel PreferLevel
+        public Connector.PreferLevel PreferLevel
         {
             get
             {
@@ -5509,28 +5509,28 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripItinerary", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelItinerary))]
     public partial class TripItinerary : object
     {
         
-        private Engines.StateBag[] AdditionalInformationField;
+        private Connector.StateBag[] AdditionalInformationField;
         
-        private Engines.TripAddOn[] AvailableAddonsField;
+        private Connector.TripAddOn[] AvailableAddonsField;
         
         private System.Guid IdField;
         
-        private Engines.ItineraryStatusType ItineraryStatusField;
+        private Connector.ItineraryStatusType ItineraryStatusField;
         
         private string NotesField;
         
         private int RphField;
         
-        private Engines.TripAddOn[] SelectedAddonsField;
+        private Connector.TripAddOn[] SelectedAddonsField;
         
-        private Engines.Tag[] TagsField;
+        private Connector.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] AdditionalInformation
+        public Connector.StateBag[] AdditionalInformation
         {
             get
             {
@@ -5543,7 +5543,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.TripAddOn[] AvailableAddons
+        public Connector.TripAddOn[] AvailableAddons
         {
             get
             {
@@ -5569,7 +5569,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.ItineraryStatusType ItineraryStatus
+        public Connector.ItineraryStatusType ItineraryStatus
         {
             get
             {
@@ -5608,7 +5608,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.TripAddOn[] SelectedAddons
+        public Connector.TripAddOn[] SelectedAddons
         {
             get
             {
@@ -5621,7 +5621,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Tag[] Tags
+        public Connector.Tag[] Tags
         {
             get
             {
@@ -5637,20 +5637,20 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelAddOn))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.TransferAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.TransferAddOn))]
     public partial class TripAddOn : object
     {
         
-        private Engines.StateBag[] AdditionalInformationField;
+        private Connector.StateBag[] AdditionalInformationField;
         
-        private Engines.AddOnBookingInfo BookingInformationField;
+        private Connector.AddOnBookingInfo BookingInformationField;
         
         private string DescriptionField;
         
-        private Engines.TripAddOnFare FareField;
+        private Connector.TripAddOnFare FareField;
         
-        private Engines.FareSource FareSourceField;
+        private Connector.FareSource FareSourceField;
         
         private System.Guid IdField;
         
@@ -5661,7 +5661,7 @@ namespace Engines
         private string TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] AdditionalInformation
+        public Connector.StateBag[] AdditionalInformation
         {
             get
             {
@@ -5674,7 +5674,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.AddOnBookingInfo BookingInformation
+        public Connector.AddOnBookingInfo BookingInformation
         {
             get
             {
@@ -5700,7 +5700,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.TripAddOnFare Fare
+        public Connector.TripAddOnFare Fare
         {
             get
             {
@@ -5713,7 +5713,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.FareSource FareSource
+        public Connector.FareSource FareSource
         {
             get
             {
@@ -5964,9 +5964,9 @@ namespace Engines
         
         private string RateCodeField;
         
-        private Engines.StateBag[] SupplierSideDataField;
+        private Connector.StateBag[] SupplierSideDataField;
         
-        private Engines.HotelDiscountType TypeField;
+        private Connector.HotelDiscountType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ChainCode
@@ -6021,7 +6021,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] SupplierSideData
+        public Connector.StateBag[] SupplierSideData
         {
             get
             {
@@ -6034,7 +6034,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelDiscountType Type
+        public Connector.HotelDiscountType Type
         {
             get
             {
@@ -6050,17 +6050,17 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFare", Namespace="http://tavisca.com")]
-    public partial class HotelFare : Engines.Fare
+    public partial class HotelFare : Connector.Fare
     {
         
-        private Engines.Money AvgDailyRateField;
+        private Connector.Money AvgDailyRateField;
         
-        private Engines.Money MaxDailyRateField;
+        private Connector.Money MaxDailyRateField;
         
-        private Engines.Money MinDailyRateField;
+        private Connector.Money MinDailyRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money AvgDailyRate
+        public Connector.Money AvgDailyRate
         {
             get
             {
@@ -6073,7 +6073,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money MaxDailyRate
+        public Connector.Money MaxDailyRate
         {
             get
             {
@@ -6086,7 +6086,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money MinDailyRate
+        public Connector.Money MinDailyRate
         {
             get
             {
@@ -6102,7 +6102,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPolicy : Engines.CancellationPolicy
+    public partial class HotelCancellationPolicy : Connector.CancellationPolicy
     {
     }
     
@@ -6114,13 +6114,13 @@ namespace Engines
         
         private bool AllowDynamicField;
         
-        private Engines.MarkupApplicationAmount ApplyOnAmountField;
+        private Connector.MarkupApplicationAmount ApplyOnAmountField;
         
         private string FareTypeField;
         
         private bool IsEnabledField;
         
-        private Engines.MarkupApplicationType MarkupApplicationTypeField;
+        private Connector.MarkupApplicationType MarkupApplicationTypeField;
         
         private long MarkupPlanIdField;
         
@@ -6142,7 +6142,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.MarkupApplicationAmount ApplyOnAmount
+        public Connector.MarkupApplicationAmount ApplyOnAmount
         {
             get
             {
@@ -6181,7 +6181,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.MarkupApplicationType MarkupApplicationType
+        public Connector.MarkupApplicationType MarkupApplicationType
         {
             get
             {
@@ -6243,7 +6243,7 @@ namespace Engines
         
         private string NameField;
         
-        private Engines.DepositType TypeField;
+        private Connector.DepositType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -6272,7 +6272,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.DepositType Type
+        public Connector.DepositType Type
         {
             get
             {
@@ -6295,7 +6295,7 @@ namespace Engines
         
         private string NameField;
         
-        private Engines.GuaranteeType TypeField;
+        private Connector.GuaranteeType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -6324,7 +6324,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.GuaranteeType Type
+        public Connector.GuaranteeType Type
         {
             get
             {
@@ -6343,14 +6343,14 @@ namespace Engines
     public partial class AllowedCountry : object
     {
         
-        private Engines.AllowedState[] AllowedStatesField;
+        private Connector.AllowedState[] AllowedStatesField;
         
         private string CodeField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.AllowedState[] AllowedStates
+        public Connector.AllowedState[] AllowedStates
         {
             get
             {
@@ -6392,20 +6392,20 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Deal", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.PaystayDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.PercentageDiscountDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.OpaqueDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.DiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.PaystayDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.PercentageDiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.OpaqueDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.DiscountDeal))]
     public partial class Deal : object
     {
         
-        private Engines.DealStatus DealStatusField;
+        private Connector.DealStatus DealStatusField;
         
         private string DealTypeField;
         
         private System.DateTime EndDateField;
         
-        private Engines.Media ImageField;
+        private Connector.Media ImageField;
         
         private bool IsPackageOnlyField;
         
@@ -6419,7 +6419,7 @@ namespace Engines
         
         private System.DateTime StartDateField;
         
-        private Engines.Tag[] TagsField;
+        private Connector.Tag[] TagsField;
         
         private string TitleField;
         
@@ -6428,7 +6428,7 @@ namespace Engines
         private System.DateTime UsageStartDateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.DealStatus DealStatus
+        public Connector.DealStatus DealStatus
         {
             get
             {
@@ -6467,7 +6467,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Media Image
+        public Connector.Media Image
         {
             get
             {
@@ -6558,7 +6558,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Tag[] Tags
+        public Connector.Tag[] Tags
         {
             get
             {
@@ -6618,21 +6618,21 @@ namespace Engines
         
         private System.DateTime AddDateField;
         
-        private Engines.DealStatus DealStatusField;
+        private Connector.DealStatus DealStatusField;
         
         private string DealTitleField;
         
         private System.DateTime EndDateField;
         
-        private Engines.FareSource FareSourceField;
+        private Connector.FareSource FareSourceField;
         
         private int FreeNightsField;
         
-        private Engines.HotelProperty HotelPropertyField;
+        private Connector.HotelProperty HotelPropertyField;
         
         private int IdField;
         
-        private Engines.Money MinFareField;
+        private Connector.Money MinFareField;
         
         private string PromotionalTextField;
         
@@ -6654,7 +6654,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.DealStatus DealStatus
+        public Connector.DealStatus DealStatus
         {
             get
             {
@@ -6693,7 +6693,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.FareSource FareSource
+        public Connector.FareSource FareSource
         {
             get
             {
@@ -6719,7 +6719,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelProperty HotelProperty
+        public Connector.HotelProperty HotelProperty
         {
             get
             {
@@ -6745,7 +6745,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money MinFare
+        public Connector.Money MinFare
         {
             get
             {
@@ -6840,11 +6840,11 @@ namespace Engines
     public partial class Room : object
     {
         
-        private Engines.StateBag[] AdditionalInformationField;
+        private Connector.StateBag[] AdditionalInformationField;
         
-        private Engines.AgeRestriction AgeRestrictionField;
+        private Connector.AgeRestriction AgeRestrictionField;
         
-        private Engines.AllowedCreditCard[] AllowedCreditCardsField;
+        private Connector.AllowedCreditCard[] AllowedCreditCardsField;
         
         private int BaseOccupancyField;
         
@@ -6852,7 +6852,7 @@ namespace Engines
         
         private bool DepositRequiredField;
         
-        private Engines.RoomRate DisplayRoomRateField;
+        private Connector.RoomRate DisplayRoomRateField;
         
         private bool GuaranteeRequiredField;
         
@@ -6860,7 +6860,7 @@ namespace Engines
         
         private int GuestCountField;
         
-        private Engines.HotelFareSource HotelFareSourceField;
+        private Connector.HotelFareSource HotelFareSourceField;
         
         private bool IsRoomWithNearByDateField;
         
@@ -6876,7 +6876,7 @@ namespace Engines
         
         private int[] PassengerRphsField;
         
-        private Engines.HotelPolicy[] PoliciesField;
+        private Connector.HotelPolicy[] PoliciesField;
         
         private bool PrepaidField;
         
@@ -6892,12 +6892,12 @@ namespace Engines
         
         private string RoomTypeField;
         
-        private Engines.DateTimeSpan StayPeriodField;
+        private Connector.DateTimeSpan StayPeriodField;
         
-        private Engines.RoomRate StdRoomRateField;
+        private Connector.RoomRate StdRoomRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] AdditionalInformation
+        public Connector.StateBag[] AdditionalInformation
         {
             get
             {
@@ -6910,7 +6910,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.AgeRestriction AgeRestriction
+        public Connector.AgeRestriction AgeRestriction
         {
             get
             {
@@ -6923,7 +6923,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.AllowedCreditCard[] AllowedCreditCards
+        public Connector.AllowedCreditCard[] AllowedCreditCards
         {
             get
             {
@@ -6975,7 +6975,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RoomRate DisplayRoomRate
+        public Connector.RoomRate DisplayRoomRate
         {
             get
             {
@@ -7027,7 +7027,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelFareSource HotelFareSource
+        public Connector.HotelFareSource HotelFareSource
         {
             get
             {
@@ -7131,7 +7131,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelPolicy[] Policies
+        public Connector.HotelPolicy[] Policies
         {
             get
             {
@@ -7235,7 +7235,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.DateTimeSpan StayPeriod
+        public Connector.DateTimeSpan StayPeriod
         {
             get
             {
@@ -7248,7 +7248,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RoomRate StdRoomRate
+        public Connector.RoomRate StdRoomRate
         {
             get
             {
@@ -7271,7 +7271,7 @@ namespace Engines
         
         private string StartField;
         
-        private Engines.SeasonType TypeField;
+        private Connector.SeasonType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string End
@@ -7300,7 +7300,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.SeasonType Type
+        public Connector.SeasonType Type
         {
             get
             {
@@ -7319,7 +7319,7 @@ namespace Engines
     public partial class AddOnBookingInfo : object
     {
         
-        private Engines.AddOnBookingStatusType BookingStatusField;
+        private Connector.AddOnBookingStatusType BookingStatusField;
         
         private int PassengerRphField;
         
@@ -7328,7 +7328,7 @@ namespace Engines
         private string VendorConfirmationNumberField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.AddOnBookingStatusType BookingStatus
+        public Connector.AddOnBookingStatusType BookingStatus
         {
             get
             {
@@ -7383,17 +7383,17 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOnFare", Namespace="http://tavisca.com")]
-    public partial class TripAddOnFare : Engines.Fare
+    public partial class TripAddOnFare : Connector.Fare
     {
         
-        private Engines.Money BaseTotalFareField;
+        private Connector.Money BaseTotalFareField;
         
         private bool IsAlreadyIncludedField;
         
         private int QuantityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money BaseTotalFare
+        public Connector.Money BaseTotalFare
         {
             get
             {
@@ -7435,8 +7435,8 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.TransferAddOn))]
-    public partial class HotelAddOn : Engines.TripAddOn
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.TransferAddOn))]
+    public partial class HotelAddOn : Connector.TripAddOn
     {
         
         private string[] RoomRphsField;
@@ -7458,21 +7458,21 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TransferAddOn", Namespace="http://tavisca.com")]
-    public partial class TransferAddOn : Engines.HotelAddOn
+    public partial class TransferAddOn : Connector.HotelAddOn
     {
         
-        private Engines.Location DestinationField;
+        private Connector.Location DestinationField;
         
         private System.DateTime DropOffField;
         
-        private Engines.Location OriginField;
+        private Connector.Location OriginField;
         
-        private Engines.PassengerTypeQuantity[] PassengersField;
+        private Connector.PassengerTypeQuantity[] PassengersField;
         
         private System.DateTime PickUpField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Location Destination
+        public Connector.Location Destination
         {
             get
             {
@@ -7498,7 +7498,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Location Origin
+        public Connector.Location Origin
         {
             get
             {
@@ -7511,7 +7511,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PassengerTypeQuantity[] Passengers
+        public Connector.PassengerTypeQuantity[] Passengers
         {
             get
             {
@@ -7555,64 +7555,64 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fare", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.RoomRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.TripAddOnFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.RoomRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.TripAddOnFare))]
     public partial class Fare : object
     {
         
-        private Engines.BaseFare BaseFareField;
+        private Connector.BaseFare BaseFareField;
         
-        private Engines.Commission[] CommissionsField;
+        private Connector.Commission[] CommissionsField;
         
-        private Engines.Fee ConsolidatorFeeField;
+        private Connector.Fee ConsolidatorFeeField;
         
-        private Engines.Discount[] DiscountsField;
+        private Connector.Discount[] DiscountsField;
         
-        private Engines.Money EstimatedCommissionField;
+        private Connector.Money EstimatedCommissionField;
         
         private string FareCodeField;
         
-        private Engines.FareRestrictionType[] FareRestrictionTypesField;
+        private Connector.FareRestrictionType[] FareRestrictionTypesField;
         
-        private Engines.FareType FareTypeField;
+        private Connector.FareType FareTypeField;
         
-        private Engines.Fee[] FeesField;
+        private Connector.Fee[] FeesField;
         
         private int IdField;
         
-        private Engines.Money MarkupField;
+        private Connector.Money MarkupField;
         
-        private Engines.Markup[] MarkupsField;
+        private Connector.Markup[] MarkupsField;
         
-        private Engines.Fee PartnerFeeField;
+        private Connector.Fee PartnerFeeField;
         
-        private Engines.Money PartnerMarkupField;
+        private Connector.Money PartnerMarkupField;
         
         private string RemarksField;
         
         private int RphField;
         
-        private Engines.Money SavingsIncludedField;
+        private Connector.Money SavingsIncludedField;
         
-        private Engines.Fee ServiceFeeField;
+        private Connector.Fee ServiceFeeField;
         
-        private Engines.StateBag[] SupplierSideDataField;
+        private Connector.StateBag[] SupplierSideDataField;
         
-        private Engines.Tax[] TaxesField;
+        private Connector.Tax[] TaxesField;
         
-        private Engines.Commission TotalCommissionField;
+        private Connector.Commission TotalCommissionField;
         
-        private Engines.Discount TotalDiscountField;
+        private Connector.Discount TotalDiscountField;
         
-        private Engines.Money TotalFareField;
+        private Connector.Money TotalFareField;
         
-        private Engines.Fee TotalFeeField;
+        private Connector.Fee TotalFeeField;
         
-        private Engines.Money TotalTaxField;
+        private Connector.Money TotalTaxField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.BaseFare BaseFare
+        public Connector.BaseFare BaseFare
         {
             get
             {
@@ -7625,7 +7625,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Commission[] Commissions
+        public Connector.Commission[] Commissions
         {
             get
             {
@@ -7638,7 +7638,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Fee ConsolidatorFee
+        public Connector.Fee ConsolidatorFee
         {
             get
             {
@@ -7651,7 +7651,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Discount[] Discounts
+        public Connector.Discount[] Discounts
         {
             get
             {
@@ -7664,7 +7664,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money EstimatedCommission
+        public Connector.Money EstimatedCommission
         {
             get
             {
@@ -7690,7 +7690,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.FareRestrictionType[] FareRestrictionTypes
+        public Connector.FareRestrictionType[] FareRestrictionTypes
         {
             get
             {
@@ -7703,7 +7703,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.FareType FareType
+        public Connector.FareType FareType
         {
             get
             {
@@ -7716,7 +7716,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Fee[] Fees
+        public Connector.Fee[] Fees
         {
             get
             {
@@ -7742,7 +7742,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money Markup
+        public Connector.Money Markup
         {
             get
             {
@@ -7755,7 +7755,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Markup[] Markups
+        public Connector.Markup[] Markups
         {
             get
             {
@@ -7768,7 +7768,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Fee PartnerFee
+        public Connector.Fee PartnerFee
         {
             get
             {
@@ -7781,7 +7781,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money PartnerMarkup
+        public Connector.Money PartnerMarkup
         {
             get
             {
@@ -7820,7 +7820,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money SavingsIncluded
+        public Connector.Money SavingsIncluded
         {
             get
             {
@@ -7833,7 +7833,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Fee ServiceFee
+        public Connector.Fee ServiceFee
         {
             get
             {
@@ -7846,7 +7846,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] SupplierSideData
+        public Connector.StateBag[] SupplierSideData
         {
             get
             {
@@ -7859,7 +7859,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Tax[] Taxes
+        public Connector.Tax[] Taxes
         {
             get
             {
@@ -7872,7 +7872,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Commission TotalCommission
+        public Connector.Commission TotalCommission
         {
             get
             {
@@ -7885,7 +7885,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Discount TotalDiscount
+        public Connector.Discount TotalDiscount
         {
             get
             {
@@ -7898,7 +7898,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money TotalFare
+        public Connector.Money TotalFare
         {
             get
             {
@@ -7911,7 +7911,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Fee TotalFee
+        public Connector.Fee TotalFee
         {
             get
             {
@@ -7924,7 +7924,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money TotalTax
+        public Connector.Money TotalTax
         {
             get
             {
@@ -7940,14 +7940,14 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="RoomRate", Namespace="http://tavisca.com")]
-    public partial class RoomRate : Engines.Fare
+    public partial class RoomRate : Connector.Fare
     {
         
         private string BookingCodeField;
         
-        private Engines.DailyRate[] DailyRatesField;
+        private Connector.DailyRate[] DailyRatesField;
         
-        private Engines.RateIndicatorType RateIndicatorTypeField;
+        private Connector.RateIndicatorType RateIndicatorTypeField;
         
         private string RatePlanCategoryField;
         
@@ -7975,7 +7975,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.DailyRate[] DailyRates
+        public Connector.DailyRate[] DailyRates
         {
             get
             {
@@ -7988,7 +7988,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RateIndicatorType RateIndicatorType
+        public Connector.RateIndicatorType RateIndicatorType
         {
             get
             {
@@ -8260,7 +8260,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PaystayDeal", Namespace="http://tavisca.com")]
-    public partial class PaystayDeal : Engines.Deal
+    public partial class PaystayDeal : Connector.Deal
     {
         
         private int FreeNightsField;
@@ -8297,7 +8297,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PercentageDiscountDeal", Namespace="http://tavisca.com")]
-    public partial class PercentageDiscountDeal : Engines.Deal
+    public partial class PercentageDiscountDeal : Connector.Deal
     {
         
         private string ApplyOnField;
@@ -8334,22 +8334,22 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OpaqueDeal", Namespace="http://tavisca.com")]
-    public partial class OpaqueDeal : Engines.Deal
+    public partial class OpaqueDeal : Connector.Deal
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DiscountDeal", Namespace="http://tavisca.com")]
-    public partial class DiscountDeal : Engines.Deal
+    public partial class DiscountDeal : Connector.Deal
     {
         
-        private Engines.Money AmountField;
+        private Connector.Money AmountField;
         
         private string ApplyOnField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money Amount
+        public Connector.Money Amount
         {
             get
             {
@@ -8411,14 +8411,14 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationPolicy", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelCancellationPolicy))]
     public partial class CancellationPolicy : object
     {
         
-        private Engines.CancellationRule[] CancellationRulesField;
+        private Connector.CancellationRule[] CancellationRulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.CancellationRule[] CancellationRules
+        public Connector.CancellationRule[] CancellationRules
         {
             get
             {
@@ -8434,24 +8434,24 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationRule", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelCancellationRule))]
     public partial class CancellationRule : object
     {
         
-        private Engines.StateBag[] AdditionalInfoField;
+        private Connector.StateBag[] AdditionalInfoField;
         
         private string DescriptionField;
         
-        private Engines.Penalty PenaltyField;
+        private Connector.Penalty PenaltyField;
         
         private int RphField;
         
-        private Engines.ProviderCancellationRuleType TypeField;
+        private Connector.ProviderCancellationRuleType TypeField;
         
-        private Engines.DateTimeSpan WindowField;
+        private Connector.DateTimeSpan WindowField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] AdditionalInfo
+        public Connector.StateBag[] AdditionalInfo
         {
             get
             {
@@ -8477,7 +8477,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Penalty Penalty
+        public Connector.Penalty Penalty
         {
             get
             {
@@ -8503,7 +8503,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.ProviderCancellationRuleType Type
+        public Connector.ProviderCancellationRuleType Type
         {
             get
             {
@@ -8516,7 +8516,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.DateTimeSpan Window
+        public Connector.DateTimeSpan Window
         {
             get
             {
@@ -8532,20 +8532,20 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Penalty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelCancellationPenalty))]
     public partial class Penalty : object
     {
         
-        private Engines.Money BasePenaltyField;
+        private Connector.Money BasePenaltyField;
         
-        private Engines.Fee[] FeesField;
+        private Connector.Fee[] FeesField;
         
-        private Engines.Markup[] MarkupsField;
+        private Connector.Markup[] MarkupsField;
         
-        private Engines.Money TotalPenaltyField;
+        private Connector.Money TotalPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money BasePenalty
+        public Connector.Money BasePenalty
         {
             get
             {
@@ -8558,7 +8558,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Fee[] Fees
+        public Connector.Fee[] Fees
         {
             get
             {
@@ -8571,7 +8571,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Markup[] Markups
+        public Connector.Markup[] Markups
         {
             get
             {
@@ -8584,7 +8584,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money TotalPenalty
+        public Connector.Money TotalPenalty
         {
             get
             {
@@ -8600,13 +8600,13 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationRule", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationRule : Engines.CancellationRule
+    public partial class HotelCancellationRule : Connector.CancellationRule
     {
         
-        private Engines.HotelCancellationPenalty HotelCancellationPenaltyField;
+        private Connector.HotelCancellationPenalty HotelCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelCancellationPenalty HotelCancellationPenalty
+        public Connector.HotelCancellationPenalty HotelCancellationPenalty
         {
             get
             {
@@ -8634,7 +8634,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPenalty : Engines.Penalty
+    public partial class HotelCancellationPenalty : Connector.Penalty
     {
     }
     
@@ -8814,10 +8814,10 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelTransform", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelFilterTransform))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelMatrixTransform))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItineraryTransform))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelComparisonMatrixTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelFilterTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelMatrixTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelItineraryTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelComparisonMatrixTransform))]
     public partial class HotelTransform : object
     {
     }
@@ -8825,7 +8825,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AvailabilityFilter", Namespace="http://tavisca.com")]
-    public partial class AvailabilityFilter : Engines.HotelFilter
+    public partial class AvailabilityFilter : Connector.HotelFilter
     {
         
         private bool ReturnOnlyAvailableItinerariesField;
@@ -8847,15 +8847,15 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ViewPortFilter", Namespace="http://tavisca.com")]
-    public partial class ViewPortFilter : Engines.HotelFilter
+    public partial class ViewPortFilter : Connector.HotelFilter
     {
         
-        private Engines.GeoCode BottomRightCornerField;
+        private Connector.GeoCode BottomRightCornerField;
         
-        private Engines.GeoCode TopLeftCornerField;
+        private Connector.GeoCode TopLeftCornerField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.GeoCode BottomRightCorner
+        public Connector.GeoCode BottomRightCorner
         {
             get
             {
@@ -8868,7 +8868,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.GeoCode TopLeftCorner
+        public Connector.GeoCode TopLeftCorner
         {
             get
             {
@@ -8884,21 +8884,21 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFilterTransform", Namespace="http://tavisca.com")]
-    public partial class HotelFilterTransform : Engines.HotelTransform
+    public partial class HotelFilterTransform : Connector.HotelTransform
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelMatrixTransform", Namespace="http://tavisca.com")]
-    public partial class HotelMatrixTransform : Engines.HotelTransform
+    public partial class HotelMatrixTransform : Connector.HotelTransform
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItineraryTransform", Namespace="http://tavisca.com")]
-    public partial class HotelItineraryTransform : Engines.HotelTransform
+    public partial class HotelItineraryTransform : Connector.HotelTransform
     {
         
         private bool GetPricelessHotelItinerariesField;
@@ -8950,7 +8950,7 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelComparisonMatrixTransform", Namespace="http://tavisca.com")]
-    public partial class HotelComparisonMatrixTransform : Engines.HotelTransform
+    public partial class HotelComparisonMatrixTransform : Connector.HotelTransform
     {
         
         private string[] HotelComparisonAttributesField;
@@ -9017,19 +9017,19 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRS", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelRoomAvailRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelRoomPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchViewRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItinerarySearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelRoomAvailRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelRoomPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelSearchViewRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelItinerarySearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelSearchRS))]
     public partial class WebServiceRS : object
     {
         
         private string CallIdField;
         
-        private Engines.ResponseType ResponseRecievedField;
+        private Connector.ResponseType ResponseRecievedField;
         
-        private Engines.ServiceStatus ServiceStatusField;
+        private Connector.ServiceStatus ServiceStatusField;
         
         private string SessionIdField;
         
@@ -9047,7 +9047,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.ResponseType ResponseRecieved
+        public Connector.ResponseType ResponseRecieved
         {
             get
             {
@@ -9060,7 +9060,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.ServiceStatus ServiceStatus
+        public Connector.ServiceStatus ServiceStatus
         {
             get
             {
@@ -9098,7 +9098,7 @@ namespace Engines
         
         private string[] MissingItemsField;
         
-        private Engines.ServiceStatusType StatusField;
+        private Connector.ServiceStatusType StatusField;
         
         private int StatusCodeField;
         
@@ -9144,7 +9144,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.ServiceStatusType Status
+        public Connector.ServiceStatusType Status
         {
             get
             {
@@ -9186,15 +9186,15 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRS : Engines.WebServiceRS
+    public partial class HotelRoomAvailRS : Connector.WebServiceRS
     {
         
-        private Engines.HotelItinerary ItineraryField;
+        private Connector.HotelItinerary ItineraryField;
         
-        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Connector.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelItinerary Itinerary
+        public Connector.HotelItinerary Itinerary
         {
             get
             {
@@ -9207,7 +9207,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RoomOccupancyType[] RoomOccupancyTypes
+        public Connector.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9223,15 +9223,15 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRS : Engines.WebServiceRS
+    public partial class HotelRoomPriceRS : Connector.WebServiceRS
     {
         
-        private Engines.HotelItinerary ItineraryField;
+        private Connector.HotelItinerary ItineraryField;
         
-        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Connector.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelItinerary Itinerary
+        public Connector.HotelItinerary Itinerary
         {
             get
             {
@@ -9244,7 +9244,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RoomOccupancyType[] RoomOccupancyTypes
+        public Connector.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9260,17 +9260,17 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchViewRS", Namespace="http://tavisca.com")]
-    public partial class HotelSearchViewRS : Engines.WebServiceRS
+    public partial class HotelSearchViewRS : Connector.WebServiceRS
     {
         
-        private Engines.PagingInfo PagingInfoField;
+        private Connector.PagingInfo PagingInfoField;
         
-        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Connector.RoomOccupancyType[] RoomOccupancyTypesField;
         
-        private Engines.HotelView[] ViewsField;
+        private Connector.HotelView[] ViewsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PagingInfo PagingInfo
+        public Connector.PagingInfo PagingInfo
         {
             get
             {
@@ -9283,7 +9283,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RoomOccupancyType[] RoomOccupancyTypes
+        public Connector.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9296,7 +9296,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelView[] Views
+        public Connector.HotelView[] Views
         {
             get
             {
@@ -9312,15 +9312,15 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRS : Engines.WebServiceRS
+    public partial class HotelItinerarySearchRS : Connector.WebServiceRS
     {
         
-        private Engines.HotelItinerary ItineraryField;
+        private Connector.HotelItinerary ItineraryField;
         
-        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Connector.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelItinerary Itinerary
+        public Connector.HotelItinerary Itinerary
         {
             get
             {
@@ -9333,7 +9333,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RoomOccupancyType[] RoomOccupancyTypes
+        public Connector.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9349,17 +9349,17 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRS : Engines.WebServiceRS
+    public partial class HotelSearchRS : Connector.WebServiceRS
     {
         
-        private Engines.HotelItinerary[] ItinerariesField;
+        private Connector.HotelItinerary[] ItinerariesField;
         
-        private Engines.PagingInfo PagingInfoField;
+        private Connector.PagingInfo PagingInfoField;
         
-        private Engines.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Connector.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelItinerary[] Itineraries
+        public Connector.HotelItinerary[] Itineraries
         {
             get
             {
@@ -9372,7 +9372,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.PagingInfo PagingInfo
+        public Connector.PagingInfo PagingInfo
         {
             get
             {
@@ -9385,7 +9385,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RoomOccupancyType[] RoomOccupancyTypes
+        public Connector.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9416,22 +9416,22 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelView", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelFilterView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelMatrixView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItineraryView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelComparisonMatrixView))]
-    public partial class HotelView : Engines.BaseEntity
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelFilterView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelMatrixView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelItineraryView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelComparisonMatrixView))]
+    public partial class HotelView : Connector.BaseEntity
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseEntity", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelFilterView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelMatrixView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelItineraryView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.HotelComparisonMatrixView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelFilterView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelMatrixView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelItineraryView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.HotelComparisonMatrixView))]
     public partial class BaseEntity : object
     {
         
@@ -9454,13 +9454,13 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFilterView", Namespace="http://tavisca.com")]
-    public partial class HotelFilterView : Engines.HotelView
+    public partial class HotelFilterView : Connector.HotelView
     {
         
-        private Engines.HotelFilterDisplayData HotelFilterDisplayDataField;
+        private Connector.HotelFilterDisplayData HotelFilterDisplayDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelFilterDisplayData HotelFilterDisplayData
+        public Connector.HotelFilterDisplayData HotelFilterDisplayData
         {
             get
             {
@@ -9476,13 +9476,13 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelMatrixView", Namespace="http://tavisca.com")]
-    public partial class HotelMatrixView : Engines.HotelView
+    public partial class HotelMatrixView : Connector.HotelView
     {
         
-        private Engines.ResultMatrix[] SummaryMatrixListField;
+        private Connector.ResultMatrix[] SummaryMatrixListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.ResultMatrix[] SummaryMatrixList
+        public Connector.ResultMatrix[] SummaryMatrixList
         {
             get
             {
@@ -9498,13 +9498,13 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItineraryView", Namespace="http://tavisca.com")]
-    public partial class HotelItineraryView : Engines.HotelView
+    public partial class HotelItineraryView : Connector.HotelView
     {
         
-        private Engines.HotelItinerary[] ItinerariesField;
+        private Connector.HotelItinerary[] ItinerariesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelItinerary[] Itineraries
+        public Connector.HotelItinerary[] Itineraries
         {
             get
             {
@@ -9521,13 +9521,13 @@ namespace Engines
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelComparisonMatrixView", Namespace="http://schemas.datacontract.org/2004/07/Tavisca.TravelNxt.Hotel.Plugins.DataContr" +
         "acts")]
-    public partial class HotelComparisonMatrixView : Engines.HotelView
+    public partial class HotelComparisonMatrixView : Connector.HotelView
     {
         
-        private Engines.ComparisonMatrix ComparisonMatrixField;
+        private Connector.ComparisonMatrix ComparisonMatrixField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.ComparisonMatrix ComparisonMatrix
+        public Connector.ComparisonMatrix ComparisonMatrix
         {
             get
             {
@@ -9546,7 +9546,7 @@ namespace Engines
     public partial class HotelFilterDisplayData : object
     {
         
-        private Engines.BrandMinFare[] BrandMinFareListField;
+        private Connector.BrandMinFare[] BrandMinFareListField;
         
         private bool CheckFiveStarField;
         
@@ -9560,7 +9560,7 @@ namespace Engines
         
         private bool CheckTwoStarField;
         
-        private Engines.CityPropertyCount[] CityPropertyCountListField;
+        private Connector.CityPropertyCount[] CityPropertyCountListField;
         
         private bool EnableFiveStarField;
         
@@ -9578,26 +9578,26 @@ namespace Engines
         
         private bool EnableTwoStarField;
         
-        private Engines.Distance MaxDistanceField;
+        private Connector.Distance MaxDistanceField;
         
-        private Engines.Money MaxFareField;
+        private Connector.Money MaxFareField;
         
         private int MaxNumberOfBedRoomsField;
         
         private int MaxOccupancyField;
         
-        private Engines.Distance MinDistanceField;
+        private Connector.Distance MinDistanceField;
         
-        private Engines.Money MinFareField;
+        private Connector.Money MinFareField;
         
         private int MinNumberOfBedRoomsField;
         
         private int MinOccupancyField;
         
-        private Engines.RatingMinFare[] RatingMinFareListField;
+        private Connector.RatingMinFare[] RatingMinFareListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.BrandMinFare[] BrandMinFareList
+        public Connector.BrandMinFare[] BrandMinFareList
         {
             get
             {
@@ -9688,7 +9688,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.CityPropertyCount[] CityPropertyCountList
+        public Connector.CityPropertyCount[] CityPropertyCountList
         {
             get
             {
@@ -9805,7 +9805,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Distance MaxDistance
+        public Connector.Distance MaxDistance
         {
             get
             {
@@ -9818,7 +9818,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money MaxFare
+        public Connector.Money MaxFare
         {
             get
             {
@@ -9857,7 +9857,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Distance MinDistance
+        public Connector.Distance MinDistance
         {
             get
             {
@@ -9870,7 +9870,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money MinFare
+        public Connector.Money MinFare
         {
             get
             {
@@ -9909,7 +9909,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.RatingMinFare[] RatingMinFareList
+        public Connector.RatingMinFare[] RatingMinFareList
         {
             get
             {
@@ -9930,7 +9930,7 @@ namespace Engines
         
         private string BrandNameField;
         
-        private Engines.Money MinFareField;
+        private Connector.Money MinFareField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string BrandName
@@ -9946,7 +9946,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money MinFare
+        public Connector.Money MinFare
         {
             get
             {
@@ -10002,12 +10002,12 @@ namespace Engines
     public partial class RatingMinFare : object
     {
         
-        private Engines.Money MinFareField;
+        private Connector.Money MinFareField;
         
-        private Engines.HotelRating RatingField;
+        private Connector.HotelRating RatingField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.Money MinFare
+        public Connector.Money MinFare
         {
             get
             {
@@ -10020,7 +10020,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.HotelRating Rating
+        public Connector.HotelRating Rating
         {
             get
             {
@@ -10039,14 +10039,14 @@ namespace Engines
     public partial class ResultMatrix : object
     {
         
-        private Engines.MatrixColumnInfo[] ColumnsField;
+        private Connector.MatrixColumnInfo[] ColumnsField;
         
-        private Engines.MatrixRowInfo[] RowsField;
+        private Connector.MatrixRowInfo[] RowsField;
         
-        private Engines.MatrixCell[] ValuesField;
+        private Connector.MatrixCell[] ValuesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.MatrixColumnInfo[] Columns
+        public Connector.MatrixColumnInfo[] Columns
         {
             get
             {
@@ -10059,7 +10059,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.MatrixRowInfo[] Rows
+        public Connector.MatrixRowInfo[] Rows
         {
             get
             {
@@ -10072,7 +10072,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.MatrixCell[] Values
+        public Connector.MatrixCell[] Values
         {
             get
             {
@@ -10088,14 +10088,14 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixColumnInfo", Namespace="http://tavisca.com")]
-    public partial class MatrixColumnInfo : Engines.MatrixRowColumnInfo
+    public partial class MatrixColumnInfo : Connector.MatrixRowColumnInfo
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixRowInfo", Namespace="http://tavisca.com")]
-    public partial class MatrixRowInfo : Engines.MatrixRowColumnInfo
+    public partial class MatrixRowInfo : Connector.MatrixRowColumnInfo
     {
     }
     
@@ -10109,7 +10109,7 @@ namespace Engines
         
         private int RowRphField;
         
-        private Engines.MatrixCellData[] ValuesField;
+        private Connector.MatrixCellData[] ValuesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int ColumnRph
@@ -10138,7 +10138,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.MatrixCellData[] Values
+        public Connector.MatrixCellData[] Values
         {
             get
             {
@@ -10154,23 +10154,23 @@ namespace Engines
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixRowColumnInfo", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.MatrixRowInfo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Engines.MatrixColumnInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.MatrixRowInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Connector.MatrixColumnInfo))]
     public partial class MatrixRowColumnInfo : object
     {
         
-        private Engines.StateBag[] AdditionalInfoField;
+        private Connector.StateBag[] AdditionalInfoField;
         
         private string CodeField;
         
         private int RphField;
         
-        private Engines.MatrixInfoType TypeField;
+        private Connector.MatrixInfoType TypeField;
         
         private string ValueField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.StateBag[] AdditionalInfo
+        public Connector.StateBag[] AdditionalInfo
         {
             get
             {
@@ -10209,7 +10209,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.MatrixInfoType Type
+        public Connector.MatrixInfoType Type
         {
             get
             {
@@ -10268,16 +10268,16 @@ namespace Engines
     public partial class ComparisonMatrix : object
     {
         
-        private Engines.ComparisonMatrixCell[] CellsField;
+        private Connector.ComparisonMatrixCell[] CellsField;
         
-        private Engines.ComparisonMatrixDimension[] ColumnsField;
+        private Connector.ComparisonMatrixDimension[] ColumnsField;
         
         private int TotalColumnsField;
         
         private int TotalRowsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.ComparisonMatrixCell[] Cells
+        public Connector.ComparisonMatrixCell[] Cells
         {
             get
             {
@@ -10290,7 +10290,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.ComparisonMatrixDimension[] Columns
+        public Connector.ComparisonMatrixDimension[] Columns
         {
             get
             {
@@ -10404,9 +10404,9 @@ namespace Engines
         
         private string AttributeNameField;
         
-        private Engines.BusinessType BusinessTypeField;
+        private Connector.BusinessType BusinessTypeField;
         
-        private Engines.TypeCode CodeField;
+        private Connector.TypeCode CodeField;
         
         private int ColumnIdField;
         
@@ -10428,7 +10428,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.BusinessType BusinessType
+        public Connector.BusinessType BusinessType
         {
             get
             {
@@ -10441,7 +10441,7 @@ namespace Engines
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Engines.TypeCode Code
+        public Connector.TypeCode Code
         {
             get
             {
@@ -10542,28 +10542,28 @@ namespace Engines
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="Engines.HotelEngine")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="Connector.HotelEngine")]
     public interface HotelEngine
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/HotelEngine/HotelAvail", ReplyAction="http://tavisca.com/HotelEngine/HotelAvailResponse")]
-        System.Threading.Tasks.Task<Engines.HotelSearchRS> HotelAvailAsync(Engines.HotelSearchRQ request);
+        System.Threading.Tasks.Task<Connector.HotelSearchRS> HotelAvailAsync(Connector.HotelSearchRQ request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/HotelEngine/HotelRoomAvail", ReplyAction="http://tavisca.com/HotelEngine/HotelRoomAvailResponse")]
-        System.Threading.Tasks.Task<Engines.HotelRoomAvailRS> HotelRoomAvailAsync(Engines.HotelRoomAvailRQ request);
+        System.Threading.Tasks.Task<Connector.HotelRoomAvailRS> HotelRoomAvailAsync(Connector.HotelRoomAvailRQ request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/HotelEngine/HotelRoomPrice", ReplyAction="http://tavisca.com/HotelEngine/HotelRoomPriceResponse")]
-        System.Threading.Tasks.Task<Engines.HotelRoomPriceRS> HotelRoomPriceAsync(Engines.HotelRoomPriceRQ request);
+        System.Threading.Tasks.Task<Connector.HotelRoomPriceRS> HotelRoomPriceAsync(Connector.HotelRoomPriceRQ request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public interface HotelEngineChannel : Engines.HotelEngine, System.ServiceModel.IClientChannel
+    public interface HotelEngineChannel : Connector.HotelEngine, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public partial class HotelEngineClient : System.ServiceModel.ClientBase<Engines.HotelEngine>, Engines.HotelEngine
+    public partial class HotelEngineClient : System.ServiceModel.ClientBase<Connector.HotelEngine>, Connector.HotelEngine
     {
         
     /// <summary>
@@ -10606,17 +10606,17 @@ namespace Engines
         {
         }
         
-        public System.Threading.Tasks.Task<Engines.HotelSearchRS> HotelAvailAsync(Engines.HotelSearchRQ request)
+        public System.Threading.Tasks.Task<Connector.HotelSearchRS> HotelAvailAsync(Connector.HotelSearchRQ request)
         {
             return base.Channel.HotelAvailAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Engines.HotelRoomAvailRS> HotelRoomAvailAsync(Engines.HotelRoomAvailRQ request)
+        public System.Threading.Tasks.Task<Connector.HotelRoomAvailRS> HotelRoomAvailAsync(Connector.HotelRoomAvailRQ request)
         {
             return base.Channel.HotelRoomAvailAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Engines.HotelRoomPriceRS> HotelRoomPriceAsync(Engines.HotelRoomPriceRQ request)
+        public System.Threading.Tasks.Task<Connector.HotelRoomPriceRS> HotelRoomPriceAsync(Connector.HotelRoomPriceRQ request)
         {
             return base.Channel.HotelRoomPriceAsync(request);
         }

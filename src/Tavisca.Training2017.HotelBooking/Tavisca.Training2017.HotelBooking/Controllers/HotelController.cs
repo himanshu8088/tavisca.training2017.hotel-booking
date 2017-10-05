@@ -1,25 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Tavisca.Training2017.HotelBooking.Models;
-using Tavisca.Training2017.HotelBooking.Factories;
-using Engines;
-
+using Services.Model;
+using Services.Contracts;
+using Services.Factory;
 
 namespace Tavisca.Training2017.HotelBooking.Controllers
 {
-    [Route("[hotel]")]
+    [Route("[controller]")]
     public class HotelController : Controller
     {
         [HttpPost("search")]
-        public IActionResult Search([FromBody]SearchRQ req)
+        public async Task<IActionResult>  SearchAsync([FromBody]HotelSearchRequest hotelSearchRQ)
         {
-            HotelEngineClient client = new HotelEngineClient();            
-            var hotelSearchRQ = new SearchRQFactory().CreateCompleteRQ(req);
-            var response=client.HotelAvailAsync(hotelSearchRQ);            
-            var result = response.Result;            
+            IHotelService hotelService = Factory.Get<IHotelService>() as IHotelService;
+            HotelSearchResult hotelSearchResult = null;
+
+            HotelSearchRequest hotelSearchRequest = new HotelSearchRequest()
+            {
+                SearchText = hotelSearchRQ.SearchText,
+                CheckInDate = hotelSearchRQ.CheckInDate,
+                CheckOutDate = hotelSearchRQ.CheckOutDate,
+                PosId = 101
+            };
+            try
+            {
+                hotelSearchResult = await hotelService.SearchHotelsAsync(hotelSearchRequest);                
+            }
+            catch (Exception e)
+            {
+
+            }
             return Ok();
         }
     }
