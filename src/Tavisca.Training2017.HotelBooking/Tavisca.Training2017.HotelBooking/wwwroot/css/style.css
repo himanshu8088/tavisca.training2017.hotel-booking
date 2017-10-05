@@ -17,12 +17,15 @@
     height: 100px;
 }
 
-.font-blue {
-    color: #1A8FC7;
+.font-white {
+    color: white;
+}
+.bg {
+    background-color: rgba(18, 11, 86, 0.99);
 }
 
 .bg-img {
-    background-image: url('../img/bg.jpg');
+    /*background-image: url('../img/bg.jpg');*/
     width: 100%;
     height: auto;
     padding: 20px;
@@ -92,12 +95,11 @@
 }
 
 .form-container {
-    opacity: 0.5;
-    background-color: black;
+    background-color: #64b8de;
     font-size: 15px;
     border-radius: 4px;
     margin-top: 10px;
-    padding-top: 20px:
+    padding-top: 20px;
 }
 
 
