@@ -17,7 +17,6 @@
   <ItemGroup>
     <Folder Include="Connected Services\" />
     <Folder Include="Contracts\" />
-    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>

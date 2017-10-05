@@ -18,7 +18,7 @@ $("#searchClick").click(function () {
     var jsonData = JSON.stringify(jsonFormatData);
    
     $.ajax({
-        url: "http://localhost:56851/api/search",
+        url: "../hotel/search.html",
         type: "POST",
         data: jsonData,
         contentType: "application/json",
@@ -27,9 +27,9 @@ $("#searchClick").click(function () {
 });
 
 function searchPageReader() {
-    var searchText = $('#destination').val;
-    var checkIn = $('#check-in').val;
-    var checkOut = $('#check-out').val;
-    var hotelSearchObj = new hotelSearchRQ("pune", "11/2/", "3242");
+    var _searchText = $('#destination').val();
+    var _checkIn = new Date($('#check-in').val());
+    var _checkOut = new Date($('#check-out').val());
+    var hotelSearchObj = new hotelSearchRQ(_searchText, _checkIn, _checkOut);
 }
 
