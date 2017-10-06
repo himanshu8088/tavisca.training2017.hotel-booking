@@ -1,49 +1,51 @@
 ﻿using BusinessLayer.Contracts;
-using Connector.Contracts;
+using BusinessLayer.Model;
 using Services.Contracts;
-using Services.Model;
 using System.Threading.Tasks;
-using Factories =Tavisca.Training2017.HotelBooking.Factories;
 using Services.Validator;
 using System;
 using System.Collections.Generic;
-using Connector;
 
 namespace Services
 {
     public class HotelService : IHotelService
-    {
-        public async Task<HotelSearchResult> SearchHotelsAsync(HotelSearchRequest hotelSearchRQ)
+    {       
+        public async Task<List<Services.Model.Hotel>> SearchHotelsAsync(Services.Model.HotelSearchRQ hotelSearchRQ)
         {
-            HotelSearchRequestValidator hotelSearchRequestValidator = new HotelSearchRequestValidator();
-            if (hotelSearchRequestValidator.IsValid(hotelSearchRQ) == false)
+            HotelSearchRQValidator hotelSearchRQValidator = new HotelSearchRQValidator();
+            
+            if (hotelSearchRQValidator.IsValid(hotelSearchRQ) == false)
                 throw new Exception("Invalid Search Request");
 
-            IHotelConnector hotelConnector = Factories.Factory.Get<IHotelConnector>() as IHotelConnector;
+            IHotelSearch hotelSearch = BusinessLayer.Factories.Factory.Get<IHotelSearch>() as IHotelSearch;
 
-            var hotelSearchRequest = new Tavisca.Training2017.HotelBooking.BusinessLayer.HotelSearchRequest()
+            var hotelRQ = new BusinessLayer.Model.HotelSearchRQ()
             {
                 SearchText = hotelSearchRQ.SearchText,
                 CheckInDate = hotelSearchRQ.CheckInDate,
-                CheckoutDate = hotelSearchRQ.CheckOutDate
+                CheckoutDate = hotelSearchRQ.CheckOutDate,
+                SessionId = Guid.NewGuid()
             };
 
-            IConfigurationService configurationService  = Factories.Factory.Get<IConfigurationService>() as IConfigurationService;
-            hotelSearchRequest.PointOfSale = configurationService.GetPointofSale(hotelSearchRQ.PosId);
-            
-            List<HotelItinerary> hotelItineraries = await hotelConnector.SearchHotelsAsync(hotelSearchRequest);
+            Task<List<HotelItinerary>> hotelItineraries = hotelSearch.SearchAsync(hotelRQ);
+            var itineraries = hotelItineraries.Result;            
+            List<Services.Model.Hotel> hotels = new List<Model.Hotel>(); 
 
-            HotelSearchResult hotelSearchResult = new HotelSearchResult();
-            hotelSearchResult.Hotels = new List<Hotel>();
-            foreach (var itenary in hotelItineraries)
+            foreach (var itinerary in itineraries)
             {
-                //hotelSearchResult.Hotels.Add(new Hotel()
-                //{
-                //    Name = itenary.
-                //});
+                var hotel = new Model.Hotel()
+                {
+                    Address = itinerary.Hotel.Address,
+                    HotelName= itinerary.Hotel.HotelName,
+                    StarRating = itinerary.Hotel.StarRating,
+                    BaseFare = itinerary.BaseFare,
+                    MediaUri=itinerary.MediaUri
+                };                
+                hotels.Add(hotel);
             }
-
-            return hotelSearchResult;
+            
+            return hotels;
         }
     }
 }
+

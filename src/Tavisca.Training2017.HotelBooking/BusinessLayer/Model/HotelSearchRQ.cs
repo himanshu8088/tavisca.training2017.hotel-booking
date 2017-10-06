@@ -1,9 +1,9 @@
-﻿using BusinessLayer.Model;
+﻿
 using System;
 
-namespace Tavisca.Training2017.HotelBooking.BusinessLayer
+namespace BusinessLayer.Model
 {
-    public class HotelSearchRequest
+    public class HotelSearchRQ
     {
         public string SearchText { get; set; }
 
@@ -11,6 +11,6 @@ namespace Tavisca.Training2017.HotelBooking.BusinessLayer
 
         public DateTime CheckoutDate { get; set; }
 
-        public PointOfSale PointOfSale { get; set; }
+        public Guid SessionId { get; set; }
     }
 }

@@ -9,13 +9,12 @@ namespace Services.Factory
     {
         private static Dictionary<Type, object> _mapping = new Dictionary<Type, object>()
         {
-            { typeof(IHotelService),   new HotelService()  },
+            { typeof(IHotelService), new HotelService() },
           
         };
 
         public static object Get<T>()
         {
-
             object value = "";
 
             if (_mapping.ContainsKey(typeof(T)))

@@ -28,8 +28,8 @@ $("#searchClick").click(function () {
 
 function searchPageReader() {
     var _searchText = $('#destination').val();
-    var _checkIn = new Date($('#check-in').val());
-    var _checkOut = new Date($('#check-out').val());
+    var _checkIn = $('#check-in').val();
+    var _checkOut = $('#check-out').val();
     var hotelSearchObj = new hotelSearchRQ(_searchText, _checkIn, _checkOut);
 }
 

@@ -5,8 +5,7 @@ using System.Text;
 
 namespace BusinessLayer.Contracts
 {
-    public interface IConfigurationService
-    {
-        PointOfSale GetPointofSale(int pointOfsaleId);
+    public interface IConnectorConfiguration
+    {        
     }    
 }

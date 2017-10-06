@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Services.Validator
 {
-    public class HotelSearchRequestValidator
+    public class HotelSearchRQValidator
     {
-        public bool IsValid(HotelSearchRequest hotelSearchRequest)
+        public bool IsValid(HotelSearchRQ hotelSearchRequest)
         {
             return true;
         }

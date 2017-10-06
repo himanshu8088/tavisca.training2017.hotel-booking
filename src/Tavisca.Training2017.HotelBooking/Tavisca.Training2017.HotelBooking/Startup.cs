@@ -36,6 +36,7 @@ namespace Tavisca.Training2017.HotelBooking
             }
             app.UseStaticFiles();
             app.UseMvc();
+            
         }
     }
 }

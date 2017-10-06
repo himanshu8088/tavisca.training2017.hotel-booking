@@ -8,7 +8,7 @@ namespace Tavisca.Training2017.HotelBooking.Models
     public class SearchRQ
     {
         public string SearchText { get; set; }           
-        public DateTime CheckIn { get; set; }        
-        public DateTime CheckOut { get; set; }        
+        public string CheckInDate { get; set; }        
+        public string CheckOutDate { get; set; }        
     }
 }

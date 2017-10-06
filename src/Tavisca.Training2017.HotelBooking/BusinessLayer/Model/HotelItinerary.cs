@@ -1,7 +1,12 @@
-﻿namespace Tavisca.Training2017.HotelBooking.BusinessLayer
+﻿using System;
+using System.Collections.Generic;
+
+namespace BusinessLayer.Model
 {
     public class HotelItinerary
     {
-        public string Name { get; set; }
+       public Hotel Hotel { get; set; }
+       public decimal BaseFare { get; set; }
+       public List<Uri> MediaUri { get; set; }
     }
 }
