@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+    <link href="../css/hotellist.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid bg">
+            <div class="navbar-header">
+                <div class="col-md-5">
+                    <a class="navbar-brand" href="#"><img src="../img/logo.png" alt=""></a>
+                </div>
+                <div class="col-md-7 margin-top">
+                    <h1 class="font-white">Hotel Search</h1>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script id="hotel-item" type="text/x-handlebars-template">
+        {{#each this}} {{#unless image}}
+        <div class="container" id="hotelList-container">
+            <h1 class="text-primary">All Hotels</h1>
+            <h4 class="text-primary">Hotels, Villas, Guest Houses</h4>
+            <div class="panel-group">
+                <div class="panel panel-primary">
+
+                    <div class="panel-body">
+                        <div class="col-md-3">
+                            <img src="
+                                 {{image}}" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <span class="label label-primary">{{hotelName}}</span>
+                            </div>
+                            <div class="row">
+                                <h4>{{starrating}}</h4>
+                            </div>
+                            <div class="row">
+                                <h4>{{address}}</h4>
+                            </div>
+                            <div class="row">
+                                <h4>Amenities</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <h4>TaviscaHotelBooking.com</h4>
+                            </div>
+                            <div class="row">
+                                <button type="button" id="viewRooms" class="btn btn-info">View Rooms</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    
+
+    <script src="../js/hotel_listing.js"></script>
+    <script src="../js/libraries/handlebars-v4.0.10.js"></script>
+</body>
+</html>

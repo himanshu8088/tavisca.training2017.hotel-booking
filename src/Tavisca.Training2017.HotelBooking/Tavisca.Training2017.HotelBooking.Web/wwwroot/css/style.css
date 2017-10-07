@@ -41,7 +41,9 @@
     color: #fff;
     font-size: 15px;
 }
-
+.font-blue {
+    color: #337ab7;
+}
 .navbar-nav > li > .dropdown-menu {
     background-color: #1A8FC7;
 }
