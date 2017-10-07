@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using BusinessLayer.Factories;
 using System;
 using System.Collections.Generic;
+using BusinessLayer.Configuration;
 
 namespace BusinessLayer.ContractsImplementation
 {
@@ -12,13 +13,14 @@ namespace BusinessLayer.ContractsImplementation
         public async Task<List<BusinessLayer.Model.HotelItinerary>> SearchAsync(BusinessLayer.Model.HotelSearchRQ searchRQ)
         {
             IHotelConnector hotelConnector = Factory.Get<IHotelConnector>() as IHotelConnector;
-            StaticConnectorConfiguration configurationService = new StaticConnectorConfiguration(searchRQ.SearchText,searchRQ.CheckInDate,searchRQ.CheckoutDate,searchRQ.PsgCount,searchRQ.NoOfRooms,searchRQ.Location.Latitude,searchRQ.Location.Longitude);            
+            StaticConnectorConfiguration configurationService = new StaticConnectorConfiguration();
+            HotelsAvailConfig hotelsAvailConfig= configurationService.GetHotelsAvailConfig( searchRQ.CheckInDate, searchRQ.CheckoutDate, searchRQ.SearchText, searchRQ.PsgCount, searchRQ.NoOfRooms, searchRQ.Location.Latitude, searchRQ.Location.Longitude);
             Connector.Model.HotelIteneraryRQ hotelSearchRQ = new Connector.Model.HotelIteneraryRQ()
             {                
-                Filters = configurationService.Filters,
-                HotelSearchCriterion = configurationService.HotelSearchCriterion,
-                PagingInfo = configurationService.PagingInfo,
-                ResultRequested = configurationService.ResultRequested,
+                Filters = hotelsAvailConfig.Filters,
+                HotelSearchCriterion = hotelsAvailConfig.HotelSearchCriterion,
+                PagingInfo = hotelsAvailConfig.PagingInfo,
+                ResultRequested = hotelsAvailConfig.ResultRequested,
                 SessionId=searchRQ.SessionId.ToString()
             };           
 

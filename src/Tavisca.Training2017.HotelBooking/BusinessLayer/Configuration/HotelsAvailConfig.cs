@@ -1,14 +1,13 @@
-﻿using System;
+﻿using Connector;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using BusinessLayer.Contracts;
-using BusinessLayer.Model;
-using Connector;
 
-namespace BusinessLayer
+namespace BusinessLayer.Configuration
 {
-    public class StaticConnectorConfiguration : IConnectorConfiguration
+    public class HotelsAvailConfig
     {
+
         private string _poi;
         private DateTime _checkIn;
         private DateTime _checkOut;
@@ -18,12 +17,7 @@ namespace BusinessLayer
         private float _latitude;
         private float _longitude;
 
-        public StaticConnectorConfiguration()
-        {
-
-        }        
-
-        public StaticConnectorConfiguration( string poi, DateTime checkIn, DateTime checkOut,int passengerCount=1,int noOfRooms=1,float latitude= 27.173891f, float longitude= 78.042068f, int posId = 101)
+        public HotelsAvailConfig(string poi, DateTime checkIn, DateTime checkOut, int passengerCount = 1, int noOfRooms = 1, float latitude = 27.173891f, float longitude = 78.042068f, int posId = 101)
         {
             _posId = posId;
             _poi = poi;
@@ -34,7 +28,6 @@ namespace BusinessLayer
             _longitude = longitude;
             _noOfRooms = noOfRooms;
         }
-                
         public HotelFilter[] Filters => new HotelFilter[]
         {
             new AvailabilityFilter()
@@ -44,7 +37,7 @@ namespace BusinessLayer
         };
         public HotelSearchCriterion HotelSearchCriterion => new HotelSearchCriterion()
         {
-            
+
             Pos = new Connector.PointOfSale()
             {
                 PosId = _posId,
@@ -125,7 +118,7 @@ namespace BusinessLayer
             SearchType = HotelSearchType.City,
             StayPeriod = new DateTimeSpan()
             {
-                Duration = 0,                
+                Duration = 0,
                 Start = _checkIn != null ? _checkIn : DateTime.Now.AddDays(5)/*DateTime.Parse("2017-10-26")*/,
                 End = _checkOut != null ? _checkOut : DateTime.Now.AddDays(7)/*DateTime.Parse("2017-10-25")*/
             },
@@ -163,6 +156,5 @@ namespace BusinessLayer
             TotalResults = 0
         };
         public ResponseType ResultRequested => ResponseType.Complete;
-
     }
 }

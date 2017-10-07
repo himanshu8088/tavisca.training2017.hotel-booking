@@ -39,13 +39,14 @@ namespace Connector
                 await client.CloseAsync();
             }
             return hotelSearchRS;
-        }       
-        
-        public void GetAllRooms()
-        {
-            var client = new HotelEngineClient();
-            
         }
+
+        //public async Task<Connector.Model.Ho> SearchRoomsAsync(Connector.Model.HotelIteneraryRQ hotelSearchRQ)
+        //{
+        //    var client = new HotelEngineClient();
+        //    client.HotelRoomAvailAsync();
+            
+        //}
 
     }
 }
