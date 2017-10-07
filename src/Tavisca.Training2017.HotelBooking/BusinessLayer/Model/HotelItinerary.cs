@@ -8,5 +8,6 @@ namespace BusinessLayer.Model
        public Hotel Hotel { get; set; }
        public decimal BaseFare { get; set; }
        public List<Uri> MediaUri { get; set; }
+       public Location Location { get; set; } 
     }
 }

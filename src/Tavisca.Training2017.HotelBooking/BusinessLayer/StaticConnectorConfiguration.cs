@@ -13,19 +13,26 @@ namespace BusinessLayer
         private DateTime _checkIn;
         private DateTime _checkOut;
         private int _posId;
-
+        private int _passengerCount;
+        private int _noOfRooms;
+        private float _latitude;
+        private float _longitude;
 
         public StaticConnectorConfiguration()
         {
 
         }        
 
-        public StaticConnectorConfiguration(string poi, DateTime checkIn, DateTime checkOut, int posId = 101)
+        public StaticConnectorConfiguration( string poi, DateTime checkIn, DateTime checkOut,int passengerCount=1,int noOfRooms=1,float latitude= 27.173891f, float longitude= 78.042068f, int posId = 101)
         {
             _posId = posId;
             _poi = poi;
             _checkIn = checkIn;
             _checkOut = checkOut;
+            _passengerCount = passengerCount;
+            _latitude = latitude;
+            _longitude = longitude;
+            _noOfRooms = noOfRooms;
         }
                 
         public HotelFilter[] Filters => new HotelFilter[]
@@ -67,30 +74,30 @@ namespace BusinessLayer
             MatrixResults = true,
             MaximumResults = 1500,
             PriceCurrencyCode = "INR",
-            Location = new Location()
+            Location = new Connector.Location()
             {
                 CodeContext = LocationCodeContext.GeoCode,
-                GeoCode = new GeoCode() { Latitude = 27.173891f, Longitude = 78.042068f },
-                GmtOffsetMinutes = 0,
-                Id = 0,
-                Radius = new Distance()
-                {
-                    Amount = 30,
-                    From = LocationCodeContext.City,
-                    Unit = DistanceUnit.mi
-                }
+                GeoCode = new GeoCode() { Latitude = _latitude, Longitude = _longitude },
+                //GmtOffsetMinutes = 0,
+                //Id = 0,
+                //Radius = new Distance()
+                //{
+                //    Amount = 30,
+                //    From = LocationCodeContext.City,
+                //    Unit = DistanceUnit.mi
+                //}
             },
-            NoOfRooms = 1,
-            Guests = new PassengerTypeQuantity[1]
+            NoOfRooms = _noOfRooms,
+            Guests = new PassengerTypeQuantity[]
             {
                 new PassengerTypeQuantity()
                 {
-                    Ages = new int[2]
-                    {
-                        30,30
-                    },
+                    //Ages = new int[2]
+                    //{
+                    //    30,30
+                    //},
                     PassengerType = PassengerType.Adult,
-                    Quantity = 2
+                    Quantity = _passengerCount
                 }
             },
             ProcessingInfo = new HotelSearchProcessingInfo()
@@ -101,16 +108,16 @@ namespace BusinessLayer
             {
                 new RoomOccupancyType()
                 {
-                    PaxQuantities =  new PassengerTypeQuantity[1]
+                    PaxQuantities =  new PassengerTypeQuantity[]
                                      {
                                             new PassengerTypeQuantity()
                                             {
-                                                Ages = new int[2]
-                                                {
-                                                    30,30
-                                                },
+                                                //Ages = new int[2]
+                                                //{
+                                                //    30,30
+                                                //},
                                                 PassengerType = PassengerType.Adult,
-                                                Quantity = 2
+                                                Quantity = _passengerCount
                                             }
                                      }
                 }

@@ -15,7 +15,8 @@ namespace Connector
             Connector.Model.HotelIteneraryRS hotelSearchRS = new Connector.Model.HotelIteneraryRS();
             try
             {
-                client = new HotelEngineClient();                
+                client = new HotelEngineClient();                  
+                
                 var hotelSearchRes = new HotelSearchRQ()
                 {
                     HotelSearchCriterion = hotelSearchRQ.HotelSearchCriterion,
@@ -39,5 +40,12 @@ namespace Connector
             }
             return hotelSearchRS;
         }       
+        
+        public void GetAllRooms()
+        {
+            var client = new HotelEngineClient();
+            
+        }
+
     }
 }

@@ -22,8 +22,15 @@ namespace Tavisca.Training2017.HotelBooking.Web.Controllers
             HotelSearchRQ hotelSearchRequest = new HotelSearchRQ()
             {
                 SearchText = searchRQ.SearchText,
-                CheckInDate =  DateTime.Parse(searchRQ.CheckInDate),
-                CheckOutDate = DateTime.Parse(searchRQ.CheckOutDate)
+                CheckInDate = DateTime.Parse(searchRQ.CheckInDate),
+                CheckOutDate = DateTime.Parse(searchRQ.CheckOutDate),
+                Location =new Services.Model.Location()
+                {
+                    Latitude=searchRQ.Location.Latitude,
+                    Longitude=searchRQ.Location.Longitude
+                },
+                NoOfRooms=searchRQ.NoOfRooms,
+                PsgCount= searchRQ.GuestCount
             };
 
             Task<List<Hotel>> response = hotelService.SearchHotelsAsync(hotelSearchRequest);

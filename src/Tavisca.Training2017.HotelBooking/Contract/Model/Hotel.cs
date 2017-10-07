@@ -11,5 +11,6 @@ namespace Services.Model
         public float StarRating { get; set; }        
         public decimal BaseFare { get; set; }
         public List<Uri> MediaUri { get; set; }
+        public Location Location { get; set; }
     }
 }
