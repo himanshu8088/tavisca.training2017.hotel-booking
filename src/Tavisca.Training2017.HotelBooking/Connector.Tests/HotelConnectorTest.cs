@@ -3,7 +3,7 @@ using Xunit;
 using Connector;
 using BusinessLayer;
 
-namespace Tavisca.Training2017.HotelBooking.Tests.Controller
+namespace Tavisca.Training2017.HotelBookingWeb.Tests
 {
     public class HotelControllerTest
     {

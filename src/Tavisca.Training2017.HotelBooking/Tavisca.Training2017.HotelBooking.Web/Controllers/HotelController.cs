@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using Services.Model;
 using Services.Contracts;
 using Services.Factory;
-using Tavisca.Training2017.HotelBooking.Models;
+using Tavisca.Training2017.HotelBooking.Web.Models;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace Tavisca.Training2017.HotelBooking.Controllers
+namespace Tavisca.Training2017.HotelBooking.Web.Controllers
 {
     [Route("[controller]")]
     public class HotelController : Controller

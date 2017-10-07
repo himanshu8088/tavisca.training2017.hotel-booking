@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Training2017.HotelBooking", "Tavisca.Training2017.HotelBooking\Tavisca.Training2017.HotelBooking.csproj", "{C8241C62-8566-4690-8E5A-8D4422C87C56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Training2017.HotelBooking.Web", "Tavisca.Training2017.HotelBooking.Web\Tavisca.Training2017.HotelBooking.Web.csproj", "{C8241C62-8566-4690-8E5A-8D4422C87C56}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Training2017.HotelBooking.Tests", "Tavisca.Training2017.HotelBooking.Tests\Tavisca.Training2017.HotelBooking.Tests.csproj", "{C31FC104-EF57-4690-8315-D715C5455128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Connector.Tests", "Connector.Tests\Connector.Tests.csproj", "{C31FC104-EF57-4690-8315-D715C5455128}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Connector", "Connectors\Connector.csproj", "{78E1E9A7-6021-4AE0-9703-E7078BC4038D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{016E3DB4-8551-4C77-A71E-F19500237B05}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Contract\Services.csproj", "{4B8CCF8F-9F0F-4B43-AD9E-2036688E8AC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B184B1A8-0F6B-4B83-931E-959CB8BF436D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +44,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C31FC104-EF57-4690-8315-D715C5455128} = {B184B1A8-0F6B-4B83-931E-959CB8BF436D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9F5BE39D-59E1-4403-912F-0340EFF8DF39}

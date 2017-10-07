@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 
-namespace Tavisca.Training2017.HotelBooking
+namespace Tavisca.Training2017.HotelBooking.Web
 {
     public class Program
     {

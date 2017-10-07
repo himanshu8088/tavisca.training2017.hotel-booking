@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.StaticFiles;
 
-namespace Tavisca.Training2017.HotelBooking
+namespace Tavisca.Training2017.HotelBooking.Web
 {
     public class Startup
     {
