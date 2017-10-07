@@ -22,14 +22,16 @@
             </div>
         </div>
     </nav>
+    <div id="hotelList-container">
+    </div>
     <script id="hotel-item" type="text/x-handlebars-template">
         {{#each this}} {{#unless image}}
-        <div class="container" id="hotelList-container">
+        <div class="container">
             <h1 class="text-primary">All Hotels</h1>
             <h4 class="text-primary">Hotels, Villas, Guest Houses</h4>
+            
             <div class="panel-group">
                 <div class="panel panel-primary">
-
                     <div class="panel-body">
                         <div class="col-md-3">
                             <img src="
@@ -60,7 +62,9 @@
                     </div>
                 </div>
             </div>
+            {{/unless}} {{/each}}
         </div>
+        
     </script>
     
 
