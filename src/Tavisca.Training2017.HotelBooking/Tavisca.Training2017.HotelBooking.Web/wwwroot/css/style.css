@@ -4,7 +4,12 @@
     font-size: 1em;
     line-height: 1.41176471;
 }
-
+label {
+    color: #ffffff;
+}
+.no-margin{
+    margin:0px;
+}
 .margin-top {
     margin-top: 15px;
 }
@@ -14,7 +19,8 @@
 }
 
 .navbar-brand {
-    height: 100px;
+    padding:0px;
+    margin-left:10px;
 }
 
 .font-white {
@@ -25,7 +31,7 @@
 }
 
 .bg-img {
-    /*background-image: url('../img/bg.jpg');*/
+    background-image: url('../img/bg.jpg');
     width: 100%;
     height: auto;
     padding: 20px;
@@ -37,13 +43,25 @@
     width: 65%;
 }
 
+nav > li > a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.dropdown-menu > li > a {
+    color: white;
+}
+
+.nav > li > a {
+    background-color: #1A8FC7;
+    color: white;
+}
+
 .navbar-default .navbar-nav > li > a {
     color: #fff;
     font-size: 15px;
 }
-.font-blue {
-    color: #337ab7;
-}
+
 .navbar-nav > li > .dropdown-menu {
     background-color: #1A8FC7;
 }
@@ -56,7 +74,7 @@
 
 .tab-container {
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.8;
     font-size: 15px;
     border-radius: 4px;
     padding: 20px 20px;
@@ -90,25 +108,14 @@
     margin-right: 4px;
     color: white;
 }
-
-.fa {
-    margin-right: 4px;
-    color: white;
-}
-
 .form-container {
-    background-color: #64b8de;
+    opacity: 0.8;
+    background-color: black;
     font-size: 15px;
     border-radius: 4px;
     margin-top: 10px;
-    padding-top: 20px;
+    padding-top: 20px:
 }
-
-
-label {
-    color: white;
-}
-
 /*  datepicker tab  */
 [type="date"] {
     background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
