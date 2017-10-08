@@ -18,7 +18,7 @@ $("#searchClick").click(function () {
     var jsonData = JSON.stringify(jsonFormatData);
    
     $.ajax({
-        url: "../hotel/search.html",
+        url: "../hotel/search",
         type: "POST",
         data: jsonData,
         contentType: "application/json",
@@ -32,18 +32,12 @@ $("#searchClick").click(function () {
                     data: data
                 });
             }
-            $("#destination").autocomplete({
-                source: list,
-                select: function (ev, data) {
-                    console.log(data);
-                }
-            })
         },
         error: function (xhr) {
             _searchResponse = {};
         }
     });
-    window.location = '../hotel/hotel_listing.html';
+    //window.location = '../hotel/hotel_listing.html';
 });
 
 function searchPageReader() {
