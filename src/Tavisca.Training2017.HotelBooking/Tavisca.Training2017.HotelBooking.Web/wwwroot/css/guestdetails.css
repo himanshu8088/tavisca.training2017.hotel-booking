@@ -1,2 +1,54 @@
-﻿body {
+﻿header {
+    height: 80px;
+    background-color: rgb(19, 42, 78);
 }
+
+.fa{
+    font-size:20px;
+    width:70px;    
+}
+
+.guest-control, .control, #pay-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    margin-top: 20px;    
+}
+
+/*.guest-control, .pay-control*/
+.tab-pane {
+    background-color: antiquewhite;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+label{
+    margin-top:5px;
+    color:darkblue;
+    
+}
+
+#procceed, #pay {
+    width: 80px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    #procceed, #pay {
+        width: 300px;
+    }
+}
+
+
+
+
+
+
