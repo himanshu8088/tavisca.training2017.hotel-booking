@@ -13,7 +13,8 @@
     align-self:center;
     width:50%;
     padding:20px;
-    margin:5px;
+    margin:5px;  
+    background-color: floralwhite
 }
 
 header {
@@ -23,7 +24,7 @@ header {
 
 .hotel {
     font-size: 15px;
-    margin-top: 10px;
+    margin:30px;
 }
 
 .padding{
@@ -35,5 +36,20 @@ header {
 }
 
 #book{
-    width:200px;
+    width:80px;
+}
+
+.row {
+    word-wrap: break-word;
+}
+
+.descriptor{
+    color:navy
+}
+
+
+@media (min-width: 768px){
+    #book {
+        width: 200px;
+    }
 }
