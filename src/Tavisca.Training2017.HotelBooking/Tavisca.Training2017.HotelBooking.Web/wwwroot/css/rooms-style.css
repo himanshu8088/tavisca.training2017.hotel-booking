@@ -1,0 +1,20 @@
+﻿header {    
+    height:120px;
+    background-color: rgb(19, 42, 78);            
+}
+
+header, .main, .hotel, .rooms, .room {
+    display: flex;
+    align-items: center;    
+}
+
+.hotel, .room {
+    flex-direction: column;
+}
+
+aside {
+    background-color: rgb(19, 42, 78);
+    border:5px solid black;
+}
+
+

@@ -13,8 +13,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
         {
             //Arrange
             HotelConnector hotelConnector = new HotelConnector();
-            StaticConnectorConfiguration configurationService = new StaticConnectorConfiguration();
-            //poi,checkIn,checkOut,passengerCount = 1,noOfRooms = 1,latitude = 27.173891f,longitude = 78.042068f,posId = 101
+            StaticConnectorConfiguration configurationService = new StaticConnectorConfiguration();            
             var hotelsConfig = configurationService.GetHotelsAvailConfig(DateTime.Now, DateTime.Now.AddDays(7), "Pune");
             Connector.Model.HotelIteneraryRQ hotelSearchRQ = new Connector.Model.HotelIteneraryRQ()
             {
