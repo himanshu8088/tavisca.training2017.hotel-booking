@@ -4,36 +4,45 @@
     <title>Rooms</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/rooms-style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/rooms-style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
-    
-</head>
-<body>    
-    <div class="container-fluid">
-        <header class="container-fluid bg">
-            <a><img src="../img/logo.png" alt=""></a>
-        </header>         
-        <aside>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        </aside>
-        <div class="main">
-            <div class="hotel" >
-                  <label id="hotel-name">name</label>
-                  <label id="hotel-address">address</label>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <a><img src="../img/logo.png" alt=""></a>
+        </header>
+
+        <div class="inner">
+            <div class="hotel padding">
+                <label id="hotel-name">name</label>
+                <label id="hotel-address">address</label>
             </div>
-            <div class="rooms">
-                 <div class="room">
-                     <label id="room-type">room-type</label>
-                     <label id="bed-type">bed-type</label>
-                     <label id="base-fare">base-fare</label>
-                     <button id="book">Book</button>                     
-                 </div>
+            <div class="room">
+                <div class="row padding" >
+                    <label>Room:</label>
+                    <label id="room-type">room-type</label>
+                </div>
+                <div class="row padding">
+                    <label>Bed:</label>
+                    <label id="bed-type">bed-type</label>
+                </div>
+                <div class="row padding">
+                    <label>Fare:</label>
+                    <label id="base-fare">base-fare</label>
+                </div>
+                <div class="row padding">
+                    <label id="description">description</label>
+                </div>
+                <div class="control">
+                    <button id="book">Book</button>
+                </div>                
             </div>
         </div>
     </div>
-        
 </body>
 </html>

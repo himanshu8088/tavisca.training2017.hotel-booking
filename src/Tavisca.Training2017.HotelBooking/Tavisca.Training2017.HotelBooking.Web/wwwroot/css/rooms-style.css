@@ -1,20 +1,39 @@
-﻿header {    
-    height:120px;
-    background-color: rgb(19, 42, 78);            
+﻿
+.hotel ,.room, .inner, .control{
+    display: flex;    
 }
 
-header, .main, .hotel, .rooms, .room {
-    display: flex;
-    align-items: center;    
-}
-
-.hotel, .room {
+.hotel, .room, .inner{
     flex-direction: column;
 }
 
-aside {
-    background-color: rgb(19, 42, 78);
-    border:5px solid black;
+.room{
+    border:3px solid grey;
+    border-radius:3px;
+    align-self:center;
+    width:50%;
+    padding:20px;
+    margin:5px;
 }
 
+header {
+    height: 80px;
+    background-color: rgb(19, 42, 78);   
+}
 
+.hotel {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.padding{
+    padding:10px;
+}
+
+.control{
+    align-self:flex-end;
+}
+
+#book{
+    width:200px;
+}
