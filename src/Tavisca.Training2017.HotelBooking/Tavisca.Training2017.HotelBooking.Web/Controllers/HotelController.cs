@@ -13,7 +13,7 @@ namespace Tavisca.Training2017.HotelBooking.Web.Controllers
     [Route("[controller]")]
     public class HotelController : Controller
     {
-        [HttpPost("search.html")]
+        [HttpPost("search")]
         public async Task<IActionResult> SearchAsync([FromBody] SearchRQ searchRQ)
         {
             IHotelService hotelService = Factory.Get<IHotelService>() as IHotelService;

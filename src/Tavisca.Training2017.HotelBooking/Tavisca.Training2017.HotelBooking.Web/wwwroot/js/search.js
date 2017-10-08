@@ -1,50 +1,28 @@
-﻿
-var jsonFormatData = {};
-
-function hotelSearchRQ (searchText, checkIn, checkOut) {
+﻿function hotelSearchRQ (searchText, checkIn, checkOut, latitude,longitude) {
      this.data = {
         "SearchText": searchText,
         "CheckInDate": checkIn,
-        "CheckOutDate": checkOut
+        "CheckOutDate": checkOut,
+        "Location": {
+            "Latitude": latitude,
+            "Longitude": longitude
+        }
     }  
-     jsonFormatData = this.data
-    
 };
 
 
 $("#searchClick").click(function () {
-
-    searchPageReader();
-    var jsonData = JSON.stringify(jsonFormatData);
-   
-    $.ajax({
-        url: "../hotel/search",
-        type: "POST",
-        data: jsonData,
-        contentType: "application/json",
-        success: function (resp) {
-            var poi = resp[2].ItemList;
-            var list = new Array();
-            for (var i = 0; i < poi.length; i++) {
-                var data = poi[i];
-                list.push({
-                    value: data.CulturedText,
-                    data: data
-                });
-            }
-        },
-        error: function (xhr) {
-            _searchResponse = {};
-        }
-    });
-    //window.location = '../hotel/hotel_listing.html';
+    saveSearchCriteriaInSession();
+    window.location = '../hotel/hotel_listing.html';
 });
 
-function searchPageReader() {
+function saveSearchCriteriaInSession() {
+    var searchLocation = JSON.parse(sessionStorage.getItem('selectedLocation')).item;
+    console.log(searchLocation);
     var _searchText = $('#destination').val();
     var _checkIn = $('#check-in').val();
     var _checkOut = $('#check-out').val();
-    var hotelSearchObj = new hotelSearchRQ(_searchText, _checkIn, _checkOut);
+    var hotelSearchObj = new hotelSearchRQ(_searchText, _checkIn, _checkOut, searchLocation.data.Latitude, searchLocation.data.Longitude);
     sessionStorage.setItem('hotelSearchCriteria', JSON.stringify(hotelSearchObj));
 }
 

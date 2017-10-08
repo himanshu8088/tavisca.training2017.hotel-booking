@@ -26,7 +26,7 @@ function search(searchText) {
             $("#destination").autocomplete({
                 source: list,
                 select: function (ev, data) {
-                    console.log(data);
+                    sessionStorage.setItem('selectedLocation', JSON.stringify(data));
                 }
             })
         },
