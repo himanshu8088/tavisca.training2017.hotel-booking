@@ -11,5 +11,6 @@ namespace Connector.Model
         public ResponseType ResultRequested { get; set; }                
         public PagingInfo PagingInfo { get; set; }  
         public string SessionId { get; set; }
+        public string HotelId { get; set; }
     }
 }

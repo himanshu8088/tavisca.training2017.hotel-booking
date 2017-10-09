@@ -34,8 +34,32 @@ namespace Tavisca.Training2017.HotelBooking.Web.Controllers
             };
 
             Task<List<Hotel>> response = hotelService.SearchHotelsAsync(hotelSearchRequest);
-            hotels = response.Result;
+            hotels = response.GetAwaiter().GetResult();
             return Ok(hotels);
+        }
+
+        [HttpPost("roomsearch")]
+        public async Task<IActionResult> RoomSearchAsync([FromBody] RoomRQ roomRQ)
+        {
+            IHotelService hotelService = Factory.Get<IHotelService>() as IHotelService;
+
+            var roomSearchRequest = new Services.Model.RoomSearchRQ()
+            {
+                SearchText = roomRQ.SearchText,
+                CheckinDate = DateTime.Parse(roomRQ.CheckInDate),
+                CheckoutDate = DateTime.Parse(roomRQ.CheckOutDate),
+                Location = new Services.Model.Location()
+                {
+                    Latitude = roomRQ.Location.Latitude,
+                    Longitude = roomRQ.Location.Longitude
+                },
+                NoOfRooms = roomRQ.NoOfRooms,
+                PsgCount = roomRQ.GuestCount,
+                HotelId = roomRQ.HotelId
+            };
+
+            var response = await hotelService.RoomSearchAsync(roomSearchRequest);
+            return Ok(response);
         }
     }
 }

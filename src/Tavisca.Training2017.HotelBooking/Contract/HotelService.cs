@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 using Services.Validator;
 using System;
 using System.Collections.Generic;
+using Services.Model;
 
 namespace Services
 {
     public class HotelService : IHotelService
-    {       
+    {
         public async Task<List<Services.Model.Hotel>> SearchHotelsAsync(Services.Model.HotelSearchRQ searchRQ)
         {
             HotelSearchRQValidator hotelSearchRQValidator = new HotelSearchRQValidator();
@@ -35,13 +36,14 @@ namespace Services
             };
 
             Task<List<HotelItinerary>> hotelItineraries = hotelSearch.SearchAsync(hotelRQ);
-            var itineraries = hotelItineraries.Result;            
+            var itineraries = hotelItineraries.GetAwaiter().GetResult();            
             List<Services.Model.Hotel> hotels = new List<Model.Hotel>(); 
 
             foreach (var itinerary in itineraries)
             {
                 var hotel = new Model.Hotel()
                 {
+                    HotelId = itinerary.Hotel.HotelId,
                     Address = itinerary.Hotel.Address,
                     HotelName= itinerary.Hotel.HotelName,
                     StarRating = itinerary.Hotel.StarRating,
@@ -57,6 +59,45 @@ namespace Services
             }
             
             return hotels;
+        }
+
+        public async Task<Model.Hotel> RoomSearchAsync(Model.RoomSearchRQ roomSearchRequest)
+        {
+            var roomSearch = BusinessLayer.Factories.Factory.Get<IRoomSearch>() as IRoomSearch;
+
+            var roomRQ = new BusinessLayer.Model.RoomSearchRQ
+            {
+                SessionId = Guid.NewGuid(),
+                SearchText = roomSearchRequest.SearchText,
+                CheckinDate = roomSearchRequest.CheckinDate,
+                CheckoutDate = roomSearchRequest.CheckoutDate,
+                Location = new BusinessLayer.Model.Location()
+                {
+                    Latitude = roomSearchRequest.Location.Latitude,
+                    Longitude = roomSearchRequest.Location.Longitude
+                },
+                NoOfRooms = roomSearchRequest.NoOfRooms,
+                PsgCount = roomSearchRequest.PsgCount,
+                HotelId = roomSearchRequest.HotelId
+            };
+
+            var hotelItinerary = await roomSearch.SearchAsync(roomRQ);
+
+            var hotel = new Model.Hotel()
+            {
+                HotelId = hotelItinerary.Hotel.HotelId,
+                Address = hotelItinerary.Hotel.Address,
+                HotelName = hotelItinerary.Hotel.HotelName,
+                StarRating = hotelItinerary.Hotel.StarRating,
+                BaseFare = hotelItinerary.BaseFare,
+                MediaUri = hotelItinerary.MediaUri,
+                Location = new Services.Model.Location()
+                {
+                    Latitude = hotelItinerary.Location.Latitude,
+                    Longitude = hotelItinerary.Location.Longitude
+                },
+            };
+            return hotel;
         }
     }
 }

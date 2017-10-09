@@ -7,5 +7,6 @@ namespace Services.Contracts
     public interface IHotelService
     {
         Task<List<Hotel>> SearchHotelsAsync(HotelSearchRQ hotelSearchRequest);
+        Task<Hotel> RoomSearchAsync(RoomSearchRQ roomSearchRequest);
     }
 }

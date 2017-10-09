@@ -26,9 +26,11 @@ namespace BusinessLayer.ContractsImplementation
 
             Task<Connector.Model.HotelIteneraryRS> hotelSearchRS= hotelConnector.SearchHotelsAsync(hotelSearchRQ);
             var result = new List<BusinessLayer.Model.HotelItinerary>();
-
-            foreach (var itinerary in hotelSearchRS.Result.HotelItineraries)
+            //var i = 0;
+            foreach (var itinerary in hotelSearchRS.GetAwaiter().GetResult().HotelItineraries)
             {
+                //var roomPrice=itinerary.Rooms[i].StdRoomRate.TotalFare.Amount;
+                //i++;
                 var hotel = new BusinessLayer.Model.Hotel()
                 {
                     HotelId = itinerary.HotelProperty.Id,

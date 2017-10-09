@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-
+using Connector.Model;
 
 namespace Connector
 {
@@ -26,7 +26,7 @@ namespace Connector
                     ResultRequested = hotelSearchRQ.ResultRequested                    
                 };
                 Task<HotelSearchRS> response= client.HotelAvailAsync(hotelSearchRes);
-                HotelSearchRS hotelSearchResult = response.Result;
+                HotelSearchRS hotelSearchResult = response.GetAwaiter().GetResult();
                 var itineraries = hotelSearchResult.Itineraries;                            
                 hotelSearchRS.HotelItineraries = new List<HotelItinerary>(itineraries);
             }
@@ -41,12 +41,20 @@ namespace Connector
             return hotelSearchRS;
         }
 
-        //public async Task<Connector.Model.Ho> SearchRoomsAsync(Connector.Model.HotelIteneraryRQ hotelSearchRQ)
-        //{
-        //    var client = new HotelEngineClient();
-        //    client.HotelRoomAvailAsync();
-            
-        //}
+        public async Task<Connector.Model.HotelIteneraryRS> SearchRoomsAsync(Connector.Model.HotelIteneraryRQ searchRQ)
+        {
+            var client = new HotelEngineClient();
+            client.HotelRoomAvailAsync(GetRoomAvailRequest(searchRQ));
+            return null;
+        }
 
+        private HotelRoomAvailRQ GetRoomAvailRequest(HotelIteneraryRQ searchRQ)
+        {
+            return new HotelRoomAvailRQ
+            {
+                HotelSearchCriterion = searchRQ.HotelSearchCriterion,
+                Itinerary = new HotelItinerary { }
+            };
+        }
     }
 }

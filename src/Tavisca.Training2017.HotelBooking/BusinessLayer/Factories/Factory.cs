@@ -14,7 +14,8 @@ namespace BusinessLayer.Factories
         {
             { typeof(IHotelSearch),   new HotelSearch()  },
             { typeof(IHotelConnector),   new HotelConnector()  },
-            { typeof(IConnectorConfiguration),   new StaticConnectorConfiguration()  }
+            { typeof(IConnectorConfiguration),   new StaticConnectorConfiguration()  },
+            { typeof(IRoomSearch),   new RoomSearch()  },
         };
 
         public static object Get<T>()

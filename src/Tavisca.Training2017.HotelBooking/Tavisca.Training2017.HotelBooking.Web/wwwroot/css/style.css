@@ -29,7 +29,6 @@ label {
 .bg {
     background-color: rgba(18, 11, 86, 0.99);
 }
-
 .bg-img {
     background-image: url('../img/bg.jpg');
     width: 100%;
@@ -140,9 +139,6 @@ input {
 }
 /* datepicker ends  */
 
-
-
-
-
-
-
+.amenity {
+    margin-right: 5px;
+}
