@@ -15,7 +15,7 @@
         dateFormat: "yy-mm-dd"
     });
 });
-function hotelSearchRQ(searchText, checkIn, checkOut, latitude, longitude) {
+function hotelSearchRQ(searchText, checkIn, checkOut, latitude, longitude, guestCount, roomCount) {
      this.data = {
         "SearchText": searchText,
         "CheckInDate": checkIn,
@@ -23,13 +23,15 @@ function hotelSearchRQ(searchText, checkIn, checkOut, latitude, longitude) {
         "Location": {
             "Latitude": latitude,
             "Longitude": longitude
-        }
-    }  
+        },
+        "GuestCount": guestCount,
+        "NoOfRooms": roomCount
+    }       
 };
 
 $("#searchClick").click(function () {
     saveSearchCriteriaInSession();
-    window.location = '../hotel/hotel_listing.html';
+    window.location = '../html/hotel.html';
 });
 
 function saveSearchCriteriaInSession() {
@@ -38,7 +40,9 @@ function saveSearchCriteriaInSession() {
     var _searchText = $('#destination').val();
     var _checkIn = $('#check-in').val();
     var _checkOut = $('#check-out').val();
-    var hotelSearchObj = new hotelSearchRQ(_searchText, _checkIn, _checkOut, searchLocation.data.Latitude, searchLocation.data.Longitude);
+    var _guestCount = $('#guest').find(":selected").text();
+    var _roomCount = $('#room').find(":selected").text();
+    var hotelSearchObj = new hotelSearchRQ(_searchText, _checkIn, _checkOut, searchLocation.data.Latitude, searchLocation.data.Longitude, _guestCount, _roomCount);
     sessionStorage.setItem('hotelSearchCriteria', JSON.stringify(hotelSearchObj));
 }
 

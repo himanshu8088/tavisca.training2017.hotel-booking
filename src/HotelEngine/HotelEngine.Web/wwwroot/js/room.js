@@ -2,6 +2,7 @@
     var searchCriteria = JSON.parse(sessionStorage.getItem('roomSearchCriteria')).data;
 
     var jsonData = JSON.stringify(searchCriteria);
+
     //$.ajax({
     //    url: "../hotel/room.html",
     //    type: "POST",
