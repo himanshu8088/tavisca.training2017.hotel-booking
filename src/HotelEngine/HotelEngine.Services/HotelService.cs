@@ -1,10 +1,9 @@
 ﻿using System.Threading.Tasks;
 using System;
-using System.Collections.Generic;
 using HotelEngine.Contracts.Models;
 using HotelEngine.Contracts.Contracts;
-using HotelEngine.Services.Validator;
 using HotelEngine.Core.Implementation;
+using HotelEngine.Core.Factories;
 
 namespace HotelEngine.Services
 {    
@@ -15,8 +14,8 @@ namespace HotelEngine.Services
 
         public HotelService()
         {
-            _hotelSearch = new HotelSearch();
-            _roomSearch = new RoomSearch();
+            _hotelSearch = Factory.Get<IHotelSearch>() as IHotelSearch;
+            _roomSearch = Factory.Get<IRoomSearch>() as IRoomSearch;
         }
 
         public async Task<HotelSearchRS> SearchHotelsAsync(HotelSearchRQ hotelSearchRequest)

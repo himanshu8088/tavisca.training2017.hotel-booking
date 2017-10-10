@@ -9,8 +9,8 @@ namespace HotelEngine.Core.Factories
     {
         private static Dictionary<Type, object> _mapping = new Dictionary<Type, object>()
         {
-            { typeof(IHotelSearch), new HotelSearch() }
-            //{ typeof(IHotelSearch), new RoomSearch() }
+            { typeof(IHotelSearch), new HotelSearch() },
+            { typeof(IRoomSearch), new RoomSearch() }
         };
 
         public static object Get<T>()

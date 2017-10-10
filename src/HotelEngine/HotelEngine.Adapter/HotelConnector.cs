@@ -6,12 +6,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using HotelEngine.Adapter.Configuration;
+using HotelEngine.Adapter.Contracts;
 
 namespace HotelEngine.Adapter
 {
     public class HotelConnector : IHotelConnector
     {
-        private StaticAdapterConfiguration _config;
+        private IAdapterConfiguration  _config;
         private HotelEngineClient _client = null;
 
         public HotelConnector()
