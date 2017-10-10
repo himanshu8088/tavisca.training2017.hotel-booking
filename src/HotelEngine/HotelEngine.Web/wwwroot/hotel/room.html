@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Rooms</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/rooms-style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/libraries/handlebars-v4.0.10.js"></script>
+
+</head>
+<body>
+    <div class="main">
+        <header>
+            <a><img src="../img/logo.png" alt=""></a>
+        </header>
+
+        <div id="roomList-container">
+
+        </div>
+
+        <script id="room-item" type="text/x-handlebars-template">
+            <div class="inner">
+                <div class="hotel">
+                    <label id="hotel-name">{{hotelName}}</label>
+                    <label id="hotel-address">{{completeAddress}}</label>
+                </div>
+                {{#each this}} {{#unless room}}
+                <div class="room">
+                    <div class="row padding">
+                        <label class="descriptor">Room:</label>
+                        <label id="room-type">{{roomName}}</label>
+                    </div>
+                    <div class="row padding">
+                        <label class="descriptor">Bed:</label>
+                        <label id="bed-type">{{bedType}}</label>
+                    </div>
+                    <div class="row padding">
+                        <label class="descriptor">Fare:</label>
+                        <label id="base-fare">{{baseFare}}</label>
+                    </div>
+                    <div class="row padding">
+                        <label id="description">{{description}}</label>
+                    </div>
+                    <div class="control">
+                        <button id="book">Book</button>
+                    </div>
+                </div>
+                {{/unless}} {{/each}}
+            </div>
+            
+        </script>
+    </div>
+    <script src="../js/room.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>

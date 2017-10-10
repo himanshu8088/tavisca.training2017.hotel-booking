@@ -47,8 +47,9 @@ nav > li > a {
     font-weight: bold;
 }
 
-.dropdown-menu > li > a {
-    color: white;
+.dropdown-menu > li:hover, .dropdown-menu > li:focus {
+    color: black;
+    background-color:#ffffff;
 }
 
 .nav > li > a {
