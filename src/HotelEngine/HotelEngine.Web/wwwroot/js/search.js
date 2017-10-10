@@ -1,4 +1,18 @@
-﻿$(document).ready(function () {
+﻿function hotelSearchRQ(searchText, checkIn, checkOut, latitude, longitude, guestCount, roomCount) {
+    this.data = {
+        "SearchText": searchText,
+        "CheckInDate": checkIn,
+        "CheckOutDate": checkOut,
+        "Location": {
+            "Latitude": latitude,
+            "Longitude": longitude
+        },
+        "GuestCount": guestCount,
+        "NoOfRooms": roomCount
+    }
+};
+
+$(document).ready(function () {
     $("#check-in").datepicker({
         dateFormat: "yy-mm-dd",
         minDate: 0,
@@ -15,19 +29,7 @@
         dateFormat: "yy-mm-dd"
     });
 });
-function hotelSearchRQ(searchText, checkIn, checkOut, latitude, longitude, guestCount, roomCount) {
-     this.data = {
-        "SearchText": searchText,
-        "CheckInDate": checkIn,
-        "CheckOutDate": checkOut,
-        "Location": {
-            "Latitude": latitude,
-            "Longitude": longitude
-        },
-        "GuestCount": guestCount,
-        "NoOfRooms": roomCount
-    }       
-};
+
 
 $("#searchClick").click(function () {
     saveSearchCriteriaInSession();

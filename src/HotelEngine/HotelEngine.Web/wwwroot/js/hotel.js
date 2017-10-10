@@ -6,8 +6,7 @@
 });
 
 $(document).ready(function () {
-    var searchCriteria = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;
-    
+    var searchCriteria = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;    
     var jsonData = JSON.stringify(searchCriteria);
     $.ajax({
         url: "../hotel/search",
@@ -30,41 +29,29 @@ $(document).ready(function () {
 
 });
 
-//function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRooms, hotelId) {
-//    this.data = {        
-//        "CheckInDate": checkIn,
-//        "CheckOutDate": checkOut,
-//        "Location": {
-//            "Latitude": latitude,
-//            "Longitude": longitude
-//        },
-//        "NoOfRooms": noOfRooms,
-//        "GuestCount": guestCount,
-//        "HotelId": hotelId            
-//    }
-//};
+function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRooms, hotelId) {
+    this.data = {        
+        "CheckInDate": checkIn,
+        "CheckOutDate": checkOut,
+        "Location": {
+            "Latitude": latitude,
+            "Longitude": longitude
+        },
+        "NoOfRooms": noOfRooms,
+        "GuestCount": guestCount,
+        "HotelId": hotelId            
+    }
+};
 
+$('#viewRooms').click(function () {
+    var result = sessionStorage.getItem('hotelSearchCriteria');
+    var searchCriteria = result.data;
+    var roomSearchObj = new roomSearchRQ(searchCriteria.CheckInDate, searchCriteria.CheckOutDate, searchCriteria.Location.Latitude, searchCriteria.Location.Longitude, searchCriteria.GuestCount, searchCriteria.NoOfRooms, searchCriteria.HotelId);    
+    storeOnSession(roomSearchObj);    
+    window.location = '../html/room.html';
+});
 
-
-//$('#viewRooms').click(function () {
-//    var searchCriteria = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;
-//    //var roomSearchObj = new roomSearchRQ(searchCriteria.CheckInDate, searchCriteria.CheckOutDate, searchCriteria.Location.Latitude, searchCriteria.Location.Longitude, 2, 1 ,12345);
-//    var roomSearchObj = new roomSearchRQ("2017-10-10", "2017-10-10", 77, 27, 2, 1, 12345);
-//    storeOnSession(roomSearchObj);
-//    //window.location = '../hotel/room';
-//    window.location = '../hotel/room.html';
-//});
-
-//$(document).ready(function () {
-//   // var searchCriteria = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;
-//    //var roomSearchObj = new roomSearchRQ(searchCriteria.CheckInDate, searchCriteria.CheckOutDate, searchCriteria.Location.Latitude, searchCriteria.Location.Longitude, 2, 1 ,12345);
-//    var roomSearchObj = new roomSearchRQ("2017-10-10", "2017-10-10", 77, 27, 2, 1, 12345);
-//    storeOnSession(roomSearchObj);
-//    //window.location = '../hotel/room';
-//    window.location = '../hotel/room.html';
-//});
-
-//function storeOnSession(roomSearchObj) {    
-//    sessionStorage.setItem('roomSearchCriteria', JSON.stringify(roomSearchObj));
-//}
+function storeOnSession(roomSearchObj) {    
+    sessionStorage.setItem('roomSearchCriteria', JSON.stringify(roomSearchObj));
+}
 
