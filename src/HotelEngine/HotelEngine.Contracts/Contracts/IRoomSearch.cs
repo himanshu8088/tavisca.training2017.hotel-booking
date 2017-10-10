@@ -6,6 +6,6 @@ namespace HotelEngine.Contracts.Contracts
 {
     public interface IRoomSearch
     {
-        Task<List<Room>> SearchAsync(RoomSearchRQ hotelSearchRequest);
+        Task<RoomSearchRS> SearchAsync(RoomSearchRQ roomSearchRQ);
     }
 }

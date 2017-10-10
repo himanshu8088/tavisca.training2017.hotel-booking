@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guest Details</title>
+    <link rel="stylesheet" href="../css/guestdetails.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <a><img src="../img/logo.png" alt=""></a>
+        </header>
+
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="active">
+                    <a data-toggle="tab" href="#guest-tab">
+                        <div class="fa fa-user"> Guest</div>
+                    </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#pay-tab">
+                        <div class="fa fa-credit-card"> Payment</div>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="guest-tab" class="tab-pane fade in active">
+                    <div class="form-group guest-control">
+                        <div class="col-md-8">
+                            <label for="name">Guest</label>
+                            <input class="form-control" id="name" type="text" placeholder="Guest Name">
+                        </div>
+                        <div class="col-md-8">
+                            <label for="mobile">Mobile</label>
+                            <input class="form-control" id="mobile" type="number" placeholder="Mobile Number">
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button class="form-control" id="procceed">Procceed</button>
+                    </div>
+                </div>
+
+                <div id="pay-tab" class="tab-pane fade">                    
+                    <div class="form-group pay-control">
+                        <div class="col-md-8">
+                            <label for="card-holder">Card Holder</label>
+                            <input class="form-control" id="card-holder" type="text" placeholder="Card Holder Name">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="Expiry Date">Date</label>
+                            <input class="form-control" id="expiry-date" type="date" placeholder="Card Expiry Date">
+                        </div> 
+                        <div class="col-md-9">
+                            <label for="card-number">Card Number</label>
+                            <input class="form-control" id="card-number" type="number" placeholder="Card Number">
+                        </div>
+                        <div class="col-md-offset-1 col-md-2">
+                            <label for="cvv">CVV</label>
+                            <input class="form-control" id="cvv" type="number" placeholder="CVV" max="999">
+                        </div>
+                    </div>                   
+                    <div class="control">
+                        <button class="form-control" id="pay">Pay</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

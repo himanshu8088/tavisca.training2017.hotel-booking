@@ -13,7 +13,7 @@
 
 $("#searchClick").click(function () {
     saveSearchCriteriaInSession();
-    window.location = '../hotel/hotel_listing.html';
+    window.location = '../html/hotels.html';
 });
 
 function saveSearchCriteriaInSession() {

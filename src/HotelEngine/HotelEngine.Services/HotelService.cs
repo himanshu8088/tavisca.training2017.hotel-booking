@@ -16,6 +16,7 @@ namespace HotelEngine.Services
         public HotelService()
         {
             _hotelSearch = new HotelSearch();
+            _roomSearch = new RoomSearch();
         }
 
         public async Task<HotelSearchRS> SearchHotelsAsync(HotelSearchRQ hotelSearchRequest)
@@ -25,9 +26,8 @@ namespace HotelEngine.Services
             return hotelSearchRS;
         }
 
-        public async Task<List<Room>> RoomSearchAsync(RoomSearchRQ roomSearchRequest)
-        {
-            roomSearchRequest.SessionId = Guid.NewGuid();
+        public async Task<RoomSearchRS> RoomSearchAsync(RoomSearchRQ roomSearchRequest)
+        {            
             var roomSearchRS = await _roomSearch.SearchAsync(roomSearchRequest);
             return roomSearchRS;
         }        

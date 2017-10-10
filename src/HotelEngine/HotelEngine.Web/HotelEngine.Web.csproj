@@ -40,7 +40,6 @@
     <None Include="wwwroot\fonts\glyphicons-halflings-regular.svg" />
     <None Include="wwwroot\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="wwwroot\js\autosuggest.js" />
-    <None Include="wwwroot\js\hotel_listing.js" />
     <None Include="wwwroot\js\libraries\bootstrap.js" />
     <None Include="wwwroot\js\libraries\bootstrap.min.js" />
     <None Include="wwwroot\js\libraries\handlebars-v4.0.10.js" />

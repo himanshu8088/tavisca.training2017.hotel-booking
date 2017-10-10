@@ -20,12 +20,7 @@ namespace HotelEngine.Core.Implementation
             var hotelSearchRS = await _hotelConnector.SearchHotelsAsync(hotelSearchRequest);
             return hotelSearchRS;
         }
-       
-        public async Task<RoomSearchRS> RoomSearchAsync(RoomSearchRQ roomSearchRQ)
-        {
-            var roomSearchRS = await _hotelConnector.SearchRoomsAsync(roomSearchRQ);
-            return roomSearchRS;
-        }
+            
     }
 }
 
