@@ -48,10 +48,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
-    <ProjectReference Include="..\Contract\Services.csproj" />
-    <ProjectReference Include="..\HotelEngine..Services\HotelEngine.Services.csproj" />
-    <ProjectReference Include="..\HotelEngine.Contracts\HotelEngine.Contracts.csproj" />
+    <ProjectReference Include="..\HotelEngine.Services\HotelEngine.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

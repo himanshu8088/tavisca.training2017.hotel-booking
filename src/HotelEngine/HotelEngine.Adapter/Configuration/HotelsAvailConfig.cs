@@ -22,7 +22,7 @@ namespace HotelEngine.Adapter.Configuration
             _posId = 101;
             _checkIn = hotelSearchRQ.CheckInDate;
             _checkOut = hotelSearchRQ.CheckOutDate;
-            _passengerCount = hotelSearchRQ.PsgCount;
+            _passengerCount = hotelSearchRQ.GuestCount;
             _latitude = hotelSearchRQ.Location.Latitude;
             _longitude = hotelSearchRQ.Location.Longitude;
             _noOfRooms = hotelSearchRQ.NoOfRooms;

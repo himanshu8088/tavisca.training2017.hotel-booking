@@ -14,7 +14,7 @@ namespace HotelEngine.Contracts.Models
         
         public Location Location { get; set; }
 
-        public int PsgCount { get; set; }
+        public int GuestCount { get; set; }
 
         public int NoOfRooms { get; set; }
     }

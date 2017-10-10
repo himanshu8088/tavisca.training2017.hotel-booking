@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Connectors\Connector.csproj" />
     <ProjectReference Include="..\HotelEngine.Adapter\HotelEngine.Adapter.csproj" />
     <ProjectReference Include="..\HotelEngine.Contracts\HotelEngine.Contracts.csproj" />
   </ItemGroup>
