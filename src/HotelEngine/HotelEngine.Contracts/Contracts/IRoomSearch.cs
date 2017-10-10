@@ -1,10 +1,11 @@
 ﻿using HotelEngine.Contracts.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace HotelEngine.Contracts.Contracts
 {
     public interface IRoomSearch
     {
-        //Task<HotelItinerary> SearchAsync(RoomSearchRQ hotelSearchRequest);
+        Task<List<Room>> SearchAsync(RoomSearchRQ hotelSearchRequest);
     }
 }

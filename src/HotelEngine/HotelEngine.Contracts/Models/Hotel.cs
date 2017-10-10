@@ -13,5 +13,6 @@ namespace HotelEngine.Contracts.Models
         public Location Location { get; set; }
         public List<Uri> Images { get; set; }
         public List<Room> Rooms { get; set; }
+        public List<Amenity> Amenities { get; set; } 
     }
 }

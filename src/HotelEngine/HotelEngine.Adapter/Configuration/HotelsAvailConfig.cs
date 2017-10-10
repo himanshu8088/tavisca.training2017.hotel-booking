@@ -14,8 +14,7 @@ namespace HotelEngine.Adapter.Configuration
         private int _passengerCount;
         private int _noOfRooms;
         private float _latitude;
-        private float _longitude;
-        /*string poi, DateTime checkIn, DateTime checkOut, int passengerCount = 1, int noOfRooms = 1, float latitude = 27.173891f, float longitude = 78.042068f, int posId = 101*/
+        private float _longitude;        
 
         public HotelsAvailConfig(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
         {
@@ -27,6 +26,18 @@ namespace HotelEngine.Adapter.Configuration
             _longitude = hotelSearchRQ.Location.Longitude;
             _noOfRooms = hotelSearchRQ.NoOfRooms;
         }
+
+        public HotelsAvailConfig(HotelEngine.Contracts.Models.RoomSearchRQ roomSearchRQ)
+        {
+            _posId = 101;
+            _checkIn = roomSearchRQ.CheckInDate;
+            _checkOut = roomSearchRQ.CheckOutDate;
+            _passengerCount = roomSearchRQ.GuestCount;
+            _latitude = roomSearchRQ.Location.Latitude;
+            _longitude = roomSearchRQ.Location.Longitude;
+            _noOfRooms = roomSearchRQ.NoOfRooms;
+        }
+
         public HotelFilter[] Filters => new HotelFilter[]
         {
             new AvailabilityFilter()
@@ -69,25 +80,13 @@ namespace HotelEngine.Adapter.Configuration
             Location = new Location()
             {
                 CodeContext = LocationCodeContext.GeoCode,
-                GeoCode = new GeoCode() { Latitude = _latitude, Longitude = _longitude },
-                //GmtOffsetMinutes = 0,
-                //Id = 0,
-                //Radius = new Distance()
-                //{
-                //    Amount = 30,
-                //    From = LocationCodeContext.City,
-                //    Unit = DistanceUnit.mi
-                //}
+                GeoCode = new GeoCode() { Latitude = _latitude, Longitude = _longitude },                
             },
             NoOfRooms = _noOfRooms,
             Guests = new PassengerTypeQuantity[]
             {
                 new PassengerTypeQuantity()
-                {
-                    //Ages = new int[2]
-                    //{
-                    //    30,30
-                    //},
+                {                    
                     PassengerType = PassengerType.Adult,
                     Quantity = _passengerCount
                 }
@@ -103,11 +102,7 @@ namespace HotelEngine.Adapter.Configuration
                     PaxQuantities =  new PassengerTypeQuantity[]
                                      {
                                             new PassengerTypeQuantity()
-                                            {
-                                                //Ages = new int[2]
-                                                //{
-                                                //    30,30
-                                                //},
+                                            {                                                
                                                 PassengerType = PassengerType.Adult,
                                                 Quantity = _passengerCount
                                             }
@@ -118,8 +113,8 @@ namespace HotelEngine.Adapter.Configuration
             StayPeriod = new DateTimeSpan()
             {
                 Duration = 0,
-                Start = _checkIn != null ? _checkIn : DateTime.Now.AddDays(5)/*DateTime.Parse("2017-10-26")*/,
-                End = _checkOut != null ? _checkOut : DateTime.Now.AddDays(7)/*DateTime.Parse("2017-10-25")*/
+                Start = _checkIn, 
+                End = _checkOut 
             },
             Attributes = new StateBag[]
             {

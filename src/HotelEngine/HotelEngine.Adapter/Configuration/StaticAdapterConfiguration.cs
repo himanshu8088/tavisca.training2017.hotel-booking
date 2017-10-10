@@ -1,18 +1,20 @@
 ﻿using System;
 using Proxies;
 using HotelEngine.Adapter.Contracts;
+using HotelEngine.Contracts.Models;
 
 namespace HotelEngine.Adapter.Configuration
 {
     public class StaticAdapterConfiguration : IAdapterConfiguration
-    {       
+    {
         public HotelsAvailConfig GetHotelsAvailConfig(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
         {
             return new HotelsAvailConfig(hotelSearchRQ);
         }
-        public RoomsAvailConfig GetRoomsAvailConfig(int hotelId)
+        public RoomsAvailConfig GetRoomsAvailConfig(RoomSearchRQ roomSearchRQ)
         {
-            return new RoomsAvailConfig(hotelId);
+            var hotelConfig = new HotelsAvailConfig(roomSearchRQ);
+            return new RoomsAvailConfig(hotelConfig, roomSearchRQ);
         }
     }
 }
