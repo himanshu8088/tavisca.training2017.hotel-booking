@@ -17,7 +17,6 @@ namespace HotelEngine.Web.Controllers
             _hotelService = new HotelService();
         }
 
-
         [HttpPost("search")]
         public async Task<IActionResult> SearchAsync([FromBody] HotelSearchRQ searchRQ)
         {           
