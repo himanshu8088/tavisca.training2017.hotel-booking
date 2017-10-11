@@ -10,10 +10,7 @@ using Xunit;
 namespace Tavisca.Training2017.HotelBookingWeb.Tests
 {
     public class HotelControllerTest
-    {
-
-
-
+    {        
         [Fact]
         public async void Room_Search_Test()
         {
@@ -40,47 +37,35 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
 
             //Assert
             Assert.NotNull(response);
-
         }
 
-        //[Fact]
-        //public void Search_Should_Give_Valid_Result_When_SearchRQ_Is_Complete()
-        //{
-        //    //Arrange
-        //    HotelConnector hotelConnector = new HotelConnector();
-        //    StaticConnectorConfiguration configurationService = new StaticConnectorConfiguration();
-        //    var hotelsConfig = configurationService.GetHotelsAvailConfig(DateTime.Now, DateTime.Now.AddDays(7), "Pune");
-        //    Connector.Model.HotelIteneraryRQ hotelSearchRQ = new Connector.Model.HotelIteneraryRQ()
-        //    {
-        //        SessionId = Guid.NewGuid().ToString(),
-        //        Filters = hotelsConfig.Filters,
-        //        HotelSearchCriterion = hotelsConfig.HotelSearchCriterion,
-        //        PagingInfo = hotelsConfig.PagingInfo,
-        //        ResultRequested = hotelsConfig.ResultRequested
-        //    };
+        [Fact]
+        public async void Price_Search_Test()
+        {
+            //Arrange           
+            var priceSearchRQ = new RoomPriceSearchRQ()
+            {
+                SessionId = Guid.Parse("b7f8e952-9825-4d44-9262-2d5907f5d600"),
+                CheckInDate = DateTime.Now.AddDays(1),
+                CheckOutDate = DateTime.Now.AddDays(5),
+                GuestCount = 1,
+                HotelId = 258057,
+                Location = new HotelEngine.Contracts.Models.Location()
+                {
+                    Latitude = 27.16973f,
+                    Longitude = 27.16973f
+                },
+                NoOfRooms = 1,
+                SearchText = "Pune",
+                RoomId= Guid.Parse("8979b327-96e6-424f-81c0-dd9594841fdf")
+            };
+            HotelConnector hotelConnector = new HotelConnector();
 
-        //    //Act
-        //    var result = hotelConnector.SearchHotelsAsync(hotelSearchRQ);
+            //Act
+            var response = await hotelConnector.SearchPriceAsync(priceSearchRQ);
 
-        //    //Assert
-        //    Assert.NotNull(result);
-        //}
-
-        //[Fact]
-        //public void Search_Room()
-        //{
-        //    RoomsAvailConfig roomsAvailConfig = new RoomsAvailConfig();
-        //    HotelsAvailConfig hotelsAvailConfig = new HotelsAvailConfig("Pune", DateTime.Now, DateTime.Now.AddDays(7));
-        //    HotelEngineClient client = new HotelEngineClient();
-        //    var req = new HotelRoomAvailRQ()
-        //    {
-        //        SessionId = Guid.NewGuid().ToString(),
-        //        HotelSearchCriterion = hotelsAvailConfig.HotelSearchCriterion,
-        //        Itinerary = roomsAvailConfig.HotelItinerary,
-        //        ResultRequested = roomsAvailConfig.ResultRequested,
-        //    };
-        //    var res = client.HotelRoomAvailAsync(req);
-        //    var result = res.Result;
-        //}
+            //Assert
+            Assert.NotNull(response);
+        }
     }
 }

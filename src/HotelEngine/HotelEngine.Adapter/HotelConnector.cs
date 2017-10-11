@@ -12,7 +12,7 @@ namespace HotelEngine.Adapter
 {
     public class HotelConnector : IHotelConnector
     {
-        private IAdapterConfiguration  _config;
+        private IAdapterConfiguration _config;
         private HotelEngineClient _client = null;
 
         public HotelConnector()
@@ -34,6 +34,84 @@ namespace HotelEngine.Adapter
             var roomAvailRS = await GetRoomsAsync(roomAvailRQ);
             var roomSearchRS = ParseRoomRS(roomAvailRS, roomSearchRQ.SessionId);
             return roomSearchRS;
+        }
+
+        public async Task<RoomPriceSearchRS> SearchPriceAsync(RoomPriceSearchRQ roomPriceRQ)
+        {
+            var hotelRoomPriceRQ = await ParsePriceRQ(roomPriceRQ);
+            var hotelRoomPriceRS = await GetRoomPrice(hotelRoomPriceRQ);
+            var roomPriceSearchRS = ParsePriceRS(hotelRoomPriceRS);
+            return roomPriceSearchRS;
+        }
+
+        private RoomPriceSearchRS ParsePriceRS(HotelRoomPriceRS hotelRoomPriceRS)
+        {
+            var roomPriceSearchRS = new RoomPriceSearchRS()
+            {
+                Fare = new HotelEngine.Contracts.Models.Fare()
+                {
+                    Amount = hotelRoomPriceRS.Itinerary.Fare.BaseFare.Amount
+                },
+                SessionId = hotelRoomPriceRS.SessionId
+            };
+            return roomPriceSearchRS;
+        }
+
+        public async Task<HotelRoomPriceRS> GetRoomPrice(HotelRoomPriceRQ hotelRoomPriceRQ)
+        {
+            HotelRoomPriceRS hotelRoomPriceRS = null;
+            try
+            {
+                _client = new HotelEngineClient();
+                hotelRoomPriceRS = await _client.HotelRoomPriceAsync(hotelRoomPriceRQ);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Connection Error");
+            }
+            finally
+            {
+                await _client.CloseAsync();
+            }
+            return hotelRoomPriceRS;
+        }
+
+        private async Task<HotelRoomAvailRS> GetRoomsAsync(HotelRoomAvailRQ hotelRoomAvailRQ)
+        {
+            HotelRoomAvailRS hotelRoomAvailRS;
+            try
+            {
+                _client = new HotelEngineClient();
+                hotelRoomAvailRS = await _client.HotelRoomAvailAsync(hotelRoomAvailRQ);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Connection Error");
+            }
+            finally
+            {
+                await _client.CloseAsync();
+            }
+            return hotelRoomAvailRS;
+        }
+
+        private async Task<Proxies.HotelSearchRS> GetHotelsAsync(Proxies.HotelSearchRQ request)
+        {
+            Proxies.HotelSearchRS hotelSearchRS;
+            try
+            {
+                _client = new HotelEngineClient();
+                hotelSearchRS = await _client.HotelAvailAsync(request);
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+            finally
+            {
+                await _client.CloseAsync();
+            }
+            return hotelSearchRS;
         }
 
         private Proxies.HotelSearchRQ ParseHotelRQ(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
@@ -117,11 +195,11 @@ namespace HotelEngine.Adapter
 
             hotelSearchResponse = new HotelEngine.Contracts.Models.HotelSearchRS()
             {
-                SessionId= sessionId.ToString(),
-                Hotels=hotels
-            };          
+                SessionId = sessionId.ToString(),
+                Hotels = hotels
+            };
             return hotelSearchResponse;
-        }        
+        }
 
         private HotelRoomAvailRQ ParseRoomRQ(RoomSearchRQ roomSearchRQ)
         {
@@ -136,11 +214,11 @@ namespace HotelEngine.Adapter
             return hotelRoomAvailRQ;
         }
 
-        private RoomSearchRS ParseRoomRS(HotelRoomAvailRS roomSearchResponse,Guid sessionId)
+        private RoomSearchRS ParseRoomRS(HotelRoomAvailRS roomSearchResponse, Guid sessionId)
         {
             RoomSearchRS roomSearchRS = null;
             List<HotelEngine.Contracts.Models.Room> rooms = new List<HotelEngine.Contracts.Models.Room>();
-            
+
             foreach (var roomResult in roomSearchResponse.Itinerary.Rooms)
             {
                 var room = new HotelEngine.Contracts.Models.Room()
@@ -163,50 +241,18 @@ namespace HotelEngine.Adapter
             return roomSearchRS;
         }
 
-        private async Task<Proxies.HotelSearchRS> GetHotelsAsync(Proxies.HotelSearchRQ request)
+        private async Task<HotelRoomPriceRQ> ParsePriceRQ(RoomPriceSearchRQ roomPriceRQ)
         {
-            Proxies.HotelSearchRS hotelSearchRS;
-            try
+            var roomAvailRQ = ParseRoomRQ(roomPriceRQ);
+            var roomAvailRS = await GetRoomsAsync(roomAvailRQ);
+            var hotelRoomPriceRQ = new HotelRoomPriceRQ()
             {
-                _client = new HotelEngineClient();
-                hotelSearchRS = await _client.HotelAvailAsync(request);
-            }
-            catch (Exception e)
-            {
-                throw;
-            }
-            finally
-            {
-                await _client.CloseAsync();
-            }
-            return hotelSearchRS;
-        }
-
-        private async Task<HotelRoomAvailRS> GetRoomsAsync(HotelRoomAvailRQ hotelRoomAvailRQ)
-        {
-            HotelRoomAvailRS hotelRoomAvailRS;
-            try
-            {
-                _client = new HotelEngineClient();
-                hotelRoomAvailRS = await _client.HotelRoomAvailAsync(hotelRoomAvailRQ);
-
-                //var pricingResponse = await _client.HotelRoomPriceAsync(new HotelRoomPriceRQ()
-                //{
-                //    SessionId = roomSearchRQ.SessionId.ToString(),
-                //    HotelSearchCriterion = roomsSettings.SearchCriterion,
-                //    ResultRequested = roomsSettings.ResultRequested,
-                //    Itinerary = roomsSettings.HotelItinerary
-                //});                
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Connection Error");
-            }
-            finally
-            {
-                await _client.CloseAsync();
-            }
-            return hotelRoomAvailRS;
+                HotelSearchCriterion = roomAvailRQ.HotelSearchCriterion,
+                Itinerary = roomAvailRS.Itinerary,
+                SessionId = roomAvailRS.SessionId,
+                ResultRequested = roomAvailRS.ResponseRecieved
+            };
+            return hotelRoomPriceRQ;
         }
 
     }

@@ -8,5 +8,6 @@ namespace HotelEngine.Contracts.Contracts
     {
         Task<HotelSearchRS> SearchHotelsAsync(HotelSearchRQ hotelSearchRequest);
         Task<RoomSearchRS> RoomSearchAsync(RoomSearchRQ roomSearchRequest);
+        Task<RoomPriceSearchRS> RoomPriceSearchAsync(RoomPriceSearchRQ priceRQ);
     }
 }

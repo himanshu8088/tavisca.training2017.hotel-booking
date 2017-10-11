@@ -1,12 +1,7 @@
-﻿
-using HotelEngine.Adapter;
+﻿using HotelEngine.Adapter;
 using HotelEngine.Contracts.Contracts;
 using HotelEngine.Contracts.Models;
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-
-
 
 namespace HotelEngine.Core.Implementation
 {
