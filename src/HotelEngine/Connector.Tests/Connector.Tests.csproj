@@ -21,4 +21,8 @@
     <Folder Include="Connected Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HotelEngine.Adapter\HotelEngine.Adapter.csproj" />
+  </ItemGroup>
+
 </Project>
