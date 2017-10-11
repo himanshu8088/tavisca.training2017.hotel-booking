@@ -33,7 +33,7 @@ label {
     background-image: url('../img/bg.jpg');
     width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 20px;    
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -41,7 +41,6 @@ label {
 .calender {
     width: 65%;
 }
-
 nav > li > a {
     font-size: 15px;
     font-weight: bold;
@@ -82,10 +81,7 @@ nav > li > a {
 
 @media(min-width:900px) {
     ul > li {
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
+        display:flex;
         justify-content: space-between;
         flex-shrink: 1;
     }

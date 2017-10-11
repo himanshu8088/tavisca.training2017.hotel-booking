@@ -1,4 +1,5 @@
-﻿function hotelSearchRQ(searchText, checkIn, checkOut, latitude, longitude, guestCount, roomCount) {
+﻿
+function hotelSearchRQ(searchText, checkIn, checkOut, latitude, longitude, guestCount, roomCount) {
     this.data = {
         "SearchText": searchText,
         "CheckInDate": checkIn,
@@ -11,26 +12,6 @@
         "NoOfRooms": roomCount
     }
 };
-
-$(document).ready(function () {
-    $("#check-in").datepicker({
-        dateFormat: "yy-mm-dd",
-        minDate: 0,
-        onSelect: function () {
-            var checkOutDate = $('#checkoutdate');
-            var startDate = $(this).datepicker('getDate');
-            startDate.setDate(startDate.getDate() + 1);
-            var minDate = $(this).datepicker('getDate');
-            checkOutDate.datepicker('setDate', minDate);
-            checkOutDate.datepicker('option', 'minDate', minDate);
-        }
-    });
-    $('#check-out').datepicker({
-        dateFormat: "yy-mm-dd"
-    });
-});
-
-
 $("#searchClick").click(function () {
     saveSearchCriteriaInSession();
     window.location = '../html/hotel.html';
@@ -47,4 +28,21 @@ function saveSearchCriteriaInSession() {
     var hotelSearchObj = new hotelSearchRQ(_searchText, _checkIn, _checkOut, searchLocation.data.Latitude, searchLocation.data.Longitude, _guestCount, _roomCount);
     sessionStorage.setItem('hotelSearchCriteria', JSON.stringify(hotelSearchObj));
 }
+$(document).ready(function () {
+    $("#check-in").datepicker({
+        dateFormat: "yy-mm-dd",
+        minDate: 0,
+        onSelect: function () {
+            var checkOutDate = $('#check-out');
+            var startDate = $(this).datepicker('getDate');
+            startDate.setDate(startDate.getDate() + 1);
+            var minDate = $(this).datepicker('getDate');
+            checkOutDate.datepicker('setDate', minDate);
+            checkOutDate.datepicker('option', 'minDate', minDate);
+        }
+    });
+    $('#check-out').datepicker({
+        dateFormat: "yy-mm-dd"
+    });
+});
 

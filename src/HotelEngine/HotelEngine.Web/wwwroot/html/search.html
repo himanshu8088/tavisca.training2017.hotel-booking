@@ -8,8 +8,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
-    <link href="../css/bootstrap.css" rel="stylesheet" />    
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/excite-bike/jquery-ui.min.css" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/dot-luv/jquery-ui.min.css" />
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/libraries/handlebars-v4.0.10.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -28,7 +28,8 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="../img/logo.png" alt="tavisca-logo"/></a>
+                    <img src="../img/logo.png" alt="tavisca-logo" />
+                </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -75,91 +76,92 @@
                     </li>
                 </ul>
             </div>
-       </div>
-            <div class="row" id="tabs">
-                <div class="col-md-6 col-md-offset-3 form-container" id="">
-                    <div class="container-fluid">
-                        <form id="hotel">
-                            <div class="row margin-top">
-                                <div class="col-md-12">
-                                    <label>City / Hotel Name / Landmark</label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-                                        <input id="destination" type="text" class="form-control" name="destination" placeholder="City / Hotel /Area">
-                                    </div>
+        </div>
+        <div class="row" id="tabs">
+            <div class="col-md-6 col-md-offset-3 form-container" id="">
+                <div class="container-fluid">
+                    <form id="hotel">
+                        <div class="row margin-top">
+                            <div class="col-md-12">
+                                <label>City / Hotel Name / Landmark</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                    <input id="destination" type="text" class="form-control" name="destination" placeholder="City / Hotel /Area">
                                 </div>
                             </div>
-                            <div class="row margin-top">
-                                <div class="col-md-6">
-                                    <label for="check-in">Check-In</label>
-                                    <div class="input-group">
-                                        <input type="date" name="check-in" id="check-in" class="form-control" placeholder="mm/dd/yyyy">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="check-out">Check-Out</label>
-                                    <div class="input-group">
-                                        <input type="date" name="check-out" id="check-out" class="form-control" placeholder="mm/dd/yyyy">
-                                    </div>
+                        </div>
+                        <div class="row margin-top">
+                            <div class="col-md-6">
+                                <label for="check-in">Check-In</label>
+                                <div class="input-group">
+                                    <input type="text" name="check-in" id="check-in" class="form-control" placeholder="mm/dd/yyyy">
                                 </div>
                             </div>
-                            <div class="row margin-top">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="sel1">Room</label>
-                                        <select class="form-control" id="room">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9+">9+</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="sel1">Adults(18+)</label>
-                                        <select class="form-control" id="guest">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="sel1">Children(0-17)</label>
-                                        <select class="form-control" id="sel1">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                        </select>
-                                    </div>
+                            <div class="col-md-6">
+                                <label for="check-out">Check-Out</label>
+                                <div class="input-group">
+                                    <input type="text" name="check-out" id="check-out" class="form-control" placeholder="mm/dd/yyyy">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <button type="button" id="searchClick" class="btn btn-info margin-bottom">Search</button>
+                        </div>
+                        <div class="row margin-top">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="sel1">Room</label>
+                                    <select class="form-control" id="room">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9+">9+</option>
+                                    </select>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="sel1">Adults(18+)</label>
+                                    <select class="form-control" id="guest">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="sel1">Children(0-17)</label>
+                                    <select class="form-control" id="sel1">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button type="button" id="searchClick" class="btn btn-info margin-bottom">Search</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <footer>Copyright &copy; Tavisca 2017</footer>
-    <script src="../js/search.js" type="text/javascript" charset="utf-8" async defer></script>
+    </div>
+    <footer>Copyright &copy; Tavisca 2017</footer>
+
     <script src="../js/autosuggest.js" type="text/javascript" charset="utf-8" async defer></script>
-    <script type="text/javascript" src="../js/libraries/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="../js/libraries/bootstrap.min.js"></script>
+    <script src="../js/search.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

@@ -29,22 +29,21 @@
         <script id="room-item" type="text/x-handlebars-template">
             <div class="inner">
                 <div class="hotel">
-                    <label id="hotel-name">{{hotelName}}</label>
-                    <label id="hotel-address">{{completeAddress}}</label>
+                    <label id="hotel-name"></label>                    
                 </div>
-                {{#each this}} {{#unless room}}
+                {{#each rooms}} 
                 <div class="room">
                     <div class="row padding">
                         <label class="descriptor">Room:</label>
-                        <label id="room-type">{{roomName}}</label>
+                        <label id="room-type">{{name}}</label>
                     </div>
                     <div class="row padding">
                         <label class="descriptor">Bed:</label>
-                        <label id="bed-type">{{bedType}}</label>
+                        <label id="bed-type">{{bed}}</label>
                     </div>
                     <div class="row padding">
                         <label class="descriptor">Fare:</label>
-                        <label id="base-fare">{{baseFare}}</label>
+                        <label id="base-fare">{{fare.amount}}</label>
                     </div>
                     <div class="row padding">
                         <label id="description">{{description}}</label>
@@ -53,7 +52,7 @@
                         <button id="book">Book</button>
                     </div>
                 </div>
-                {{/unless}} {{/each}}
+                {{/each}}
             </div>
             
         </script>

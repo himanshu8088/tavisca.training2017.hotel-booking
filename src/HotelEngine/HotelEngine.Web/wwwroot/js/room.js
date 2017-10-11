@@ -1,11 +1,8 @@
-﻿$('#book').click(){
-
-};
-
+﻿
 $(document).ready(function () {
     var searchCriteria = JSON.parse(sessionStorage.getItem('roomSearchCriteria')).data;
     var jsonData = JSON.stringify(searchCriteria);
-
+  
     $.ajax({
         url: "../hotel/roomsearch",
         type: "POST",
@@ -16,6 +13,7 @@ $(document).ready(function () {
             var compiledTemplate = Handlebars.compile(template.html());
             var html = compiledTemplate(resp);
             $('#roomList-container').html(html);
+            $('#hotel-name').html(searchCriteria.SearchText);
         },
         error: function (xhr) {
             _searchResponse = {};
