@@ -1,7 +1,7 @@
 ﻿using HotelEngine.Adapter;
 using HotelEngine.Adapter.Configuration;
 using HotelEngine.Contracts.Models;
-using HotelSearch;
+using Proxies;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -46,8 +46,8 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
             var priceSearchRQ = new RoomPriceSearchRQ()
             {
                 SessionId = Guid.Parse("fbe2f93e-8d56-4cd8-9e76-24e01e8ea171"),
-                CheckInDate = DateTime.Parse("27-10-2017"),
-                CheckOutDate = DateTime.Parse("29-10-2017"),
+                CheckInDate = DateTime.Parse("26-10-2017"),
+                CheckOutDate = DateTime.Parse("28-10-2017"),
                 GuestCount = 2,
                 HotelId = 252448,
                 Location = new HotelEngine.Contracts.Models.Location()

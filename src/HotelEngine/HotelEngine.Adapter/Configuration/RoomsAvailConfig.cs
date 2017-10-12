@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HotelSearch;
+using Proxies;
 using HotelEngine.Contracts.Models;
 
 namespace HotelEngine.Adapter.Configuration

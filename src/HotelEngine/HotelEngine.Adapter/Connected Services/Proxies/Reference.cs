@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelSearch
+namespace Proxies
 {
     using System.Runtime.Serialization;
     
@@ -15,22 +15,22 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRQ", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelRoomAvailRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelRoomPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelSearchViewRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelItinerarySearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelRoomAvailRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelRoomPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelSearchViewRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelItinerarySearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelSearchRQ))]
     public partial class WebServiceRQ : object
     {
         
-        private HotelSearch.StateBag[] AdditionalInfoField;
+        private Proxies.StateBag[] AdditionalInfoField;
         
-        private HotelSearch.ResponseType ResultRequestedField;
+        private Proxies.ResponseType ResultRequestedField;
         
         private string SessionIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] AdditionalInfo
+        public Proxies.StateBag[] AdditionalInfo
         {
             get
             {
@@ -43,7 +43,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.ResponseType ResultRequested
+        public Proxies.ResponseType ResultRequested
         {
             get
             {
@@ -72,15 +72,15 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRQ : HotelSearch.WebServiceRQ
+    public partial class HotelRoomAvailRQ : Proxies.WebServiceRQ
     {
         
-        private HotelSearch.HotelSearchCriterion HotelSearchCriterionField;
+        private Proxies.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelSearch.HotelItinerary ItineraryField;
+        private Proxies.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelSearchCriterion HotelSearchCriterion
+        public Proxies.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -93,7 +93,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelItinerary Itinerary
+        public Proxies.HotelItinerary Itinerary
         {
             get
             {
@@ -109,15 +109,15 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRQ : HotelSearch.WebServiceRQ
+    public partial class HotelRoomPriceRQ : Proxies.WebServiceRQ
     {
         
-        private HotelSearch.HotelSearchCriterion HotelSearchCriterionField;
+        private Proxies.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelSearch.HotelItinerary ItineraryField;
+        private Proxies.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelSearchCriterion HotelSearchCriterion
+        public Proxies.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -130,7 +130,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelItinerary Itinerary
+        public Proxies.HotelItinerary Itinerary
         {
             get
             {
@@ -146,23 +146,23 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchViewRQ", Namespace="http://tavisca.com")]
-    public partial class HotelSearchViewRQ : HotelSearch.WebServiceRQ
+    public partial class HotelSearchViewRQ : Proxies.WebServiceRQ
     {
         
-        private HotelSearch.HotelFilter[] FiltersField;
+        private Proxies.HotelFilter[] FiltersField;
         
-        private HotelSearch.HotelSearchCriterion HotelSearchCriterionField;
+        private Proxies.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelSearch.PagingInfo PagingInfoField;
+        private Proxies.PagingInfo PagingInfoField;
         
         private string PasswordField;
         
-        private HotelSearch.HotelTransform[] TransformsField;
+        private Proxies.HotelTransform[] TransformsField;
         
         private string UserNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelFilter[] Filters
+        public Proxies.HotelFilter[] Filters
         {
             get
             {
@@ -175,7 +175,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelSearchCriterion HotelSearchCriterion
+        public Proxies.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -188,7 +188,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PagingInfo PagingInfo
+        public Proxies.PagingInfo PagingInfo
         {
             get
             {
@@ -214,7 +214,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelTransform[] Transforms
+        public Proxies.HotelTransform[] Transforms
         {
             get
             {
@@ -243,7 +243,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRQ : HotelSearch.WebServiceRQ
+    public partial class HotelItinerarySearchRQ : Proxies.WebServiceRQ
     {
         
         private int ItineraryIdField;
@@ -265,17 +265,17 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRQ : HotelSearch.WebServiceRQ
+    public partial class HotelSearchRQ : Proxies.WebServiceRQ
     {
         
-        private HotelSearch.HotelFilter[] FiltersField;
+        private Proxies.HotelFilter[] FiltersField;
         
-        private HotelSearch.HotelSearchCriterion HotelSearchCriterionField;
+        private Proxies.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelSearch.PagingInfo PagingInfoField;
+        private Proxies.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelFilter[] Filters
+        public Proxies.HotelFilter[] Filters
         {
             get
             {
@@ -288,7 +288,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelSearchCriterion HotelSearchCriterion
+        public Proxies.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -301,7 +301,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PagingInfo PagingInfo
+        public Proxies.PagingInfo PagingInfo
         {
             get
             {
@@ -369,39 +369,39 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class HotelSearchCriterion : HotelSearch.TripSearchCriterion
+    public partial class HotelSearchCriterion : Proxies.TripSearchCriterion
     {
         
-        private HotelSearch.PassengerTypeQuantity[] GuestsField;
+        private Proxies.PassengerTypeQuantity[] GuestsField;
         
         private bool IsReturnRoomsField;
         
-        private HotelSearch.Location LocationField;
+        private Proxies.Location LocationField;
         
         private string NoOfBedRoomsField;
         
         private int NoOfRoomsField;
         
-        private HotelSearch.HotelSearchProcessingInfo ProcessingInfoField;
+        private Proxies.HotelSearchProcessingInfo ProcessingInfoField;
         
-        private HotelSearch.HotelProperty[] PropertiesToSearchField;
+        private Proxies.HotelProperty[] PropertiesToSearchField;
         
-        private HotelSearch.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Proxies.RoomOccupancyType[] RoomOccupancyTypesField;
         
         private string SearchBehaviorField;
         
         private string[] SearchCategoriesField;
         
-        private HotelSearch.HotelSearchType SearchTypeField;
+        private Proxies.HotelSearchType SearchTypeField;
         
-        private HotelSearch.DateTimeSpan StayPeriodField;
+        private Proxies.DateTimeSpan StayPeriodField;
         
-        private HotelSearch.Tag[] TagsField;
+        private Proxies.Tag[] TagsField;
         
-        private HotelSearch.HotelSearchPreference TravelPreferenceField;
+        private Proxies.HotelSearchPreference TravelPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PassengerTypeQuantity[] Guests
+        public Proxies.PassengerTypeQuantity[] Guests
         {
             get
             {
@@ -427,7 +427,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Location Location
+        public Proxies.Location Location
         {
             get
             {
@@ -466,7 +466,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelSearchProcessingInfo ProcessingInfo
+        public Proxies.HotelSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -479,7 +479,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelProperty[] PropertiesToSearch
+        public Proxies.HotelProperty[] PropertiesToSearch
         {
             get
             {
@@ -492,7 +492,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RoomOccupancyType[] RoomOccupancyTypes
+        public Proxies.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -531,7 +531,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelSearchType SearchType
+        public Proxies.HotelSearchType SearchType
         {
             get
             {
@@ -544,7 +544,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.DateTimeSpan StayPeriod
+        public Proxies.DateTimeSpan StayPeriod
         {
             get
             {
@@ -557,7 +557,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Tag[] Tags
+        public Proxies.Tag[] Tags
         {
             get
             {
@@ -570,7 +570,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelSearchPreference TravelPreference
+        public Proxies.HotelSearchPreference TravelPreference
         {
             get
             {
@@ -668,8 +668,8 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFilter", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.AvailabilityFilter))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.ViewPortFilter))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.AvailabilityFilter))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.ViewPortFilter))]
     public partial class HotelFilter : object
     {
     }
@@ -677,59 +677,59 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerary", Namespace="http://tavisca.com")]
-    public partial class HotelItinerary : HotelSearch.TripItinerary
+    public partial class HotelItinerary : Proxies.TripItinerary
     {
         
-        private HotelSearch.Deposit[] AcceptableDepositsField;
+        private Proxies.Deposit[] AcceptableDepositsField;
         
-        private HotelSearch.Guarantee[] AcceptableGuaranteesField;
+        private Proxies.Guarantee[] AcceptableGuaranteesField;
         
         private bool AllPaxDetailsRequiredField;
         
-        private HotelSearch.AllowedCountry[] AllowedCountriesField;
+        private Proxies.AllowedCountry[] AllowedCountriesField;
         
-        private HotelSearch.HotelContract ContractField;
+        private Proxies.HotelContract ContractField;
         
-        private HotelSearch.Deal[] DealsField;
+        private Proxies.Deal[] DealsField;
         
         private bool DepositRequiredField;
         
         private string[] DepositTextField;
         
-        private HotelSearch.HotelDiscountCode DiscountCodeField;
+        private Proxies.HotelDiscountCode DiscountCodeField;
         
-        private HotelSearch.HotelFare FareField;
+        private Proxies.HotelFare FareField;
         
         private bool GuaranteeRequiredField;
         
         private string[] GuaranteeTextField;
         
-        private HotelSearch.HotelCancellationPolicy HotelCancellationPolicyField;
+        private Proxies.HotelCancellationPolicy HotelCancellationPolicyField;
         
-        private HotelSearch.PromotionalHotelDeal[] HotelDealsField;
+        private Proxies.PromotionalHotelDeal[] HotelDealsField;
         
-        private HotelSearch.HotelFareSource HotelFareSourceField;
+        private Proxies.HotelFareSource HotelFareSourceField;
         
-        private HotelSearch.HotelProperty HotelPropertyField;
+        private Proxies.HotelProperty HotelPropertyField;
         
         private string ItineraryTypeField;
         
-        private HotelSearch.MarkupPlan MarkupPlanField;
+        private Proxies.MarkupPlan MarkupPlanField;
         
-        private HotelSearch.HotelPolicy[] PoliciesField;
+        private Proxies.HotelPolicy[] PoliciesField;
         
-        private HotelSearch.Room[] RoomsField;
+        private Proxies.Room[] RoomsField;
         
-        private HotelSearch.Season[] SeasonsField;
+        private Proxies.Season[] SeasonsField;
         
         private string SegmentRefField;
         
         private bool ShippingAddressRequiredField;
         
-        private HotelSearch.DateTimeSpan StayPeriodField;
+        private Proxies.DateTimeSpan StayPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Deposit[] AcceptableDeposits
+        public Proxies.Deposit[] AcceptableDeposits
         {
             get
             {
@@ -742,7 +742,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Guarantee[] AcceptableGuarantees
+        public Proxies.Guarantee[] AcceptableGuarantees
         {
             get
             {
@@ -768,7 +768,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.AllowedCountry[] AllowedCountries
+        public Proxies.AllowedCountry[] AllowedCountries
         {
             get
             {
@@ -781,7 +781,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelContract Contract
+        public Proxies.HotelContract Contract
         {
             get
             {
@@ -794,7 +794,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Deal[] Deals
+        public Proxies.Deal[] Deals
         {
             get
             {
@@ -833,7 +833,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelDiscountCode DiscountCode
+        public Proxies.HotelDiscountCode DiscountCode
         {
             get
             {
@@ -846,7 +846,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelFare Fare
+        public Proxies.HotelFare Fare
         {
             get
             {
@@ -885,7 +885,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelCancellationPolicy HotelCancellationPolicy
+        public Proxies.HotelCancellationPolicy HotelCancellationPolicy
         {
             get
             {
@@ -898,7 +898,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PromotionalHotelDeal[] HotelDeals
+        public Proxies.PromotionalHotelDeal[] HotelDeals
         {
             get
             {
@@ -911,7 +911,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelFareSource HotelFareSource
+        public Proxies.HotelFareSource HotelFareSource
         {
             get
             {
@@ -924,7 +924,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelProperty HotelProperty
+        public Proxies.HotelProperty HotelProperty
         {
             get
             {
@@ -950,7 +950,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.MarkupPlan MarkupPlan
+        public Proxies.MarkupPlan MarkupPlan
         {
             get
             {
@@ -963,7 +963,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelPolicy[] Policies
+        public Proxies.HotelPolicy[] Policies
         {
             get
             {
@@ -976,7 +976,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Room[] Rooms
+        public Proxies.Room[] Rooms
         {
             get
             {
@@ -989,7 +989,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Season[] Seasons
+        public Proxies.Season[] Seasons
         {
             get
             {
@@ -1028,7 +1028,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.DateTimeSpan StayPeriod
+        public Proxies.DateTimeSpan StayPeriod
         {
             get
             {
@@ -1044,22 +1044,22 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripSearchCriterion", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelSearchCriterion))]
     public partial class TripSearchCriterion : object
     {
         
-        private HotelSearch.StateBag[] AttributesField;
+        private Proxies.StateBag[] AttributesField;
         
         private bool MatrixResultsField;
         
         private int MaximumResultsField;
         
-        private HotelSearch.PointOfSale PosField;
+        private Proxies.PointOfSale PosField;
         
         private string PriceCurrencyCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] Attributes
+        public Proxies.StateBag[] Attributes
         {
             get
             {
@@ -1098,7 +1098,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PointOfSale Pos
+        public Proxies.PointOfSale Pos
         {
             get
             {
@@ -1130,16 +1130,16 @@ namespace HotelSearch
     public partial class PointOfSale : object
     {
         
-        private HotelSearch.StateBag[] AdditionalInfoField;
+        private Proxies.StateBag[] AdditionalInfoField;
         
         private string AgentSignField;
         
         private int PosIdField;
         
-        private HotelSearch.Company RequesterField;
+        private Proxies.Company RequesterField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] AdditionalInfo
+        public Proxies.StateBag[] AdditionalInfo
         {
             get
             {
@@ -1178,7 +1178,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Company Requester
+        public Proxies.Company Requester
         {
             get
             {
@@ -1194,17 +1194,17 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Location", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.Airport))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.City))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.Address))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.Airport))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.City))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.Address))]
     public partial class Location : object
     {
         
         private string CodeField;
         
-        private HotelSearch.LocationCodeContext CodeContextField;
+        private Proxies.LocationCodeContext CodeContextField;
         
-        private HotelSearch.GeoCode GeoCodeField;
+        private Proxies.GeoCode GeoCodeField;
         
         private int GmtOffsetMinutesField;
         
@@ -1212,9 +1212,9 @@ namespace HotelSearch
         
         private string NameField;
         
-        private HotelSearch.Distance RadiusField;
+        private Proxies.Distance RadiusField;
         
-        private HotelSearch.StateBag[] SupplierSideDataField;
+        private Proxies.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -1230,7 +1230,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.LocationCodeContext CodeContext
+        public Proxies.LocationCodeContext CodeContext
         {
             get
             {
@@ -1243,7 +1243,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.GeoCode GeoCode
+        public Proxies.GeoCode GeoCode
         {
             get
             {
@@ -1295,7 +1295,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Distance Radius
+        public Proxies.Distance Radius
         {
             get
             {
@@ -1308,7 +1308,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] SupplierSideData
+        public Proxies.StateBag[] SupplierSideData
         {
             get
             {
@@ -1327,22 +1327,22 @@ namespace HotelSearch
     public partial class HotelSearchProcessingInfo : object
     {
         
-        private HotelSearch.HotelDisplayOrder DisplayOrderField;
+        private Proxies.HotelDisplayOrder DisplayOrderField;
         
-        private HotelSearch.HotelFareSource[] FareSourcesField;
+        private Proxies.HotelFareSource[] FareSourcesField;
         
-        private HotelSearch.FareType[] FareTypesField;
+        private Proxies.FareType[] FareTypesField;
         
-        private HotelSearch.HotelContentPreference[] HotelContentPreferencesField;
+        private Proxies.HotelContentPreference[] HotelContentPreferencesField;
         
-        private HotelSearch.HotelSearchNearByDates HotelSearchNearByDatesField;
+        private Proxies.HotelSearchNearByDates HotelSearchNearByDatesField;
         
-        private HotelSearch.GeoCode POIGeoCodeField;
+        private Proxies.GeoCode POIGeoCodeField;
         
-        private HotelSearch.PreferenceSortInfo[] PreferenceSortInfoListField;
+        private Proxies.PreferenceSortInfo[] PreferenceSortInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelDisplayOrder DisplayOrder
+        public Proxies.HotelDisplayOrder DisplayOrder
         {
             get
             {
@@ -1355,7 +1355,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelFareSource[] FareSources
+        public Proxies.HotelFareSource[] FareSources
         {
             get
             {
@@ -1368,7 +1368,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.FareType[] FareTypes
+        public Proxies.FareType[] FareTypes
         {
             get
             {
@@ -1381,7 +1381,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelContentPreference[] HotelContentPreferences
+        public Proxies.HotelContentPreference[] HotelContentPreferences
         {
             get
             {
@@ -1394,7 +1394,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelSearchNearByDates HotelSearchNearByDates
+        public Proxies.HotelSearchNearByDates HotelSearchNearByDates
         {
             get
             {
@@ -1407,7 +1407,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.GeoCode POIGeoCode
+        public Proxies.GeoCode POIGeoCode
         {
             get
             {
@@ -1420,7 +1420,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PreferenceSortInfo[] PreferenceSortInfoList
+        public Proxies.PreferenceSortInfo[] PreferenceSortInfoList
         {
             get
             {
@@ -1488,41 +1488,41 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchPreference", Namespace="http://tavisca.com")]
-    public partial class HotelSearchPreference : HotelSearch.TravelPreference
+    public partial class HotelSearchPreference : Proxies.TravelPreference
     {
         
-        private HotelSearch.AmenityPreference[] AmenitiesField;
+        private Proxies.AmenityPreference[] AmenitiesField;
         
         private string[] CityNamePreferenceListField;
         
-        private HotelSearch.FareType[] FareTypeListField;
+        private Proxies.FareType[] FareTypeListField;
         
-        private HotelSearch.CompanyPreference[] HotelChainsField;
+        private Proxies.CompanyPreference[] HotelChainsField;
         
-        private HotelSearch.HotelNamePreference HotelNamePreferenceField;
+        private Proxies.HotelNamePreference HotelNamePreferenceField;
         
         private string[] ItineraryRphListToFilterField;
         
-        private HotelSearch.Distance MaxDistanceField;
+        private Proxies.Distance MaxDistanceField;
         
         private int MaxNumberOfBedRoomsField;
         
         private int MaxOccupancyField;
         
-        private HotelSearch.Distance MinDistanceField;
+        private Proxies.Distance MinDistanceField;
         
         private int MinNumberOfBedRoomsField;
         
         private int MinOccupancyField;
         
-        private HotelSearch.HotelPaymentType[] PaymentTypesField;
+        private Proxies.HotelPaymentType[] PaymentTypesField;
         
-        private HotelSearch.RateRangePreference RateRangePreferenceField;
+        private Proxies.RateRangePreference RateRangePreferenceField;
         
-        private HotelSearch.HotelRating[] RatingListField;
+        private Proxies.HotelRating[] RatingListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.AmenityPreference[] Amenities
+        public Proxies.AmenityPreference[] Amenities
         {
             get
             {
@@ -1548,7 +1548,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.FareType[] FareTypeList
+        public Proxies.FareType[] FareTypeList
         {
             get
             {
@@ -1561,7 +1561,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.CompanyPreference[] HotelChains
+        public Proxies.CompanyPreference[] HotelChains
         {
             get
             {
@@ -1574,7 +1574,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelNamePreference HotelNamePreference
+        public Proxies.HotelNamePreference HotelNamePreference
         {
             get
             {
@@ -1600,7 +1600,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Distance MaxDistance
+        public Proxies.Distance MaxDistance
         {
             get
             {
@@ -1639,7 +1639,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Distance MinDistance
+        public Proxies.Distance MinDistance
         {
             get
             {
@@ -1678,7 +1678,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelPaymentType[] PaymentTypes
+        public Proxies.HotelPaymentType[] PaymentTypes
         {
             get
             {
@@ -1691,7 +1691,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RateRangePreference RateRangePreference
+        public Proxies.RateRangePreference RateRangePreference
         {
             get
             {
@@ -1704,7 +1704,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelRating[] RatingList
+        public Proxies.HotelRating[] RatingList
         {
             get
             {
@@ -1725,7 +1725,7 @@ namespace HotelSearch
         
         private int[] AgesField;
         
-        private HotelSearch.PassengerType PassengerTypeField;
+        private Proxies.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
@@ -1743,7 +1743,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PassengerType PassengerType
+        public Proxies.PassengerType PassengerType
         {
             get
             {
@@ -1772,41 +1772,41 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelProperty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.VacationRentalProperty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.VacationRentalProperty))]
     public partial class HotelProperty : object
     {
         
-        private HotelSearch.Activity[] ActivityOptionsField;
+        private Proxies.Activity[] ActivityOptionsField;
         
-        private HotelSearch.Address AddressField;
+        private Proxies.Address AddressField;
         
-        private HotelSearch.Amenity[] AmenitiesField;
+        private Proxies.Amenity[] AmenitiesField;
         
-        private HotelSearch.AreaAttraction[] AreaAttractionsField;
+        private Proxies.AreaAttraction[] AreaAttractionsField;
         
-        private HotelSearch.AvailabilityCalender AvailabilityCalenderField;
+        private Proxies.AvailabilityCalender AvailabilityCalenderField;
         
-        private HotelSearch.TimeDetail[] CheckInOptionsField;
+        private Proxies.TimeDetail[] CheckInOptionsField;
         
-        private HotelSearch.TimeDetail[] CheckOutOptionsField;
+        private Proxies.TimeDetail[] CheckOutOptionsField;
         
-        private HotelSearch.HotelDescription[] DescriptionsField;
+        private Proxies.HotelDescription[] DescriptionsField;
         
-        private HotelSearch.Distance DistanceField;
+        private Proxies.Distance DistanceField;
         
         private string FaxNumberField;
         
-        private HotelSearch.GeoCode GeoCodeField;
+        private Proxies.GeoCode GeoCodeField;
         
-        private HotelSearch.HotelChain HotelChainField;
+        private Proxies.HotelChain HotelChainField;
         
-        private HotelSearch.HotelMultimedia HotelMultiMediaField;
+        private Proxies.HotelMultimedia HotelMultiMediaField;
         
-        private HotelSearch.HotelRating HotelRatingField;
+        private Proxies.HotelRating HotelRatingField;
         
         private int IdField;
         
-        private HotelSearch.Media[] MediaContentField;
+        private Proxies.Media[] MediaContentField;
         
         private string NameField;
         
@@ -1814,20 +1814,20 @@ namespace HotelSearch
         
         private string PhoneNumberField;
         
-        private HotelSearch.Review[] ReviewsField;
+        private Proxies.Review[] ReviewsField;
         
-        private HotelSearch.StateBag[] StateBagField;
+        private Proxies.StateBag[] StateBagField;
         
         private string SupplierHotelIdField;
         
-        private HotelSearch.Tag[] TagsField;
+        private Proxies.Tag[] TagsField;
         
-        private HotelSearch.Media ThumbnailField;
+        private Proxies.Media ThumbnailField;
         
         private string WebsiteUrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Activity[] ActivityOptions
+        public Proxies.Activity[] ActivityOptions
         {
             get
             {
@@ -1840,7 +1840,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Address Address
+        public Proxies.Address Address
         {
             get
             {
@@ -1853,7 +1853,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Amenity[] Amenities
+        public Proxies.Amenity[] Amenities
         {
             get
             {
@@ -1866,7 +1866,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.AreaAttraction[] AreaAttractions
+        public Proxies.AreaAttraction[] AreaAttractions
         {
             get
             {
@@ -1879,7 +1879,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.AvailabilityCalender AvailabilityCalender
+        public Proxies.AvailabilityCalender AvailabilityCalender
         {
             get
             {
@@ -1892,7 +1892,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.TimeDetail[] CheckInOptions
+        public Proxies.TimeDetail[] CheckInOptions
         {
             get
             {
@@ -1905,7 +1905,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.TimeDetail[] CheckOutOptions
+        public Proxies.TimeDetail[] CheckOutOptions
         {
             get
             {
@@ -1918,7 +1918,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelDescription[] Descriptions
+        public Proxies.HotelDescription[] Descriptions
         {
             get
             {
@@ -1931,7 +1931,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Distance Distance
+        public Proxies.Distance Distance
         {
             get
             {
@@ -1957,7 +1957,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.GeoCode GeoCode
+        public Proxies.GeoCode GeoCode
         {
             get
             {
@@ -1970,7 +1970,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelChain HotelChain
+        public Proxies.HotelChain HotelChain
         {
             get
             {
@@ -1983,7 +1983,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelMultimedia HotelMultiMedia
+        public Proxies.HotelMultimedia HotelMultiMedia
         {
             get
             {
@@ -1996,7 +1996,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelRating HotelRating
+        public Proxies.HotelRating HotelRating
         {
             get
             {
@@ -2022,7 +2022,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Media[] MediaContent
+        public Proxies.Media[] MediaContent
         {
             get
             {
@@ -2074,7 +2074,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Review[] Reviews
+        public Proxies.Review[] Reviews
         {
             get
             {
@@ -2087,7 +2087,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] StateBag
+        public Proxies.StateBag[] StateBag
         {
             get
             {
@@ -2113,7 +2113,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Tag[] Tags
+        public Proxies.Tag[] Tags
         {
             get
             {
@@ -2126,7 +2126,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Media Thumbnail
+        public Proxies.Media Thumbnail
         {
             get
             {
@@ -2160,7 +2160,7 @@ namespace HotelSearch
         
         private string OccupancyCodeField;
         
-        private HotelSearch.PassengerTypeQuantity[] PaxQuantitiesField;
+        private Proxies.PassengerTypeQuantity[] PaxQuantitiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string OccupancyCode
@@ -2176,7 +2176,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PassengerTypeQuantity[] PaxQuantities
+        public Proxies.PassengerTypeQuantity[] PaxQuantities
         {
             get
             {
@@ -2274,16 +2274,16 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelChain))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.CompanyPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelChain))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.CompanyPreference))]
     public partial class Company : object
     {
         
-        private HotelSearch.Agency AgencyField;
+        private Proxies.Agency AgencyField;
         
         private string CodeField;
         
-        private HotelSearch.CompanyCodeContext CodeContextField;
+        private Proxies.CompanyCodeContext CodeContextField;
         
         private string DKField;
         
@@ -2295,12 +2295,12 @@ namespace HotelSearch
         
         private int IDField;
         
-        private HotelSearch.Media LogoField;
+        private Proxies.Media LogoField;
         
         private string ShortNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Agency Agency
+        public Proxies.Agency Agency
         {
             get
             {
@@ -2326,7 +2326,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.CompanyCodeContext CodeContext
+        public Proxies.CompanyCodeContext CodeContext
         {
             get
             {
@@ -2404,7 +2404,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Media Logo
+        public Proxies.Media Logo
         {
             get
             {
@@ -2436,14 +2436,14 @@ namespace HotelSearch
     public partial class Agency : object
     {
         
-        private HotelSearch.Address AgencyAddressField;
+        private Proxies.Address AgencyAddressField;
         
         private int AgencyIdField;
         
         private string AgencyNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Address AgencyAddress
+        public Proxies.Address AgencyAddress
         {
             get
             {
@@ -2488,16 +2488,16 @@ namespace HotelSearch
     public partial class Media : object
     {
         
-        private HotelSearch.MediaCaptionType CaptionField;
+        private Proxies.MediaCaptionType CaptionField;
         
         private string MimeTypeField;
         
-        private HotelSearch.MediaType TypeField;
+        private Proxies.MediaType TypeField;
         
         private string UrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.MediaCaptionType Caption
+        public Proxies.MediaCaptionType Caption
         {
             get
             {
@@ -2523,7 +2523,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.MediaType Type
+        public Proxies.MediaType Type
         {
             get
             {
@@ -2552,20 +2552,20 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelChain", Namespace="http://tavisca.com")]
-    public partial class HotelChain : HotelSearch.Company
+    public partial class HotelChain : Proxies.Company
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompanyPreference", Namespace="http://tavisca.com")]
-    public partial class CompanyPreference : HotelSearch.Company
+    public partial class CompanyPreference : Proxies.Company
     {
         
-        private HotelSearch.PreferLevel PreferLevelField;
+        private Proxies.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PreferLevel PreferLevel
+        public Proxies.PreferLevel PreferLevel
         {
             get
             {
@@ -2602,7 +2602,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://tavisca.com")]
-    public partial class Address : HotelSearch.Location
+    public partial class Address : Proxies.Location
     {
         
         private string AddressLine1Field;
@@ -2611,7 +2611,7 @@ namespace HotelSearch
         
         private string AddressSchemeField;
         
-        private HotelSearch.City CityField;
+        private Proxies.City CityField;
         
         private string CompleteAddressField;
         
@@ -2659,7 +2659,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.City City
+        public Proxies.City City
         {
             get
             {
@@ -2756,9 +2756,9 @@ namespace HotelSearch
         
         private float AmountField;
         
-        private HotelSearch.LocationCodeContext FromField;
+        private Proxies.LocationCodeContext FromField;
         
-        private HotelSearch.DistanceUnit UnitField;
+        private Proxies.DistanceUnit UnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Amount
@@ -2774,7 +2774,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.LocationCodeContext From
+        public Proxies.LocationCodeContext From
         {
             get
             {
@@ -2787,7 +2787,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.DistanceUnit Unit
+        public Proxies.DistanceUnit Unit
         {
             get
             {
@@ -2803,15 +2803,15 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Airport", Namespace="http://tavisca.com")]
-    public partial class Airport : HotelSearch.Location
+    public partial class Airport : Proxies.Location
     {
         
-        private HotelSearch.AirportType AirportTypeField;
+        private Proxies.AirportType AirportTypeField;
         
-        private HotelSearch.City CityField;
+        private Proxies.City CityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.AirportType AirportType
+        public Proxies.AirportType AirportType
         {
             get
             {
@@ -2824,7 +2824,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.City City
+        public Proxies.City City
         {
             get
             {
@@ -2840,7 +2840,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="City", Namespace="http://tavisca.com")]
-    public partial class City : HotelSearch.Location
+    public partial class City : Proxies.Location
     {
         
         private string CountryField;
@@ -3394,7 +3394,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFareSource", Namespace="http://tavisca.com")]
-    public partial class HotelFareSource : HotelSearch.FareSource
+    public partial class HotelFareSource : Proxies.FareSource
     {
     }
     
@@ -3461,14 +3461,14 @@ namespace HotelSearch
     public partial class PreferenceSortInfo : object
     {
         
-        private HotelSearch.FareType FareTypeField;
+        private Proxies.FareType FareTypeField;
         
         private bool FareTypeSpecifiedField;
         
         private string VendorCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.FareType FareType
+        public Proxies.FareType FareType
         {
             get
             {
@@ -3510,7 +3510,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="FareSource", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelFareSource))]
     public partial class FareSource : object
     {
         
@@ -3566,12 +3566,12 @@ namespace HotelSearch
     public partial class AvailabilityCalender : object
     {
         
-        private HotelSearch.AvailabilityStatus AvailabilityStatusField;
+        private Proxies.AvailabilityStatus AvailabilityStatusField;
         
-        private HotelSearch.DateRange[] TimeSpansField;
+        private Proxies.DateRange[] TimeSpansField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.AvailabilityStatus AvailabilityStatus
+        public Proxies.AvailabilityStatus AvailabilityStatus
         {
             get
             {
@@ -3584,7 +3584,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.DateRange[] TimeSpans
+        public Proxies.DateRange[] TimeSpans
         {
             get
             {
@@ -3777,7 +3777,7 @@ namespace HotelSearch
         
         private float RatingField;
         
-        private HotelSearch.RatingType RatingTypeField;
+        private Proxies.RatingType RatingTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Rating
@@ -3793,7 +3793,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RatingType RatingType
+        public Proxies.RatingType RatingType
         {
             get
             {
@@ -3809,7 +3809,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="VacationRentalProperty", Namespace="http://tavisca.com")]
-    public partial class VacationRentalProperty : HotelSearch.HotelProperty
+    public partial class VacationRentalProperty : Proxies.HotelProperty
     {
         
         private int BathroomsField;
@@ -3820,11 +3820,11 @@ namespace HotelSearch
         
         private int MaxOccupancyField;
         
-        private HotelSearch.PropertyOwner OwnerField;
+        private Proxies.PropertyOwner OwnerField;
         
-        private HotelSearch.Area PropertyAreaField;
+        private Proxies.Area PropertyAreaField;
         
-        private HotelSearch.SeasonalRate[] SeasonalRatesField;
+        private Proxies.SeasonalRate[] SeasonalRatesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Bathrooms
@@ -3879,7 +3879,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PropertyOwner Owner
+        public Proxies.PropertyOwner Owner
         {
             get
             {
@@ -3892,7 +3892,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Area PropertyArea
+        public Proxies.Area PropertyArea
         {
             get
             {
@@ -3905,7 +3905,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.SeasonalRate[] SeasonalRates
+        public Proxies.SeasonalRate[] SeasonalRates
         {
             get
             {
@@ -3928,13 +3928,13 @@ namespace HotelSearch
         
         private string DescriptionField;
         
-        private HotelSearch.Distance DistanceField;
+        private Proxies.Distance DistanceField;
         
-        private HotelSearch.GeoCode GeoCodeField;
+        private Proxies.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private HotelSearch.Tag[] TagsField;
+        private Proxies.Tag[] TagsField;
         
         private string TypeField;
         
@@ -3965,7 +3965,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Distance Distance
+        public Proxies.Distance Distance
         {
             get
             {
@@ -3978,7 +3978,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.GeoCode GeoCode
+        public Proxies.GeoCode GeoCode
         {
             get
             {
@@ -4004,7 +4004,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Tag[] Tags
+        public Proxies.Tag[] Tags
         {
             get
             {
@@ -4033,7 +4033,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Amenity", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.AmenityPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.AmenityPreference))]
     public partial class Amenity : object
     {
         
@@ -4168,11 +4168,11 @@ namespace HotelSearch
         
         private string DescriptionField;
         
-        private HotelSearch.GeoCode GeoCodeField;
+        private Proxies.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private HotelSearch.Tag[] TagsField;
+        private Proxies.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Address
@@ -4201,7 +4201,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.GeoCode GeoCode
+        public Proxies.GeoCode GeoCode
         {
             get
             {
@@ -4227,7 +4227,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Tag[] Tags
+        public Proxies.Tag[] Tags
         {
             get
             {
@@ -4248,7 +4248,7 @@ namespace HotelSearch
         
         private System.DateTime BeginDateField;
         
-        private HotelSearch.Day DayField;
+        private Proxies.Day DayField;
         
         private System.DateTime EndDateField;
         
@@ -4268,7 +4268,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Day Day
+        public Proxies.Day Day
         {
             get
             {
@@ -4350,20 +4350,20 @@ namespace HotelSearch
     public partial class Review : object
     {
         
-        private HotelSearch.HelpfulVotes HelpfulVotesField;
+        private Proxies.HelpfulVotes HelpfulVotesField;
         
         private decimal RatingField;
         
-        private HotelSearch.ReviewRating[] RatingsField;
+        private Proxies.ReviewRating[] RatingsField;
         
-        private HotelSearch.Reviewer ReviewerField;
+        private Proxies.Reviewer ReviewerField;
         
         private string TextField;
         
         private string TitleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HelpfulVotes HelpfulVotes
+        public Proxies.HelpfulVotes HelpfulVotes
         {
             get
             {
@@ -4389,7 +4389,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.ReviewRating[] Ratings
+        public Proxies.ReviewRating[] Ratings
         {
             get
             {
@@ -4402,7 +4402,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Reviewer Reviewer
+        public Proxies.Reviewer Reviewer
         {
             get
             {
@@ -4444,13 +4444,13 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AmenityPreference", Namespace="http://tavisca.com")]
-    public partial class AmenityPreference : HotelSearch.Amenity
+    public partial class AmenityPreference : Proxies.Amenity
     {
         
-        private HotelSearch.PreferLevel PreferLevelField;
+        private Proxies.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PreferLevel PreferLevel
+        public Proxies.PreferLevel PreferLevel
         {
             get
             {
@@ -4603,7 +4603,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Reviewer", Namespace="http://tavisca.com")]
-    public partial class Reviewer : HotelSearch.Person
+    public partial class Reviewer : Proxies.Person
     {
         
         private System.DateTime StayDateField;
@@ -4662,8 +4662,8 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.PropertyOwner))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.Reviewer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.PropertyOwner))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.Reviewer))]
     public partial class Person : object
     {
         
@@ -4731,7 +4731,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PropertyOwner", Namespace="http://tavisca.com")]
-    public partial class PropertyOwner : HotelSearch.Person
+    public partial class PropertyOwner : Proxies.Person
     {
     }
     
@@ -4782,11 +4782,11 @@ namespace HotelSearch
         
         private System.DateTime EndDateField;
         
-        private HotelSearch.StayDuration MinimumStayField;
+        private Proxies.StayDuration MinimumStayField;
         
         private string PeriodNameField;
         
-        private HotelSearch.Money RateField;
+        private Proxies.Money RateField;
         
         private string RateTypeField;
         
@@ -4817,7 +4817,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StayDuration MinimumStay
+        public Proxies.StayDuration MinimumStay
         {
             get
             {
@@ -4843,7 +4843,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money Rate
+        public Proxies.Money Rate
         {
             get
             {
@@ -4909,14 +4909,14 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Money", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.DailyRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.BaseFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.Commission))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.Fee))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.Discount))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.Markup))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.Tax))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.MatrixCellData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.DailyRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.BaseFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.Commission))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.Fee))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.Discount))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.Markup))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.Tax))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.MatrixCellData))]
     public partial class Money : object
     {
         
@@ -5029,7 +5029,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DailyRate", Namespace="http://tavisca.com")]
-    public partial class DailyRate : HotelSearch.Money
+    public partial class DailyRate : Proxies.Money
     {
         
         private System.DateTime EndDateField;
@@ -5066,14 +5066,14 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseFare", Namespace="http://tavisca.com")]
-    public partial class BaseFare : HotelSearch.Money
+    public partial class BaseFare : Proxies.Money
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Commission", Namespace="http://tavisca.com")]
-    public partial class Commission : HotelSearch.Money
+    public partial class Commission : Proxies.Money
     {
         
         private long IdField;
@@ -5125,7 +5125,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fee", Namespace="http://tavisca.com")]
-    public partial class Fee : HotelSearch.Money
+    public partial class Fee : Proxies.Money
     {
         
         private long IdField;
@@ -5192,7 +5192,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Discount", Namespace="http://tavisca.com")]
-    public partial class Discount : HotelSearch.Money
+    public partial class Discount : Proxies.Money
     {
         
         private long IdField;
@@ -5244,7 +5244,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Markup", Namespace="http://tavisca.com")]
-    public partial class Markup : HotelSearch.Money
+    public partial class Markup : Proxies.Money
     {
         
         private long IdField;
@@ -5296,7 +5296,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Tax", Namespace="http://tavisca.com")]
-    public partial class Tax : HotelSearch.Money
+    public partial class Tax : Proxies.Money
     {
         
         private string CodeField;
@@ -5348,7 +5348,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixCellData", Namespace="http://tavisca.com")]
-    public partial class MatrixCellData : HotelSearch.Money
+    public partial class MatrixCellData : Proxies.Money
     {
         
         private string RemarksField;
@@ -5370,13 +5370,13 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TravelPreference", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelSearchPreference))]
     public partial class TravelPreference : object
     {
         
         private string SpecialRequestField;
         
-        private HotelSearch.CompanyPreference[] VendorPreferencesField;
+        private Proxies.CompanyPreference[] VendorPreferencesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string SpecialRequest
@@ -5392,7 +5392,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.CompanyPreference[] VendorPreferences
+        public Proxies.CompanyPreference[] VendorPreferences
         {
             get
             {
@@ -5413,7 +5413,7 @@ namespace HotelSearch
         
         private string NameField;
         
-        private HotelSearch.PreferLevel PreferLevelField;
+        private Proxies.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Name
@@ -5429,7 +5429,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PreferLevel PreferLevel
+        public Proxies.PreferLevel PreferLevel
         {
             get
             {
@@ -5448,14 +5448,14 @@ namespace HotelSearch
     public partial class RateRangePreference : object
     {
         
-        private HotelSearch.Money MaxRateField;
+        private Proxies.Money MaxRateField;
         
-        private HotelSearch.Money MinRateField;
+        private Proxies.Money MinRateField;
         
-        private HotelSearch.PreferLevel PreferLevelField;
+        private Proxies.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money MaxRate
+        public Proxies.Money MaxRate
         {
             get
             {
@@ -5468,7 +5468,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money MinRate
+        public Proxies.Money MinRate
         {
             get
             {
@@ -5481,7 +5481,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PreferLevel PreferLevel
+        public Proxies.PreferLevel PreferLevel
         {
             get
             {
@@ -5509,28 +5509,28 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripItinerary", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelItinerary))]
     public partial class TripItinerary : object
     {
         
-        private HotelSearch.StateBag[] AdditionalInformationField;
+        private Proxies.StateBag[] AdditionalInformationField;
         
-        private HotelSearch.TripAddOn[] AvailableAddonsField;
+        private Proxies.TripAddOn[] AvailableAddonsField;
         
         private System.Guid IdField;
         
-        private HotelSearch.ItineraryStatusType ItineraryStatusField;
+        private Proxies.ItineraryStatusType ItineraryStatusField;
         
         private string NotesField;
         
         private int RphField;
         
-        private HotelSearch.TripAddOn[] SelectedAddonsField;
+        private Proxies.TripAddOn[] SelectedAddonsField;
         
-        private HotelSearch.Tag[] TagsField;
+        private Proxies.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] AdditionalInformation
+        public Proxies.StateBag[] AdditionalInformation
         {
             get
             {
@@ -5543,7 +5543,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.TripAddOn[] AvailableAddons
+        public Proxies.TripAddOn[] AvailableAddons
         {
             get
             {
@@ -5569,7 +5569,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.ItineraryStatusType ItineraryStatus
+        public Proxies.ItineraryStatusType ItineraryStatus
         {
             get
             {
@@ -5608,7 +5608,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.TripAddOn[] SelectedAddons
+        public Proxies.TripAddOn[] SelectedAddons
         {
             get
             {
@@ -5621,7 +5621,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Tag[] Tags
+        public Proxies.Tag[] Tags
         {
             get
             {
@@ -5637,20 +5637,20 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelAddOn))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.TransferAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.TransferAddOn))]
     public partial class TripAddOn : object
     {
         
-        private HotelSearch.StateBag[] AdditionalInformationField;
+        private Proxies.StateBag[] AdditionalInformationField;
         
-        private HotelSearch.AddOnBookingInfo BookingInformationField;
+        private Proxies.AddOnBookingInfo BookingInformationField;
         
         private string DescriptionField;
         
-        private HotelSearch.TripAddOnFare FareField;
+        private Proxies.TripAddOnFare FareField;
         
-        private HotelSearch.FareSource FareSourceField;
+        private Proxies.FareSource FareSourceField;
         
         private System.Guid IdField;
         
@@ -5661,7 +5661,7 @@ namespace HotelSearch
         private string TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] AdditionalInformation
+        public Proxies.StateBag[] AdditionalInformation
         {
             get
             {
@@ -5674,7 +5674,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.AddOnBookingInfo BookingInformation
+        public Proxies.AddOnBookingInfo BookingInformation
         {
             get
             {
@@ -5700,7 +5700,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.TripAddOnFare Fare
+        public Proxies.TripAddOnFare Fare
         {
             get
             {
@@ -5713,7 +5713,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.FareSource FareSource
+        public Proxies.FareSource FareSource
         {
             get
             {
@@ -5964,9 +5964,9 @@ namespace HotelSearch
         
         private string RateCodeField;
         
-        private HotelSearch.StateBag[] SupplierSideDataField;
+        private Proxies.StateBag[] SupplierSideDataField;
         
-        private HotelSearch.HotelDiscountType TypeField;
+        private Proxies.HotelDiscountType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ChainCode
@@ -6021,7 +6021,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] SupplierSideData
+        public Proxies.StateBag[] SupplierSideData
         {
             get
             {
@@ -6034,7 +6034,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelDiscountType Type
+        public Proxies.HotelDiscountType Type
         {
             get
             {
@@ -6050,17 +6050,17 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFare", Namespace="http://tavisca.com")]
-    public partial class HotelFare : HotelSearch.Fare
+    public partial class HotelFare : Proxies.Fare
     {
         
-        private HotelSearch.Money AvgDailyRateField;
+        private Proxies.Money AvgDailyRateField;
         
-        private HotelSearch.Money MaxDailyRateField;
+        private Proxies.Money MaxDailyRateField;
         
-        private HotelSearch.Money MinDailyRateField;
+        private Proxies.Money MinDailyRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money AvgDailyRate
+        public Proxies.Money AvgDailyRate
         {
             get
             {
@@ -6073,7 +6073,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money MaxDailyRate
+        public Proxies.Money MaxDailyRate
         {
             get
             {
@@ -6086,7 +6086,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money MinDailyRate
+        public Proxies.Money MinDailyRate
         {
             get
             {
@@ -6102,7 +6102,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPolicy : HotelSearch.CancellationPolicy
+    public partial class HotelCancellationPolicy : Proxies.CancellationPolicy
     {
     }
     
@@ -6114,13 +6114,13 @@ namespace HotelSearch
         
         private bool AllowDynamicField;
         
-        private HotelSearch.MarkupApplicationAmount ApplyOnAmountField;
+        private Proxies.MarkupApplicationAmount ApplyOnAmountField;
         
         private string FareTypeField;
         
         private bool IsEnabledField;
         
-        private HotelSearch.MarkupApplicationType MarkupApplicationTypeField;
+        private Proxies.MarkupApplicationType MarkupApplicationTypeField;
         
         private long MarkupPlanIdField;
         
@@ -6142,7 +6142,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.MarkupApplicationAmount ApplyOnAmount
+        public Proxies.MarkupApplicationAmount ApplyOnAmount
         {
             get
             {
@@ -6181,7 +6181,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.MarkupApplicationType MarkupApplicationType
+        public Proxies.MarkupApplicationType MarkupApplicationType
         {
             get
             {
@@ -6243,7 +6243,7 @@ namespace HotelSearch
         
         private string NameField;
         
-        private HotelSearch.DepositType TypeField;
+        private Proxies.DepositType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -6272,7 +6272,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.DepositType Type
+        public Proxies.DepositType Type
         {
             get
             {
@@ -6295,7 +6295,7 @@ namespace HotelSearch
         
         private string NameField;
         
-        private HotelSearch.GuaranteeType TypeField;
+        private Proxies.GuaranteeType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -6324,7 +6324,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.GuaranteeType Type
+        public Proxies.GuaranteeType Type
         {
             get
             {
@@ -6343,14 +6343,14 @@ namespace HotelSearch
     public partial class AllowedCountry : object
     {
         
-        private HotelSearch.AllowedState[] AllowedStatesField;
+        private Proxies.AllowedState[] AllowedStatesField;
         
         private string CodeField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.AllowedState[] AllowedStates
+        public Proxies.AllowedState[] AllowedStates
         {
             get
             {
@@ -6392,20 +6392,20 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Deal", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.PaystayDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.PercentageDiscountDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.OpaqueDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.DiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.PaystayDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.PercentageDiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.OpaqueDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.DiscountDeal))]
     public partial class Deal : object
     {
         
-        private HotelSearch.DealStatus DealStatusField;
+        private Proxies.DealStatus DealStatusField;
         
         private string DealTypeField;
         
         private System.DateTime EndDateField;
         
-        private HotelSearch.Media ImageField;
+        private Proxies.Media ImageField;
         
         private bool IsPackageOnlyField;
         
@@ -6419,7 +6419,7 @@ namespace HotelSearch
         
         private System.DateTime StartDateField;
         
-        private HotelSearch.Tag[] TagsField;
+        private Proxies.Tag[] TagsField;
         
         private string TitleField;
         
@@ -6428,7 +6428,7 @@ namespace HotelSearch
         private System.DateTime UsageStartDateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.DealStatus DealStatus
+        public Proxies.DealStatus DealStatus
         {
             get
             {
@@ -6467,7 +6467,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Media Image
+        public Proxies.Media Image
         {
             get
             {
@@ -6558,7 +6558,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Tag[] Tags
+        public Proxies.Tag[] Tags
         {
             get
             {
@@ -6618,21 +6618,21 @@ namespace HotelSearch
         
         private System.DateTime AddDateField;
         
-        private HotelSearch.DealStatus DealStatusField;
+        private Proxies.DealStatus DealStatusField;
         
         private string DealTitleField;
         
         private System.DateTime EndDateField;
         
-        private HotelSearch.FareSource FareSourceField;
+        private Proxies.FareSource FareSourceField;
         
         private int FreeNightsField;
         
-        private HotelSearch.HotelProperty HotelPropertyField;
+        private Proxies.HotelProperty HotelPropertyField;
         
         private int IdField;
         
-        private HotelSearch.Money MinFareField;
+        private Proxies.Money MinFareField;
         
         private string PromotionalTextField;
         
@@ -6654,7 +6654,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.DealStatus DealStatus
+        public Proxies.DealStatus DealStatus
         {
             get
             {
@@ -6693,7 +6693,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.FareSource FareSource
+        public Proxies.FareSource FareSource
         {
             get
             {
@@ -6719,7 +6719,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelProperty HotelProperty
+        public Proxies.HotelProperty HotelProperty
         {
             get
             {
@@ -6745,7 +6745,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money MinFare
+        public Proxies.Money MinFare
         {
             get
             {
@@ -6840,11 +6840,11 @@ namespace HotelSearch
     public partial class Room : object
     {
         
-        private HotelSearch.StateBag[] AdditionalInformationField;
+        private Proxies.StateBag[] AdditionalInformationField;
         
-        private HotelSearch.AgeRestriction AgeRestrictionField;
+        private Proxies.AgeRestriction AgeRestrictionField;
         
-        private HotelSearch.AllowedCreditCard[] AllowedCreditCardsField;
+        private Proxies.AllowedCreditCard[] AllowedCreditCardsField;
         
         private int BaseOccupancyField;
         
@@ -6852,7 +6852,7 @@ namespace HotelSearch
         
         private bool DepositRequiredField;
         
-        private HotelSearch.RoomRate DisplayRoomRateField;
+        private Proxies.RoomRate DisplayRoomRateField;
         
         private bool GuaranteeRequiredField;
         
@@ -6860,7 +6860,7 @@ namespace HotelSearch
         
         private int GuestCountField;
         
-        private HotelSearch.HotelFareSource HotelFareSourceField;
+        private Proxies.HotelFareSource HotelFareSourceField;
         
         private bool IsRoomWithNearByDateField;
         
@@ -6876,7 +6876,7 @@ namespace HotelSearch
         
         private int[] PassengerRphsField;
         
-        private HotelSearch.HotelPolicy[] PoliciesField;
+        private Proxies.HotelPolicy[] PoliciesField;
         
         private bool PrepaidField;
         
@@ -6892,12 +6892,12 @@ namespace HotelSearch
         
         private string RoomTypeField;
         
-        private HotelSearch.DateTimeSpan StayPeriodField;
+        private Proxies.DateTimeSpan StayPeriodField;
         
-        private HotelSearch.RoomRate StdRoomRateField;
+        private Proxies.RoomRate StdRoomRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] AdditionalInformation
+        public Proxies.StateBag[] AdditionalInformation
         {
             get
             {
@@ -6910,7 +6910,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.AgeRestriction AgeRestriction
+        public Proxies.AgeRestriction AgeRestriction
         {
             get
             {
@@ -6923,7 +6923,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.AllowedCreditCard[] AllowedCreditCards
+        public Proxies.AllowedCreditCard[] AllowedCreditCards
         {
             get
             {
@@ -6975,7 +6975,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RoomRate DisplayRoomRate
+        public Proxies.RoomRate DisplayRoomRate
         {
             get
             {
@@ -7027,7 +7027,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelFareSource HotelFareSource
+        public Proxies.HotelFareSource HotelFareSource
         {
             get
             {
@@ -7131,7 +7131,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelPolicy[] Policies
+        public Proxies.HotelPolicy[] Policies
         {
             get
             {
@@ -7235,7 +7235,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.DateTimeSpan StayPeriod
+        public Proxies.DateTimeSpan StayPeriod
         {
             get
             {
@@ -7248,7 +7248,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RoomRate StdRoomRate
+        public Proxies.RoomRate StdRoomRate
         {
             get
             {
@@ -7271,7 +7271,7 @@ namespace HotelSearch
         
         private string StartField;
         
-        private HotelSearch.SeasonType TypeField;
+        private Proxies.SeasonType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string End
@@ -7300,7 +7300,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.SeasonType Type
+        public Proxies.SeasonType Type
         {
             get
             {
@@ -7319,7 +7319,7 @@ namespace HotelSearch
     public partial class AddOnBookingInfo : object
     {
         
-        private HotelSearch.AddOnBookingStatusType BookingStatusField;
+        private Proxies.AddOnBookingStatusType BookingStatusField;
         
         private int PassengerRphField;
         
@@ -7328,7 +7328,7 @@ namespace HotelSearch
         private string VendorConfirmationNumberField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.AddOnBookingStatusType BookingStatus
+        public Proxies.AddOnBookingStatusType BookingStatus
         {
             get
             {
@@ -7383,17 +7383,17 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOnFare", Namespace="http://tavisca.com")]
-    public partial class TripAddOnFare : HotelSearch.Fare
+    public partial class TripAddOnFare : Proxies.Fare
     {
         
-        private HotelSearch.Money BaseTotalFareField;
+        private Proxies.Money BaseTotalFareField;
         
         private bool IsAlreadyIncludedField;
         
         private int QuantityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money BaseTotalFare
+        public Proxies.Money BaseTotalFare
         {
             get
             {
@@ -7435,8 +7435,8 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.TransferAddOn))]
-    public partial class HotelAddOn : HotelSearch.TripAddOn
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.TransferAddOn))]
+    public partial class HotelAddOn : Proxies.TripAddOn
     {
         
         private string[] RoomRphsField;
@@ -7458,21 +7458,21 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TransferAddOn", Namespace="http://tavisca.com")]
-    public partial class TransferAddOn : HotelSearch.HotelAddOn
+    public partial class TransferAddOn : Proxies.HotelAddOn
     {
         
-        private HotelSearch.Location DestinationField;
+        private Proxies.Location DestinationField;
         
         private System.DateTime DropOffField;
         
-        private HotelSearch.Location OriginField;
+        private Proxies.Location OriginField;
         
-        private HotelSearch.PassengerTypeQuantity[] PassengersField;
+        private Proxies.PassengerTypeQuantity[] PassengersField;
         
         private System.DateTime PickUpField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Location Destination
+        public Proxies.Location Destination
         {
             get
             {
@@ -7498,7 +7498,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Location Origin
+        public Proxies.Location Origin
         {
             get
             {
@@ -7511,7 +7511,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PassengerTypeQuantity[] Passengers
+        public Proxies.PassengerTypeQuantity[] Passengers
         {
             get
             {
@@ -7555,64 +7555,64 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fare", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.RoomRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.TripAddOnFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.RoomRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.TripAddOnFare))]
     public partial class Fare : object
     {
         
-        private HotelSearch.BaseFare BaseFareField;
+        private Proxies.BaseFare BaseFareField;
         
-        private HotelSearch.Commission[] CommissionsField;
+        private Proxies.Commission[] CommissionsField;
         
-        private HotelSearch.Fee ConsolidatorFeeField;
+        private Proxies.Fee ConsolidatorFeeField;
         
-        private HotelSearch.Discount[] DiscountsField;
+        private Proxies.Discount[] DiscountsField;
         
-        private HotelSearch.Money EstimatedCommissionField;
+        private Proxies.Money EstimatedCommissionField;
         
         private string FareCodeField;
         
-        private HotelSearch.FareRestrictionType[] FareRestrictionTypesField;
+        private Proxies.FareRestrictionType[] FareRestrictionTypesField;
         
-        private HotelSearch.FareType FareTypeField;
+        private Proxies.FareType FareTypeField;
         
-        private HotelSearch.Fee[] FeesField;
+        private Proxies.Fee[] FeesField;
         
         private int IdField;
         
-        private HotelSearch.Money MarkupField;
+        private Proxies.Money MarkupField;
         
-        private HotelSearch.Markup[] MarkupsField;
+        private Proxies.Markup[] MarkupsField;
         
-        private HotelSearch.Fee PartnerFeeField;
+        private Proxies.Fee PartnerFeeField;
         
-        private HotelSearch.Money PartnerMarkupField;
+        private Proxies.Money PartnerMarkupField;
         
         private string RemarksField;
         
         private int RphField;
         
-        private HotelSearch.Money SavingsIncludedField;
+        private Proxies.Money SavingsIncludedField;
         
-        private HotelSearch.Fee ServiceFeeField;
+        private Proxies.Fee ServiceFeeField;
         
-        private HotelSearch.StateBag[] SupplierSideDataField;
+        private Proxies.StateBag[] SupplierSideDataField;
         
-        private HotelSearch.Tax[] TaxesField;
+        private Proxies.Tax[] TaxesField;
         
-        private HotelSearch.Commission TotalCommissionField;
+        private Proxies.Commission TotalCommissionField;
         
-        private HotelSearch.Discount TotalDiscountField;
+        private Proxies.Discount TotalDiscountField;
         
-        private HotelSearch.Money TotalFareField;
+        private Proxies.Money TotalFareField;
         
-        private HotelSearch.Fee TotalFeeField;
+        private Proxies.Fee TotalFeeField;
         
-        private HotelSearch.Money TotalTaxField;
+        private Proxies.Money TotalTaxField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.BaseFare BaseFare
+        public Proxies.BaseFare BaseFare
         {
             get
             {
@@ -7625,7 +7625,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Commission[] Commissions
+        public Proxies.Commission[] Commissions
         {
             get
             {
@@ -7638,7 +7638,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Fee ConsolidatorFee
+        public Proxies.Fee ConsolidatorFee
         {
             get
             {
@@ -7651,7 +7651,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Discount[] Discounts
+        public Proxies.Discount[] Discounts
         {
             get
             {
@@ -7664,7 +7664,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money EstimatedCommission
+        public Proxies.Money EstimatedCommission
         {
             get
             {
@@ -7690,7 +7690,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.FareRestrictionType[] FareRestrictionTypes
+        public Proxies.FareRestrictionType[] FareRestrictionTypes
         {
             get
             {
@@ -7703,7 +7703,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.FareType FareType
+        public Proxies.FareType FareType
         {
             get
             {
@@ -7716,7 +7716,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Fee[] Fees
+        public Proxies.Fee[] Fees
         {
             get
             {
@@ -7742,7 +7742,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money Markup
+        public Proxies.Money Markup
         {
             get
             {
@@ -7755,7 +7755,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Markup[] Markups
+        public Proxies.Markup[] Markups
         {
             get
             {
@@ -7768,7 +7768,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Fee PartnerFee
+        public Proxies.Fee PartnerFee
         {
             get
             {
@@ -7781,7 +7781,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money PartnerMarkup
+        public Proxies.Money PartnerMarkup
         {
             get
             {
@@ -7820,7 +7820,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money SavingsIncluded
+        public Proxies.Money SavingsIncluded
         {
             get
             {
@@ -7833,7 +7833,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Fee ServiceFee
+        public Proxies.Fee ServiceFee
         {
             get
             {
@@ -7846,7 +7846,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] SupplierSideData
+        public Proxies.StateBag[] SupplierSideData
         {
             get
             {
@@ -7859,7 +7859,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Tax[] Taxes
+        public Proxies.Tax[] Taxes
         {
             get
             {
@@ -7872,7 +7872,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Commission TotalCommission
+        public Proxies.Commission TotalCommission
         {
             get
             {
@@ -7885,7 +7885,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Discount TotalDiscount
+        public Proxies.Discount TotalDiscount
         {
             get
             {
@@ -7898,7 +7898,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money TotalFare
+        public Proxies.Money TotalFare
         {
             get
             {
@@ -7911,7 +7911,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Fee TotalFee
+        public Proxies.Fee TotalFee
         {
             get
             {
@@ -7924,7 +7924,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money TotalTax
+        public Proxies.Money TotalTax
         {
             get
             {
@@ -7940,14 +7940,14 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="RoomRate", Namespace="http://tavisca.com")]
-    public partial class RoomRate : HotelSearch.Fare
+    public partial class RoomRate : Proxies.Fare
     {
         
         private string BookingCodeField;
         
-        private HotelSearch.DailyRate[] DailyRatesField;
+        private Proxies.DailyRate[] DailyRatesField;
         
-        private HotelSearch.RateIndicatorType RateIndicatorTypeField;
+        private Proxies.RateIndicatorType RateIndicatorTypeField;
         
         private string RatePlanCategoryField;
         
@@ -7975,7 +7975,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.DailyRate[] DailyRates
+        public Proxies.DailyRate[] DailyRates
         {
             get
             {
@@ -7988,7 +7988,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RateIndicatorType RateIndicatorType
+        public Proxies.RateIndicatorType RateIndicatorType
         {
             get
             {
@@ -8260,7 +8260,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PaystayDeal", Namespace="http://tavisca.com")]
-    public partial class PaystayDeal : HotelSearch.Deal
+    public partial class PaystayDeal : Proxies.Deal
     {
         
         private int FreeNightsField;
@@ -8297,7 +8297,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PercentageDiscountDeal", Namespace="http://tavisca.com")]
-    public partial class PercentageDiscountDeal : HotelSearch.Deal
+    public partial class PercentageDiscountDeal : Proxies.Deal
     {
         
         private string ApplyOnField;
@@ -8334,22 +8334,22 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OpaqueDeal", Namespace="http://tavisca.com")]
-    public partial class OpaqueDeal : HotelSearch.Deal
+    public partial class OpaqueDeal : Proxies.Deal
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DiscountDeal", Namespace="http://tavisca.com")]
-    public partial class DiscountDeal : HotelSearch.Deal
+    public partial class DiscountDeal : Proxies.Deal
     {
         
-        private HotelSearch.Money AmountField;
+        private Proxies.Money AmountField;
         
         private string ApplyOnField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money Amount
+        public Proxies.Money Amount
         {
             get
             {
@@ -8411,14 +8411,14 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationPolicy", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelCancellationPolicy))]
     public partial class CancellationPolicy : object
     {
         
-        private HotelSearch.CancellationRule[] CancellationRulesField;
+        private Proxies.CancellationRule[] CancellationRulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.CancellationRule[] CancellationRules
+        public Proxies.CancellationRule[] CancellationRules
         {
             get
             {
@@ -8434,24 +8434,24 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationRule", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelCancellationRule))]
     public partial class CancellationRule : object
     {
         
-        private HotelSearch.StateBag[] AdditionalInfoField;
+        private Proxies.StateBag[] AdditionalInfoField;
         
         private string DescriptionField;
         
-        private HotelSearch.Penalty PenaltyField;
+        private Proxies.Penalty PenaltyField;
         
         private int RphField;
         
-        private HotelSearch.ProviderCancellationRuleType TypeField;
+        private Proxies.ProviderCancellationRuleType TypeField;
         
-        private HotelSearch.DateTimeSpan WindowField;
+        private Proxies.DateTimeSpan WindowField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] AdditionalInfo
+        public Proxies.StateBag[] AdditionalInfo
         {
             get
             {
@@ -8477,7 +8477,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Penalty Penalty
+        public Proxies.Penalty Penalty
         {
             get
             {
@@ -8503,7 +8503,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.ProviderCancellationRuleType Type
+        public Proxies.ProviderCancellationRuleType Type
         {
             get
             {
@@ -8516,7 +8516,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.DateTimeSpan Window
+        public Proxies.DateTimeSpan Window
         {
             get
             {
@@ -8532,20 +8532,20 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Penalty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelCancellationPenalty))]
     public partial class Penalty : object
     {
         
-        private HotelSearch.Money BasePenaltyField;
+        private Proxies.Money BasePenaltyField;
         
-        private HotelSearch.Fee[] FeesField;
+        private Proxies.Fee[] FeesField;
         
-        private HotelSearch.Markup[] MarkupsField;
+        private Proxies.Markup[] MarkupsField;
         
-        private HotelSearch.Money TotalPenaltyField;
+        private Proxies.Money TotalPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money BasePenalty
+        public Proxies.Money BasePenalty
         {
             get
             {
@@ -8558,7 +8558,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Fee[] Fees
+        public Proxies.Fee[] Fees
         {
             get
             {
@@ -8571,7 +8571,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Markup[] Markups
+        public Proxies.Markup[] Markups
         {
             get
             {
@@ -8584,7 +8584,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money TotalPenalty
+        public Proxies.Money TotalPenalty
         {
             get
             {
@@ -8600,13 +8600,13 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationRule", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationRule : HotelSearch.CancellationRule
+    public partial class HotelCancellationRule : Proxies.CancellationRule
     {
         
-        private HotelSearch.HotelCancellationPenalty HotelCancellationPenaltyField;
+        private Proxies.HotelCancellationPenalty HotelCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelCancellationPenalty HotelCancellationPenalty
+        public Proxies.HotelCancellationPenalty HotelCancellationPenalty
         {
             get
             {
@@ -8634,7 +8634,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPenalty : HotelSearch.Penalty
+    public partial class HotelCancellationPenalty : Proxies.Penalty
     {
     }
     
@@ -8814,10 +8814,10 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelTransform", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelFilterTransform))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelMatrixTransform))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelItineraryTransform))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelComparisonMatrixTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelFilterTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelMatrixTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelItineraryTransform))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelComparisonMatrixTransform))]
     public partial class HotelTransform : object
     {
     }
@@ -8825,7 +8825,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AvailabilityFilter", Namespace="http://tavisca.com")]
-    public partial class AvailabilityFilter : HotelSearch.HotelFilter
+    public partial class AvailabilityFilter : Proxies.HotelFilter
     {
         
         private bool ReturnOnlyAvailableItinerariesField;
@@ -8847,15 +8847,15 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ViewPortFilter", Namespace="http://tavisca.com")]
-    public partial class ViewPortFilter : HotelSearch.HotelFilter
+    public partial class ViewPortFilter : Proxies.HotelFilter
     {
         
-        private HotelSearch.GeoCode BottomRightCornerField;
+        private Proxies.GeoCode BottomRightCornerField;
         
-        private HotelSearch.GeoCode TopLeftCornerField;
+        private Proxies.GeoCode TopLeftCornerField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.GeoCode BottomRightCorner
+        public Proxies.GeoCode BottomRightCorner
         {
             get
             {
@@ -8868,7 +8868,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.GeoCode TopLeftCorner
+        public Proxies.GeoCode TopLeftCorner
         {
             get
             {
@@ -8884,21 +8884,21 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFilterTransform", Namespace="http://tavisca.com")]
-    public partial class HotelFilterTransform : HotelSearch.HotelTransform
+    public partial class HotelFilterTransform : Proxies.HotelTransform
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelMatrixTransform", Namespace="http://tavisca.com")]
-    public partial class HotelMatrixTransform : HotelSearch.HotelTransform
+    public partial class HotelMatrixTransform : Proxies.HotelTransform
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItineraryTransform", Namespace="http://tavisca.com")]
-    public partial class HotelItineraryTransform : HotelSearch.HotelTransform
+    public partial class HotelItineraryTransform : Proxies.HotelTransform
     {
         
         private bool GetPricelessHotelItinerariesField;
@@ -8950,7 +8950,7 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelComparisonMatrixTransform", Namespace="http://tavisca.com")]
-    public partial class HotelComparisonMatrixTransform : HotelSearch.HotelTransform
+    public partial class HotelComparisonMatrixTransform : Proxies.HotelTransform
     {
         
         private string[] HotelComparisonAttributesField;
@@ -9017,19 +9017,19 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRS", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelRoomAvailRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelRoomPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelSearchViewRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelItinerarySearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelRoomAvailRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelRoomPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelSearchViewRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelItinerarySearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelSearchRS))]
     public partial class WebServiceRS : object
     {
         
         private string CallIdField;
         
-        private HotelSearch.ResponseType ResponseRecievedField;
+        private Proxies.ResponseType ResponseRecievedField;
         
-        private HotelSearch.ServiceStatus ServiceStatusField;
+        private Proxies.ServiceStatus ServiceStatusField;
         
         private string SessionIdField;
         
@@ -9047,7 +9047,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.ResponseType ResponseRecieved
+        public Proxies.ResponseType ResponseRecieved
         {
             get
             {
@@ -9060,7 +9060,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.ServiceStatus ServiceStatus
+        public Proxies.ServiceStatus ServiceStatus
         {
             get
             {
@@ -9098,7 +9098,7 @@ namespace HotelSearch
         
         private string[] MissingItemsField;
         
-        private HotelSearch.ServiceStatusType StatusField;
+        private Proxies.ServiceStatusType StatusField;
         
         private int StatusCodeField;
         
@@ -9144,7 +9144,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.ServiceStatusType Status
+        public Proxies.ServiceStatusType Status
         {
             get
             {
@@ -9186,15 +9186,15 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRS : HotelSearch.WebServiceRS
+    public partial class HotelRoomAvailRS : Proxies.WebServiceRS
     {
         
-        private HotelSearch.HotelItinerary ItineraryField;
+        private Proxies.HotelItinerary ItineraryField;
         
-        private HotelSearch.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Proxies.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelItinerary Itinerary
+        public Proxies.HotelItinerary Itinerary
         {
             get
             {
@@ -9207,7 +9207,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RoomOccupancyType[] RoomOccupancyTypes
+        public Proxies.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9223,15 +9223,15 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRS : HotelSearch.WebServiceRS
+    public partial class HotelRoomPriceRS : Proxies.WebServiceRS
     {
         
-        private HotelSearch.HotelItinerary ItineraryField;
+        private Proxies.HotelItinerary ItineraryField;
         
-        private HotelSearch.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Proxies.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelItinerary Itinerary
+        public Proxies.HotelItinerary Itinerary
         {
             get
             {
@@ -9244,7 +9244,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RoomOccupancyType[] RoomOccupancyTypes
+        public Proxies.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9260,17 +9260,17 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchViewRS", Namespace="http://tavisca.com")]
-    public partial class HotelSearchViewRS : HotelSearch.WebServiceRS
+    public partial class HotelSearchViewRS : Proxies.WebServiceRS
     {
         
-        private HotelSearch.PagingInfo PagingInfoField;
+        private Proxies.PagingInfo PagingInfoField;
         
-        private HotelSearch.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Proxies.RoomOccupancyType[] RoomOccupancyTypesField;
         
-        private HotelSearch.HotelView[] ViewsField;
+        private Proxies.HotelView[] ViewsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PagingInfo PagingInfo
+        public Proxies.PagingInfo PagingInfo
         {
             get
             {
@@ -9283,7 +9283,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RoomOccupancyType[] RoomOccupancyTypes
+        public Proxies.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9296,7 +9296,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelView[] Views
+        public Proxies.HotelView[] Views
         {
             get
             {
@@ -9312,15 +9312,15 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRS : HotelSearch.WebServiceRS
+    public partial class HotelItinerarySearchRS : Proxies.WebServiceRS
     {
         
-        private HotelSearch.HotelItinerary ItineraryField;
+        private Proxies.HotelItinerary ItineraryField;
         
-        private HotelSearch.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Proxies.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelItinerary Itinerary
+        public Proxies.HotelItinerary Itinerary
         {
             get
             {
@@ -9333,7 +9333,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RoomOccupancyType[] RoomOccupancyTypes
+        public Proxies.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9349,17 +9349,17 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRS : HotelSearch.WebServiceRS
+    public partial class HotelSearchRS : Proxies.WebServiceRS
     {
         
-        private HotelSearch.HotelItinerary[] ItinerariesField;
+        private Proxies.HotelItinerary[] ItinerariesField;
         
-        private HotelSearch.PagingInfo PagingInfoField;
+        private Proxies.PagingInfo PagingInfoField;
         
-        private HotelSearch.RoomOccupancyType[] RoomOccupancyTypesField;
+        private Proxies.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelItinerary[] Itineraries
+        public Proxies.HotelItinerary[] Itineraries
         {
             get
             {
@@ -9372,7 +9372,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.PagingInfo PagingInfo
+        public Proxies.PagingInfo PagingInfo
         {
             get
             {
@@ -9385,7 +9385,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RoomOccupancyType[] RoomOccupancyTypes
+        public Proxies.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -9416,22 +9416,22 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelView", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelFilterView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelMatrixView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelItineraryView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelComparisonMatrixView))]
-    public partial class HotelView : HotelSearch.BaseEntity
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelFilterView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelMatrixView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelItineraryView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelComparisonMatrixView))]
+    public partial class HotelView : Proxies.BaseEntity
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseEntity", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelFilterView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelMatrixView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelItineraryView))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.HotelComparisonMatrixView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelFilterView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelMatrixView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelItineraryView))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.HotelComparisonMatrixView))]
     public partial class BaseEntity : object
     {
         
@@ -9454,13 +9454,13 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFilterView", Namespace="http://tavisca.com")]
-    public partial class HotelFilterView : HotelSearch.HotelView
+    public partial class HotelFilterView : Proxies.HotelView
     {
         
-        private HotelSearch.HotelFilterDisplayData HotelFilterDisplayDataField;
+        private Proxies.HotelFilterDisplayData HotelFilterDisplayDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelFilterDisplayData HotelFilterDisplayData
+        public Proxies.HotelFilterDisplayData HotelFilterDisplayData
         {
             get
             {
@@ -9476,13 +9476,13 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelMatrixView", Namespace="http://tavisca.com")]
-    public partial class HotelMatrixView : HotelSearch.HotelView
+    public partial class HotelMatrixView : Proxies.HotelView
     {
         
-        private HotelSearch.ResultMatrix[] SummaryMatrixListField;
+        private Proxies.ResultMatrix[] SummaryMatrixListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.ResultMatrix[] SummaryMatrixList
+        public Proxies.ResultMatrix[] SummaryMatrixList
         {
             get
             {
@@ -9498,13 +9498,13 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItineraryView", Namespace="http://tavisca.com")]
-    public partial class HotelItineraryView : HotelSearch.HotelView
+    public partial class HotelItineraryView : Proxies.HotelView
     {
         
-        private HotelSearch.HotelItinerary[] ItinerariesField;
+        private Proxies.HotelItinerary[] ItinerariesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelItinerary[] Itineraries
+        public Proxies.HotelItinerary[] Itineraries
         {
             get
             {
@@ -9521,13 +9521,13 @@ namespace HotelSearch
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelComparisonMatrixView", Namespace="http://schemas.datacontract.org/2004/07/Tavisca.TravelNxt.Hotel.Plugins.DataContr" +
         "acts")]
-    public partial class HotelComparisonMatrixView : HotelSearch.HotelView
+    public partial class HotelComparisonMatrixView : Proxies.HotelView
     {
         
-        private HotelSearch.ComparisonMatrix ComparisonMatrixField;
+        private Proxies.ComparisonMatrix ComparisonMatrixField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.ComparisonMatrix ComparisonMatrix
+        public Proxies.ComparisonMatrix ComparisonMatrix
         {
             get
             {
@@ -9546,7 +9546,7 @@ namespace HotelSearch
     public partial class HotelFilterDisplayData : object
     {
         
-        private HotelSearch.BrandMinFare[] BrandMinFareListField;
+        private Proxies.BrandMinFare[] BrandMinFareListField;
         
         private bool CheckFiveStarField;
         
@@ -9560,7 +9560,7 @@ namespace HotelSearch
         
         private bool CheckTwoStarField;
         
-        private HotelSearch.CityPropertyCount[] CityPropertyCountListField;
+        private Proxies.CityPropertyCount[] CityPropertyCountListField;
         
         private bool EnableFiveStarField;
         
@@ -9578,26 +9578,26 @@ namespace HotelSearch
         
         private bool EnableTwoStarField;
         
-        private HotelSearch.Distance MaxDistanceField;
+        private Proxies.Distance MaxDistanceField;
         
-        private HotelSearch.Money MaxFareField;
+        private Proxies.Money MaxFareField;
         
         private int MaxNumberOfBedRoomsField;
         
         private int MaxOccupancyField;
         
-        private HotelSearch.Distance MinDistanceField;
+        private Proxies.Distance MinDistanceField;
         
-        private HotelSearch.Money MinFareField;
+        private Proxies.Money MinFareField;
         
         private int MinNumberOfBedRoomsField;
         
         private int MinOccupancyField;
         
-        private HotelSearch.RatingMinFare[] RatingMinFareListField;
+        private Proxies.RatingMinFare[] RatingMinFareListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.BrandMinFare[] BrandMinFareList
+        public Proxies.BrandMinFare[] BrandMinFareList
         {
             get
             {
@@ -9688,7 +9688,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.CityPropertyCount[] CityPropertyCountList
+        public Proxies.CityPropertyCount[] CityPropertyCountList
         {
             get
             {
@@ -9805,7 +9805,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Distance MaxDistance
+        public Proxies.Distance MaxDistance
         {
             get
             {
@@ -9818,7 +9818,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money MaxFare
+        public Proxies.Money MaxFare
         {
             get
             {
@@ -9857,7 +9857,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Distance MinDistance
+        public Proxies.Distance MinDistance
         {
             get
             {
@@ -9870,7 +9870,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money MinFare
+        public Proxies.Money MinFare
         {
             get
             {
@@ -9909,7 +9909,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.RatingMinFare[] RatingMinFareList
+        public Proxies.RatingMinFare[] RatingMinFareList
         {
             get
             {
@@ -9930,7 +9930,7 @@ namespace HotelSearch
         
         private string BrandNameField;
         
-        private HotelSearch.Money MinFareField;
+        private Proxies.Money MinFareField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string BrandName
@@ -9946,7 +9946,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money MinFare
+        public Proxies.Money MinFare
         {
             get
             {
@@ -10002,12 +10002,12 @@ namespace HotelSearch
     public partial class RatingMinFare : object
     {
         
-        private HotelSearch.Money MinFareField;
+        private Proxies.Money MinFareField;
         
-        private HotelSearch.HotelRating RatingField;
+        private Proxies.HotelRating RatingField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.Money MinFare
+        public Proxies.Money MinFare
         {
             get
             {
@@ -10020,7 +10020,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.HotelRating Rating
+        public Proxies.HotelRating Rating
         {
             get
             {
@@ -10039,14 +10039,14 @@ namespace HotelSearch
     public partial class ResultMatrix : object
     {
         
-        private HotelSearch.MatrixColumnInfo[] ColumnsField;
+        private Proxies.MatrixColumnInfo[] ColumnsField;
         
-        private HotelSearch.MatrixRowInfo[] RowsField;
+        private Proxies.MatrixRowInfo[] RowsField;
         
-        private HotelSearch.MatrixCell[] ValuesField;
+        private Proxies.MatrixCell[] ValuesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.MatrixColumnInfo[] Columns
+        public Proxies.MatrixColumnInfo[] Columns
         {
             get
             {
@@ -10059,7 +10059,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.MatrixRowInfo[] Rows
+        public Proxies.MatrixRowInfo[] Rows
         {
             get
             {
@@ -10072,7 +10072,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.MatrixCell[] Values
+        public Proxies.MatrixCell[] Values
         {
             get
             {
@@ -10088,14 +10088,14 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixColumnInfo", Namespace="http://tavisca.com")]
-    public partial class MatrixColumnInfo : HotelSearch.MatrixRowColumnInfo
+    public partial class MatrixColumnInfo : Proxies.MatrixRowColumnInfo
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixRowInfo", Namespace="http://tavisca.com")]
-    public partial class MatrixRowInfo : HotelSearch.MatrixRowColumnInfo
+    public partial class MatrixRowInfo : Proxies.MatrixRowColumnInfo
     {
     }
     
@@ -10109,7 +10109,7 @@ namespace HotelSearch
         
         private int RowRphField;
         
-        private HotelSearch.MatrixCellData[] ValuesField;
+        private Proxies.MatrixCellData[] ValuesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int ColumnRph
@@ -10138,7 +10138,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.MatrixCellData[] Values
+        public Proxies.MatrixCellData[] Values
         {
             get
             {
@@ -10154,23 +10154,23 @@ namespace HotelSearch
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatrixRowColumnInfo", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.MatrixRowInfo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelSearch.MatrixColumnInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.MatrixRowInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Proxies.MatrixColumnInfo))]
     public partial class MatrixRowColumnInfo : object
     {
         
-        private HotelSearch.StateBag[] AdditionalInfoField;
+        private Proxies.StateBag[] AdditionalInfoField;
         
         private string CodeField;
         
         private int RphField;
         
-        private HotelSearch.MatrixInfoType TypeField;
+        private Proxies.MatrixInfoType TypeField;
         
         private string ValueField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.StateBag[] AdditionalInfo
+        public Proxies.StateBag[] AdditionalInfo
         {
             get
             {
@@ -10209,7 +10209,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.MatrixInfoType Type
+        public Proxies.MatrixInfoType Type
         {
             get
             {
@@ -10268,16 +10268,16 @@ namespace HotelSearch
     public partial class ComparisonMatrix : object
     {
         
-        private HotelSearch.ComparisonMatrixCell[] CellsField;
+        private Proxies.ComparisonMatrixCell[] CellsField;
         
-        private HotelSearch.ComparisonMatrixDimension[] ColumnsField;
+        private Proxies.ComparisonMatrixDimension[] ColumnsField;
         
         private int TotalColumnsField;
         
         private int TotalRowsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.ComparisonMatrixCell[] Cells
+        public Proxies.ComparisonMatrixCell[] Cells
         {
             get
             {
@@ -10290,7 +10290,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.ComparisonMatrixDimension[] Columns
+        public Proxies.ComparisonMatrixDimension[] Columns
         {
             get
             {
@@ -10404,9 +10404,9 @@ namespace HotelSearch
         
         private string AttributeNameField;
         
-        private HotelSearch.BusinessType BusinessTypeField;
+        private Proxies.BusinessType BusinessTypeField;
         
-        private HotelSearch.TypeCode CodeField;
+        private Proxies.TypeCode CodeField;
         
         private int ColumnIdField;
         
@@ -10428,7 +10428,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.BusinessType BusinessType
+        public Proxies.BusinessType BusinessType
         {
             get
             {
@@ -10441,7 +10441,7 @@ namespace HotelSearch
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelSearch.TypeCode Code
+        public Proxies.TypeCode Code
         {
             get
             {
@@ -10542,28 +10542,28 @@ namespace HotelSearch
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="HotelSearch.HotelEngine")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="Proxies.HotelEngine")]
     public interface HotelEngine
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/HotelEngine/HotelAvail", ReplyAction="http://tavisca.com/HotelEngine/HotelAvailResponse")]
-        System.Threading.Tasks.Task<HotelSearch.HotelSearchRS> HotelAvailAsync(HotelSearch.HotelSearchRQ request);
+        System.Threading.Tasks.Task<Proxies.HotelSearchRS> HotelAvailAsync(Proxies.HotelSearchRQ request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/HotelEngine/HotelRoomAvail", ReplyAction="http://tavisca.com/HotelEngine/HotelRoomAvailResponse")]
-        System.Threading.Tasks.Task<HotelSearch.HotelRoomAvailRS> HotelRoomAvailAsync(HotelSearch.HotelRoomAvailRQ request);
+        System.Threading.Tasks.Task<Proxies.HotelRoomAvailRS> HotelRoomAvailAsync(Proxies.HotelRoomAvailRQ request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/HotelEngine/HotelRoomPrice", ReplyAction="http://tavisca.com/HotelEngine/HotelRoomPriceResponse")]
-        System.Threading.Tasks.Task<HotelSearch.HotelRoomPriceRS> HotelRoomPriceAsync(HotelSearch.HotelRoomPriceRQ request);
+        System.Threading.Tasks.Task<Proxies.HotelRoomPriceRS> HotelRoomPriceAsync(Proxies.HotelRoomPriceRQ request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public interface HotelEngineChannel : HotelSearch.HotelEngine, System.ServiceModel.IClientChannel
+    public interface HotelEngineChannel : Proxies.HotelEngine, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public partial class HotelEngineClient : System.ServiceModel.ClientBase<HotelSearch.HotelEngine>, HotelSearch.HotelEngine
+    public partial class HotelEngineClient : System.ServiceModel.ClientBase<Proxies.HotelEngine>, Proxies.HotelEngine
     {
         
     /// <summary>
@@ -10606,17 +10606,17 @@ namespace HotelSearch
         {
         }
         
-        public System.Threading.Tasks.Task<HotelSearch.HotelSearchRS> HotelAvailAsync(HotelSearch.HotelSearchRQ request)
+        public System.Threading.Tasks.Task<Proxies.HotelSearchRS> HotelAvailAsync(Proxies.HotelSearchRQ request)
         {
             return base.Channel.HotelAvailAsync(request);
         }
         
-        public System.Threading.Tasks.Task<HotelSearch.HotelRoomAvailRS> HotelRoomAvailAsync(HotelSearch.HotelRoomAvailRQ request)
+        public System.Threading.Tasks.Task<Proxies.HotelRoomAvailRS> HotelRoomAvailAsync(Proxies.HotelRoomAvailRQ request)
         {
             return base.Channel.HotelRoomAvailAsync(request);
         }
         
-        public System.Threading.Tasks.Task<HotelSearch.HotelRoomPriceRS> HotelRoomPriceAsync(HotelSearch.HotelRoomPriceRQ request)
+        public System.Threading.Tasks.Task<Proxies.HotelRoomPriceRS> HotelRoomPriceAsync(Proxies.HotelRoomPriceRQ request)
         {
             return base.Channel.HotelRoomPriceAsync(request);
         }

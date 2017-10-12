@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HotelBook;
+using BookingProxy;
 
 namespace HotelEngine.Adapter.Configuration
 {
@@ -17,7 +17,10 @@ namespace HotelEngine.Adapter.Configuration
         private int[] _ages;
         private int _qty;
 
+        public TripFolderBookConfig()
+        {
 
+        }
 
         public TripFolderBookRQ TripFolderBookRQ => new TripFolderBookRQ()
         {
@@ -74,28 +77,28 @@ namespace HotelEngine.Adapter.Configuration
                             new StateBag() { Name = "DKCommissionIdentifier", Value = "3285301P" },
                             new StateBag() { Name = "MemberSignUpDate", Value = "Tue, 04 Jan 2011" }
                     },
-                    PosId=101,
-                    Requester=new Company()
+                    PosId = 101,
+                    Requester = new Company()
                     {
-                        Agency=new Agency()
+                        Agency = new Agency()
                         {
-                            AgencyAddress=new Address()
+                            AgencyAddress = new Address()
                             {
-                                CodeContext=LocationCodeContext.Address,
-                                AddressLine1="Test1",
-                                AddressLine2="Test2",
-                                ZipCode= "89002"
-                            } ,
-                            AgencyName="WV",                            
+                                CodeContext = LocationCodeContext.Address,
+                                AddressLine1 = "Test1",
+                                AddressLine2 = "Test2",
+                                ZipCode = "89002"
+                            },
+                            AgencyName = "WV",
                         },
-                        Code="DTP",
-                        CodeContext=CompanyCodeContext.Airline,
-                        DK= "3285301P",
-                        FullName= "Rovia"
+                        Code = "DTP",
+                        CodeContext = CompanyCodeContext.Airline,
+                        DK = "3285301P",
+                        FullName = "Rovia"
                     },
                 },
-                Type=TripFolderType.Personal,
-                Passengers=new Passenger[]
+                Type = TripFolderType.Personal,
+                Passengers = new Passenger[]
                 {
                     new Passenger()
                     {
@@ -116,7 +119,7 @@ namespace HotelEngine.Adapter.Configuration
                         UserName="rsarda@tavisca.com"
                     }
                 },
-                Payments=new CreditCardPayment[]
+                Payments = new CreditCardPayment[]
                 {
                     new CreditCardPayment()
                     {
@@ -155,9 +158,9 @@ namespace HotelEngine.Adapter.Configuration
                         NameOnCard="Test Card TF",
                         Number="4444333322221111",
                         SecurityCode="123"
-                    }                 
+                    }
                 },
-                Products=new HotelTripProduct[]
+                Products = new HotelTripProduct[]
                 {
                    new HotelTripProduct()
                    {
@@ -216,7 +219,7 @@ namespace HotelEngine.Adapter.Configuration
                        RoomOccupancyTypes=new RoomOccupancyType[]
                        {
                            new RoomOccupancyType()
-                           {                               
+                           {
                                PaxQuantities=new PassengerTypeQuantity[]
                                {
                                    new PassengerTypeQuantity()
@@ -227,14 +230,14 @@ namespace HotelEngine.Adapter.Configuration
                                    }
                                }
                            }
-                       }                       
+                       }
                    }
-                } ,
-                Status=TripStatus.Planned,
+                },
+                Status = TripStatus.Planned,
             },
-            TripProcessingInfo=new TripProcessingInfo()
+            TripProcessingInfo = new TripProcessingInfo()
             {
-                TripProductRphs=new int[] { 4 }
+                TripProductRphs = new int[] { 4 }
             }
         };
     }

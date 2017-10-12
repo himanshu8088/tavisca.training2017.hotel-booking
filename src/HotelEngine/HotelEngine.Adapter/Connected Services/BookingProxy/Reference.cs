@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelBook
+namespace BookingProxy
 {
     using System.Runtime.Serialization;
     using System;
@@ -16,43 +16,43 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRQ", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripProductCancellationDetailsRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderDeleteRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderCancelRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderBookRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CompleteBookingRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderRetrieveRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderRetrieveRQWithPaging))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderSaveRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripProductPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.SeatMapQueryRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirLowFareSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirFullScheduleSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirFareRulesRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelRoomAvailRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelRoomPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelItinerarySearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarRateDetailRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivityDetailsRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivitySearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ReviewPendingRetrieveRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.SaveReviewStatusRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderAssignSeatRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripProductCancellationDetailsRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderDeleteRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderCancelRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderBookRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CompleteBookingRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderRetrieveRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderRetrieveRQWithPaging))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderSaveRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripProductPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.SeatMapQueryRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirLowFareSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirFullScheduleSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirFareRulesRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelRoomAvailRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelRoomPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelItinerarySearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarRateDetailRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivityDetailsRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivitySearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ReviewPendingRetrieveRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.SaveReviewStatusRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderAssignSeatRQ))]
     public partial class WebServiceRQ : object
     {
         
-        private HotelBook.StateBag[] AdditionalInfoField;
+        private BookingProxy.StateBag[] AdditionalInfoField;
         
-        private HotelBook.ResponseType ResultRequestedField;
+        private BookingProxy.ResponseType ResultRequestedField;
         
         private string SessionIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] AdditionalInfo
+        public BookingProxy.StateBag[] AdditionalInfo
         {
             get
             {
@@ -65,7 +65,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ResponseType ResultRequested
+        public BookingProxy.ResponseType ResultRequested
         {
             get
             {
@@ -94,20 +94,20 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductCancellationDetailsRQ", Namespace="http://tavisca.com")]
-    public partial class TripProductCancellationDetailsRQ : HotelBook.WebServiceRQ
+    public partial class TripProductCancellationDetailsRQ : BookingProxy.WebServiceRQ
     {
         
         private string ConfirmationNumberField;
         
-        private HotelBook.FareSource FareSourceField;
+        private BookingProxy.FareSource FareSourceField;
         
-        private HotelBook.User OwnerField;
+        private BookingProxy.User OwnerField;
         
-        private HotelBook.PointOfSale POSField;
+        private BookingProxy.PointOfSale POSField;
         
         private System.Guid TripFolderIdField;
         
-        private HotelBook.TripProcessingInfo TripProcessingInfoField;
+        private BookingProxy.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ConfirmationNumber
@@ -123,7 +123,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareSource FareSource
+        public BookingProxy.FareSource FareSource
         {
             get
             {
@@ -136,7 +136,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.User Owner
+        public BookingProxy.User Owner
         {
             get
             {
@@ -149,7 +149,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PointOfSale POS
+        public BookingProxy.PointOfSale POS
         {
             get
             {
@@ -175,7 +175,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripProcessingInfo TripProcessingInfo
+        public BookingProxy.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -191,13 +191,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderDeleteRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderDeleteRQ : HotelBook.WebServiceRQ
+    public partial class TripFolderDeleteRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.TripFolder TripFolderField;
+        private BookingProxy.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder TripFolder
+        public BookingProxy.TripFolder TripFolder
         {
             get
             {
@@ -213,17 +213,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderCancelRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderCancelRQ : HotelBook.WebServiceRQ
+    public partial class TripFolderCancelRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.User OwnerField;
+        private BookingProxy.User OwnerField;
         
         private System.Guid TripFolderIdField;
         
-        private HotelBook.TripProcessingInfo TripProcessingInfoField;
+        private BookingProxy.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.User Owner
+        public BookingProxy.User Owner
         {
             get
             {
@@ -249,7 +249,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripProcessingInfo TripProcessingInfo
+        public BookingProxy.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -265,15 +265,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderBookRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderBookRQ : HotelBook.WebServiceRQ
+    public partial class TripFolderBookRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.TripFolder TripFolderField;
+        private BookingProxy.TripFolder TripFolderField;
         
-        private HotelBook.TripProcessingInfo TripProcessingInfoField;
+        private BookingProxy.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder TripFolder
+        public BookingProxy.TripFolder TripFolder
         {
             get
             {
@@ -286,7 +286,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripProcessingInfo TripProcessingInfo
+        public BookingProxy.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -302,17 +302,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompleteBookingRQ", Namespace="http://tavisca.com")]
-    public partial class CompleteBookingRQ : HotelBook.WebServiceRQ
+    public partial class CompleteBookingRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.Payment ExternalPaymentField;
+        private BookingProxy.Payment ExternalPaymentField;
         
-        private HotelBook.SecureAuthenticationRequest[] SecureAuthenticationRequestsField;
+        private BookingProxy.SecureAuthenticationRequest[] SecureAuthenticationRequestsField;
         
         private System.Guid TripFolderIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Payment ExternalPayment
+        public BookingProxy.Payment ExternalPayment
         {
             get
             {
@@ -325,7 +325,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SecureAuthenticationRequest[] SecureAuthenticationRequests
+        public BookingProxy.SecureAuthenticationRequest[] SecureAuthenticationRequests
         {
             get
             {
@@ -354,15 +354,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRQ", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderRetrieveRQWithPaging))]
-    public partial class TripFolderRetrieveRQ : HotelBook.WebServiceRQ
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderRetrieveRQWithPaging))]
+    public partial class TripFolderRetrieveRQ : BookingProxy.WebServiceRQ
     {
         
         private bool ReturnLightWeightTripFoldersField;
         
-        private HotelBook.TripRetrieveCriterion SearchCriterionField;
+        private BookingProxy.TripRetrieveCriterion SearchCriterionField;
         
-        private HotelBook.User TripOwnerField;
+        private BookingProxy.User TripOwnerField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool ReturnLightWeightTripFolders
@@ -378,7 +378,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripRetrieveCriterion SearchCriterion
+        public BookingProxy.TripRetrieveCriterion SearchCriterion
         {
             get
             {
@@ -391,7 +391,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.User TripOwner
+        public BookingProxy.User TripOwner
         {
             get
             {
@@ -407,13 +407,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRQWithPaging", Namespace="http://tavisca.com")]
-    public partial class TripFolderRetrieveRQWithPaging : HotelBook.TripFolderRetrieveRQ
+    public partial class TripFolderRetrieveRQWithPaging : BookingProxy.TripFolderRetrieveRQ
     {
         
-        private HotelBook.TripRetrieveCriterionV2 TripSearchCriterionField;
+        private BookingProxy.TripRetrieveCriterionV2 TripSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripRetrieveCriterionV2 TripSearchCriterion
+        public BookingProxy.TripRetrieveCriterionV2 TripSearchCriterion
         {
             get
             {
@@ -429,15 +429,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderPriceRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderPriceRQ : HotelBook.WebServiceRQ
+    public partial class TripFolderPriceRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.TripFolder TripFolderField;
+        private BookingProxy.TripFolder TripFolderField;
         
-        private HotelBook.TripProcessingInfo TripProcessingInfoField;
+        private BookingProxy.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder TripFolder
+        public BookingProxy.TripFolder TripFolder
         {
             get
             {
@@ -450,7 +450,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripProcessingInfo TripProcessingInfo
+        public BookingProxy.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -466,15 +466,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderSaveRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderSaveRQ : HotelBook.WebServiceRQ
+    public partial class TripFolderSaveRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.TripFolder TripFolderField;
+        private BookingProxy.TripFolder TripFolderField;
         
-        private HotelBook.TripProcessingInfo TripProcessingInfoField;
+        private BookingProxy.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder TripFolder
+        public BookingProxy.TripFolder TripFolder
         {
             get
             {
@@ -487,7 +487,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripProcessingInfo TripProcessingInfo
+        public BookingProxy.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -503,13 +503,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductPriceRQ", Namespace="http://tavisca.com")]
-    public partial class TripProductPriceRQ : HotelBook.WebServiceRQ
+    public partial class TripProductPriceRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.TripProduct TripProductField;
+        private BookingProxy.TripProduct TripProductField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripProduct TripProduct
+        public BookingProxy.TripProduct TripProduct
         {
             get
             {
@@ -525,17 +525,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SeatMapQueryRQ", Namespace="http://tavisca.com")]
-    public partial class SeatMapQueryRQ : HotelBook.WebServiceRQ
+    public partial class SeatMapQueryRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.SeatMapSearchCriterion CriterionField;
+        private BookingProxy.SeatMapSearchCriterion CriterionField;
         
-        private HotelBook.FareSource FareSourceField;
+        private BookingProxy.FareSource FareSourceField;
         
-        private HotelBook.PointOfSale PosField;
+        private BookingProxy.PointOfSale PosField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SeatMapSearchCriterion Criterion
+        public BookingProxy.SeatMapSearchCriterion Criterion
         {
             get
             {
@@ -548,7 +548,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareSource FareSource
+        public BookingProxy.FareSource FareSource
         {
             get
             {
@@ -561,7 +561,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PointOfSale Pos
+        public BookingProxy.PointOfSale Pos
         {
             get
             {
@@ -577,15 +577,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirLowFareSearchRQ", Namespace="http://tavisca.com")]
-    public partial class AirLowFareSearchRQ : HotelBook.WebServiceRQ
+    public partial class AirLowFareSearchRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.AirSearchCriterion AirSearchCriterionField;
+        private BookingProxy.AirSearchCriterion AirSearchCriterionField;
         
-        private HotelBook.PagingInfo PagingInfoField;
+        private BookingProxy.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirSearchCriterion AirSearchCriterion
+        public BookingProxy.AirSearchCriterion AirSearchCriterion
         {
             get
             {
@@ -598,7 +598,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PagingInfo PagingInfo
+        public BookingProxy.PagingInfo PagingInfo
         {
             get
             {
@@ -614,17 +614,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFullScheduleSearchRQ", Namespace="http://tavisca.com")]
-    public partial class AirFullScheduleSearchRQ : HotelBook.WebServiceRQ
+    public partial class AirFullScheduleSearchRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.AirSearchCriterion AirSearchCriterionField;
+        private BookingProxy.AirSearchCriterion AirSearchCriterionField;
         
         private int QueryLegRphField;
         
-        private HotelBook.AirLeg[] SelectedLegsField;
+        private BookingProxy.AirLeg[] SelectedLegsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirSearchCriterion AirSearchCriterion
+        public BookingProxy.AirSearchCriterion AirSearchCriterion
         {
             get
             {
@@ -650,7 +650,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirLeg[] SelectedLegs
+        public BookingProxy.AirLeg[] SelectedLegs
         {
             get
             {
@@ -666,17 +666,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFareRulesRQ", Namespace="http://tavisca.com")]
-    public partial class AirFareRulesRQ : HotelBook.WebServiceRQ
+    public partial class AirFareRulesRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.AirFareSource[] FareSourcesField;
+        private BookingProxy.AirFareSource[] FareSourcesField;
         
-        private HotelBook.AirItinerary ItineraryField;
+        private BookingProxy.AirItinerary ItineraryField;
         
-        private HotelBook.PointOfSale PosField;
+        private BookingProxy.PointOfSale PosField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirFareSource[] FareSources
+        public BookingProxy.AirFareSource[] FareSources
         {
             get
             {
@@ -689,7 +689,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirItinerary Itinerary
+        public BookingProxy.AirItinerary Itinerary
         {
             get
             {
@@ -702,7 +702,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PointOfSale Pos
+        public BookingProxy.PointOfSale Pos
         {
             get
             {
@@ -718,21 +718,21 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirPriceRQ", Namespace="http://tavisca.com")]
-    public partial class AirPriceRQ : HotelBook.WebServiceRQ
+    public partial class AirPriceRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.AirFareSource[] FareSourcesField;
+        private BookingProxy.AirFareSource[] FareSourcesField;
         
-        private HotelBook.FareType[] FareTypesField;
+        private BookingProxy.FareType[] FareTypesField;
         
         private bool IsRepriceField;
         
-        private HotelBook.AirItinerary ItineraryField;
+        private BookingProxy.AirItinerary ItineraryField;
         
-        private HotelBook.AirSearchCriterion SearchCriterionField;
+        private BookingProxy.AirSearchCriterion SearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirFareSource[] FareSources
+        public BookingProxy.AirFareSource[] FareSources
         {
             get
             {
@@ -745,7 +745,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareType[] FareTypes
+        public BookingProxy.FareType[] FareTypes
         {
             get
             {
@@ -771,7 +771,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirItinerary Itinerary
+        public BookingProxy.AirItinerary Itinerary
         {
             get
             {
@@ -784,7 +784,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirSearchCriterion SearchCriterion
+        public BookingProxy.AirSearchCriterion SearchCriterion
         {
             get
             {
@@ -800,15 +800,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRQ : HotelBook.WebServiceRQ
+    public partial class HotelRoomAvailRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.HotelSearchCriterion HotelSearchCriterionField;
+        private BookingProxy.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelBook.HotelItinerary ItineraryField;
+        private BookingProxy.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelSearchCriterion HotelSearchCriterion
+        public BookingProxy.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -821,7 +821,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelItinerary Itinerary
+        public BookingProxy.HotelItinerary Itinerary
         {
             get
             {
@@ -837,15 +837,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRQ : HotelBook.WebServiceRQ
+    public partial class HotelRoomPriceRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.HotelSearchCriterion HotelSearchCriterionField;
+        private BookingProxy.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelBook.HotelItinerary ItineraryField;
+        private BookingProxy.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelSearchCriterion HotelSearchCriterion
+        public BookingProxy.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -858,7 +858,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelItinerary Itinerary
+        public BookingProxy.HotelItinerary Itinerary
         {
             get
             {
@@ -874,17 +874,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRQ : HotelBook.WebServiceRQ
+    public partial class HotelSearchRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.HotelFilter[] FiltersField;
+        private BookingProxy.HotelFilter[] FiltersField;
         
-        private HotelBook.HotelSearchCriterion HotelSearchCriterionField;
+        private BookingProxy.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelBook.PagingInfo PagingInfoField;
+        private BookingProxy.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelFilter[] Filters
+        public BookingProxy.HotelFilter[] Filters
         {
             get
             {
@@ -897,7 +897,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelSearchCriterion HotelSearchCriterion
+        public BookingProxy.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -910,7 +910,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PagingInfo PagingInfo
+        public BookingProxy.PagingInfo PagingInfo
         {
             get
             {
@@ -926,7 +926,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRQ : HotelBook.WebServiceRQ
+    public partial class HotelItinerarySearchRQ : BookingProxy.WebServiceRQ
     {
         
         private int ItineraryIdField;
@@ -948,15 +948,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchRQ", Namespace="http://tavisca.com")]
-    public partial class CarSearchRQ : HotelBook.WebServiceRQ
+    public partial class CarSearchRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.CarSearchCriterion CarSearchCriterionField;
+        private BookingProxy.CarSearchCriterion CarSearchCriterionField;
         
-        private HotelBook.PagingInfo PagingInfoField;
+        private BookingProxy.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarSearchCriterion CarSearchCriterion
+        public BookingProxy.CarSearchCriterion CarSearchCriterion
         {
             get
             {
@@ -969,7 +969,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PagingInfo PagingInfo
+        public BookingProxy.PagingInfo PagingInfo
         {
             get
             {
@@ -985,15 +985,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarRateDetailRQ", Namespace="http://tavisca.com")]
-    public partial class CarRateDetailRQ : HotelBook.WebServiceRQ
+    public partial class CarRateDetailRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.CarSearchCriterion CarSearchCriterionField;
+        private BookingProxy.CarSearchCriterion CarSearchCriterionField;
         
-        private HotelBook.CarItinerary ItineraryField;
+        private BookingProxy.CarItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarSearchCriterion CarSearchCriterion
+        public BookingProxy.CarSearchCriterion CarSearchCriterion
         {
             get
             {
@@ -1006,7 +1006,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarItinerary Itinerary
+        public BookingProxy.CarItinerary Itinerary
         {
             get
             {
@@ -1022,15 +1022,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityDetailsRQ", Namespace="http://tavisca.com")]
-    public partial class ActivityDetailsRQ : HotelBook.WebServiceRQ
+    public partial class ActivityDetailsRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.ActivityItinerary ActivityItineraryField;
+        private BookingProxy.ActivityItinerary ActivityItineraryField;
         
-        private HotelBook.ActivitySearchCriterion ActivitySearchCriterionField;
+        private BookingProxy.ActivitySearchCriterion ActivitySearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityItinerary ActivityItinerary
+        public BookingProxy.ActivityItinerary ActivityItinerary
         {
             get
             {
@@ -1043,7 +1043,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivitySearchCriterion ActivitySearchCriterion
+        public BookingProxy.ActivitySearchCriterion ActivitySearchCriterion
         {
             get
             {
@@ -1059,15 +1059,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivitySearchRQ", Namespace="http://tavisca.com")]
-    public partial class ActivitySearchRQ : HotelBook.WebServiceRQ
+    public partial class ActivitySearchRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.ActivitySearchCriterion ActivitySearchCriterionField;
+        private BookingProxy.ActivitySearchCriterion ActivitySearchCriterionField;
         
-        private HotelBook.PagingInfo PagingInfoField;
+        private BookingProxy.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivitySearchCriterion ActivitySearchCriterion
+        public BookingProxy.ActivitySearchCriterion ActivitySearchCriterion
         {
             get
             {
@@ -1080,7 +1080,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PagingInfo PagingInfo
+        public BookingProxy.PagingInfo PagingInfo
         {
             get
             {
@@ -1096,15 +1096,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ReviewPendingRetrieveRQ", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class ReviewPendingRetrieveRQ : HotelBook.WebServiceRQ
+    public partial class ReviewPendingRetrieveRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.TripCountRetrieveCriterion SearchCriterionField;
+        private BookingProxy.TripCountRetrieveCriterion SearchCriterionField;
         
-        private HotelBook.User1 TripOwnerField;
+        private BookingProxy.User1 TripOwnerField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripCountRetrieveCriterion SearchCriterion
+        public BookingProxy.TripCountRetrieveCriterion SearchCriterion
         {
             get
             {
@@ -1117,7 +1117,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.User1 TripOwner
+        public BookingProxy.User1 TripOwner
         {
             get
             {
@@ -1133,7 +1133,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SaveReviewStatusRQ", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class SaveReviewStatusRQ : HotelBook.WebServiceRQ
+    public partial class SaveReviewStatusRQ : BookingProxy.WebServiceRQ
     {
         
         private System.Guid ProductIdField;
@@ -1155,17 +1155,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderAssignSeatRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderAssignSeatRQ : HotelBook.WebServiceRQ
+    public partial class TripFolderAssignSeatRQ : BookingProxy.WebServiceRQ
     {
         
-        private HotelBook.PassengerSegmentSeatInfo[] PaxSegSeatInfoListField;
+        private BookingProxy.PassengerSegmentSeatInfo[] PaxSegSeatInfoListField;
         
         private int TriProductRphField;
         
-        private HotelBook.TripFolder TripFolderField;
+        private BookingProxy.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerSegmentSeatInfo[] PaxSegSeatInfoList
+        public BookingProxy.PassengerSegmentSeatInfo[] PaxSegSeatInfoList
         {
             get
             {
@@ -1191,7 +1191,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder TripFolder
+        public BookingProxy.TripFolder TripFolder
         {
             get
             {
@@ -1259,42 +1259,42 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolder", Namespace="http://tavisca.com")]
-    public partial class TripFolder : HotelBook.Folder
+    public partial class TripFolder : BookingProxy.Folder
     {
         
         private string CitiesField;
         
         private string ConfirmationNumberField;
         
-        private HotelBook.CustomData CustomDataField;
+        private BookingProxy.CustomData CustomDataField;
         
         private System.DateTime EndDateField;
         
-        private HotelBook.ErrorInfo[] ErrorInfoListField;
+        private BookingProxy.ErrorInfo[] ErrorInfoListField;
         
-        private HotelBook.Passenger[] PassengersField;
+        private BookingProxy.Passenger[] PassengersField;
         
-        private HotelBook.Payment[] PaymentsField;
+        private BookingProxy.Payment[] PaymentsField;
         
-        private HotelBook.PNRSegment[] PnrSegmentsField;
+        private BookingProxy.PNRSegment[] PnrSegmentsField;
         
-        private HotelBook.TripProduct[] ProductsField;
+        private BookingProxy.TripProduct[] ProductsField;
         
-        private HotelBook.Remark[] RemarksField;
+        private BookingProxy.Remark[] RemarksField;
         
-        private HotelBook.ServiceStatus ServiceStatusField;
+        private BookingProxy.ServiceStatus ServiceStatusField;
         
         private System.DateTime StartDateField;
         
-        private HotelBook.TripStatus StatusField;
+        private BookingProxy.TripStatus StatusField;
         
-        private HotelBook.FareSource SupplierField;
+        private BookingProxy.FareSource SupplierField;
         
         private string SupplierConfirmationNumberField;
         
-        private HotelBook.StateBag[] TicketingLinesField;
+        private BookingProxy.StateBag[] TicketingLinesField;
         
-        private HotelBook.Ticket[] TicketsField;
+        private BookingProxy.Ticket[] TicketsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Cities
@@ -1323,7 +1323,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CustomData CustomData
+        public BookingProxy.CustomData CustomData
         {
             get
             {
@@ -1349,7 +1349,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ErrorInfo[] ErrorInfoList
+        public BookingProxy.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -1362,7 +1362,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Passenger[] Passengers
+        public BookingProxy.Passenger[] Passengers
         {
             get
             {
@@ -1375,7 +1375,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Payment[] Payments
+        public BookingProxy.Payment[] Payments
         {
             get
             {
@@ -1388,7 +1388,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PNRSegment[] PnrSegments
+        public BookingProxy.PNRSegment[] PnrSegments
         {
             get
             {
@@ -1401,7 +1401,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripProduct[] Products
+        public BookingProxy.TripProduct[] Products
         {
             get
             {
@@ -1414,7 +1414,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Remark[] Remarks
+        public BookingProxy.Remark[] Remarks
         {
             get
             {
@@ -1427,7 +1427,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ServiceStatus ServiceStatus
+        public BookingProxy.ServiceStatus ServiceStatus
         {
             get
             {
@@ -1453,7 +1453,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripStatus Status
+        public BookingProxy.TripStatus Status
         {
             get
             {
@@ -1466,7 +1466,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareSource Supplier
+        public BookingProxy.FareSource Supplier
         {
             get
             {
@@ -1492,7 +1492,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] TicketingLines
+        public BookingProxy.StateBag[] TicketingLines
         {
             get
             {
@@ -1505,7 +1505,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Ticket[] Tickets
+        public BookingProxy.Ticket[] Tickets
         {
             get
             {
@@ -1603,11 +1603,11 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="FareSource", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivityFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.GenericFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivityFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.GenericFareSource))]
     public partial class FareSource : object
     {
         
@@ -1663,7 +1663,7 @@ namespace HotelBook
     public partial class User : object
     {
         
-        private HotelBook.StateBag[] AdditionalInfoField;
+        private BookingProxy.StateBag[] AdditionalInfoField;
         
         private string EmailField;
         
@@ -1684,7 +1684,7 @@ namespace HotelBook
         private string UserNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] AdditionalInfo
+        public BookingProxy.StateBag[] AdditionalInfo
         {
             get
             {
@@ -1820,16 +1820,16 @@ namespace HotelBook
     public partial class PointOfSale : object
     {
         
-        private HotelBook.StateBag[] AdditionalInfoField;
+        private BookingProxy.StateBag[] AdditionalInfoField;
         
         private string AgentSignField;
         
         private int PosIdField;
         
-        private HotelBook.Company RequesterField;
+        private BookingProxy.Company RequesterField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] AdditionalInfo
+        public BookingProxy.StateBag[] AdditionalInfo
         {
             get
             {
@@ -1868,7 +1868,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Company Requester
+        public BookingProxy.Company Requester
         {
             get
             {
@@ -1921,32 +1921,32 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFareSource", Namespace="http://tavisca.com")]
-    public partial class AirFareSource : HotelBook.FareSource
+    public partial class AirFareSource : BookingProxy.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFareSource", Namespace="http://tavisca.com")]
-    public partial class HotelFareSource : HotelBook.FareSource
+    public partial class HotelFareSource : BookingProxy.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarFareSource", Namespace="http://tavisca.com")]
-    public partial class CarFareSource : HotelBook.FareSource
+    public partial class CarFareSource : BookingProxy.FareSource
     {
         
         private string[] AirportCodesField;
         
-        private HotelBook.CarCompany[] CarCompaniesField;
+        private BookingProxy.CarCompany[] CarCompaniesField;
         
         private string[] CityCodesField;
         
         private bool IsGdsField;
         
-        private HotelBook.CarDiscountCode[] RateCodesField;
+        private BookingProxy.CarDiscountCode[] RateCodesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string[] AirportCodes
@@ -1962,7 +1962,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarCompany[] CarCompanies
+        public BookingProxy.CarCompany[] CarCompanies
         {
             get
             {
@@ -2001,7 +2001,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarDiscountCode[] RateCodes
+        public BookingProxy.CarDiscountCode[] RateCodes
         {
             get
             {
@@ -2017,21 +2017,21 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityFareSource", Namespace="http://tavisca.com")]
-    public partial class ActivityFareSource : HotelBook.FareSource
+    public partial class ActivityFareSource : BookingProxy.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericFareSource", Namespace="http://tavisca.com")]
-    public partial class GenericFareSource : HotelBook.FareSource
+    public partial class GenericFareSource : BookingProxy.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCompany", Namespace="http://tavisca.com")]
-    public partial class CarCompany : HotelBook.Company
+    public partial class CarCompany : BookingProxy.Company
     {
     }
     
@@ -2041,14 +2041,14 @@ namespace HotelBook
     public partial class CarDiscountCode : object
     {
         
-        private HotelBook.CarDiscountType DiscountTypeField;
+        private BookingProxy.CarDiscountType DiscountTypeField;
         
         private string NumberField;
         
         private string VendorCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarDiscountType DiscountType
+        public BookingProxy.CarDiscountType DiscountType
         {
             get
             {
@@ -2090,18 +2090,18 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.Airline))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelChain))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CompanyPreference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarCompany))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.Airline))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelChain))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CompanyPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarCompany))]
     public partial class Company : object
     {
         
-        private HotelBook.Agency AgencyField;
+        private BookingProxy.Agency AgencyField;
         
         private string CodeField;
         
-        private HotelBook.CompanyCodeContext CodeContextField;
+        private BookingProxy.CompanyCodeContext CodeContextField;
         
         private string DKField;
         
@@ -2113,12 +2113,12 @@ namespace HotelBook
         
         private int IDField;
         
-        private HotelBook.Media LogoField;
+        private BookingProxy.Media LogoField;
         
         private string ShortNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Agency Agency
+        public BookingProxy.Agency Agency
         {
             get
             {
@@ -2144,7 +2144,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CompanyCodeContext CodeContext
+        public BookingProxy.CompanyCodeContext CodeContext
         {
             get
             {
@@ -2222,7 +2222,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Media Logo
+        public BookingProxy.Media Logo
         {
             get
             {
@@ -2254,14 +2254,14 @@ namespace HotelBook
     public partial class Agency : object
     {
         
-        private HotelBook.Address AgencyAddressField;
+        private BookingProxy.Address AgencyAddressField;
         
         private int AgencyIdField;
         
         private string AgencyNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Address AgencyAddress
+        public BookingProxy.Address AgencyAddress
         {
             get
             {
@@ -2306,16 +2306,16 @@ namespace HotelBook
     public partial class Media : object
     {
         
-        private HotelBook.MediaCaptionType CaptionField;
+        private BookingProxy.MediaCaptionType CaptionField;
         
         private string MimeTypeField;
         
-        private HotelBook.MediaType TypeField;
+        private BookingProxy.MediaType TypeField;
         
         private string UrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.MediaCaptionType Caption
+        public BookingProxy.MediaCaptionType Caption
         {
             get
             {
@@ -2341,7 +2341,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.MediaType Type
+        public BookingProxy.MediaType Type
         {
             get
             {
@@ -2370,7 +2370,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Airline", Namespace="http://tavisca.com")]
-    public partial class Airline : HotelBook.Company
+    public partial class Airline : BookingProxy.Company
     {
         
         private bool IsNonArcCarrierField;
@@ -2392,20 +2392,20 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelChain", Namespace="http://tavisca.com")]
-    public partial class HotelChain : HotelBook.Company
+    public partial class HotelChain : BookingProxy.Company
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompanyPreference", Namespace="http://tavisca.com")]
-    public partial class CompanyPreference : HotelBook.Company
+    public partial class CompanyPreference : BookingProxy.Company
     {
         
-        private HotelBook.PreferLevel PreferLevelField;
+        private BookingProxy.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PreferLevel PreferLevel
+        public BookingProxy.PreferLevel PreferLevel
         {
             get
             {
@@ -2442,7 +2442,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://tavisca.com")]
-    public partial class Address : HotelBook.Location
+    public partial class Address : BookingProxy.Location
     {
         
         private string AddressLine1Field;
@@ -2451,7 +2451,7 @@ namespace HotelBook
         
         private string AddressSchemeField;
         
-        private HotelBook.City CityField;
+        private BookingProxy.City CityField;
         
         private string CompleteAddressField;
         
@@ -2499,7 +2499,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.City City
+        public BookingProxy.City City
         {
             get
             {
@@ -2554,17 +2554,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Location", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.Airport))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.City))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.Address))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.Airport))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.City))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.Address))]
     public partial class Location : object
     {
         
         private string CodeField;
         
-        private HotelBook.LocationCodeContext CodeContextField;
+        private BookingProxy.LocationCodeContext CodeContextField;
         
-        private HotelBook.GeoCode GeoCodeField;
+        private BookingProxy.GeoCode GeoCodeField;
         
         private int GmtOffsetMinutesField;
         
@@ -2572,9 +2572,9 @@ namespace HotelBook
         
         private string NameField;
         
-        private HotelBook.Distance RadiusField;
+        private BookingProxy.Distance RadiusField;
         
-        private HotelBook.StateBag[] SupplierSideDataField;
+        private BookingProxy.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -2590,7 +2590,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.LocationCodeContext CodeContext
+        public BookingProxy.LocationCodeContext CodeContext
         {
             get
             {
@@ -2603,7 +2603,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.GeoCode GeoCode
+        public BookingProxy.GeoCode GeoCode
         {
             get
             {
@@ -2655,7 +2655,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Distance Radius
+        public BookingProxy.Distance Radius
         {
             get
             {
@@ -2668,7 +2668,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] SupplierSideData
+        public BookingProxy.StateBag[] SupplierSideData
         {
             get
             {
@@ -2726,9 +2726,9 @@ namespace HotelBook
         
         private float AmountField;
         
-        private HotelBook.LocationCodeContext FromField;
+        private BookingProxy.LocationCodeContext FromField;
         
-        private HotelBook.DistanceUnit UnitField;
+        private BookingProxy.DistanceUnit UnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Amount
@@ -2744,7 +2744,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.LocationCodeContext From
+        public BookingProxy.LocationCodeContext From
         {
             get
             {
@@ -2757,7 +2757,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DistanceUnit Unit
+        public BookingProxy.DistanceUnit Unit
         {
             get
             {
@@ -2773,15 +2773,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Airport", Namespace="http://tavisca.com")]
-    public partial class Airport : HotelBook.Location
+    public partial class Airport : BookingProxy.Location
     {
         
-        private HotelBook.AirportType AirportTypeField;
+        private BookingProxy.AirportType AirportTypeField;
         
-        private HotelBook.City CityField;
+        private BookingProxy.City CityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirportType AirportType
+        public BookingProxy.AirportType AirportType
         {
             get
             {
@@ -2794,7 +2794,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.City City
+        public BookingProxy.City City
         {
             get
             {
@@ -2810,7 +2810,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="City", Namespace="http://tavisca.com")]
-    public partial class City : HotelBook.Location
+    public partial class City : BookingProxy.Location
     {
         
         private string CountryField;
@@ -3252,13 +3252,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Folder", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolder))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolder))]
     public partial class Folder : object
     {
         
         private System.DateTime CreatedDateField;
         
-        private HotelBook.User CreatorField;
+        private BookingProxy.User CreatorField;
         
         private string FolderNameField;
         
@@ -3266,11 +3266,11 @@ namespace HotelBook
         
         private System.DateTime LastModifiedDateField;
         
-        private HotelBook.User OwnerField;
+        private BookingProxy.User OwnerField;
         
-        private HotelBook.PointOfSale PosField;
+        private BookingProxy.PointOfSale PosField;
         
-        private HotelBook.TripFolderType TypeField;
+        private BookingProxy.TripFolderType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime CreatedDate
@@ -3286,7 +3286,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.User Creator
+        public BookingProxy.User Creator
         {
             get
             {
@@ -3338,7 +3338,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.User Owner
+        public BookingProxy.User Owner
         {
             get
             {
@@ -3351,7 +3351,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PointOfSale Pos
+        public BookingProxy.PointOfSale Pos
         {
             get
             {
@@ -3364,7 +3364,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolderType Type
+        public BookingProxy.TripFolderType Type
         {
             get
             {
@@ -3395,18 +3395,18 @@ namespace HotelBook
     public partial class CustomData : object
     {
         
-        private HotelBook.dateTimeCustomFields DateFieldsField;
+        private BookingProxy.dateTimeCustomFields DateFieldsField;
         
-        private HotelBook.decimalCustomFields DecimalFieldsField;
+        private BookingProxy.decimalCustomFields DecimalFieldsField;
         
-        private HotelBook.intCustomFields IntFieldsField;
+        private BookingProxy.intCustomFields IntFieldsField;
         
-        private HotelBook.stringCustomFields StringFieldsField;
+        private BookingProxy.stringCustomFields StringFieldsField;
         
-        private HotelBook.stringCustomFields TextFieldsField;
+        private BookingProxy.stringCustomFields TextFieldsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.dateTimeCustomFields DateFields
+        public BookingProxy.dateTimeCustomFields DateFields
         {
             get
             {
@@ -3419,7 +3419,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.decimalCustomFields DecimalFields
+        public BookingProxy.decimalCustomFields DecimalFields
         {
             get
             {
@@ -3432,7 +3432,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.intCustomFields IntFields
+        public BookingProxy.intCustomFields IntFields
         {
             get
             {
@@ -3445,7 +3445,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.stringCustomFields StringFields
+        public BookingProxy.stringCustomFields StringFields
         {
             get
             {
@@ -3458,7 +3458,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.stringCustomFields TextFields
+        public BookingProxy.stringCustomFields TextFields
         {
             get
             {
@@ -3483,7 +3483,7 @@ namespace HotelBook
         
         private string[] MissingItemsField;
         
-        private HotelBook.ServiceStatusType StatusField;
+        private BookingProxy.ServiceStatusType StatusField;
         
         private int StatusCodeField;
         
@@ -3529,7 +3529,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ServiceStatusType Status
+        public BookingProxy.ServiceStatusType Status
         {
             get
             {
@@ -3576,7 +3576,7 @@ namespace HotelBook
         
         private string ErrorCodeField;
         
-        private HotelBook.ErrorContext ErrorContextField;
+        private BookingProxy.ErrorContext ErrorContextField;
         
         private string ErrorMessageField;
         
@@ -3596,7 +3596,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ErrorContext ErrorContext
+        public BookingProxy.ErrorContext ErrorContext
         {
             get
             {
@@ -3643,23 +3643,23 @@ namespace HotelBook
         
         private int AgeField;
         
-        private HotelBook.Membership[] AirMembershipsField;
+        private BookingProxy.Membership[] AirMembershipsField;
         
         private System.DateTime BirthDateField;
         
-        private HotelBook.Membership[] CarMembershipsField;
+        private BookingProxy.Membership[] CarMembershipsField;
         
-        private HotelBook.StateBag[] CustomFieldsField;
+        private BookingProxy.StateBag[] CustomFieldsField;
         
-        private HotelBook.Address DeliveryAddressField;
+        private BookingProxy.Address DeliveryAddressField;
         
         private string EmailField;
         
         private string FirstNameField;
         
-        private HotelBook.Gender GenderField;
+        private BookingProxy.Gender GenderField;
         
-        private HotelBook.Membership[] HotelMembershipsField;
+        private BookingProxy.Membership[] HotelMembershipsField;
         
         private string KnownTravelerNumberField;
         
@@ -3669,9 +3669,9 @@ namespace HotelBook
         
         private System.Guid PassengerIdField;
         
-        private HotelBook.PassengerType PassengerTypeField;
+        private BookingProxy.PassengerType PassengerTypeField;
         
-        private HotelBook.Passport PassportField;
+        private BookingProxy.Passport PassportField;
         
         private string PhoneNumberField;
         
@@ -3705,7 +3705,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Membership[] AirMemberships
+        public BookingProxy.Membership[] AirMemberships
         {
             get
             {
@@ -3731,7 +3731,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Membership[] CarMemberships
+        public BookingProxy.Membership[] CarMemberships
         {
             get
             {
@@ -3744,7 +3744,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] CustomFields
+        public BookingProxy.StateBag[] CustomFields
         {
             get
             {
@@ -3757,7 +3757,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Address DeliveryAddress
+        public BookingProxy.Address DeliveryAddress
         {
             get
             {
@@ -3796,7 +3796,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Gender Gender
+        public BookingProxy.Gender Gender
         {
             get
             {
@@ -3809,7 +3809,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Membership[] HotelMemberships
+        public BookingProxy.Membership[] HotelMemberships
         {
             get
             {
@@ -3874,7 +3874,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerType PassengerType
+        public BookingProxy.PassengerType PassengerType
         {
             get
             {
@@ -3887,7 +3887,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Passport Passport
+        public BookingProxy.Passport Passport
         {
             get
             {
@@ -4020,31 +4020,31 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Payment", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CreditCardPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.SoftCashPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.BankAccountPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ExternalPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CheckPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.DeferredPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CreditCardPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.SoftCashPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.BankAccountPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ExternalPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CheckPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.DeferredPayment))]
     public partial class Payment : object
     {
         
-        private HotelBook.Money AmountField;
+        private BookingProxy.Money AmountField;
         
-        private HotelBook.StateBag[] AttributesField;
+        private BookingProxy.StateBag[] AttributesField;
         
-        private HotelBook.Address BillingAddressField;
+        private BookingProxy.Address BillingAddressField;
         
-        private HotelBook.ChargeTransaction[] ChargeTransactionsField;
+        private BookingProxy.ChargeTransaction[] ChargeTransactionsField;
         
         private System.Guid IdField;
         
-        private HotelBook.PaymentType PaymentTypeField;
+        private BookingProxy.PaymentType PaymentTypeField;
         
         private int RphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money Amount
+        public BookingProxy.Money Amount
         {
             get
             {
@@ -4057,7 +4057,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] Attributes
+        public BookingProxy.StateBag[] Attributes
         {
             get
             {
@@ -4070,7 +4070,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Address BillingAddress
+        public BookingProxy.Address BillingAddress
         {
             get
             {
@@ -4083,7 +4083,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ChargeTransaction[] ChargeTransactions
+        public BookingProxy.ChargeTransaction[] ChargeTransactions
         {
             get
             {
@@ -4109,7 +4109,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PaymentType PaymentType
+        public BookingProxy.PaymentType PaymentType
         {
             get
             {
@@ -4280,23 +4280,23 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProduct", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.GenericTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivityTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.GenericTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivityTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarTripProduct))]
     public partial class TripProduct : object
     {
         
-        private HotelBook.Payment[] AgencyGeneratedPaymentsField;
+        private BookingProxy.Payment[] AgencyGeneratedPaymentsField;
         
-        private HotelBook.StateBag[] AttributesField;
+        private BookingProxy.StateBag[] AttributesField;
         
         private int BookingSequenceNumberField;
         
-        private HotelBook.CancellationDetails CancellationDetailsField;
+        private BookingProxy.CancellationDetails CancellationDetailsField;
         
-        private HotelBook.ErrorInfo[] ErrorInfoListField;
+        private BookingProxy.ErrorInfo[] ErrorInfoListField;
         
         private System.Guid IdField;
         
@@ -4304,20 +4304,20 @@ namespace HotelBook
         
         private int LeadPassengerRphField;
         
-        private HotelBook.User OwnerField;
+        private BookingProxy.User OwnerField;
         
-        private HotelBook.PassengerSegment[] PassengerSegmentsField;
+        private BookingProxy.PassengerSegment[] PassengerSegmentsField;
         
-        private HotelBook.PaymentBreakup[] PaymentBreakupsField;
+        private BookingProxy.PaymentBreakup[] PaymentBreakupsField;
         
-        private HotelBook.PaymentType[] PaymentOptionsField;
+        private BookingProxy.PaymentType[] PaymentOptionsField;
         
-        private HotelBook.TripItinerary[] PreferredItinerariesField;
+        private BookingProxy.TripItinerary[] PreferredItinerariesField;
         
         private int RphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Payment[] AgencyGeneratedPayments
+        public BookingProxy.Payment[] AgencyGeneratedPayments
         {
             get
             {
@@ -4330,7 +4330,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] Attributes
+        public BookingProxy.StateBag[] Attributes
         {
             get
             {
@@ -4356,7 +4356,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CancellationDetails CancellationDetails
+        public BookingProxy.CancellationDetails CancellationDetails
         {
             get
             {
@@ -4369,7 +4369,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ErrorInfo[] ErrorInfoList
+        public BookingProxy.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -4421,7 +4421,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.User Owner
+        public BookingProxy.User Owner
         {
             get
             {
@@ -4434,7 +4434,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerSegment[] PassengerSegments
+        public BookingProxy.PassengerSegment[] PassengerSegments
         {
             get
             {
@@ -4447,7 +4447,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PaymentBreakup[] PaymentBreakups
+        public BookingProxy.PaymentBreakup[] PaymentBreakups
         {
             get
             {
@@ -4460,7 +4460,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PaymentType[] PaymentOptions
+        public BookingProxy.PaymentType[] PaymentOptions
         {
             get
             {
@@ -4473,7 +4473,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripItinerary[] PreferredItineraries
+        public BookingProxy.TripItinerary[] PreferredItineraries
         {
             get
             {
@@ -4502,15 +4502,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Remark", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.PNRRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.GeneralRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.OSIRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.SpecializedRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.PNRRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.GeneralRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.OSIRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.SpecializedRemark))]
     public partial class Remark : object
     {
         
-        private HotelBook.StateBag[] AttributesField;
+        private BookingProxy.StateBag[] AttributesField;
         
         private string CategoryField;
         
@@ -4521,7 +4521,7 @@ namespace HotelBook
         private string ValueField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] Attributes
+        public BookingProxy.StateBag[] Attributes
         {
             get
             {
@@ -4624,11 +4624,11 @@ namespace HotelBook
         
         private string RecordLocatorField;
         
-        private HotelBook.SegmentReference[] SegmentReferencesField;
+        private BookingProxy.SegmentReference[] SegmentReferencesField;
         
         private string TicketNumberField;
         
-        private HotelBook.TicketStatus TicketStatusField;
+        private BookingProxy.TicketStatus TicketStatusField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string AirlineRecordLocator
@@ -4722,7 +4722,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SegmentReference[] SegmentReferences
+        public BookingProxy.SegmentReference[] SegmentReferences
         {
             get
             {
@@ -4748,7 +4748,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TicketStatus TicketStatus
+        public BookingProxy.TicketStatus TicketStatus
         {
             get
             {
@@ -5463,7 +5463,7 @@ namespace HotelBook
         
         private string PlaceOfIssueField;
         
-        private HotelBook.Visa[] VisasField;
+        private BookingProxy.Visa[] VisasField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int[] ApplicablePassengerRPHs
@@ -5570,7 +5570,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Visa[] Visas
+        public BookingProxy.Visa[] Visas
         {
             get
             {
@@ -5789,16 +5789,16 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Money", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.DailyRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarCharge))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ServiceFee))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.Fee))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.Markup))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.BaseFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.Commission))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.Discount))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.Tax))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.DailyRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarCharge))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ServiceFee))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.Fee))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.Markup))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.BaseFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.Commission))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.Discount))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.Tax))]
     public partial class Money : object
     {
         
@@ -5911,12 +5911,12 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CreditCardPayment", Namespace="http://tavisca.com")]
-    public partial class CreditCardPayment : HotelBook.Payment
+    public partial class CreditCardPayment : BookingProxy.Payment
     {
         
-        private HotelBook.CreditCardMake CardMakeField;
+        private BookingProxy.CreditCardMake CardMakeField;
         
-        private HotelBook.CreditCardType CardTypeField;
+        private BookingProxy.CreditCardType CardTypeField;
         
         private System.DateTime ExpiryMonthYearField;
         
@@ -5926,12 +5926,12 @@ namespace HotelBook
         
         private string NumberField;
         
-        private HotelBook.SecureAuthenticationData SecureAuthenticationDataField;
+        private BookingProxy.SecureAuthenticationData SecureAuthenticationDataField;
         
         private string SecurityCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CreditCardMake CardMake
+        public BookingProxy.CreditCardMake CardMake
         {
             get
             {
@@ -5944,7 +5944,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CreditCardType CardType
+        public BookingProxy.CreditCardType CardType
         {
             get
             {
@@ -6009,7 +6009,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SecureAuthenticationData SecureAuthenticationData
+        public BookingProxy.SecureAuthenticationData SecureAuthenticationData
         {
             get
             {
@@ -6038,7 +6038,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SoftCashPayment", Namespace="http://tavisca.com")]
-    public partial class SoftCashPayment : HotelBook.Payment
+    public partial class SoftCashPayment : BookingProxy.Payment
     {
         
         private System.DateTime AddDateTimeField;
@@ -6075,7 +6075,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BankAccountPayment", Namespace="http://tavisca.com")]
-    public partial class BankAccountPayment : HotelBook.Payment
+    public partial class BankAccountPayment : BookingProxy.Payment
     {
         
         private string AccountHolderNameField;
@@ -6142,10 +6142,10 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ExternalPayment", Namespace="http://tavisca.com")]
-    public partial class ExternalPayment : HotelBook.Payment
+    public partial class ExternalPayment : BookingProxy.Payment
     {
         
-        private HotelBook.ChargeStatus ChargeStatusField;
+        private BookingProxy.ChargeStatus ChargeStatusField;
         
         private decimal ChargedAmountField;
         
@@ -6154,7 +6154,7 @@ namespace HotelBook
         private string ProviderNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ChargeStatus ChargeStatus
+        public BookingProxy.ChargeStatus ChargeStatus
         {
             get
             {
@@ -6209,14 +6209,14 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CheckPayment", Namespace="http://tavisca.com")]
-    public partial class CheckPayment : HotelBook.Payment
+    public partial class CheckPayment : BookingProxy.Payment
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DeferredPayment", Namespace="http://tavisca.com")]
-    public partial class DeferredPayment : HotelBook.Payment
+    public partial class DeferredPayment : BookingProxy.Payment
     {
     }
     
@@ -6226,24 +6226,24 @@ namespace HotelBook
     public partial class ChargeTransaction : object
     {
         
-        private HotelBook.StateBag[] AdditionalInfoField;
+        private BookingProxy.StateBag[] AdditionalInfoField;
         
         private System.Guid AssociatedChargeTransactionIdField;
         
-        private HotelBook.ChargeBreakup[] ChargeBreakupsField;
+        private BookingProxy.ChargeBreakup[] ChargeBreakupsField;
         
-        private HotelBook.ChargeStatus ChargeStatusField;
+        private BookingProxy.ChargeStatus ChargeStatusField;
         
         private System.Guid ChargeTransactionIdField;
         
-        private HotelBook.Money ChargedAmountField;
+        private BookingProxy.Money ChargedAmountField;
         
         private string ProviderTransactionIdField;
         
         private string TransactionIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] AdditionalInfo
+        public BookingProxy.StateBag[] AdditionalInfo
         {
             get
             {
@@ -6269,7 +6269,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ChargeBreakup[] ChargeBreakups
+        public BookingProxy.ChargeBreakup[] ChargeBreakups
         {
             get
             {
@@ -6282,7 +6282,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ChargeStatus ChargeStatus
+        public BookingProxy.ChargeStatus ChargeStatus
         {
             get
             {
@@ -6308,7 +6308,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money ChargedAmount
+        public BookingProxy.Money ChargedAmount
         {
             get
             {
@@ -6383,7 +6383,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DailyRate", Namespace="http://tavisca.com")]
-    public partial class DailyRate : HotelBook.Money
+    public partial class DailyRate : BookingProxy.Money
     {
         
         private System.DateTime EndDateField;
@@ -6420,21 +6420,21 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCharge", Namespace="http://tavisca.com")]
-    public partial class CarCharge : HotelBook.Money
+    public partial class CarCharge : BookingProxy.Money
     {
         
-        private HotelBook.ChargeAssociation AssociationField;
+        private BookingProxy.ChargeAssociation AssociationField;
         
         private string DescriptionField;
         
         private int QuantityField;
         
-        private HotelBook.ChargeType TypeField;
+        private BookingProxy.ChargeType TypeField;
         
-        private HotelBook.ChargeUnit UnitField;
+        private BookingProxy.ChargeUnit UnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ChargeAssociation Association
+        public BookingProxy.ChargeAssociation Association
         {
             get
             {
@@ -6473,7 +6473,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ChargeType Type
+        public BookingProxy.ChargeType Type
         {
             get
             {
@@ -6486,7 +6486,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ChargeUnit Unit
+        public BookingProxy.ChargeUnit Unit
         {
             get
             {
@@ -6502,12 +6502,12 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ServiceFee", Namespace="http://tavisca.com")]
-    public partial class ServiceFee : HotelBook.Money
+    public partial class ServiceFee : BookingProxy.Money
     {
         
         private decimal PercentValueField;
         
-        private HotelBook.ServiceFeeType ServiceFeeTypeField;
+        private BookingProxy.ServiceFeeType ServiceFeeTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public decimal PercentValue
@@ -6523,7 +6523,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ServiceFeeType ServiceFeeType
+        public BookingProxy.ServiceFeeType ServiceFeeType
         {
             get
             {
@@ -6539,7 +6539,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fee", Namespace="http://tavisca.com")]
-    public partial class Fee : HotelBook.Money
+    public partial class Fee : BookingProxy.Money
     {
         
         private long IdField;
@@ -6606,7 +6606,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Markup", Namespace="http://tavisca.com")]
-    public partial class Markup : HotelBook.Money
+    public partial class Markup : BookingProxy.Money
     {
         
         private long IdField;
@@ -6658,20 +6658,20 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseFare", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarRate))]
-    public partial class BaseFare : HotelBook.Money
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarRate))]
+    public partial class BaseFare : BookingProxy.Money
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarRate", Namespace="http://tavisca.com")]
-    public partial class CarRate : HotelBook.BaseFare
+    public partial class CarRate : BookingProxy.BaseFare
     {
         
         private int QuantityField;
         
-        private HotelBook.CarRateType RateTypeField;
+        private BookingProxy.CarRateType RateTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Quantity
@@ -6687,7 +6687,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarRateType RateType
+        public BookingProxy.CarRateType RateType
         {
             get
             {
@@ -6703,7 +6703,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Commission", Namespace="http://tavisca.com")]
-    public partial class Commission : HotelBook.Money
+    public partial class Commission : BookingProxy.Money
     {
         
         private long IdField;
@@ -6755,7 +6755,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Discount", Namespace="http://tavisca.com")]
-    public partial class Discount : HotelBook.Money
+    public partial class Discount : BookingProxy.Money
     {
         
         private long IdField;
@@ -6807,7 +6807,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Tax", Namespace="http://tavisca.com")]
-    public partial class Tax : HotelBook.Money
+    public partial class Tax : BookingProxy.Money
     {
         
         private string CodeField;
@@ -7072,7 +7072,7 @@ namespace HotelBook
     public partial class ChargeBreakup : object
     {
         
-        private HotelBook.Money ChargedAmountField;
+        private BookingProxy.Money ChargedAmountField;
         
         private System.Guid IdField;
         
@@ -7081,7 +7081,7 @@ namespace HotelBook
         private int ProductRphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money ChargedAmount
+        public BookingProxy.Money ChargedAmount
         {
             get
             {
@@ -7214,7 +7214,7 @@ namespace HotelBook
         
         private string ACSUrlField;
         
-        private HotelBook.StateBag[] AdditionalInfoField;
+        private BookingProxy.StateBag[] AdditionalInfoField;
         
         private string MDField;
         
@@ -7234,7 +7234,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] AdditionalInfo
+        public BookingProxy.StateBag[] AdditionalInfo
         {
             get
             {
@@ -7299,7 +7299,7 @@ namespace HotelBook
         
         private System.Nullable<System.DateTime> AppliedOnField;
         
-        private HotelBook.CancellationRule AppliedRuleField;
+        private BookingProxy.CancellationRule AppliedRuleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> AppliedOn
@@ -7315,7 +7315,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CancellationRule AppliedRule
+        public BookingProxy.CancellationRule AppliedRule
         {
             get
             {
@@ -7331,15 +7331,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericTripProduct", Namespace="http://tavisca.com")]
-    public partial class GenericTripProduct : HotelBook.TripProduct
+    public partial class GenericTripProduct : BookingProxy.TripProduct
     {
         
-        private HotelBook.GenericItinerary GenericItineraryField;
+        private BookingProxy.GenericItinerary GenericItineraryField;
         
-        private HotelBook.GenericSearchCriterion GenericSearchCriterionField;
+        private BookingProxy.GenericSearchCriterion GenericSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.GenericItinerary GenericItinerary
+        public BookingProxy.GenericItinerary GenericItinerary
         {
             get
             {
@@ -7352,7 +7352,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.GenericSearchCriterion GenericSearchCriterion
+        public BookingProxy.GenericSearchCriterion GenericSearchCriterion
         {
             get
             {
@@ -7368,15 +7368,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirTripProduct", Namespace="http://tavisca.com")]
-    public partial class AirTripProduct : HotelBook.TripProduct
+    public partial class AirTripProduct : BookingProxy.TripProduct
     {
         
-        private HotelBook.AirItinerary AirItineraryField;
+        private BookingProxy.AirItinerary AirItineraryField;
         
-        private HotelBook.AirSearchCriterion AirSearchCriterionField;
+        private BookingProxy.AirSearchCriterion AirSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirItinerary AirItinerary
+        public BookingProxy.AirItinerary AirItinerary
         {
             get
             {
@@ -7389,7 +7389,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirSearchCriterion AirSearchCriterion
+        public BookingProxy.AirSearchCriterion AirSearchCriterion
         {
             get
             {
@@ -7405,15 +7405,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityTripProduct", Namespace="http://tavisca.com")]
-    public partial class ActivityTripProduct : HotelBook.TripProduct
+    public partial class ActivityTripProduct : BookingProxy.TripProduct
     {
         
-        private HotelBook.ActivityItinerary ActivityItineraryField;
+        private BookingProxy.ActivityItinerary ActivityItineraryField;
         
-        private HotelBook.ActivitySearchCriterion ActivitySearchCriterionField;
+        private BookingProxy.ActivitySearchCriterion ActivitySearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityItinerary ActivityItinerary
+        public BookingProxy.ActivityItinerary ActivityItinerary
         {
             get
             {
@@ -7426,7 +7426,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivitySearchCriterion ActivitySearchCriterion
+        public BookingProxy.ActivitySearchCriterion ActivitySearchCriterion
         {
             get
             {
@@ -7442,17 +7442,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelTripProduct", Namespace="http://tavisca.com")]
-    public partial class HotelTripProduct : HotelBook.TripProduct
+    public partial class HotelTripProduct : BookingProxy.TripProduct
     {
         
-        private HotelBook.HotelItinerary HotelItineraryField;
+        private BookingProxy.HotelItinerary HotelItineraryField;
         
-        private HotelBook.HotelSearchCriterion HotelSearchCriterionField;
+        private BookingProxy.HotelSearchCriterion HotelSearchCriterionField;
         
-        private HotelBook.RoomOccupancyType[] RoomOccupancyTypesField;
+        private BookingProxy.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelItinerary HotelItinerary
+        public BookingProxy.HotelItinerary HotelItinerary
         {
             get
             {
@@ -7465,7 +7465,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelSearchCriterion HotelSearchCriterion
+        public BookingProxy.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -7478,7 +7478,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RoomOccupancyType[] RoomOccupancyTypes
+        public BookingProxy.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -7494,15 +7494,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarTripProduct", Namespace="http://tavisca.com")]
-    public partial class CarTripProduct : HotelBook.TripProduct
+    public partial class CarTripProduct : BookingProxy.TripProduct
     {
         
-        private HotelBook.CarItinerary CarItineraryField;
+        private BookingProxy.CarItinerary CarItineraryField;
         
-        private HotelBook.CarSearchCriterion CarSearchCriterionField;
+        private BookingProxy.CarSearchCriterion CarSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarItinerary CarItinerary
+        public BookingProxy.CarItinerary CarItinerary
         {
             get
             {
@@ -7515,7 +7515,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarSearchCriterion CarSearchCriterion
+        public BookingProxy.CarSearchCriterion CarSearchCriterion
         {
             get
             {
@@ -7536,7 +7536,7 @@ namespace HotelBook
         
         private string AgencyNotesField;
         
-        private HotelBook.TripProductStatus BookingStatusField;
+        private BookingProxy.TripProductStatus BookingStatusField;
         
         private string CancellationNumberField;
         
@@ -7546,7 +7546,7 @@ namespace HotelBook
         
         private int PassengerRphField;
         
-        private HotelBook.PostBookingTripStatus PostBookingStatusField;
+        private BookingProxy.PostBookingTripStatus PostBookingStatusField;
         
         private int RphField;
         
@@ -7568,7 +7568,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripProductStatus BookingStatus
+        public BookingProxy.TripProductStatus BookingStatus
         {
             get
             {
@@ -7633,7 +7633,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PostBookingTripStatus PostBookingStatus
+        public BookingProxy.PostBookingTripStatus PostBookingStatus
         {
             get
             {
@@ -7691,14 +7691,14 @@ namespace HotelBook
     public partial class PaymentBreakup : object
     {
         
-        private HotelBook.Money AmountField;
+        private BookingProxy.Money AmountField;
         
         private int PassengerRphField;
         
         private int PaymentRphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money Amount
+        public BookingProxy.Money Amount
         {
             get
             {
@@ -7740,32 +7740,32 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripItinerary", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivityItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.GenericItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivityItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.GenericItinerary))]
     public partial class TripItinerary : object
     {
         
-        private HotelBook.StateBag[] AdditionalInformationField;
+        private BookingProxy.StateBag[] AdditionalInformationField;
         
-        private HotelBook.TripAddOn[] AvailableAddonsField;
+        private BookingProxy.TripAddOn[] AvailableAddonsField;
         
         private System.Guid IdField;
         
-        private HotelBook.ItineraryStatusType ItineraryStatusField;
+        private BookingProxy.ItineraryStatusType ItineraryStatusField;
         
         private string NotesField;
         
         private int RphField;
         
-        private HotelBook.TripAddOn[] SelectedAddonsField;
+        private BookingProxy.TripAddOn[] SelectedAddonsField;
         
-        private HotelBook.Tag[] TagsField;
+        private BookingProxy.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] AdditionalInformation
+        public BookingProxy.StateBag[] AdditionalInformation
         {
             get
             {
@@ -7778,7 +7778,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripAddOn[] AvailableAddons
+        public BookingProxy.TripAddOn[] AvailableAddons
         {
             get
             {
@@ -7804,7 +7804,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ItineraryStatusType ItineraryStatus
+        public BookingProxy.ItineraryStatusType ItineraryStatus
         {
             get
             {
@@ -7843,7 +7843,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripAddOn[] SelectedAddons
+        public BookingProxy.TripAddOn[] SelectedAddons
         {
             get
             {
@@ -7856,7 +7856,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Tag[] Tags
+        public BookingProxy.Tag[] Tags
         {
             get
             {
@@ -7872,27 +7872,27 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationRule", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelCancellationRule))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirCancellationRule))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarCancellationRule))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivityCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivityCancellationRule))]
     public partial class CancellationRule : object
     {
         
-        private HotelBook.StateBag[] AdditionalInfoField;
+        private BookingProxy.StateBag[] AdditionalInfoField;
         
         private string DescriptionField;
         
-        private HotelBook.Penalty PenaltyField;
+        private BookingProxy.Penalty PenaltyField;
         
         private int RphField;
         
-        private HotelBook.ProviderCancellationRuleType TypeField;
+        private BookingProxy.ProviderCancellationRuleType TypeField;
         
-        private HotelBook.DateTimeSpan WindowField;
+        private BookingProxy.DateTimeSpan WindowField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] AdditionalInfo
+        public BookingProxy.StateBag[] AdditionalInfo
         {
             get
             {
@@ -7918,7 +7918,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Penalty Penalty
+        public BookingProxy.Penalty Penalty
         {
             get
             {
@@ -7944,7 +7944,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ProviderCancellationRuleType Type
+        public BookingProxy.ProviderCancellationRuleType Type
         {
             get
             {
@@ -7957,7 +7957,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan Window
+        public BookingProxy.DateTimeSpan Window
         {
             get
             {
@@ -7973,25 +7973,25 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Penalty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.PassengerPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivityCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivityPassengerPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.PassengerPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivityCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivityPassengerPenalty))]
     public partial class Penalty : object
     {
         
-        private HotelBook.Money BasePenaltyField;
+        private BookingProxy.Money BasePenaltyField;
         
-        private HotelBook.Fee[] FeesField;
+        private BookingProxy.Fee[] FeesField;
         
-        private HotelBook.Markup[] MarkupsField;
+        private BookingProxy.Markup[] MarkupsField;
         
-        private HotelBook.Money TotalPenaltyField;
+        private BookingProxy.Money TotalPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money BasePenalty
+        public BookingProxy.Money BasePenalty
         {
             get
             {
@@ -8004,7 +8004,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Fee[] Fees
+        public BookingProxy.Fee[] Fees
         {
             get
             {
@@ -8017,7 +8017,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Markup[] Markups
+        public BookingProxy.Markup[] Markups
         {
             get
             {
@@ -8030,7 +8030,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money TotalPenalty
+        public BookingProxy.Money TotalPenalty
         {
             get
             {
@@ -8098,13 +8098,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationRule", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationRule : HotelBook.CancellationRule
+    public partial class HotelCancellationRule : BookingProxy.CancellationRule
     {
         
-        private HotelBook.HotelCancellationPenalty HotelCancellationPenaltyField;
+        private BookingProxy.HotelCancellationPenalty HotelCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelCancellationPenalty HotelCancellationPenalty
+        public BookingProxy.HotelCancellationPenalty HotelCancellationPenalty
         {
             get
             {
@@ -8120,13 +8120,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirCancellationRule", Namespace="http://tavisca.com")]
-    public partial class AirCancellationRule : HotelBook.CancellationRule
+    public partial class AirCancellationRule : BookingProxy.CancellationRule
     {
         
-        private HotelBook.AirCancellationPenalty AirPenaltyField;
+        private BookingProxy.AirCancellationPenalty AirPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirCancellationPenalty AirPenalty
+        public BookingProxy.AirCancellationPenalty AirPenalty
         {
             get
             {
@@ -8142,13 +8142,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCancellationRule", Namespace="http://tavisca.com")]
-    public partial class CarCancellationRule : HotelBook.CancellationRule
+    public partial class CarCancellationRule : BookingProxy.CancellationRule
     {
         
-        private HotelBook.CarCancellationPenalty CarCancellationPenaltyField;
+        private BookingProxy.CarCancellationPenalty CarCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarCancellationPenalty CarCancellationPenalty
+        public BookingProxy.CarCancellationPenalty CarCancellationPenalty
         {
             get
             {
@@ -8164,13 +8164,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityCancellationRule", Namespace="http://tavisca.com")]
-    public partial class ActivityCancellationRule : HotelBook.CancellationRule
+    public partial class ActivityCancellationRule : BookingProxy.CancellationRule
     {
         
-        private HotelBook.ActivityCancellationPenalty ActivityCancellationPenaltyField;
+        private BookingProxy.ActivityCancellationPenalty ActivityCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityCancellationPenalty ActivityCancellationPenalty
+        public BookingProxy.ActivityCancellationPenalty ActivityCancellationPenalty
         {
             get
             {
@@ -8198,20 +8198,20 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPenalty : HotelBook.Penalty
+    public partial class HotelCancellationPenalty : BookingProxy.Penalty
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class AirCancellationPenalty : HotelBook.Penalty
+    public partial class AirCancellationPenalty : BookingProxy.Penalty
     {
         
-        private HotelBook.PassengerPenalty[] PassengersPenaltiesField;
+        private BookingProxy.PassengerPenalty[] PassengersPenaltiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerPenalty[] PassengersPenalties
+        public BookingProxy.PassengerPenalty[] PassengersPenalties
         {
             get
             {
@@ -8227,15 +8227,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PassengerPenalty", Namespace="http://tavisca.com")]
-    public partial class PassengerPenalty : HotelBook.Penalty
+    public partial class PassengerPenalty : BookingProxy.Penalty
     {
         
-        private HotelBook.PassengerType PassengerTypeField;
+        private BookingProxy.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerType PassengerType
+        public BookingProxy.PassengerType PassengerType
         {
             get
             {
@@ -8264,20 +8264,20 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class CarCancellationPenalty : HotelBook.Penalty
+    public partial class CarCancellationPenalty : BookingProxy.Penalty
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class ActivityCancellationPenalty : HotelBook.Penalty
+    public partial class ActivityCancellationPenalty : BookingProxy.Penalty
     {
         
-        private HotelBook.ActivityPassengerPenalty[] PassengersPenaltiesField;
+        private BookingProxy.ActivityPassengerPenalty[] PassengersPenaltiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityPassengerPenalty[] PassengersPenalties
+        public BookingProxy.ActivityPassengerPenalty[] PassengersPenalties
         {
             get
             {
@@ -8293,7 +8293,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityPassengerPenalty", Namespace="http://tavisca.com")]
-    public partial class ActivityPassengerPenalty : HotelBook.Penalty
+    public partial class ActivityPassengerPenalty : BookingProxy.Penalty
     {
         
         private string PassengerTypeField;
@@ -8378,35 +8378,35 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirItinerary", Namespace="http://tavisca.com")]
-    public partial class AirItinerary : HotelBook.TripItinerary
+    public partial class AirItinerary : BookingProxy.TripItinerary
     {
         
-        private HotelBook.AirCancellationPolicy AirCancellationPolicyField;
+        private BookingProxy.AirCancellationPolicy AirCancellationPolicyField;
         
-        private HotelBook.AirFareSource AirFareSourceField;
+        private BookingProxy.AirFareSource AirFareSourceField;
         
         private float BiasRatingField;
         
-        private HotelBook.DBAirContract ContractField;
+        private BookingProxy.DBAirContract ContractField;
         
-        private HotelBook.AirFare FareField;
+        private BookingProxy.AirFare FareField;
         
         private string IdentifierField;
         
-        private HotelBook.AirItineraryType ItineraryTypeField;
+        private BookingProxy.AirItineraryType ItineraryTypeField;
         
-        private HotelBook.AirLeg[] LegsField;
+        private BookingProxy.AirLeg[] LegsField;
         
-        private HotelBook.MarkupPlan MarkupPlanField;
+        private BookingProxy.MarkupPlan MarkupPlanField;
         
-        private HotelBook.AirPolicy[] PoliciesField;
+        private BookingProxy.AirPolicy[] PoliciesField;
         
-        private HotelBook.StateBag[] SupplierSideDataField;
+        private BookingProxy.StateBag[] SupplierSideDataField;
         
-        private HotelBook.TicketingInfo TicketingInfoField;
+        private BookingProxy.TicketingInfo TicketingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirCancellationPolicy AirCancellationPolicy
+        public BookingProxy.AirCancellationPolicy AirCancellationPolicy
         {
             get
             {
@@ -8419,7 +8419,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirFareSource AirFareSource
+        public BookingProxy.AirFareSource AirFareSource
         {
             get
             {
@@ -8445,7 +8445,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DBAirContract Contract
+        public BookingProxy.DBAirContract Contract
         {
             get
             {
@@ -8458,7 +8458,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirFare Fare
+        public BookingProxy.AirFare Fare
         {
             get
             {
@@ -8484,7 +8484,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirItineraryType ItineraryType
+        public BookingProxy.AirItineraryType ItineraryType
         {
             get
             {
@@ -8497,7 +8497,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirLeg[] Legs
+        public BookingProxy.AirLeg[] Legs
         {
             get
             {
@@ -8510,7 +8510,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.MarkupPlan MarkupPlan
+        public BookingProxy.MarkupPlan MarkupPlan
         {
             get
             {
@@ -8523,7 +8523,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirPolicy[] Policies
+        public BookingProxy.AirPolicy[] Policies
         {
             get
             {
@@ -8536,7 +8536,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] SupplierSideData
+        public BookingProxy.StateBag[] SupplierSideData
         {
             get
             {
@@ -8549,7 +8549,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TicketingInfo TicketingInfo
+        public BookingProxy.TicketingInfo TicketingInfo
         {
             get
             {
@@ -8565,59 +8565,59 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerary", Namespace="http://tavisca.com")]
-    public partial class HotelItinerary : HotelBook.TripItinerary
+    public partial class HotelItinerary : BookingProxy.TripItinerary
     {
         
-        private HotelBook.Deposit[] AcceptableDepositsField;
+        private BookingProxy.Deposit[] AcceptableDepositsField;
         
-        private HotelBook.Guarantee[] AcceptableGuaranteesField;
+        private BookingProxy.Guarantee[] AcceptableGuaranteesField;
         
         private bool AllPaxDetailsRequiredField;
         
-        private HotelBook.AllowedCountry[] AllowedCountriesField;
+        private BookingProxy.AllowedCountry[] AllowedCountriesField;
         
-        private HotelBook.HotelContract ContractField;
+        private BookingProxy.HotelContract ContractField;
         
-        private HotelBook.Deal[] DealsField;
+        private BookingProxy.Deal[] DealsField;
         
         private bool DepositRequiredField;
         
         private string[] DepositTextField;
         
-        private HotelBook.HotelDiscountCode DiscountCodeField;
+        private BookingProxy.HotelDiscountCode DiscountCodeField;
         
-        private HotelBook.HotelFare FareField;
+        private BookingProxy.HotelFare FareField;
         
         private bool GuaranteeRequiredField;
         
         private string[] GuaranteeTextField;
         
-        private HotelBook.HotelCancellationPolicy HotelCancellationPolicyField;
+        private BookingProxy.HotelCancellationPolicy HotelCancellationPolicyField;
         
-        private HotelBook.PromotionalHotelDeal[] HotelDealsField;
+        private BookingProxy.PromotionalHotelDeal[] HotelDealsField;
         
-        private HotelBook.HotelFareSource HotelFareSourceField;
+        private BookingProxy.HotelFareSource HotelFareSourceField;
         
-        private HotelBook.HotelProperty HotelPropertyField;
+        private BookingProxy.HotelProperty HotelPropertyField;
         
         private string ItineraryTypeField;
         
-        private HotelBook.MarkupPlan MarkupPlanField;
+        private BookingProxy.MarkupPlan MarkupPlanField;
         
-        private HotelBook.HotelPolicy[] PoliciesField;
+        private BookingProxy.HotelPolicy[] PoliciesField;
         
-        private HotelBook.Room[] RoomsField;
+        private BookingProxy.Room[] RoomsField;
         
-        private HotelBook.Season[] SeasonsField;
+        private BookingProxy.Season[] SeasonsField;
         
         private string SegmentRefField;
         
         private bool ShippingAddressRequiredField;
         
-        private HotelBook.DateTimeSpan StayPeriodField;
+        private BookingProxy.DateTimeSpan StayPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Deposit[] AcceptableDeposits
+        public BookingProxy.Deposit[] AcceptableDeposits
         {
             get
             {
@@ -8630,7 +8630,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Guarantee[] AcceptableGuarantees
+        public BookingProxy.Guarantee[] AcceptableGuarantees
         {
             get
             {
@@ -8656,7 +8656,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AllowedCountry[] AllowedCountries
+        public BookingProxy.AllowedCountry[] AllowedCountries
         {
             get
             {
@@ -8669,7 +8669,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelContract Contract
+        public BookingProxy.HotelContract Contract
         {
             get
             {
@@ -8682,7 +8682,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Deal[] Deals
+        public BookingProxy.Deal[] Deals
         {
             get
             {
@@ -8721,7 +8721,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelDiscountCode DiscountCode
+        public BookingProxy.HotelDiscountCode DiscountCode
         {
             get
             {
@@ -8734,7 +8734,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelFare Fare
+        public BookingProxy.HotelFare Fare
         {
             get
             {
@@ -8773,7 +8773,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelCancellationPolicy HotelCancellationPolicy
+        public BookingProxy.HotelCancellationPolicy HotelCancellationPolicy
         {
             get
             {
@@ -8786,7 +8786,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PromotionalHotelDeal[] HotelDeals
+        public BookingProxy.PromotionalHotelDeal[] HotelDeals
         {
             get
             {
@@ -8799,7 +8799,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelFareSource HotelFareSource
+        public BookingProxy.HotelFareSource HotelFareSource
         {
             get
             {
@@ -8812,7 +8812,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelProperty HotelProperty
+        public BookingProxy.HotelProperty HotelProperty
         {
             get
             {
@@ -8838,7 +8838,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.MarkupPlan MarkupPlan
+        public BookingProxy.MarkupPlan MarkupPlan
         {
             get
             {
@@ -8851,7 +8851,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelPolicy[] Policies
+        public BookingProxy.HotelPolicy[] Policies
         {
             get
             {
@@ -8864,7 +8864,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Room[] Rooms
+        public BookingProxy.Room[] Rooms
         {
             get
             {
@@ -8877,7 +8877,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Season[] Seasons
+        public BookingProxy.Season[] Seasons
         {
             get
             {
@@ -8916,7 +8916,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan StayPeriod
+        public BookingProxy.DateTimeSpan StayPeriod
         {
             get
             {
@@ -8932,47 +8932,47 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarItinerary", Namespace="http://tavisca.com")]
-    public partial class CarItinerary : HotelBook.TripItinerary
+    public partial class CarItinerary : BookingProxy.TripItinerary
     {
         
-        private HotelBook.Guarantee[] AcceptableGuaranteesField;
+        private BookingProxy.Guarantee[] AcceptableGuaranteesField;
         
-        private HotelBook.CarCancellationPolicy CarCancellationPolicyField;
+        private BookingProxy.CarCancellationPolicy CarCancellationPolicyField;
         
-        private HotelBook.CarCompany CarCompanyField;
+        private BookingProxy.CarCompany CarCompanyField;
         
-        private HotelBook.CarFareSource CarFareSourceField;
+        private BookingProxy.CarFareSource CarFareSourceField;
         
-        private HotelBook.CarDiscountCode DiscountCodeField;
+        private BookingProxy.CarDiscountCode DiscountCodeField;
         
-        private HotelBook.RentalLocationInfo DropOffInfoField;
+        private BookingProxy.RentalLocationInfo DropOffInfoField;
         
-        private HotelBook.Location DropOffLocationField;
+        private BookingProxy.Location DropOffLocationField;
         
-        private HotelBook.CarFare FareField;
+        private BookingProxy.CarFare FareField;
         
         private bool GuaranteeRequiredField;
         
         private string[] GuaranteeTextField;
         
-        private HotelBook.Mileage MileageField;
+        private BookingProxy.Mileage MileageField;
         
-        private HotelBook.RentalLocationInfo PickupInfoField;
+        private BookingProxy.RentalLocationInfo PickupInfoField;
         
-        private HotelBook.Location PickupLocationField;
+        private BookingProxy.Location PickupLocationField;
         
-        private HotelBook.CarPolicy[] PoliciesField;
+        private BookingProxy.CarPolicy[] PoliciesField;
         
-        private HotelBook.DateTimeSpan RentalPeriodField;
+        private BookingProxy.DateTimeSpan RentalPeriodField;
         
         private string SegmentRefField;
         
-        private HotelBook.StateBag[] SupplierSideDataField;
+        private BookingProxy.StateBag[] SupplierSideDataField;
         
-        private HotelBook.Vehicle VehicleField;
+        private BookingProxy.Vehicle VehicleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Guarantee[] AcceptableGuarantees
+        public BookingProxy.Guarantee[] AcceptableGuarantees
         {
             get
             {
@@ -8985,7 +8985,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarCancellationPolicy CarCancellationPolicy
+        public BookingProxy.CarCancellationPolicy CarCancellationPolicy
         {
             get
             {
@@ -8998,7 +8998,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarCompany CarCompany
+        public BookingProxy.CarCompany CarCompany
         {
             get
             {
@@ -9011,7 +9011,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarFareSource CarFareSource
+        public BookingProxy.CarFareSource CarFareSource
         {
             get
             {
@@ -9024,7 +9024,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarDiscountCode DiscountCode
+        public BookingProxy.CarDiscountCode DiscountCode
         {
             get
             {
@@ -9037,7 +9037,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RentalLocationInfo DropOffInfo
+        public BookingProxy.RentalLocationInfo DropOffInfo
         {
             get
             {
@@ -9050,7 +9050,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location DropOffLocation
+        public BookingProxy.Location DropOffLocation
         {
             get
             {
@@ -9063,7 +9063,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarFare Fare
+        public BookingProxy.CarFare Fare
         {
             get
             {
@@ -9102,7 +9102,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Mileage Mileage
+        public BookingProxy.Mileage Mileage
         {
             get
             {
@@ -9115,7 +9115,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RentalLocationInfo PickupInfo
+        public BookingProxy.RentalLocationInfo PickupInfo
         {
             get
             {
@@ -9128,7 +9128,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location PickupLocation
+        public BookingProxy.Location PickupLocation
         {
             get
             {
@@ -9141,7 +9141,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarPolicy[] Policies
+        public BookingProxy.CarPolicy[] Policies
         {
             get
             {
@@ -9154,7 +9154,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan RentalPeriod
+        public BookingProxy.DateTimeSpan RentalPeriod
         {
             get
             {
@@ -9180,7 +9180,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] SupplierSideData
+        public BookingProxy.StateBag[] SupplierSideData
         {
             get
             {
@@ -9193,7 +9193,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Vehicle Vehicle
+        public BookingProxy.Vehicle Vehicle
         {
             get
             {
@@ -9209,69 +9209,69 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityItinerary", Namespace="http://tavisca.com")]
-    public partial class ActivityItinerary : HotelBook.TripItinerary
+    public partial class ActivityItinerary : BookingProxy.TripItinerary
     {
         
-        private HotelBook.ActivityCancellationPolicy ActivityCancellationPolicyField;
+        private BookingProxy.ActivityCancellationPolicy ActivityCancellationPolicyField;
         
-        private HotelBook.ActivityFareSource ActivityFareSourceField;
+        private BookingProxy.ActivityFareSource ActivityFareSourceField;
         
-        private HotelBook.ActivityOption[] ActivityOptionsField;
+        private BookingProxy.ActivityOption[] ActivityOptionsField;
         
-        private HotelBook.ActivityReview[] ActivityReviewsField;
+        private BookingProxy.ActivityReview[] ActivityReviewsField;
         
         private string AdditionalTextField;
         
         private double AverageRatingField;
         
-        private HotelBook.BookingAnswer[] BookingAnswersField;
+        private BookingProxy.BookingAnswer[] BookingAnswersField;
         
-        private HotelBook.BookingQuestion[] BookingQuestionsField;
+        private BookingProxy.BookingQuestion[] BookingQuestionsField;
         
-        private HotelBook.ActivityCategory CategoryField;
+        private BookingProxy.ActivityCategory CategoryField;
         
         private string DescriptionField;
         
         private string DurationTextField;
         
-        private HotelBook.ActivityFare FareField;
+        private BookingProxy.ActivityFare FareField;
         
-        private HotelBook.GeoCode GeoCodeField;
+        private BookingProxy.GeoCode GeoCodeField;
         
-        private HotelBook.Media ImageField;
+        private BookingProxy.Media ImageField;
         
-        private HotelBook.ImageInfo[] ImagesField;
+        private BookingProxy.ImageInfo[] ImagesField;
         
         private string ItineraryTypeField;
         
         private string LegalTextField;
         
-        private HotelBook.Location LocationField;
+        private BookingProxy.Location LocationField;
         
         private string LongDescriptionField;
         
-        private HotelBook.Media MapField;
+        private BookingProxy.Media MapField;
         
         private string NameField;
         
-        private HotelBook.Policy[] PoliciesField;
+        private BookingProxy.Policy[] PoliciesField;
         
         private string ScheduleTextField;
         
-        private HotelBook.ActivityOption SelectedOptionField;
+        private BookingProxy.ActivityOption SelectedOptionField;
         
         private string SupplierItineraryIdField;
         
         private string SupplierItineraryTypeField;
         
-        private HotelBook.Media ThumbnailField;
+        private BookingProxy.Media ThumbnailField;
         
         private string TitleField;
         
         private string VendorItineraryTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityCancellationPolicy ActivityCancellationPolicy
+        public BookingProxy.ActivityCancellationPolicy ActivityCancellationPolicy
         {
             get
             {
@@ -9284,7 +9284,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityFareSource ActivityFareSource
+        public BookingProxy.ActivityFareSource ActivityFareSource
         {
             get
             {
@@ -9297,7 +9297,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityOption[] ActivityOptions
+        public BookingProxy.ActivityOption[] ActivityOptions
         {
             get
             {
@@ -9310,7 +9310,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityReview[] ActivityReviews
+        public BookingProxy.ActivityReview[] ActivityReviews
         {
             get
             {
@@ -9349,7 +9349,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.BookingAnswer[] BookingAnswers
+        public BookingProxy.BookingAnswer[] BookingAnswers
         {
             get
             {
@@ -9362,7 +9362,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.BookingQuestion[] BookingQuestions
+        public BookingProxy.BookingQuestion[] BookingQuestions
         {
             get
             {
@@ -9375,7 +9375,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityCategory Category
+        public BookingProxy.ActivityCategory Category
         {
             get
             {
@@ -9414,7 +9414,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityFare Fare
+        public BookingProxy.ActivityFare Fare
         {
             get
             {
@@ -9427,7 +9427,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.GeoCode GeoCode
+        public BookingProxy.GeoCode GeoCode
         {
             get
             {
@@ -9440,7 +9440,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Media Image
+        public BookingProxy.Media Image
         {
             get
             {
@@ -9453,7 +9453,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ImageInfo[] Images
+        public BookingProxy.ImageInfo[] Images
         {
             get
             {
@@ -9492,7 +9492,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location Location
+        public BookingProxy.Location Location
         {
             get
             {
@@ -9518,7 +9518,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Media Map
+        public BookingProxy.Media Map
         {
             get
             {
@@ -9544,7 +9544,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Policy[] Policies
+        public BookingProxy.Policy[] Policies
         {
             get
             {
@@ -9570,7 +9570,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityOption SelectedOption
+        public BookingProxy.ActivityOption SelectedOption
         {
             get
             {
@@ -9609,7 +9609,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Media Thumbnail
+        public BookingProxy.Media Thumbnail
         {
             get
             {
@@ -9651,33 +9651,33 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericItinerary", Namespace="http://tavisca.com")]
-    public partial class GenericItinerary : HotelBook.TripItinerary
+    public partial class GenericItinerary : BookingProxy.TripItinerary
     {
         
-        private HotelBook.StateBag[] AttributesField;
+        private BookingProxy.StateBag[] AttributesField;
         
         private string DescriptionField;
         
         private System.DateTime EndDateField;
         
-        private HotelBook.GenericFare FareField;
+        private BookingProxy.GenericFare FareField;
         
-        private HotelBook.GenericFareSource GenericFareSourceField;
+        private BookingProxy.GenericFareSource GenericFareSourceField;
         
         private string ImageUrlField;
         
-        private HotelBook.Location LocationField;
+        private BookingProxy.Location LocationField;
         
         private string NameField;
         
-        private HotelBook.PolicyInfo[] PoliciesField;
+        private BookingProxy.PolicyInfo[] PoliciesField;
         
         private System.DateTime StartDateField;
         
-        private HotelBook.SupplierInfo SupplierInfoField;
+        private BookingProxy.SupplierInfo SupplierInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] Attributes
+        public BookingProxy.StateBag[] Attributes
         {
             get
             {
@@ -9716,7 +9716,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.GenericFare Fare
+        public BookingProxy.GenericFare Fare
         {
             get
             {
@@ -9729,7 +9729,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.GenericFareSource GenericFareSource
+        public BookingProxy.GenericFareSource GenericFareSource
         {
             get
             {
@@ -9755,7 +9755,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location Location
+        public BookingProxy.Location Location
         {
             get
             {
@@ -9781,7 +9781,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PolicyInfo[] Policies
+        public BookingProxy.PolicyInfo[] Policies
         {
             get
             {
@@ -9807,7 +9807,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SupplierInfo SupplierInfo
+        public BookingProxy.SupplierInfo SupplierInfo
         {
             get
             {
@@ -9823,21 +9823,21 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.BaggageAddOn))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelAddOn))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TransferAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.BaggageAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TransferAddOn))]
     public partial class TripAddOn : object
     {
         
-        private HotelBook.StateBag[] AdditionalInformationField;
+        private BookingProxy.StateBag[] AdditionalInformationField;
         
-        private HotelBook.AddOnBookingInfo BookingInformationField;
+        private BookingProxy.AddOnBookingInfo BookingInformationField;
         
         private string DescriptionField;
         
-        private HotelBook.TripAddOnFare FareField;
+        private BookingProxy.TripAddOnFare FareField;
         
-        private HotelBook.FareSource FareSourceField;
+        private BookingProxy.FareSource FareSourceField;
         
         private System.Guid IdField;
         
@@ -9848,7 +9848,7 @@ namespace HotelBook
         private string TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] AdditionalInformation
+        public BookingProxy.StateBag[] AdditionalInformation
         {
             get
             {
@@ -9861,7 +9861,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AddOnBookingInfo BookingInformation
+        public BookingProxy.AddOnBookingInfo BookingInformation
         {
             get
             {
@@ -9887,7 +9887,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripAddOnFare Fare
+        public BookingProxy.TripAddOnFare Fare
         {
             get
             {
@@ -9900,7 +9900,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareSource FareSource
+        public BookingProxy.FareSource FareSource
         {
             get
             {
@@ -10038,7 +10038,7 @@ namespace HotelBook
     public partial class AddOnBookingInfo : object
     {
         
-        private HotelBook.AddOnBookingStatusType BookingStatusField;
+        private BookingProxy.AddOnBookingStatusType BookingStatusField;
         
         private int PassengerRphField;
         
@@ -10047,7 +10047,7 @@ namespace HotelBook
         private string VendorConfirmationNumberField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AddOnBookingStatusType BookingStatus
+        public BookingProxy.AddOnBookingStatusType BookingStatus
         {
             get
             {
@@ -10102,17 +10102,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOnFare", Namespace="http://tavisca.com")]
-    public partial class TripAddOnFare : HotelBook.Fare
+    public partial class TripAddOnFare : BookingProxy.Fare
     {
         
-        private HotelBook.Money BaseTotalFareField;
+        private BookingProxy.Money BaseTotalFareField;
         
         private bool IsAlreadyIncludedField;
         
         private int QuantityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money BaseTotalFare
+        public BookingProxy.Money BaseTotalFare
         {
             get
             {
@@ -10154,14 +10154,14 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaggageAddOn", Namespace="http://tavisca.com")]
-    public partial class BaggageAddOn : HotelBook.TripAddOn
+    public partial class BaggageAddOn : BookingProxy.TripAddOn
     {
         
         private int AllowedWeightLimitField;
         
         private bool IsLimitSpecifiedField;
         
-        private HotelBook.WeightUnit WeightUnitField;
+        private BookingProxy.WeightUnit WeightUnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int AllowedWeightLimit
@@ -10190,7 +10190,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.WeightUnit WeightUnit
+        public BookingProxy.WeightUnit WeightUnit
         {
             get
             {
@@ -10206,8 +10206,8 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TransferAddOn))]
-    public partial class HotelAddOn : HotelBook.TripAddOn
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TransferAddOn))]
+    public partial class HotelAddOn : BookingProxy.TripAddOn
     {
         
         private string[] RoomRphsField;
@@ -10229,21 +10229,21 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TransferAddOn", Namespace="http://tavisca.com")]
-    public partial class TransferAddOn : HotelBook.HotelAddOn
+    public partial class TransferAddOn : BookingProxy.HotelAddOn
     {
         
-        private HotelBook.Location DestinationField;
+        private BookingProxy.Location DestinationField;
         
         private System.DateTime DropOffField;
         
-        private HotelBook.Location OriginField;
+        private BookingProxy.Location OriginField;
         
-        private HotelBook.PassengerTypeQuantity[] PassengersField;
+        private BookingProxy.PassengerTypeQuantity[] PassengersField;
         
         private System.DateTime PickUpField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location Destination
+        public BookingProxy.Location Destination
         {
             get
             {
@@ -10269,7 +10269,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location Origin
+        public BookingProxy.Location Origin
         {
             get
             {
@@ -10282,7 +10282,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerTypeQuantity[] Passengers
+        public BookingProxy.PassengerTypeQuantity[] Passengers
         {
             get
             {
@@ -10326,70 +10326,70 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fare", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.PassengerFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.RoomRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivityPassengerFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivityFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.GenericFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripAddOnFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.PassengerFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.RoomRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivityPassengerFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivityFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.GenericFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripAddOnFare))]
     public partial class Fare : object
     {
         
-        private HotelBook.BaseFare BaseFareField;
+        private BookingProxy.BaseFare BaseFareField;
         
-        private HotelBook.Commission[] CommissionsField;
+        private BookingProxy.Commission[] CommissionsField;
         
-        private HotelBook.Fee ConsolidatorFeeField;
+        private BookingProxy.Fee ConsolidatorFeeField;
         
-        private HotelBook.Discount[] DiscountsField;
+        private BookingProxy.Discount[] DiscountsField;
         
-        private HotelBook.Money EstimatedCommissionField;
+        private BookingProxy.Money EstimatedCommissionField;
         
         private string FareCodeField;
         
-        private HotelBook.FareRestrictionType[] FareRestrictionTypesField;
+        private BookingProxy.FareRestrictionType[] FareRestrictionTypesField;
         
-        private HotelBook.FareType FareTypeField;
+        private BookingProxy.FareType FareTypeField;
         
-        private HotelBook.Fee[] FeesField;
+        private BookingProxy.Fee[] FeesField;
         
         private int IdField;
         
-        private HotelBook.Money MarkupField;
+        private BookingProxy.Money MarkupField;
         
-        private HotelBook.Markup[] MarkupsField;
+        private BookingProxy.Markup[] MarkupsField;
         
-        private HotelBook.Fee PartnerFeeField;
+        private BookingProxy.Fee PartnerFeeField;
         
-        private HotelBook.Money PartnerMarkupField;
+        private BookingProxy.Money PartnerMarkupField;
         
         private string RemarksField;
         
         private int RphField;
         
-        private HotelBook.Money SavingsIncludedField;
+        private BookingProxy.Money SavingsIncludedField;
         
-        private HotelBook.Fee ServiceFeeField;
+        private BookingProxy.Fee ServiceFeeField;
         
-        private HotelBook.StateBag[] SupplierSideDataField;
+        private BookingProxy.StateBag[] SupplierSideDataField;
         
-        private HotelBook.Tax[] TaxesField;
+        private BookingProxy.Tax[] TaxesField;
         
-        private HotelBook.Commission TotalCommissionField;
+        private BookingProxy.Commission TotalCommissionField;
         
-        private HotelBook.Discount TotalDiscountField;
+        private BookingProxy.Discount TotalDiscountField;
         
-        private HotelBook.Money TotalFareField;
+        private BookingProxy.Money TotalFareField;
         
-        private HotelBook.Fee TotalFeeField;
+        private BookingProxy.Fee TotalFeeField;
         
-        private HotelBook.Money TotalTaxField;
+        private BookingProxy.Money TotalTaxField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.BaseFare BaseFare
+        public BookingProxy.BaseFare BaseFare
         {
             get
             {
@@ -10402,7 +10402,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Commission[] Commissions
+        public BookingProxy.Commission[] Commissions
         {
             get
             {
@@ -10415,7 +10415,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Fee ConsolidatorFee
+        public BookingProxy.Fee ConsolidatorFee
         {
             get
             {
@@ -10428,7 +10428,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Discount[] Discounts
+        public BookingProxy.Discount[] Discounts
         {
             get
             {
@@ -10441,7 +10441,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money EstimatedCommission
+        public BookingProxy.Money EstimatedCommission
         {
             get
             {
@@ -10467,7 +10467,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareRestrictionType[] FareRestrictionTypes
+        public BookingProxy.FareRestrictionType[] FareRestrictionTypes
         {
             get
             {
@@ -10480,7 +10480,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareType FareType
+        public BookingProxy.FareType FareType
         {
             get
             {
@@ -10493,7 +10493,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Fee[] Fees
+        public BookingProxy.Fee[] Fees
         {
             get
             {
@@ -10519,7 +10519,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money Markup
+        public BookingProxy.Money Markup
         {
             get
             {
@@ -10532,7 +10532,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Markup[] Markups
+        public BookingProxy.Markup[] Markups
         {
             get
             {
@@ -10545,7 +10545,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Fee PartnerFee
+        public BookingProxy.Fee PartnerFee
         {
             get
             {
@@ -10558,7 +10558,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money PartnerMarkup
+        public BookingProxy.Money PartnerMarkup
         {
             get
             {
@@ -10597,7 +10597,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money SavingsIncluded
+        public BookingProxy.Money SavingsIncluded
         {
             get
             {
@@ -10610,7 +10610,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Fee ServiceFee
+        public BookingProxy.Fee ServiceFee
         {
             get
             {
@@ -10623,7 +10623,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] SupplierSideData
+        public BookingProxy.StateBag[] SupplierSideData
         {
             get
             {
@@ -10636,7 +10636,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Tax[] Taxes
+        public BookingProxy.Tax[] Taxes
         {
             get
             {
@@ -10649,7 +10649,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Commission TotalCommission
+        public BookingProxy.Commission TotalCommission
         {
             get
             {
@@ -10662,7 +10662,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Discount TotalDiscount
+        public BookingProxy.Discount TotalDiscount
         {
             get
             {
@@ -10675,7 +10675,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money TotalFare
+        public BookingProxy.Money TotalFare
         {
             get
             {
@@ -10688,7 +10688,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Fee TotalFee
+        public BookingProxy.Fee TotalFee
         {
             get
             {
@@ -10701,7 +10701,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money TotalTax
+        public BookingProxy.Money TotalTax
         {
             get
             {
@@ -10717,12 +10717,12 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFare", Namespace="http://tavisca.com")]
-    public partial class AirFare : HotelBook.Fare
+    public partial class AirFare : BookingProxy.Fare
     {
         
         private string[] LegGroupsField;
         
-        private HotelBook.PassengerFare[] PassengerFaresField;
+        private BookingProxy.PassengerFare[] PassengerFaresField;
         
         private string[] TagsField;
         
@@ -10740,7 +10740,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerFare[] PassengerFares
+        public BookingProxy.PassengerFare[] PassengerFares
         {
             get
             {
@@ -10769,14 +10769,14 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PassengerFare", Namespace="http://tavisca.com")]
-    public partial class PassengerFare : HotelBook.Fare
+    public partial class PassengerFare : BookingProxy.Fare
     {
         
         private int MaxAgeField;
         
         private int MinAgeField;
         
-        private HotelBook.PassengerType PassengerTypeField;
+        private BookingProxy.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
@@ -10809,7 +10809,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerType PassengerType
+        public BookingProxy.PassengerType PassengerType
         {
             get
             {
@@ -10851,14 +10851,14 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="RoomRate", Namespace="http://tavisca.com")]
-    public partial class RoomRate : HotelBook.Fare
+    public partial class RoomRate : BookingProxy.Fare
     {
         
         private string BookingCodeField;
         
-        private HotelBook.DailyRate[] DailyRatesField;
+        private BookingProxy.DailyRate[] DailyRatesField;
         
-        private HotelBook.RateIndicatorType RateIndicatorTypeField;
+        private BookingProxy.RateIndicatorType RateIndicatorTypeField;
         
         private string RatePlanCategoryField;
         
@@ -10886,7 +10886,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DailyRate[] DailyRates
+        public BookingProxy.DailyRate[] DailyRates
         {
             get
             {
@@ -10899,7 +10899,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RateIndicatorType RateIndicatorType
+        public BookingProxy.RateIndicatorType RateIndicatorType
         {
             get
             {
@@ -10993,17 +10993,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFare", Namespace="http://tavisca.com")]
-    public partial class HotelFare : HotelBook.Fare
+    public partial class HotelFare : BookingProxy.Fare
     {
         
-        private HotelBook.Money AvgDailyRateField;
+        private BookingProxy.Money AvgDailyRateField;
         
-        private HotelBook.Money MaxDailyRateField;
+        private BookingProxy.Money MaxDailyRateField;
         
-        private HotelBook.Money MinDailyRateField;
+        private BookingProxy.Money MinDailyRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money AvgDailyRate
+        public BookingProxy.Money AvgDailyRate
         {
             get
             {
@@ -11016,7 +11016,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money MaxDailyRate
+        public BookingProxy.Money MaxDailyRate
         {
             get
             {
@@ -11029,7 +11029,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money MinDailyRate
+        public BookingProxy.Money MinDailyRate
         {
             get
             {
@@ -11045,19 +11045,19 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarFare", Namespace="http://tavisca.com")]
-    public partial class CarFare : HotelBook.Fare
+    public partial class CarFare : BookingProxy.Fare
     {
         
-        private HotelBook.CarRate BaseRateField;
+        private BookingProxy.CarRate BaseRateField;
         
-        private HotelBook.Money BaseTotalFareField;
+        private BookingProxy.Money BaseTotalFareField;
         
-        private HotelBook.CarCharge[] ChargesField;
+        private BookingProxy.CarCharge[] ChargesField;
         
-        private HotelBook.Money TotalChargesField;
+        private BookingProxy.Money TotalChargesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarRate BaseRate
+        public BookingProxy.CarRate BaseRate
         {
             get
             {
@@ -11070,7 +11070,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money BaseTotalFare
+        public BookingProxy.Money BaseTotalFare
         {
             get
             {
@@ -11083,7 +11083,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarCharge[] Charges
+        public BookingProxy.CarCharge[] Charges
         {
             get
             {
@@ -11096,7 +11096,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money TotalCharges
+        public BookingProxy.Money TotalCharges
         {
             get
             {
@@ -11112,7 +11112,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityPassengerFare", Namespace="http://tavisca.com")]
-    public partial class ActivityPassengerFare : HotelBook.Fare
+    public partial class ActivityPassengerFare : BookingProxy.Fare
     {
         
         private int MaxAgeField;
@@ -11239,13 +11239,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityFare", Namespace="http://tavisca.com")]
-    public partial class ActivityFare : HotelBook.Fare
+    public partial class ActivityFare : BookingProxy.Fare
     {
         
-        private HotelBook.Money MinFareField;
+        private BookingProxy.Money MinFareField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money MinFare
+        public BookingProxy.Money MinFare
         {
             get
             {
@@ -11261,7 +11261,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericFare", Namespace="http://tavisca.com")]
-    public partial class GenericFare : HotelBook.Fare
+    public partial class GenericFare : BookingProxy.Fare
     {
     }
     
@@ -11405,7 +11405,7 @@ namespace HotelBook
         
         private int[] AgesField;
         
-        private HotelBook.PassengerType PassengerTypeField;
+        private BookingProxy.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
@@ -11423,7 +11423,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerType PassengerType
+        public BookingProxy.PassengerType PassengerType
         {
             get
             {
@@ -11452,7 +11452,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class AirCancellationPolicy : HotelBook.CancellationPolicy
+    public partial class AirCancellationPolicy : BookingProxy.CancellationPolicy
     {
     }
     
@@ -11502,19 +11502,19 @@ namespace HotelBook
         
         private int PreferenceField;
         
-        private HotelBook.SpecialServiceRequest[] SSRsField;
+        private BookingProxy.SpecialServiceRequest[] SSRsField;
         
         private long SearchAirFareSourceIdField;
         
         private string TicketDesignatorField;
         
-        private HotelBook.DateTimeSpan TicketingPeriodField;
+        private BookingProxy.DateTimeSpan TicketingPeriodField;
         
         private string TourCodeField;
         
-        private HotelBook.DateTimeSpan TravelPeriodField;
+        private BookingProxy.DateTimeSpan TravelPeriodField;
         
-        private HotelBook.DateTimeSpan ValidPeriodField;
+        private BookingProxy.DateTimeSpan ValidPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public long AgencyId
@@ -11777,7 +11777,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SpecialServiceRequest[] SSRs
+        public BookingProxy.SpecialServiceRequest[] SSRs
         {
             get
             {
@@ -11816,7 +11816,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan TicketingPeriod
+        public BookingProxy.DateTimeSpan TicketingPeriod
         {
             get
             {
@@ -11842,7 +11842,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan TravelPeriod
+        public BookingProxy.DateTimeSpan TravelPeriod
         {
             get
             {
@@ -11855,7 +11855,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan ValidPeriod
+        public BookingProxy.DateTimeSpan ValidPeriod
         {
             get
             {
@@ -11876,13 +11876,13 @@ namespace HotelBook
         
         private bool AllowDynamicField;
         
-        private HotelBook.MarkupApplicationAmount ApplyOnAmountField;
+        private BookingProxy.MarkupApplicationAmount ApplyOnAmountField;
         
         private string FareTypeField;
         
         private bool IsEnabledField;
         
-        private HotelBook.MarkupApplicationType MarkupApplicationTypeField;
+        private BookingProxy.MarkupApplicationType MarkupApplicationTypeField;
         
         private long MarkupPlanIdField;
         
@@ -11904,7 +11904,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.MarkupApplicationAmount ApplyOnAmount
+        public BookingProxy.MarkupApplicationAmount ApplyOnAmount
         {
             get
             {
@@ -11943,7 +11943,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.MarkupApplicationType MarkupApplicationType
+        public BookingProxy.MarkupApplicationType MarkupApplicationType
         {
             get
             {
@@ -12007,7 +12007,7 @@ namespace HotelBook
         
         private string ETicketNumberField;
         
-        private HotelBook.TicketType TypeField;
+        private BookingProxy.TicketType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime BookingTimeLimit
@@ -12049,7 +12049,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TicketType Type
+        public BookingProxy.TicketType Type
         {
             get
             {
@@ -12085,23 +12085,23 @@ namespace HotelBook
         
         private string[] ContractReferencesField;
         
-        private HotelBook.FlightSegment[] FlightSegmentsField;
+        private BookingProxy.FlightSegment[] FlightSegmentsField;
         
         private int LegDurationField;
         
-        private HotelBook.Distance MileageField;
+        private BookingProxy.Distance MileageField;
         
-        private HotelBook.RateCodeInfo RateCodeInfoField;
+        private BookingProxy.RateCodeInfo RateCodeInfoField;
         
         private int RphField;
         
         private int ScopeIdField;
         
-        private HotelBook.FlightSegmentStop[] StopDetailsField;
+        private BookingProxy.FlightSegmentStop[] StopDetailsField;
         
         private int StopsField;
         
-        private HotelBook.StateBag[] SupplierSideDataField;
+        private BookingProxy.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string[] ContractReferences
@@ -12117,7 +12117,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FlightSegment[] FlightSegments
+        public BookingProxy.FlightSegment[] FlightSegments
         {
             get
             {
@@ -12143,7 +12143,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Distance Mileage
+        public BookingProxy.Distance Mileage
         {
             get
             {
@@ -12156,7 +12156,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RateCodeInfo RateCodeInfo
+        public BookingProxy.RateCodeInfo RateCodeInfo
         {
             get
             {
@@ -12195,7 +12195,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FlightSegmentStop[] StopDetails
+        public BookingProxy.FlightSegmentStop[] StopDetails
         {
             get
             {
@@ -12221,7 +12221,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] SupplierSideData
+        public BookingProxy.StateBag[] SupplierSideData
         {
             get
             {
@@ -12237,24 +12237,24 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirPolicy", Namespace="http://schemas.datacontract.org/2004/07/Tavisca.TravelNxt.Air.DataContracts")]
-    public partial class AirPolicy : HotelBook.Policy
+    public partial class AirPolicy : BookingProxy.Policy
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationPolicy", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelCancellationPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarCancellationPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivityCancellationPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivityCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirCancellationPolicy))]
     public partial class CancellationPolicy : object
     {
         
-        private HotelBook.CancellationRule[] CancellationRulesField;
+        private BookingProxy.CancellationRule[] CancellationRulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CancellationRule[] CancellationRules
+        public BookingProxy.CancellationRule[] CancellationRules
         {
             get
             {
@@ -12270,21 +12270,21 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPolicy : HotelBook.CancellationPolicy
+    public partial class HotelCancellationPolicy : BookingProxy.CancellationPolicy
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class CarCancellationPolicy : HotelBook.CancellationPolicy
+    public partial class CarCancellationPolicy : BookingProxy.CancellationPolicy
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class ActivityCancellationPolicy : HotelBook.CancellationPolicy
+    public partial class ActivityCancellationPolicy : BookingProxy.CancellationPolicy
     {
     }
     
@@ -12294,7 +12294,7 @@ namespace HotelBook
     public partial class SpecialServiceRequest : object
     {
         
-        private HotelBook.StateBag[] AdditionalInfoField;
+        private BookingProxy.StateBag[] AdditionalInfoField;
         
         private string SSRAirlineField;
         
@@ -12303,7 +12303,7 @@ namespace HotelBook
         private string SSRFreeFormField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] AdditionalInfo
+        public BookingProxy.StateBag[] AdditionalInfo
         {
             get
             {
@@ -12363,7 +12363,7 @@ namespace HotelBook
         
         private string RateCodeField;
         
-        private HotelBook.StateBag[] SupplierSideDataField;
+        private BookingProxy.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string RateCode
@@ -12379,7 +12379,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] SupplierSideData
+        public BookingProxy.StateBag[] SupplierSideData
         {
             get
             {
@@ -12398,17 +12398,17 @@ namespace HotelBook
     public partial class FlightSegment : object
     {
         
-        private HotelBook.Aircraft AirCraftField;
+        private BookingProxy.Aircraft AirCraftField;
         
         private string AirlineRecordLocatorField;
         
-        private HotelBook.Airport ArrivalAirportField;
+        private BookingProxy.Airport ArrivalAirportField;
         
         private System.DateTime ArrivalDateTimeField;
         
-        private HotelBook.CabinClass CabinClassField;
+        private BookingProxy.CabinClass CabinClassField;
         
-        private HotelBook.Airport DepartureAirportField;
+        private BookingProxy.Airport DepartureAirportField;
         
         private System.DateTime DepartureDateTimeField;
         
@@ -12416,7 +12416,7 @@ namespace HotelBook
         
         private string FlightNumberField;
         
-        private HotelBook.FlightSegmentStop[] FlightSegmentStopsField;
+        private BookingProxy.FlightSegmentStop[] FlightSegmentStopsField;
         
         private bool IsETicketField;
         
@@ -12424,30 +12424,30 @@ namespace HotelBook
         
         private int LayoverDurationField;
         
-        private HotelBook.Airline MarketingAirlineField;
+        private BookingProxy.Airline MarketingAirlineField;
         
         private string MarriageGroupCodeField;
         
         private string MealCodeField;
         
-        private HotelBook.Distance MileageField;
+        private BookingProxy.Distance MileageField;
         
-        private HotelBook.Airline OperatingAirlineField;
+        private BookingProxy.Airline OperatingAirlineField;
         
-        private HotelBook.PassengerSeat[] PassengerSeatField;
+        private BookingProxy.PassengerSeat[] PassengerSeatField;
         
-        private HotelBook.SegmentQualifier[] QualifiersField;
+        private BookingProxy.SegmentQualifier[] QualifiersField;
         
         private int RphField;
         
         private string SegmentRefField;
         
-        private HotelBook.SellStatus SellStatusField;
+        private BookingProxy.SellStatus SellStatusField;
         
         private int StopsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Aircraft AirCraft
+        public BookingProxy.Aircraft AirCraft
         {
             get
             {
@@ -12473,7 +12473,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Airport ArrivalAirport
+        public BookingProxy.Airport ArrivalAirport
         {
             get
             {
@@ -12499,7 +12499,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CabinClass CabinClass
+        public BookingProxy.CabinClass CabinClass
         {
             get
             {
@@ -12512,7 +12512,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Airport DepartureAirport
+        public BookingProxy.Airport DepartureAirport
         {
             get
             {
@@ -12564,7 +12564,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FlightSegmentStop[] FlightSegmentStops
+        public BookingProxy.FlightSegmentStop[] FlightSegmentStops
         {
             get
             {
@@ -12616,7 +12616,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Airline MarketingAirline
+        public BookingProxy.Airline MarketingAirline
         {
             get
             {
@@ -12655,7 +12655,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Distance Mileage
+        public BookingProxy.Distance Mileage
         {
             get
             {
@@ -12668,7 +12668,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Airline OperatingAirline
+        public BookingProxy.Airline OperatingAirline
         {
             get
             {
@@ -12681,7 +12681,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerSeat[] PassengerSeat
+        public BookingProxy.PassengerSeat[] PassengerSeat
         {
             get
             {
@@ -12694,7 +12694,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SegmentQualifier[] Qualifiers
+        public BookingProxy.SegmentQualifier[] Qualifiers
         {
             get
             {
@@ -12733,7 +12733,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SellStatus SellStatus
+        public BookingProxy.SellStatus SellStatus
         {
             get
             {
@@ -12765,7 +12765,7 @@ namespace HotelBook
     public partial class FlightSegmentStop : object
     {
         
-        private HotelBook.Airport AirportField;
+        private BookingProxy.Airport AirportField;
         
         private System.DateTime ArrivalDateTimeField;
         
@@ -12780,7 +12780,7 @@ namespace HotelBook
         private int RphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Airport Airport
+        public BookingProxy.Airport Airport
         {
             get
             {
@@ -12991,11 +12991,11 @@ namespace HotelBook
         
         private string FareBasisCodeField;
         
-        private HotelBook.FareType FareTypeField;
+        private BookingProxy.FareType FareTypeField;
         
         private string LineNumberField;
         
-        private HotelBook.PassengerType PassengerTypeField;
+        private BookingProxy.PassengerType PassengerTypeField;
         
         private string SegmentRefField;
         
@@ -13028,7 +13028,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareType FareType
+        public BookingProxy.FareType FareType
         {
             get
             {
@@ -13054,7 +13054,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerType PassengerType
+        public BookingProxy.PassengerType PassengerType
         {
             get
             {
@@ -13153,8 +13153,8 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Policy", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirPolicy))]
     public partial class Policy : object
     {
         
@@ -13192,7 +13192,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarPolicy", Namespace="http://tavisca.com")]
-    public partial class CarPolicy : HotelBook.Policy
+    public partial class CarPolicy : BookingProxy.Policy
     {
     }
     
@@ -13379,9 +13379,9 @@ namespace HotelBook
         
         private string RateCodeField;
         
-        private HotelBook.StateBag[] SupplierSideDataField;
+        private BookingProxy.StateBag[] SupplierSideDataField;
         
-        private HotelBook.HotelDiscountType TypeField;
+        private BookingProxy.HotelDiscountType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ChainCode
@@ -13436,7 +13436,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] SupplierSideData
+        public BookingProxy.StateBag[] SupplierSideData
         {
             get
             {
@@ -13449,7 +13449,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelDiscountType Type
+        public BookingProxy.HotelDiscountType Type
         {
             get
             {
@@ -13465,41 +13465,41 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelProperty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.VacationRentalProperty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.VacationRentalProperty))]
     public partial class HotelProperty : object
     {
         
-        private HotelBook.Activity[] ActivityOptionsField;
+        private BookingProxy.Activity[] ActivityOptionsField;
         
-        private HotelBook.Address AddressField;
+        private BookingProxy.Address AddressField;
         
-        private HotelBook.Amenity[] AmenitiesField;
+        private BookingProxy.Amenity[] AmenitiesField;
         
-        private HotelBook.AreaAttraction[] AreaAttractionsField;
+        private BookingProxy.AreaAttraction[] AreaAttractionsField;
         
-        private HotelBook.AvailabilityCalender AvailabilityCalenderField;
+        private BookingProxy.AvailabilityCalender AvailabilityCalenderField;
         
-        private HotelBook.TimeDetail[] CheckInOptionsField;
+        private BookingProxy.TimeDetail[] CheckInOptionsField;
         
-        private HotelBook.TimeDetail[] CheckOutOptionsField;
+        private BookingProxy.TimeDetail[] CheckOutOptionsField;
         
-        private HotelBook.HotelDescription[] DescriptionsField;
+        private BookingProxy.HotelDescription[] DescriptionsField;
         
-        private HotelBook.Distance DistanceField;
+        private BookingProxy.Distance DistanceField;
         
         private string FaxNumberField;
         
-        private HotelBook.GeoCode GeoCodeField;
+        private BookingProxy.GeoCode GeoCodeField;
         
-        private HotelBook.HotelChain HotelChainField;
+        private BookingProxy.HotelChain HotelChainField;
         
-        private HotelBook.HotelMultimedia HotelMultiMediaField;
+        private BookingProxy.HotelMultimedia HotelMultiMediaField;
         
-        private HotelBook.HotelRating HotelRatingField;
+        private BookingProxy.HotelRating HotelRatingField;
         
         private int IdField;
         
-        private HotelBook.Media[] MediaContentField;
+        private BookingProxy.Media[] MediaContentField;
         
         private string NameField;
         
@@ -13507,20 +13507,20 @@ namespace HotelBook
         
         private string PhoneNumberField;
         
-        private HotelBook.Review[] ReviewsField;
+        private BookingProxy.Review[] ReviewsField;
         
-        private HotelBook.StateBag[] StateBagField;
+        private BookingProxy.StateBag[] StateBagField;
         
         private string SupplierHotelIdField;
         
-        private HotelBook.Tag[] TagsField;
+        private BookingProxy.Tag[] TagsField;
         
-        private HotelBook.Media ThumbnailField;
+        private BookingProxy.Media ThumbnailField;
         
         private string WebsiteUrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Activity[] ActivityOptions
+        public BookingProxy.Activity[] ActivityOptions
         {
             get
             {
@@ -13533,7 +13533,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Address Address
+        public BookingProxy.Address Address
         {
             get
             {
@@ -13546,7 +13546,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Amenity[] Amenities
+        public BookingProxy.Amenity[] Amenities
         {
             get
             {
@@ -13559,7 +13559,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AreaAttraction[] AreaAttractions
+        public BookingProxy.AreaAttraction[] AreaAttractions
         {
             get
             {
@@ -13572,7 +13572,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AvailabilityCalender AvailabilityCalender
+        public BookingProxy.AvailabilityCalender AvailabilityCalender
         {
             get
             {
@@ -13585,7 +13585,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TimeDetail[] CheckInOptions
+        public BookingProxy.TimeDetail[] CheckInOptions
         {
             get
             {
@@ -13598,7 +13598,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TimeDetail[] CheckOutOptions
+        public BookingProxy.TimeDetail[] CheckOutOptions
         {
             get
             {
@@ -13611,7 +13611,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelDescription[] Descriptions
+        public BookingProxy.HotelDescription[] Descriptions
         {
             get
             {
@@ -13624,7 +13624,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Distance Distance
+        public BookingProxy.Distance Distance
         {
             get
             {
@@ -13650,7 +13650,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.GeoCode GeoCode
+        public BookingProxy.GeoCode GeoCode
         {
             get
             {
@@ -13663,7 +13663,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelChain HotelChain
+        public BookingProxy.HotelChain HotelChain
         {
             get
             {
@@ -13676,7 +13676,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelMultimedia HotelMultiMedia
+        public BookingProxy.HotelMultimedia HotelMultiMedia
         {
             get
             {
@@ -13689,7 +13689,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelRating HotelRating
+        public BookingProxy.HotelRating HotelRating
         {
             get
             {
@@ -13715,7 +13715,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Media[] MediaContent
+        public BookingProxy.Media[] MediaContent
         {
             get
             {
@@ -13767,7 +13767,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Review[] Reviews
+        public BookingProxy.Review[] Reviews
         {
             get
             {
@@ -13780,7 +13780,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] StateBag
+        public BookingProxy.StateBag[] StateBag
         {
             get
             {
@@ -13806,7 +13806,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Tag[] Tags
+        public BookingProxy.Tag[] Tags
         {
             get
             {
@@ -13819,7 +13819,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Media Thumbnail
+        public BookingProxy.Media Thumbnail
         {
             get
             {
@@ -13855,7 +13855,7 @@ namespace HotelBook
         
         private string NameField;
         
-        private HotelBook.DepositType TypeField;
+        private BookingProxy.DepositType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -13884,7 +13884,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DepositType Type
+        public BookingProxy.DepositType Type
         {
             get
             {
@@ -13907,7 +13907,7 @@ namespace HotelBook
         
         private string NameField;
         
-        private HotelBook.GuaranteeType TypeField;
+        private BookingProxy.GuaranteeType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -13936,7 +13936,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.GuaranteeType Type
+        public BookingProxy.GuaranteeType Type
         {
             get
             {
@@ -13955,14 +13955,14 @@ namespace HotelBook
     public partial class AllowedCountry : object
     {
         
-        private HotelBook.AllowedState[] AllowedStatesField;
+        private BookingProxy.AllowedState[] AllowedStatesField;
         
         private string CodeField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AllowedState[] AllowedStates
+        public BookingProxy.AllowedState[] AllowedStates
         {
             get
             {
@@ -14004,20 +14004,20 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Deal", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.PaystayDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.PercentageDiscountDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.OpaqueDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.DiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.PaystayDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.PercentageDiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.OpaqueDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.DiscountDeal))]
     public partial class Deal : object
     {
         
-        private HotelBook.DealStatus DealStatusField;
+        private BookingProxy.DealStatus DealStatusField;
         
         private string DealTypeField;
         
         private System.DateTime EndDateField;
         
-        private HotelBook.Media ImageField;
+        private BookingProxy.Media ImageField;
         
         private bool IsPackageOnlyField;
         
@@ -14031,7 +14031,7 @@ namespace HotelBook
         
         private System.DateTime StartDateField;
         
-        private HotelBook.Tag[] TagsField;
+        private BookingProxy.Tag[] TagsField;
         
         private string TitleField;
         
@@ -14040,7 +14040,7 @@ namespace HotelBook
         private System.DateTime UsageStartDateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DealStatus DealStatus
+        public BookingProxy.DealStatus DealStatus
         {
             get
             {
@@ -14079,7 +14079,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Media Image
+        public BookingProxy.Media Image
         {
             get
             {
@@ -14170,7 +14170,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Tag[] Tags
+        public BookingProxy.Tag[] Tags
         {
             get
             {
@@ -14230,21 +14230,21 @@ namespace HotelBook
         
         private System.DateTime AddDateField;
         
-        private HotelBook.DealStatus DealStatusField;
+        private BookingProxy.DealStatus DealStatusField;
         
         private string DealTitleField;
         
         private System.DateTime EndDateField;
         
-        private HotelBook.FareSource FareSourceField;
+        private BookingProxy.FareSource FareSourceField;
         
         private int FreeNightsField;
         
-        private HotelBook.HotelProperty HotelPropertyField;
+        private BookingProxy.HotelProperty HotelPropertyField;
         
         private int IdField;
         
-        private HotelBook.Money MinFareField;
+        private BookingProxy.Money MinFareField;
         
         private string PromotionalTextField;
         
@@ -14266,7 +14266,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DealStatus DealStatus
+        public BookingProxy.DealStatus DealStatus
         {
             get
             {
@@ -14305,7 +14305,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareSource FareSource
+        public BookingProxy.FareSource FareSource
         {
             get
             {
@@ -14331,7 +14331,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelProperty HotelProperty
+        public BookingProxy.HotelProperty HotelProperty
         {
             get
             {
@@ -14357,7 +14357,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money MinFare
+        public BookingProxy.Money MinFare
         {
             get
             {
@@ -14452,11 +14452,11 @@ namespace HotelBook
     public partial class Room : object
     {
         
-        private HotelBook.StateBag[] AdditionalInformationField;
+        private BookingProxy.StateBag[] AdditionalInformationField;
         
-        private HotelBook.AgeRestriction AgeRestrictionField;
+        private BookingProxy.AgeRestriction AgeRestrictionField;
         
-        private HotelBook.AllowedCreditCard[] AllowedCreditCardsField;
+        private BookingProxy.AllowedCreditCard[] AllowedCreditCardsField;
         
         private int BaseOccupancyField;
         
@@ -14464,7 +14464,7 @@ namespace HotelBook
         
         private bool DepositRequiredField;
         
-        private HotelBook.RoomRate DisplayRoomRateField;
+        private BookingProxy.RoomRate DisplayRoomRateField;
         
         private bool GuaranteeRequiredField;
         
@@ -14472,7 +14472,7 @@ namespace HotelBook
         
         private int GuestCountField;
         
-        private HotelBook.HotelFareSource HotelFareSourceField;
+        private BookingProxy.HotelFareSource HotelFareSourceField;
         
         private bool IsRoomWithNearByDateField;
         
@@ -14488,7 +14488,7 @@ namespace HotelBook
         
         private int[] PassengerRphsField;
         
-        private HotelBook.HotelPolicy[] PoliciesField;
+        private BookingProxy.HotelPolicy[] PoliciesField;
         
         private bool PrepaidField;
         
@@ -14504,12 +14504,12 @@ namespace HotelBook
         
         private string RoomTypeField;
         
-        private HotelBook.DateTimeSpan StayPeriodField;
+        private BookingProxy.DateTimeSpan StayPeriodField;
         
-        private HotelBook.RoomRate StdRoomRateField;
+        private BookingProxy.RoomRate StdRoomRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] AdditionalInformation
+        public BookingProxy.StateBag[] AdditionalInformation
         {
             get
             {
@@ -14522,7 +14522,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AgeRestriction AgeRestriction
+        public BookingProxy.AgeRestriction AgeRestriction
         {
             get
             {
@@ -14535,7 +14535,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AllowedCreditCard[] AllowedCreditCards
+        public BookingProxy.AllowedCreditCard[] AllowedCreditCards
         {
             get
             {
@@ -14587,7 +14587,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RoomRate DisplayRoomRate
+        public BookingProxy.RoomRate DisplayRoomRate
         {
             get
             {
@@ -14639,7 +14639,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelFareSource HotelFareSource
+        public BookingProxy.HotelFareSource HotelFareSource
         {
             get
             {
@@ -14743,7 +14743,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelPolicy[] Policies
+        public BookingProxy.HotelPolicy[] Policies
         {
             get
             {
@@ -14847,7 +14847,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan StayPeriod
+        public BookingProxy.DateTimeSpan StayPeriod
         {
             get
             {
@@ -14860,7 +14860,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RoomRate StdRoomRate
+        public BookingProxy.RoomRate StdRoomRate
         {
             get
             {
@@ -14883,7 +14883,7 @@ namespace HotelBook
         
         private string StartField;
         
-        private HotelBook.SeasonType TypeField;
+        private BookingProxy.SeasonType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string End
@@ -14912,7 +14912,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SeasonType Type
+        public BookingProxy.SeasonType Type
         {
             get
             {
@@ -15010,7 +15010,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PaystayDeal", Namespace="http://tavisca.com")]
-    public partial class PaystayDeal : HotelBook.Deal
+    public partial class PaystayDeal : BookingProxy.Deal
     {
         
         private int FreeNightsField;
@@ -15047,7 +15047,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PercentageDiscountDeal", Namespace="http://tavisca.com")]
-    public partial class PercentageDiscountDeal : HotelBook.Deal
+    public partial class PercentageDiscountDeal : BookingProxy.Deal
     {
         
         private string ApplyOnField;
@@ -15084,22 +15084,22 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OpaqueDeal", Namespace="http://tavisca.com")]
-    public partial class OpaqueDeal : HotelBook.Deal
+    public partial class OpaqueDeal : BookingProxy.Deal
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DiscountDeal", Namespace="http://tavisca.com")]
-    public partial class DiscountDeal : HotelBook.Deal
+    public partial class DiscountDeal : BookingProxy.Deal
     {
         
-        private HotelBook.Money AmountField;
+        private BookingProxy.Money AmountField;
         
         private string ApplyOnField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money Amount
+        public BookingProxy.Money Amount
         {
             get
             {
@@ -15164,12 +15164,12 @@ namespace HotelBook
     public partial class AvailabilityCalender : object
     {
         
-        private HotelBook.AvailabilityStatus AvailabilityStatusField;
+        private BookingProxy.AvailabilityStatus AvailabilityStatusField;
         
-        private HotelBook.DateRange[] TimeSpansField;
+        private BookingProxy.DateRange[] TimeSpansField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AvailabilityStatus AvailabilityStatus
+        public BookingProxy.AvailabilityStatus AvailabilityStatus
         {
             get
             {
@@ -15182,7 +15182,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateRange[] TimeSpans
+        public BookingProxy.DateRange[] TimeSpans
         {
             get
             {
@@ -15375,7 +15375,7 @@ namespace HotelBook
         
         private float RatingField;
         
-        private HotelBook.RatingType RatingTypeField;
+        private BookingProxy.RatingType RatingTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Rating
@@ -15391,7 +15391,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RatingType RatingType
+        public BookingProxy.RatingType RatingType
         {
             get
             {
@@ -15407,7 +15407,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="VacationRentalProperty", Namespace="http://tavisca.com")]
-    public partial class VacationRentalProperty : HotelBook.HotelProperty
+    public partial class VacationRentalProperty : BookingProxy.HotelProperty
     {
         
         private int BathroomsField;
@@ -15418,11 +15418,11 @@ namespace HotelBook
         
         private int MaxOccupancyField;
         
-        private HotelBook.PropertyOwner OwnerField;
+        private BookingProxy.PropertyOwner OwnerField;
         
-        private HotelBook.Area PropertyAreaField;
+        private BookingProxy.Area PropertyAreaField;
         
-        private HotelBook.SeasonalRate[] SeasonalRatesField;
+        private BookingProxy.SeasonalRate[] SeasonalRatesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Bathrooms
@@ -15477,7 +15477,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PropertyOwner Owner
+        public BookingProxy.PropertyOwner Owner
         {
             get
             {
@@ -15490,7 +15490,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Area PropertyArea
+        public BookingProxy.Area PropertyArea
         {
             get
             {
@@ -15503,7 +15503,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SeasonalRate[] SeasonalRates
+        public BookingProxy.SeasonalRate[] SeasonalRates
         {
             get
             {
@@ -15526,13 +15526,13 @@ namespace HotelBook
         
         private string DescriptionField;
         
-        private HotelBook.Distance DistanceField;
+        private BookingProxy.Distance DistanceField;
         
-        private HotelBook.GeoCode GeoCodeField;
+        private BookingProxy.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private HotelBook.Tag[] TagsField;
+        private BookingProxy.Tag[] TagsField;
         
         private string TypeField;
         
@@ -15563,7 +15563,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Distance Distance
+        public BookingProxy.Distance Distance
         {
             get
             {
@@ -15576,7 +15576,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.GeoCode GeoCode
+        public BookingProxy.GeoCode GeoCode
         {
             get
             {
@@ -15602,7 +15602,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Tag[] Tags
+        public BookingProxy.Tag[] Tags
         {
             get
             {
@@ -15631,7 +15631,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Amenity", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AmenityPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AmenityPreference))]
     public partial class Amenity : object
     {
         
@@ -15766,11 +15766,11 @@ namespace HotelBook
         
         private string DescriptionField;
         
-        private HotelBook.GeoCode GeoCodeField;
+        private BookingProxy.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private HotelBook.Tag[] TagsField;
+        private BookingProxy.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Address
@@ -15799,7 +15799,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.GeoCode GeoCode
+        public BookingProxy.GeoCode GeoCode
         {
             get
             {
@@ -15825,7 +15825,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Tag[] Tags
+        public BookingProxy.Tag[] Tags
         {
             get
             {
@@ -15846,7 +15846,7 @@ namespace HotelBook
         
         private System.DateTime BeginDateField;
         
-        private HotelBook.Day DayField;
+        private BookingProxy.Day DayField;
         
         private System.DateTime EndDateField;
         
@@ -15866,7 +15866,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Day Day
+        public BookingProxy.Day Day
         {
             get
             {
@@ -15948,20 +15948,20 @@ namespace HotelBook
     public partial class Review : object
     {
         
-        private HotelBook.HelpfulVotes HelpfulVotesField;
+        private BookingProxy.HelpfulVotes HelpfulVotesField;
         
         private decimal RatingField;
         
-        private HotelBook.ReviewRating[] RatingsField;
+        private BookingProxy.ReviewRating[] RatingsField;
         
-        private HotelBook.Reviewer ReviewerField;
+        private BookingProxy.Reviewer ReviewerField;
         
         private string TextField;
         
         private string TitleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HelpfulVotes HelpfulVotes
+        public BookingProxy.HelpfulVotes HelpfulVotes
         {
             get
             {
@@ -15987,7 +15987,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ReviewRating[] Ratings
+        public BookingProxy.ReviewRating[] Ratings
         {
             get
             {
@@ -16000,7 +16000,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Reviewer Reviewer
+        public BookingProxy.Reviewer Reviewer
         {
             get
             {
@@ -16042,13 +16042,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AmenityPreference", Namespace="http://tavisca.com")]
-    public partial class AmenityPreference : HotelBook.Amenity
+    public partial class AmenityPreference : BookingProxy.Amenity
     {
         
-        private HotelBook.PreferLevel PreferLevelField;
+        private BookingProxy.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PreferLevel PreferLevel
+        public BookingProxy.PreferLevel PreferLevel
         {
             get
             {
@@ -16201,7 +16201,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Reviewer", Namespace="http://tavisca.com")]
-    public partial class Reviewer : HotelBook.Person
+    public partial class Reviewer : BookingProxy.Person
     {
         
         private System.DateTime StayDateField;
@@ -16260,8 +16260,8 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.PropertyOwner))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.Reviewer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.PropertyOwner))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.Reviewer))]
     public partial class Person : object
     {
         
@@ -16329,7 +16329,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PropertyOwner", Namespace="http://tavisca.com")]
-    public partial class PropertyOwner : HotelBook.Person
+    public partial class PropertyOwner : BookingProxy.Person
     {
     }
     
@@ -16380,11 +16380,11 @@ namespace HotelBook
         
         private System.DateTime EndDateField;
         
-        private HotelBook.StayDuration MinimumStayField;
+        private BookingProxy.StayDuration MinimumStayField;
         
         private string PeriodNameField;
         
-        private HotelBook.Money RateField;
+        private BookingProxy.Money RateField;
         
         private string RateTypeField;
         
@@ -16415,7 +16415,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StayDuration MinimumStay
+        public BookingProxy.StayDuration MinimumStay
         {
             get
             {
@@ -16441,7 +16441,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money Rate
+        public BookingProxy.Money Rate
         {
             get
             {
@@ -16646,13 +16646,13 @@ namespace HotelBook
         
         private bool AtAirportField;
         
-        private HotelBook.HoursOfOperation[] HoursField;
+        private BookingProxy.HoursOfOperation[] HoursField;
         
         private bool InTerminalField;
         
-        private HotelBook.ShuttleInfo ShuttleInfoField;
+        private BookingProxy.ShuttleInfo ShuttleInfoField;
         
-        private HotelBook.RentalLocationType TypeField;
+        private BookingProxy.RentalLocationType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool AtAirport
@@ -16668,7 +16668,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HoursOfOperation[] Hours
+        public BookingProxy.HoursOfOperation[] Hours
         {
             get
             {
@@ -16694,7 +16694,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ShuttleInfo ShuttleInfo
+        public BookingProxy.ShuttleInfo ShuttleInfo
         {
             get
             {
@@ -16707,7 +16707,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RentalLocationType Type
+        public BookingProxy.RentalLocationType Type
         {
             get
             {
@@ -16726,16 +16726,16 @@ namespace HotelBook
     public partial class Mileage : object
     {
         
-        private HotelBook.Distance AllowedUnitsField;
+        private BookingProxy.Distance AllowedUnitsField;
         
-        private HotelBook.CarCharge[] ExtraMileageChargesField;
+        private BookingProxy.CarCharge[] ExtraMileageChargesField;
         
         private bool IsUnlimitedField;
         
-        private HotelBook.CarRateType MileageRateTypeField;
+        private BookingProxy.CarRateType MileageRateTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Distance AllowedUnits
+        public BookingProxy.Distance AllowedUnits
         {
             get
             {
@@ -16748,7 +16748,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarCharge[] ExtraMileageCharges
+        public BookingProxy.CarCharge[] ExtraMileageCharges
         {
             get
             {
@@ -16774,7 +16774,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarRateType MileageRateType
+        public BookingProxy.CarRateType MileageRateType
         {
             get
             {
@@ -16793,19 +16793,19 @@ namespace HotelBook
     public partial class Vehicle : object
     {
         
-        private HotelBook.CarAirConditioning AirConditioningField;
+        private BookingProxy.CarAirConditioning AirConditioningField;
         
         private int BaggageField;
         
-        private HotelBook.PassengerCapacity CapacityField;
+        private BookingProxy.PassengerCapacity CapacityField;
         
-        private HotelBook.CarCategory CategoryField;
+        private BookingProxy.CarCategory CategoryField;
         
-        private HotelBook.Doors DoorsField;
+        private BookingProxy.Doors DoorsField;
         
-        private HotelBook.CarDrive DriveField;
+        private BookingProxy.CarDrive DriveField;
         
-        private HotelBook.CarFuel FuelField;
+        private BookingProxy.CarFuel FuelField;
         
         private string ImageField;
         
@@ -16813,14 +16813,14 @@ namespace HotelBook
         
         private string SippCodeField;
         
-        private HotelBook.StateBag[] SupplierSideDataField;
+        private BookingProxy.StateBag[] SupplierSideDataField;
         
-        private HotelBook.CarTransmission TransmissionField;
+        private BookingProxy.CarTransmission TransmissionField;
         
-        private HotelBook.CarType TypeField;
+        private BookingProxy.CarType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarAirConditioning AirConditioning
+        public BookingProxy.CarAirConditioning AirConditioning
         {
             get
             {
@@ -16846,7 +16846,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerCapacity Capacity
+        public BookingProxy.PassengerCapacity Capacity
         {
             get
             {
@@ -16859,7 +16859,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarCategory Category
+        public BookingProxy.CarCategory Category
         {
             get
             {
@@ -16872,7 +16872,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Doors Doors
+        public BookingProxy.Doors Doors
         {
             get
             {
@@ -16885,7 +16885,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarDrive Drive
+        public BookingProxy.CarDrive Drive
         {
             get
             {
@@ -16898,7 +16898,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarFuel Fuel
+        public BookingProxy.CarFuel Fuel
         {
             get
             {
@@ -16950,7 +16950,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] SupplierSideData
+        public BookingProxy.StateBag[] SupplierSideData
         {
             get
             {
@@ -16963,7 +16963,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarTransmission Transmission
+        public BookingProxy.CarTransmission Transmission
         {
             get
             {
@@ -16976,7 +16976,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarType Type
+        public BookingProxy.CarType Type
         {
             get
             {
@@ -16995,14 +16995,14 @@ namespace HotelBook
     public partial class HoursOfOperation : object
     {
         
-        private HotelBook.WeekDay DayOfWeekField;
+        private BookingProxy.WeekDay DayOfWeekField;
         
         private string EndTimeField;
         
         private string StartTimeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.WeekDay DayOfWeek
+        public BookingProxy.WeekDay DayOfWeek
         {
             get
             {
@@ -17416,7 +17416,7 @@ namespace HotelBook
     public partial class ActivityCategory : object
     {
         
-        private HotelBook.ActivityCategoryType CategoryTypeField;
+        private BookingProxy.ActivityCategoryType CategoryTypeField;
         
         private string IdField;
         
@@ -17425,7 +17425,7 @@ namespace HotelBook
         private string SupplierCategoryIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityCategoryType CategoryType
+        public BookingProxy.ActivityCategoryType CategoryType
         {
             get
             {
@@ -17483,7 +17483,7 @@ namespace HotelBook
     public partial class ActivityOption : object
     {
         
-        private HotelBook.Date[] AvailableOnField;
+        private BookingProxy.Date[] AvailableOnField;
         
         private string DescriptionField;
         
@@ -17493,12 +17493,12 @@ namespace HotelBook
         
         private string NameField;
         
-        private HotelBook.ActivityPassengerFare[] PassengerFaresField;
+        private BookingProxy.ActivityPassengerFare[] PassengerFaresField;
         
-        private HotelBook.Date SelectedDateTimeField;
+        private BookingProxy.Date SelectedDateTimeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Date[] AvailableOn
+        public BookingProxy.Date[] AvailableOn
         {
             get
             {
@@ -17563,7 +17563,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityPassengerFare[] PassengerFares
+        public BookingProxy.ActivityPassengerFare[] PassengerFares
         {
             get
             {
@@ -17576,7 +17576,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Date SelectedDateTime
+        public BookingProxy.Date SelectedDateTime
         {
             get
             {
@@ -18028,19 +18028,19 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class GenericSearchCriterion : HotelBook.TripSearchCriterion
+    public partial class GenericSearchCriterion : BookingProxy.TripSearchCriterion
     {
         
-        private HotelBook.DateTimeSpan DurationField;
+        private BookingProxy.DateTimeSpan DurationField;
         
-        private HotelBook.TravellerInfo[] GuestsField;
+        private BookingProxy.TravellerInfo[] GuestsField;
         
-        private HotelBook.Location LocationField;
+        private BookingProxy.Location LocationField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan Duration
+        public BookingProxy.DateTimeSpan Duration
         {
             get
             {
@@ -18053,7 +18053,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TravellerInfo[] Guests
+        public BookingProxy.TravellerInfo[] Guests
         {
             get
             {
@@ -18066,7 +18066,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location Location
+        public BookingProxy.Location Location
         {
             get
             {
@@ -18095,26 +18095,26 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripSearchCriterion", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelSearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirSearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarSearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivitySearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.GenericSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivitySearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.GenericSearchCriterion))]
     public partial class TripSearchCriterion : object
     {
         
-        private HotelBook.StateBag[] AttributesField;
+        private BookingProxy.StateBag[] AttributesField;
         
         private bool MatrixResultsField;
         
         private int MaximumResultsField;
         
-        private HotelBook.PointOfSale PosField;
+        private BookingProxy.PointOfSale PosField;
         
         private string PriceCurrencyCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] Attributes
+        public BookingProxy.StateBag[] Attributes
         {
             get
             {
@@ -18153,7 +18153,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PointOfSale Pos
+        public BookingProxy.PointOfSale Pos
         {
             get
             {
@@ -18182,39 +18182,39 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class HotelSearchCriterion : HotelBook.TripSearchCriterion
+    public partial class HotelSearchCriterion : BookingProxy.TripSearchCriterion
     {
         
-        private HotelBook.PassengerTypeQuantity[] GuestsField;
+        private BookingProxy.PassengerTypeQuantity[] GuestsField;
         
         private bool IsReturnRoomsField;
         
-        private HotelBook.Location LocationField;
+        private BookingProxy.Location LocationField;
         
         private string NoOfBedRoomsField;
         
         private int NoOfRoomsField;
         
-        private HotelBook.HotelSearchProcessingInfo ProcessingInfoField;
+        private BookingProxy.HotelSearchProcessingInfo ProcessingInfoField;
         
-        private HotelBook.HotelProperty[] PropertiesToSearchField;
+        private BookingProxy.HotelProperty[] PropertiesToSearchField;
         
-        private HotelBook.RoomOccupancyType[] RoomOccupancyTypesField;
+        private BookingProxy.RoomOccupancyType[] RoomOccupancyTypesField;
         
         private string SearchBehaviorField;
         
         private string[] SearchCategoriesField;
         
-        private HotelBook.HotelSearchType SearchTypeField;
+        private BookingProxy.HotelSearchType SearchTypeField;
         
-        private HotelBook.DateTimeSpan StayPeriodField;
+        private BookingProxy.DateTimeSpan StayPeriodField;
         
-        private HotelBook.Tag[] TagsField;
+        private BookingProxy.Tag[] TagsField;
         
-        private HotelBook.HotelSearchPreference TravelPreferenceField;
+        private BookingProxy.HotelSearchPreference TravelPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerTypeQuantity[] Guests
+        public BookingProxy.PassengerTypeQuantity[] Guests
         {
             get
             {
@@ -18240,7 +18240,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location Location
+        public BookingProxy.Location Location
         {
             get
             {
@@ -18279,7 +18279,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelSearchProcessingInfo ProcessingInfo
+        public BookingProxy.HotelSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18292,7 +18292,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelProperty[] PropertiesToSearch
+        public BookingProxy.HotelProperty[] PropertiesToSearch
         {
             get
             {
@@ -18305,7 +18305,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RoomOccupancyType[] RoomOccupancyTypes
+        public BookingProxy.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -18344,7 +18344,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelSearchType SearchType
+        public BookingProxy.HotelSearchType SearchType
         {
             get
             {
@@ -18357,7 +18357,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan StayPeriod
+        public BookingProxy.DateTimeSpan StayPeriod
         {
             get
             {
@@ -18370,7 +18370,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Tag[] Tags
+        public BookingProxy.Tag[] Tags
         {
             get
             {
@@ -18383,7 +18383,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelSearchPreference TravelPreference
+        public BookingProxy.HotelSearchPreference TravelPreference
         {
             get
             {
@@ -18399,19 +18399,19 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class AirSearchCriterion : HotelBook.TripSearchCriterion
+    public partial class AirSearchCriterion : BookingProxy.TripSearchCriterion
     {
         
-        private HotelBook.PassengerTypeQuantity[] PassengerInfoSummaryField;
+        private BookingProxy.PassengerTypeQuantity[] PassengerInfoSummaryField;
         
-        private HotelBook.AirSearchProcessingInfo ProcessingInfoField;
+        private BookingProxy.AirSearchProcessingInfo ProcessingInfoField;
         
-        private HotelBook.OriginDestinationInformation[] SearchSegmentsField;
+        private BookingProxy.OriginDestinationInformation[] SearchSegmentsField;
         
-        private HotelBook.AirSearchPreference TravelPreferenceField;
+        private BookingProxy.AirSearchPreference TravelPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerTypeQuantity[] PassengerInfoSummary
+        public BookingProxy.PassengerTypeQuantity[] PassengerInfoSummary
         {
             get
             {
@@ -18424,7 +18424,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirSearchProcessingInfo ProcessingInfo
+        public BookingProxy.AirSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18437,7 +18437,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.OriginDestinationInformation[] SearchSegments
+        public BookingProxy.OriginDestinationInformation[] SearchSegments
         {
             get
             {
@@ -18450,7 +18450,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirSearchPreference TravelPreference
+        public BookingProxy.AirSearchPreference TravelPreference
         {
             get
             {
@@ -18466,23 +18466,23 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class CarSearchCriterion : HotelBook.TripSearchCriterion
+    public partial class CarSearchCriterion : BookingProxy.TripSearchCriterion
     {
         
-        private HotelBook.CarSearchPreference CarPreferenceField;
+        private BookingProxy.CarSearchPreference CarPreferenceField;
         
-        private HotelBook.CarDiscountCode[] DiscountCodesField;
+        private BookingProxy.CarDiscountCode[] DiscountCodesField;
         
-        private HotelBook.Location DropOffLocationField;
+        private BookingProxy.Location DropOffLocationField;
         
-        private HotelBook.Location PickupLocationField;
+        private BookingProxy.Location PickupLocationField;
         
-        private HotelBook.CarSearchProcessingInfo ProcessingInfoField;
+        private BookingProxy.CarSearchProcessingInfo ProcessingInfoField;
         
-        private HotelBook.DateTimeSpan RentalPeriodField;
+        private BookingProxy.DateTimeSpan RentalPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarSearchPreference CarPreference
+        public BookingProxy.CarSearchPreference CarPreference
         {
             get
             {
@@ -18495,7 +18495,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarDiscountCode[] DiscountCodes
+        public BookingProxy.CarDiscountCode[] DiscountCodes
         {
             get
             {
@@ -18508,7 +18508,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location DropOffLocation
+        public BookingProxy.Location DropOffLocation
         {
             get
             {
@@ -18521,7 +18521,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location PickupLocation
+        public BookingProxy.Location PickupLocation
         {
             get
             {
@@ -18534,7 +18534,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarSearchProcessingInfo ProcessingInfo
+        public BookingProxy.CarSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18547,7 +18547,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan RentalPeriod
+        public BookingProxy.DateTimeSpan RentalPeriod
         {
             get
             {
@@ -18563,17 +18563,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivitySearchCriterion", Namespace="http://tavisca.com")]
-    public partial class ActivitySearchCriterion : HotelBook.TripSearchCriterion
+    public partial class ActivitySearchCriterion : BookingProxy.TripSearchCriterion
     {
         
-        private HotelBook.Location DestinationField;
+        private BookingProxy.Location DestinationField;
         
-        private HotelBook.DateTimeSpan DurationField;
+        private BookingProxy.DateTimeSpan DurationField;
         
-        private HotelBook.ActivitySearchProcessingInfo ProcessingInfoField;
+        private BookingProxy.ActivitySearchProcessingInfo ProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location Destination
+        public BookingProxy.Location Destination
         {
             get
             {
@@ -18586,7 +18586,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan Duration
+        public BookingProxy.DateTimeSpan Duration
         {
             get
             {
@@ -18599,7 +18599,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivitySearchProcessingInfo ProcessingInfo
+        public BookingProxy.ActivitySearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18620,7 +18620,7 @@ namespace HotelBook
         
         private int AgeField;
         
-        private HotelBook.PurchaseType TypeField;
+        private BookingProxy.PurchaseType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Age
@@ -18636,7 +18636,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PurchaseType Type
+        public BookingProxy.PurchaseType Type
         {
             get
             {
@@ -18655,22 +18655,22 @@ namespace HotelBook
     public partial class HotelSearchProcessingInfo : object
     {
         
-        private HotelBook.HotelDisplayOrder DisplayOrderField;
+        private BookingProxy.HotelDisplayOrder DisplayOrderField;
         
-        private HotelBook.HotelFareSource[] FareSourcesField;
+        private BookingProxy.HotelFareSource[] FareSourcesField;
         
-        private HotelBook.FareType[] FareTypesField;
+        private BookingProxy.FareType[] FareTypesField;
         
-        private HotelBook.HotelContentPreference[] HotelContentPreferencesField;
+        private BookingProxy.HotelContentPreference[] HotelContentPreferencesField;
         
-        private HotelBook.HotelSearchNearByDates HotelSearchNearByDatesField;
+        private BookingProxy.HotelSearchNearByDates HotelSearchNearByDatesField;
         
-        private HotelBook.GeoCode POIGeoCodeField;
+        private BookingProxy.GeoCode POIGeoCodeField;
         
-        private HotelBook.PreferenceSortInfo[] PreferenceSortInfoListField;
+        private BookingProxy.PreferenceSortInfo[] PreferenceSortInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelDisplayOrder DisplayOrder
+        public BookingProxy.HotelDisplayOrder DisplayOrder
         {
             get
             {
@@ -18683,7 +18683,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelFareSource[] FareSources
+        public BookingProxy.HotelFareSource[] FareSources
         {
             get
             {
@@ -18696,7 +18696,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareType[] FareTypes
+        public BookingProxy.FareType[] FareTypes
         {
             get
             {
@@ -18709,7 +18709,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelContentPreference[] HotelContentPreferences
+        public BookingProxy.HotelContentPreference[] HotelContentPreferences
         {
             get
             {
@@ -18722,7 +18722,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelSearchNearByDates HotelSearchNearByDates
+        public BookingProxy.HotelSearchNearByDates HotelSearchNearByDates
         {
             get
             {
@@ -18735,7 +18735,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.GeoCode POIGeoCode
+        public BookingProxy.GeoCode POIGeoCode
         {
             get
             {
@@ -18748,7 +18748,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PreferenceSortInfo[] PreferenceSortInfoList
+        public BookingProxy.PreferenceSortInfo[] PreferenceSortInfoList
         {
             get
             {
@@ -18764,41 +18764,41 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchPreference", Namespace="http://tavisca.com")]
-    public partial class HotelSearchPreference : HotelBook.TravelPreference
+    public partial class HotelSearchPreference : BookingProxy.TravelPreference
     {
         
-        private HotelBook.AmenityPreference[] AmenitiesField;
+        private BookingProxy.AmenityPreference[] AmenitiesField;
         
         private string[] CityNamePreferenceListField;
         
-        private HotelBook.FareType[] FareTypeListField;
+        private BookingProxy.FareType[] FareTypeListField;
         
-        private HotelBook.CompanyPreference[] HotelChainsField;
+        private BookingProxy.CompanyPreference[] HotelChainsField;
         
-        private HotelBook.HotelNamePreference HotelNamePreferenceField;
+        private BookingProxy.HotelNamePreference HotelNamePreferenceField;
         
         private string[] ItineraryRphListToFilterField;
         
-        private HotelBook.Distance MaxDistanceField;
+        private BookingProxy.Distance MaxDistanceField;
         
         private int MaxNumberOfBedRoomsField;
         
         private int MaxOccupancyField;
         
-        private HotelBook.Distance MinDistanceField;
+        private BookingProxy.Distance MinDistanceField;
         
         private int MinNumberOfBedRoomsField;
         
         private int MinOccupancyField;
         
-        private HotelBook.HotelPaymentType[] PaymentTypesField;
+        private BookingProxy.HotelPaymentType[] PaymentTypesField;
         
-        private HotelBook.RateRangePreference RateRangePreferenceField;
+        private BookingProxy.RateRangePreference RateRangePreferenceField;
         
-        private HotelBook.HotelRating[] RatingListField;
+        private BookingProxy.HotelRating[] RatingListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AmenityPreference[] Amenities
+        public BookingProxy.AmenityPreference[] Amenities
         {
             get
             {
@@ -18824,7 +18824,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareType[] FareTypeList
+        public BookingProxy.FareType[] FareTypeList
         {
             get
             {
@@ -18837,7 +18837,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CompanyPreference[] HotelChains
+        public BookingProxy.CompanyPreference[] HotelChains
         {
             get
             {
@@ -18850,7 +18850,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelNamePreference HotelNamePreference
+        public BookingProxy.HotelNamePreference HotelNamePreference
         {
             get
             {
@@ -18876,7 +18876,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Distance MaxDistance
+        public BookingProxy.Distance MaxDistance
         {
             get
             {
@@ -18915,7 +18915,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Distance MinDistance
+        public BookingProxy.Distance MinDistance
         {
             get
             {
@@ -18954,7 +18954,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelPaymentType[] PaymentTypes
+        public BookingProxy.HotelPaymentType[] PaymentTypes
         {
             get
             {
@@ -18967,7 +18967,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RateRangePreference RateRangePreference
+        public BookingProxy.RateRangePreference RateRangePreference
         {
             get
             {
@@ -18980,7 +18980,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelRating[] RatingList
+        public BookingProxy.HotelRating[] RatingList
         {
             get
             {
@@ -19001,7 +19001,7 @@ namespace HotelBook
         
         private string OccupancyCodeField;
         
-        private HotelBook.PassengerTypeQuantity[] PaxQuantitiesField;
+        private BookingProxy.PassengerTypeQuantity[] PaxQuantitiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string OccupancyCode
@@ -19017,7 +19017,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PassengerTypeQuantity[] PaxQuantities
+        public BookingProxy.PassengerTypeQuantity[] PaxQuantities
         {
             get
             {
@@ -19205,14 +19205,14 @@ namespace HotelBook
     public partial class PreferenceSortInfo : object
     {
         
-        private HotelBook.FareType FareTypeField;
+        private BookingProxy.FareType FareTypeField;
         
         private bool FareTypeSpecifiedField;
         
         private string VendorCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareType FareType
+        public BookingProxy.FareType FareType
         {
             get
             {
@@ -19254,15 +19254,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TravelPreference", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirSearchPreference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarSearchPreference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelSearchPreference))]
     public partial class TravelPreference : object
     {
         
         private string SpecialRequestField;
         
-        private HotelBook.CompanyPreference[] VendorPreferencesField;
+        private BookingProxy.CompanyPreference[] VendorPreferencesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string SpecialRequest
@@ -19278,7 +19278,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CompanyPreference[] VendorPreferences
+        public BookingProxy.CompanyPreference[] VendorPreferences
         {
             get
             {
@@ -19294,18 +19294,18 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirSearchPreference", Namespace="http://tavisca.com")]
-    public partial class AirSearchPreference : HotelBook.TravelPreference
+    public partial class AirSearchPreference : BookingProxy.TravelPreference
     {
         
         private bool AllowMixedAirlinesField;
         
-        private HotelBook.DateTimeSpan ArrivalTimeRangeField;
+        private BookingProxy.DateTimeSpan ArrivalTimeRangeField;
         
-        private HotelBook.CabinClass[] CabinClassesPreferredField;
+        private BookingProxy.CabinClass[] CabinClassesPreferredField;
         
-        private HotelBook.Location ConnectionCityField;
+        private BookingProxy.Location ConnectionCityField;
         
-        private HotelBook.DateTimeSpan DepartureTimeRangeField;
+        private BookingProxy.DateTimeSpan DepartureTimeRangeField;
         
         private bool DirectConnectField;
         
@@ -19313,7 +19313,7 @@ namespace HotelBook
         
         private bool ETicketOnlyField;
         
-        private HotelBook.FareType[] FareTypeListField;
+        private BookingProxy.FareType[] FareTypeListField;
         
         private string[] ItineraryRphListToFilterField;
         
@@ -19325,15 +19325,15 @@ namespace HotelBook
         
         private bool MaxStopsQuantitySpecifiedField;
         
-        private HotelBook.MealType MealPreferenceField;
+        private BookingProxy.MealType MealPreferenceField;
         
         private int[] NoOfStopsListField;
         
-        private HotelBook.RateRangePreference RateRangePreferenceField;
+        private BookingProxy.RateRangePreference RateRangePreferenceField;
         
         private bool RefundableFareOnlyField;
         
-        private HotelBook.SeatType SeatingPreferenceField;
+        private BookingProxy.SeatType SeatingPreferenceField;
         
         private bool UnRestrictedFareField;
         
@@ -19351,7 +19351,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan ArrivalTimeRange
+        public BookingProxy.DateTimeSpan ArrivalTimeRange
         {
             get
             {
@@ -19364,7 +19364,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CabinClass[] CabinClassesPreferred
+        public BookingProxy.CabinClass[] CabinClassesPreferred
         {
             get
             {
@@ -19377,7 +19377,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location ConnectionCity
+        public BookingProxy.Location ConnectionCity
         {
             get
             {
@@ -19390,7 +19390,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.DateTimeSpan DepartureTimeRange
+        public BookingProxy.DateTimeSpan DepartureTimeRange
         {
             get
             {
@@ -19442,7 +19442,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareType[] FareTypeList
+        public BookingProxy.FareType[] FareTypeList
         {
             get
             {
@@ -19520,7 +19520,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.MealType MealPreference
+        public BookingProxy.MealType MealPreference
         {
             get
             {
@@ -19546,7 +19546,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RateRangePreference RateRangePreference
+        public BookingProxy.RateRangePreference RateRangePreference
         {
             get
             {
@@ -19572,7 +19572,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SeatType SeatingPreference
+        public BookingProxy.SeatType SeatingPreference
         {
             get
             {
@@ -19601,25 +19601,25 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchPreference", Namespace="http://tavisca.com")]
-    public partial class CarSearchPreference : HotelBook.TravelPreference
+    public partial class CarSearchPreference : BookingProxy.TravelPreference
     {
         
-        private HotelBook.CarAirConditioning ACPreferenceField;
+        private BookingProxy.CarAirConditioning ACPreferenceField;
         
-        private HotelBook.CarCategory[] CarClassListField;
+        private BookingProxy.CarCategory[] CarClassListField;
         
-        private HotelBook.CarType[] CarTypeListField;
+        private BookingProxy.CarType[] CarTypeListField;
         
-        private HotelBook.FareType[] FareTypeListField;
+        private BookingProxy.FareType[] FareTypeListField;
         
-        private HotelBook.RateRangePreference RateRangePreferenceField;
+        private BookingProxy.RateRangePreference RateRangePreferenceField;
         
         private string SippCodeField;
         
-        private HotelBook.CarTransmission TransmissionField;
+        private BookingProxy.CarTransmission TransmissionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarAirConditioning ACPreference
+        public BookingProxy.CarAirConditioning ACPreference
         {
             get
             {
@@ -19632,7 +19632,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarCategory[] CarClassList
+        public BookingProxy.CarCategory[] CarClassList
         {
             get
             {
@@ -19645,7 +19645,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarType[] CarTypeList
+        public BookingProxy.CarType[] CarTypeList
         {
             get
             {
@@ -19658,7 +19658,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareType[] FareTypeList
+        public BookingProxy.FareType[] FareTypeList
         {
             get
             {
@@ -19671,7 +19671,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RateRangePreference RateRangePreference
+        public BookingProxy.RateRangePreference RateRangePreference
         {
             get
             {
@@ -19697,7 +19697,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarTransmission Transmission
+        public BookingProxy.CarTransmission Transmission
         {
             get
             {
@@ -19718,7 +19718,7 @@ namespace HotelBook
         
         private string NameField;
         
-        private HotelBook.PreferLevel PreferLevelField;
+        private BookingProxy.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Name
@@ -19734,7 +19734,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PreferLevel PreferLevel
+        public BookingProxy.PreferLevel PreferLevel
         {
             get
             {
@@ -19753,14 +19753,14 @@ namespace HotelBook
     public partial class RateRangePreference : object
     {
         
-        private HotelBook.Money MaxRateField;
+        private BookingProxy.Money MaxRateField;
         
-        private HotelBook.Money MinRateField;
+        private BookingProxy.Money MinRateField;
         
-        private HotelBook.PreferLevel PreferLevelField;
+        private BookingProxy.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money MaxRate
+        public BookingProxy.Money MaxRate
         {
             get
             {
@@ -19773,7 +19773,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Money MinRate
+        public BookingProxy.Money MinRate
         {
             get
             {
@@ -19786,7 +19786,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PreferLevel PreferLevel
+        public BookingProxy.PreferLevel PreferLevel
         {
             get
             {
@@ -19849,15 +19849,15 @@ namespace HotelBook
         
         private bool CompressResultsField;
         
-        private HotelBook.AirDisplayOrder DisplayOrderField;
+        private BookingProxy.AirDisplayOrder DisplayOrderField;
         
-        private HotelBook.AirFareSource[] FareSourcesField;
+        private BookingProxy.AirFareSource[] FareSourcesField;
         
-        private HotelBook.FareType[] FareTypesField;
+        private BookingProxy.FareType[] FareTypesField;
         
-        private HotelBook.AirItineraryType ItineraryTypeField;
+        private BookingProxy.AirItineraryType ItineraryTypeField;
         
-        private HotelBook.PreferenceSortInfo[] PreferenceSortInfoListField;
+        private BookingProxy.PreferenceSortInfo[] PreferenceSortInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool CompressResults
@@ -19873,7 +19873,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirDisplayOrder DisplayOrder
+        public BookingProxy.AirDisplayOrder DisplayOrder
         {
             get
             {
@@ -19886,7 +19886,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirFareSource[] FareSources
+        public BookingProxy.AirFareSource[] FareSources
         {
             get
             {
@@ -19899,7 +19899,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareType[] FareTypes
+        public BookingProxy.FareType[] FareTypes
         {
             get
             {
@@ -19912,7 +19912,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirItineraryType ItineraryType
+        public BookingProxy.AirItineraryType ItineraryType
         {
             get
             {
@@ -19925,7 +19925,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PreferenceSortInfo[] PreferenceSortInfoList
+        public BookingProxy.PreferenceSortInfo[] PreferenceSortInfoList
         {
             get
             {
@@ -19944,26 +19944,26 @@ namespace HotelBook
     public partial class OriginDestinationInformation : object
     {
         
-        private HotelBook.TravelDateTime DepartureDateTimeField;
+        private BookingProxy.TravelDateTime DepartureDateTimeField;
         
-        private HotelBook.AlternateAirportInfo DestAltArptsInfoField;
+        private BookingProxy.AlternateAirportInfo DestAltArptsInfoField;
         
-        private HotelBook.Location DestinationLocationField;
+        private BookingProxy.Location DestinationLocationField;
         
-        private HotelBook.Location[] ExcludeConnectionCityField;
+        private BookingProxy.Location[] ExcludeConnectionCityField;
         
         private string[] ExcludeServiceClassField;
         
-        private HotelBook.Location[] IncludeConnectionCityField;
+        private BookingProxy.Location[] IncludeConnectionCityField;
         
         private string[] IncludeServiceClassField;
         
-        private HotelBook.AlternateAirportInfo OriginAltArptsInfoField;
+        private BookingProxy.AlternateAirportInfo OriginAltArptsInfoField;
         
-        private HotelBook.Location OriginLocationField;
+        private BookingProxy.Location OriginLocationField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TravelDateTime DepartureDateTime
+        public BookingProxy.TravelDateTime DepartureDateTime
         {
             get
             {
@@ -19976,7 +19976,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AlternateAirportInfo DestAltArptsInfo
+        public BookingProxy.AlternateAirportInfo DestAltArptsInfo
         {
             get
             {
@@ -19989,7 +19989,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location DestinationLocation
+        public BookingProxy.Location DestinationLocation
         {
             get
             {
@@ -20002,7 +20002,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location[] ExcludeConnectionCity
+        public BookingProxy.Location[] ExcludeConnectionCity
         {
             get
             {
@@ -20028,7 +20028,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location[] IncludeConnectionCity
+        public BookingProxy.Location[] IncludeConnectionCity
         {
             get
             {
@@ -20054,7 +20054,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AlternateAirportInfo OriginAltArptsInfo
+        public BookingProxy.AlternateAirportInfo OriginAltArptsInfo
         {
             get
             {
@@ -20067,7 +20067,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Location OriginLocation
+        public BookingProxy.Location OriginLocation
         {
             get
             {
@@ -20201,7 +20201,7 @@ namespace HotelBook
         
         private bool EnabledField;
         
-        private HotelBook.Distance RadiusField;
+        private BookingProxy.Distance RadiusField;
         
         private bool RadiusSpecifiedField;
         
@@ -20245,7 +20245,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Distance Radius
+        public BookingProxy.Distance Radius
         {
             get
             {
@@ -20277,14 +20277,14 @@ namespace HotelBook
     public partial class CarSearchProcessingInfo : object
     {
         
-        private HotelBook.CarDisplayOrder CarDisplayOrderField;
+        private BookingProxy.CarDisplayOrder CarDisplayOrderField;
         
-        private HotelBook.CarFareSource[] CarFareSourcesField;
+        private BookingProxy.CarFareSource[] CarFareSourcesField;
         
-        private HotelBook.FareType[] CarFareTypesField;
+        private BookingProxy.FareType[] CarFareTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarDisplayOrder CarDisplayOrder
+        public BookingProxy.CarDisplayOrder CarDisplayOrder
         {
             get
             {
@@ -20297,7 +20297,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarFareSource[] CarFareSources
+        public BookingProxy.CarFareSource[] CarFareSources
         {
             get
             {
@@ -20310,7 +20310,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FareType[] CarFareTypes
+        public BookingProxy.FareType[] CarFareTypes
         {
             get
             {
@@ -20359,14 +20359,14 @@ namespace HotelBook
     public partial class ActivitySearchProcessingInfo : object
     {
         
-        private HotelBook.ActivityDisplayOrder DisplayOrderField;
+        private BookingProxy.ActivityDisplayOrder DisplayOrderField;
         
         private bool IncludeActivityPhotosField;
         
         private bool IncludeActivityReviewsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityDisplayOrder DisplayOrder
+        public BookingProxy.ActivityDisplayOrder DisplayOrder
         {
             get
             {
@@ -20453,7 +20453,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripRemark", Namespace="http://tavisca.com")]
-    public partial class TripRemark : HotelBook.Remark
+    public partial class TripRemark : BookingProxy.Remark
     {
         
         private string AddedByField;
@@ -20490,10 +20490,10 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PNRRemark", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.GeneralRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.OSIRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.SpecializedRemark))]
-    public partial class PNRRemark : HotelBook.Remark
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.GeneralRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.OSIRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.SpecializedRemark))]
+    public partial class PNRRemark : BookingProxy.Remark
     {
         
         private int LineNumberField;
@@ -20545,14 +20545,14 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GeneralRemark", Namespace="http://tavisca.com")]
-    public partial class GeneralRemark : HotelBook.PNRRemark
+    public partial class GeneralRemark : BookingProxy.PNRRemark
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OSIRemark", Namespace="http://tavisca.com")]
-    public partial class OSIRemark : HotelBook.PNRRemark
+    public partial class OSIRemark : BookingProxy.PNRRemark
     {
         
         private string AirlineCodeField;
@@ -20574,7 +20574,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SpecializedRemark", Namespace="http://tavisca.com")]
-    public partial class SpecializedRemark : HotelBook.PNRRemark
+    public partial class SpecializedRemark : BookingProxy.PNRRemark
     {
         
         private string AlphabetField;
@@ -20705,7 +20705,7 @@ namespace HotelBook
     public partial class SecureAuthenticationRequest : object
     {
         
-        private HotelBook.StateBag[] AdditionalInfoField;
+        private BookingProxy.StateBag[] AdditionalInfoField;
         
         private string MDField;
         
@@ -20714,7 +20714,7 @@ namespace HotelBook
         private int PaymentRphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] AdditionalInfo
+        public BookingProxy.StateBag[] AdditionalInfo
         {
             get
             {
@@ -20772,12 +20772,12 @@ namespace HotelBook
     public partial class TripRetrieveCriterion : object
     {
         
-        private HotelBook.AggregateMatchPreference AggregateMatchPreferenceField;
+        private BookingProxy.AggregateMatchPreference AggregateMatchPreferenceField;
         
-        private HotelBook.SingleMatchPreference SingleMatchPreferenceField;
+        private BookingProxy.SingleMatchPreference SingleMatchPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AggregateMatchPreference AggregateMatchPreference
+        public BookingProxy.AggregateMatchPreference AggregateMatchPreference
         {
             get
             {
@@ -20790,7 +20790,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SingleMatchPreference SingleMatchPreference
+        public BookingProxy.SingleMatchPreference SingleMatchPreference
         {
             get
             {
@@ -20813,9 +20813,9 @@ namespace HotelBook
         
         private System.DateTime BeforeDateField;
         
-        private HotelBook.CompareDate CompareAfterDateField;
+        private BookingProxy.CompareDate CompareAfterDateField;
         
-        private HotelBook.CompareDate CompareBeforeDateField;
+        private BookingProxy.CompareDate CompareBeforeDateField;
         
         private string DealerIdField;
         
@@ -20837,7 +20837,7 @@ namespace HotelBook
         
         private long PassengerIDField;
         
-        private HotelBook.TripStatus StatusField;
+        private BookingProxy.TripStatus StatusField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime AfterDate
@@ -20866,7 +20866,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CompareDate CompareAfterDate
+        public BookingProxy.CompareDate CompareAfterDate
         {
             get
             {
@@ -20879,7 +20879,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CompareDate CompareBeforeDate
+        public BookingProxy.CompareDate CompareBeforeDate
         {
             get
             {
@@ -21022,7 +21022,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripStatus Status
+        public BookingProxy.TripStatus Status
         {
             get
             {
@@ -21130,21 +21130,21 @@ namespace HotelBook
         
         private bool IsStatusPresentField;
         
-        private HotelBook.OrderSortedTripFoldersBy OrderSortedTripFoldersByField;
+        private BookingProxy.OrderSortedTripFoldersBy OrderSortedTripFoldersByField;
         
         private string OwnerNameField;
         
         private long PackageCodeField;
         
-        private HotelBook.PagingDetail PagingDetailsField;
+        private BookingProxy.PagingDetail PagingDetailsField;
         
         private string PassengerFirstNameField;
         
         private string PassengerLastNameField;
         
-        private HotelBook.ProductType ProductTypeField;
+        private BookingProxy.ProductType ProductTypeField;
         
-        private HotelBook.SortTripFolderBy SortTripFolderByField;
+        private BookingProxy.SortTripFolderBy SortTripFolderByField;
         
         private string SupplierConfirmationNumberField;
         
@@ -21154,7 +21154,7 @@ namespace HotelBook
         
         private System.DateTime TripStartDateField;
         
-        private HotelBook.TripStatus[] TripStatusesField;
+        private BookingProxy.TripStatus[] TripStatusesField;
         
         private string VendorConfirmationNumberField;
         
@@ -21224,7 +21224,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.OrderSortedTripFoldersBy OrderSortedTripFoldersBy
+        public BookingProxy.OrderSortedTripFoldersBy OrderSortedTripFoldersBy
         {
             get
             {
@@ -21263,7 +21263,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PagingDetail PagingDetails
+        public BookingProxy.PagingDetail PagingDetails
         {
             get
             {
@@ -21302,7 +21302,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ProductType ProductType
+        public BookingProxy.ProductType ProductType
         {
             get
             {
@@ -21315,7 +21315,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SortTripFolderBy SortTripFolderBy
+        public BookingProxy.SortTripFolderBy SortTripFolderBy
         {
             get
             {
@@ -21380,7 +21380,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripStatus[] TripStatuses
+        public BookingProxy.TripStatus[] TripStatuses
         {
             get
             {
@@ -21535,9 +21535,9 @@ namespace HotelBook
         
         private string AirlineCodeField;
         
-        private HotelBook.StateBag[] AttributesField;
+        private BookingProxy.StateBag[] AttributesField;
         
-        private HotelBook.CabinClass CabinClassField;
+        private BookingProxy.CabinClass CabinClassField;
         
         private string ClassOfServiceField;
         
@@ -21565,7 +21565,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.StateBag[] Attributes
+        public BookingProxy.StateBag[] Attributes
         {
             get
             {
@@ -21578,7 +21578,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CabinClass CabinClass
+        public BookingProxy.CabinClass CabinClass
         {
             get
             {
@@ -21925,40 +21925,40 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRS", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripProductCancellationDetailsRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderBookRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CompleteBookingRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderRetrieveRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderRetrieveRSWithPaging))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderSaveRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripProductPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderDeleteRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderCancelRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.SeatMapQueryRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirLowFareSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirFullScheduleSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirFareRulesRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.AirPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelRoomAvailRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelRoomPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.HotelItinerarySearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.CarRateDetailRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivitySearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ActivityDetailsRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.ReviewPendingRetrieveRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.SaveReviewStatusRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderAssignSeatRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripProductCancellationDetailsRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderBookRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CompleteBookingRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderRetrieveRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderRetrieveRSWithPaging))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderSaveRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripProductPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderDeleteRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderCancelRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.SeatMapQueryRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirLowFareSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirFullScheduleSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirFareRulesRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.AirPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelRoomAvailRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelRoomPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.HotelItinerarySearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.CarRateDetailRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivitySearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ActivityDetailsRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.ReviewPendingRetrieveRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.SaveReviewStatusRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderAssignSeatRS))]
     public partial class WebServiceRS : object
     {
         
         private string CallIdField;
         
-        private HotelBook.ResponseType ResponseRecievedField;
+        private BookingProxy.ResponseType ResponseRecievedField;
         
-        private HotelBook.ServiceStatus ServiceStatusField;
+        private BookingProxy.ServiceStatus ServiceStatusField;
         
         private string SessionIdField;
         
@@ -21976,7 +21976,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ResponseType ResponseRecieved
+        public BookingProxy.ResponseType ResponseRecieved
         {
             get
             {
@@ -21989,7 +21989,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ServiceStatus ServiceStatus
+        public BookingProxy.ServiceStatus ServiceStatus
         {
             get
             {
@@ -22018,15 +22018,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductCancellationDetailsRS", Namespace="http://tavisca.com")]
-    public partial class TripProductCancellationDetailsRS : HotelBook.WebServiceRS
+    public partial class TripProductCancellationDetailsRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.CancellationDetails CancellationDetailsField;
+        private BookingProxy.CancellationDetails CancellationDetailsField;
         
-        private HotelBook.ErrorInfo[] ErrorInfoListField;
+        private BookingProxy.ErrorInfo[] ErrorInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CancellationDetails CancellationDetails
+        public BookingProxy.CancellationDetails CancellationDetails
         {
             get
             {
@@ -22039,7 +22039,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ErrorInfo[] ErrorInfoList
+        public BookingProxy.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22055,15 +22055,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderBookRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderBookRS : HotelBook.WebServiceRS
+    public partial class TripFolderBookRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.ErrorInfo[] ErrorInfoListField;
+        private BookingProxy.ErrorInfo[] ErrorInfoListField;
         
-        private HotelBook.TripFolder TripFolderField;
+        private BookingProxy.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ErrorInfo[] ErrorInfoList
+        public BookingProxy.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22076,7 +22076,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder TripFolder
+        public BookingProxy.TripFolder TripFolder
         {
             get
             {
@@ -22092,15 +22092,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompleteBookingRS", Namespace="http://tavisca.com")]
-    public partial class CompleteBookingRS : HotelBook.WebServiceRS
+    public partial class CompleteBookingRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.ErrorInfo[] ErrorInfoListField;
+        private BookingProxy.ErrorInfo[] ErrorInfoListField;
         
-        private HotelBook.TripFolder TripFolderField;
+        private BookingProxy.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ErrorInfo[] ErrorInfoList
+        public BookingProxy.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22113,7 +22113,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder TripFolder
+        public BookingProxy.TripFolder TripFolder
         {
             get
             {
@@ -22129,14 +22129,14 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRS", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(HotelBook.TripFolderRetrieveRSWithPaging))]
-    public partial class TripFolderRetrieveRS : HotelBook.WebServiceRS
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookingProxy.TripFolderRetrieveRSWithPaging))]
+    public partial class TripFolderRetrieveRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.TripFolder[] TripFoldersField;
+        private BookingProxy.TripFolder[] TripFoldersField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder[] TripFolders
+        public BookingProxy.TripFolder[] TripFolders
         {
             get
             {
@@ -22152,13 +22152,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRSWithPaging", Namespace="http://tavisca.com")]
-    public partial class TripFolderRetrieveRSWithPaging : HotelBook.TripFolderRetrieveRS
+    public partial class TripFolderRetrieveRSWithPaging : BookingProxy.TripFolderRetrieveRS
     {
         
-        private HotelBook.PagingDetail PagingDetailField;
+        private BookingProxy.PagingDetail PagingDetailField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PagingDetail PagingDetail
+        public BookingProxy.PagingDetail PagingDetail
         {
             get
             {
@@ -22174,17 +22174,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderPriceRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderPriceRS : HotelBook.WebServiceRS
+    public partial class TripFolderPriceRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.ErrorInfo[] ErrorInfoListField;
+        private BookingProxy.ErrorInfo[] ErrorInfoListField;
         
-        private HotelBook.TripFolder TripFolderField;
+        private BookingProxy.TripFolder TripFolderField;
         
-        private HotelBook.TripProcessingInfo TripProcessingInfoField;
+        private BookingProxy.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ErrorInfo[] ErrorInfoList
+        public BookingProxy.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22197,7 +22197,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder TripFolder
+        public BookingProxy.TripFolder TripFolder
         {
             get
             {
@@ -22210,7 +22210,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripProcessingInfo TripProcessingInfo
+        public BookingProxy.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -22226,13 +22226,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderSaveRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderSaveRS : HotelBook.WebServiceRS
+    public partial class TripFolderSaveRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.TripFolder TripFolderField;
+        private BookingProxy.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder TripFolder
+        public BookingProxy.TripFolder TripFolder
         {
             get
             {
@@ -22248,15 +22248,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductPriceRS", Namespace="http://tavisca.com")]
-    public partial class TripProductPriceRS : HotelBook.WebServiceRS
+    public partial class TripProductPriceRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.ErrorInfo[] ErrorInfoListField;
+        private BookingProxy.ErrorInfo[] ErrorInfoListField;
         
-        private HotelBook.TripProduct TripProductField;
+        private BookingProxy.TripProduct TripProductField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ErrorInfo[] ErrorInfoList
+        public BookingProxy.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22269,7 +22269,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripProduct TripProduct
+        public BookingProxy.TripProduct TripProduct
         {
             get
             {
@@ -22285,7 +22285,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderDeleteRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderDeleteRS : HotelBook.WebServiceRS
+    public partial class TripFolderDeleteRS : BookingProxy.WebServiceRS
     {
         
         private bool SuccessField;
@@ -22307,15 +22307,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderCancelRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderCancelRS : HotelBook.WebServiceRS
+    public partial class TripFolderCancelRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.ErrorInfo[] ErrorInfoListField;
+        private BookingProxy.ErrorInfo[] ErrorInfoListField;
         
-        private HotelBook.TripFolder TripFolderField;
+        private BookingProxy.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ErrorInfo[] ErrorInfoList
+        public BookingProxy.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22328,7 +22328,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder TripFolder
+        public BookingProxy.TripFolder TripFolder
         {
             get
             {
@@ -22344,13 +22344,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SeatMapQueryRS", Namespace="http://tavisca.com")]
-    public partial class SeatMapQueryRS : HotelBook.WebServiceRS
+    public partial class SeatMapQueryRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.SeatMap SeatMapField;
+        private BookingProxy.SeatMap SeatMapField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SeatMap SeatMap
+        public BookingProxy.SeatMap SeatMap
         {
             get
             {
@@ -22366,16 +22366,16 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirLowFareSearchRS", Namespace="http://tavisca.com")]
-    public partial class AirLowFareSearchRS : HotelBook.WebServiceRS
+    public partial class AirLowFareSearchRS : BookingProxy.WebServiceRS
     {
         
         private byte[] CompressedItinerariesField;
         
         private bool IsCompressedField;
         
-        private HotelBook.AirItinerary[] ItinerariesField;
+        private BookingProxy.AirItinerary[] ItinerariesField;
         
-        private HotelBook.PagingInfo PagingInfoField;
+        private BookingProxy.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public byte[] CompressedItineraries
@@ -22404,7 +22404,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirItinerary[] Itineraries
+        public BookingProxy.AirItinerary[] Itineraries
         {
             get
             {
@@ -22417,7 +22417,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PagingInfo PagingInfo
+        public BookingProxy.PagingInfo PagingInfo
         {
             get
             {
@@ -22433,17 +22433,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFullScheduleSearchRS", Namespace="http://tavisca.com")]
-    public partial class AirFullScheduleSearchRS : HotelBook.WebServiceRS
+    public partial class AirFullScheduleSearchRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.AirFare[] LegOptionFaresField;
+        private BookingProxy.AirFare[] LegOptionFaresField;
         
-        private HotelBook.AirLeg[] LegOptionsField;
+        private BookingProxy.AirLeg[] LegOptionsField;
         
-        private HotelBook.AirLeg[] SelectedLegsField;
+        private BookingProxy.AirLeg[] SelectedLegsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirFare[] LegOptionFares
+        public BookingProxy.AirFare[] LegOptionFares
         {
             get
             {
@@ -22456,7 +22456,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirLeg[] LegOptions
+        public BookingProxy.AirLeg[] LegOptions
         {
             get
             {
@@ -22469,7 +22469,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirLeg[] SelectedLegs
+        public BookingProxy.AirLeg[] SelectedLegs
         {
             get
             {
@@ -22485,13 +22485,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFareRulesRS", Namespace="http://tavisca.com")]
-    public partial class AirFareRulesRS : HotelBook.WebServiceRS
+    public partial class AirFareRulesRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.AirFareRules RulesField;
+        private BookingProxy.AirFareRules RulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirFareRules Rules
+        public BookingProxy.AirFareRules Rules
         {
             get
             {
@@ -22507,13 +22507,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirPriceRS", Namespace="http://tavisca.com")]
-    public partial class AirPriceRS : HotelBook.WebServiceRS
+    public partial class AirPriceRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.AirItinerary ItineraryField;
+        private BookingProxy.AirItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirItinerary Itinerary
+        public BookingProxy.AirItinerary Itinerary
         {
             get
             {
@@ -22529,15 +22529,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRS : HotelBook.WebServiceRS
+    public partial class HotelRoomAvailRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.HotelItinerary ItineraryField;
+        private BookingProxy.HotelItinerary ItineraryField;
         
-        private HotelBook.RoomOccupancyType[] RoomOccupancyTypesField;
+        private BookingProxy.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelItinerary Itinerary
+        public BookingProxy.HotelItinerary Itinerary
         {
             get
             {
@@ -22550,7 +22550,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RoomOccupancyType[] RoomOccupancyTypes
+        public BookingProxy.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22566,15 +22566,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRS : HotelBook.WebServiceRS
+    public partial class HotelRoomPriceRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.HotelItinerary ItineraryField;
+        private BookingProxy.HotelItinerary ItineraryField;
         
-        private HotelBook.RoomOccupancyType[] RoomOccupancyTypesField;
+        private BookingProxy.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelItinerary Itinerary
+        public BookingProxy.HotelItinerary Itinerary
         {
             get
             {
@@ -22587,7 +22587,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RoomOccupancyType[] RoomOccupancyTypes
+        public BookingProxy.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22603,17 +22603,17 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRS : HotelBook.WebServiceRS
+    public partial class HotelSearchRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.HotelItinerary[] ItinerariesField;
+        private BookingProxy.HotelItinerary[] ItinerariesField;
         
-        private HotelBook.PagingInfo PagingInfoField;
+        private BookingProxy.PagingInfo PagingInfoField;
         
-        private HotelBook.RoomOccupancyType[] RoomOccupancyTypesField;
+        private BookingProxy.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelItinerary[] Itineraries
+        public BookingProxy.HotelItinerary[] Itineraries
         {
             get
             {
@@ -22626,7 +22626,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PagingInfo PagingInfo
+        public BookingProxy.PagingInfo PagingInfo
         {
             get
             {
@@ -22639,7 +22639,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RoomOccupancyType[] RoomOccupancyTypes
+        public BookingProxy.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22655,15 +22655,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRS : HotelBook.WebServiceRS
+    public partial class HotelItinerarySearchRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.HotelItinerary ItineraryField;
+        private BookingProxy.HotelItinerary ItineraryField;
         
-        private HotelBook.RoomOccupancyType[] RoomOccupancyTypesField;
+        private BookingProxy.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.HotelItinerary Itinerary
+        public BookingProxy.HotelItinerary Itinerary
         {
             get
             {
@@ -22676,7 +22676,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RoomOccupancyType[] RoomOccupancyTypes
+        public BookingProxy.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22692,15 +22692,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchRS", Namespace="http://tavisca.com")]
-    public partial class CarSearchRS : HotelBook.WebServiceRS
+    public partial class CarSearchRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.CarItinerary[] ItinerariesField;
+        private BookingProxy.CarItinerary[] ItinerariesField;
         
-        private HotelBook.PagingInfo PagingInfoField;
+        private BookingProxy.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarItinerary[] Itineraries
+        public BookingProxy.CarItinerary[] Itineraries
         {
             get
             {
@@ -22713,7 +22713,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PagingInfo PagingInfo
+        public BookingProxy.PagingInfo PagingInfo
         {
             get
             {
@@ -22729,13 +22729,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarRateDetailRS", Namespace="http://tavisca.com")]
-    public partial class CarRateDetailRS : HotelBook.WebServiceRS
+    public partial class CarRateDetailRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.CarItinerary ItineraryField;
+        private BookingProxy.CarItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.CarItinerary Itinerary
+        public BookingProxy.CarItinerary Itinerary
         {
             get
             {
@@ -22751,15 +22751,15 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivitySearchRS", Namespace="http://tavisca.com")]
-    public partial class ActivitySearchRS : HotelBook.WebServiceRS
+    public partial class ActivitySearchRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.ActivityItinerary[] ActivityItinerariesField;
+        private BookingProxy.ActivityItinerary[] ActivityItinerariesField;
         
-        private HotelBook.PagingInfo PagingInfoField;
+        private BookingProxy.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityItinerary[] ActivityItineraries
+        public BookingProxy.ActivityItinerary[] ActivityItineraries
         {
             get
             {
@@ -22772,7 +22772,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.PagingInfo PagingInfo
+        public BookingProxy.PagingInfo PagingInfo
         {
             get
             {
@@ -22788,13 +22788,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityDetailsRS", Namespace="http://tavisca.com")]
-    public partial class ActivityDetailsRS : HotelBook.WebServiceRS
+    public partial class ActivityDetailsRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.ActivityItinerary ActivityItineraryField;
+        private BookingProxy.ActivityItinerary ActivityItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ActivityItinerary ActivityItinerary
+        public BookingProxy.ActivityItinerary ActivityItinerary
         {
             get
             {
@@ -22810,7 +22810,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ReviewPendingRetrieveRS", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class ReviewPendingRetrieveRS : HotelBook.WebServiceRS
+    public partial class ReviewPendingRetrieveRS : BookingProxy.WebServiceRS
     {
         
         private int PendingReviewsCountField;
@@ -22832,7 +22832,7 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SaveReviewStatusRS", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class SaveReviewStatusRS : HotelBook.WebServiceRS
+    public partial class SaveReviewStatusRS : BookingProxy.WebServiceRS
     {
         
         private bool StatusField;
@@ -22854,13 +22854,13 @@ namespace HotelBook
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderAssignSeatRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderAssignSeatRS : HotelBook.WebServiceRS
+    public partial class TripFolderAssignSeatRS : BookingProxy.WebServiceRS
     {
         
-        private HotelBook.TripFolder TripFolderField;
+        private BookingProxy.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.TripFolder TripFolder
+        public BookingProxy.TripFolder TripFolder
         {
             get
             {
@@ -22879,10 +22879,10 @@ namespace HotelBook
     public partial class SeatMap : object
     {
         
-        private HotelBook.ClassOfServiceDetail[] ClassesOfServiceField;
+        private BookingProxy.ClassOfServiceDetail[] ClassesOfServiceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ClassOfServiceDetail[] ClassesOfService
+        public BookingProxy.ClassOfServiceDetail[] ClassesOfService
         {
             get
             {
@@ -22901,20 +22901,20 @@ namespace HotelBook
     public partial class ClassOfServiceDetail : object
     {
         
-        private HotelBook.Column[] ColumnsField;
+        private BookingProxy.Column[] ColumnsField;
         
         private int EndRowNumberField;
         
-        private HotelBook.ArrayOfCabinFeature FeaturesField;
+        private BookingProxy.ArrayOfCabinFeature FeaturesField;
         
         private string NameField;
         
-        private HotelBook.Row[] RowsField;
+        private BookingProxy.Row[] RowsField;
         
         private int StartRowNumberField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Column[] Columns
+        public BookingProxy.Column[] Columns
         {
             get
             {
@@ -22940,7 +22940,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ArrayOfCabinFeature Features
+        public BookingProxy.ArrayOfCabinFeature Features
         {
             get
             {
@@ -22966,7 +22966,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Row[] Rows
+        public BookingProxy.Row[] Rows
         {
             get
             {
@@ -22998,14 +22998,14 @@ namespace HotelBook
     public partial class Column : object
     {
         
-        private HotelBook.ColumnCharacterstics CharacteristicsField;
+        private BookingProxy.ColumnCharacterstics CharacteristicsField;
         
-        private HotelBook.ColumnLocation LocationField;
+        private BookingProxy.ColumnLocation LocationField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ColumnCharacterstics Characteristics
+        public BookingProxy.ColumnCharacterstics Characteristics
         {
             get
             {
@@ -23018,7 +23018,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.ColumnLocation Location
+        public BookingProxy.ColumnLocation Location
         {
             get
             {
@@ -23057,16 +23057,16 @@ namespace HotelBook
     public partial class Row : object
     {
         
-        private HotelBook.RowCharacterstics CharactersticsField;
+        private BookingProxy.RowCharacterstics CharactersticsField;
         
         private int NumberField;
         
-        private HotelBook.Seat[] SeatsField;
+        private BookingProxy.Seat[] SeatsField;
         
-        private HotelBook.RowType TypeField;
+        private BookingProxy.RowType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RowCharacterstics Characterstics
+        public BookingProxy.RowCharacterstics Characterstics
         {
             get
             {
@@ -23092,7 +23092,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Seat[] Seats
+        public BookingProxy.Seat[] Seats
         {
             get
             {
@@ -23105,7 +23105,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RowType Type
+        public BookingProxy.RowType Type
         {
             get
             {
@@ -23168,16 +23168,16 @@ namespace HotelBook
     public partial class Seat : object
     {
         
-        private HotelBook.SeatCharacterstics CharactersticsField;
+        private BookingProxy.SeatCharacterstics CharactersticsField;
         
         private string NameField;
         
-        private HotelBook.SeatOccupationStatus StatusField;
+        private BookingProxy.SeatOccupationStatus StatusField;
         
-        private HotelBook.AirSeatType TypeField;
+        private BookingProxy.AirSeatType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SeatCharacterstics Characterstics
+        public BookingProxy.SeatCharacterstics Characterstics
         {
             get
             {
@@ -23203,7 +23203,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.SeatOccupationStatus Status
+        public BookingProxy.SeatOccupationStatus Status
         {
             get
             {
@@ -23216,7 +23216,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.AirSeatType Type
+        public BookingProxy.AirSeatType Type
         {
             get
             {
@@ -23314,10 +23314,10 @@ namespace HotelBook
     public partial class AirFareRules : object
     {
         
-        private HotelBook.FlightFareRule[] FlightRulesField;
+        private BookingProxy.FlightFareRule[] FlightRulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.FlightFareRule[] FlightRules
+        public BookingProxy.FlightFareRule[] FlightRules
         {
             get
             {
@@ -23336,22 +23336,22 @@ namespace HotelBook
     public partial class FlightFareRule : object
     {
         
-        private HotelBook.Airline AirlineField;
+        private BookingProxy.Airline AirlineField;
         
-        private HotelBook.Airport ArrivalAirportField;
+        private BookingProxy.Airport ArrivalAirportField;
         
         private string BookingClassField;
         
-        private HotelBook.Airport DepartureAirportField;
+        private BookingProxy.Airport DepartureAirportField;
         
         private System.DateTime DepartureDateField;
         
         private string[] FareBasisCodesField;
         
-        private HotelBook.RuleInfo[] RulesField;
+        private BookingProxy.RuleInfo[] RulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Airline Airline
+        public BookingProxy.Airline Airline
         {
             get
             {
@@ -23364,7 +23364,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Airport ArrivalAirport
+        public BookingProxy.Airport ArrivalAirport
         {
             get
             {
@@ -23390,7 +23390,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.Airport DepartureAirport
+        public BookingProxy.Airport DepartureAirport
         {
             get
             {
@@ -23429,7 +23429,7 @@ namespace HotelBook
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public HotelBook.RuleInfo[] Rules
+        public BookingProxy.RuleInfo[] Rules
         {
             get
             {
@@ -23480,52 +23480,52 @@ namespace HotelBook
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="HotelBook.TripsEngine")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="BookingProxy.TripsEngine")]
     public interface TripsEngine
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/AssignAirSeats", ReplyAction="http://tavisca.com/TripsEngine/AssignAirSeatsResponse")]
-        System.Threading.Tasks.Task<HotelBook.TripFolderAssignSeatRS> AssignAirSeatsAsync(HotelBook.TripFolderAssignSeatRQ req);
+        System.Threading.Tasks.Task<BookingProxy.TripFolderAssignSeatRS> AssignAirSeatsAsync(BookingProxy.TripFolderAssignSeatRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/BookTripFolder", ReplyAction="http://tavisca.com/TripsEngine/BookTripFolderResponse")]
-        System.Threading.Tasks.Task<HotelBook.TripFolderBookRS> BookTripFolderAsync(HotelBook.TripFolderBookRQ req);
+        System.Threading.Tasks.Task<BookingProxy.TripFolderBookRS> BookTripFolderAsync(BookingProxy.TripFolderBookRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/CompleteBooking", ReplyAction="http://tavisca.com/TripsEngine/CompleteBookingResponse")]
-        System.Threading.Tasks.Task<HotelBook.CompleteBookingRS> CompleteBookingAsync(HotelBook.CompleteBookingRQ req);
+        System.Threading.Tasks.Task<BookingProxy.CompleteBookingRS> CompleteBookingAsync(BookingProxy.CompleteBookingRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/CancelTripFolder", ReplyAction="http://tavisca.com/TripsEngine/CancelTripFolderResponse")]
-        System.Threading.Tasks.Task<HotelBook.TripFolderCancelRS> CancelTripFolderAsync(HotelBook.TripFolderCancelRQ req);
+        System.Threading.Tasks.Task<BookingProxy.TripFolderCancelRS> CancelTripFolderAsync(BookingProxy.TripFolderCancelRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/DeleteTripFolder", ReplyAction="http://tavisca.com/TripsEngine/DeleteTripFolderResponse")]
-        System.Threading.Tasks.Task<HotelBook.TripFolderDeleteRS> DeleteTripFolderAsync(HotelBook.TripFolderDeleteRQ req);
+        System.Threading.Tasks.Task<BookingProxy.TripFolderDeleteRS> DeleteTripFolderAsync(BookingProxy.TripFolderDeleteRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/GetProductCancellationDetails", ReplyAction="http://tavisca.com/TripsEngine/GetProductCancellationDetailsResponse")]
-        System.Threading.Tasks.Task<HotelBook.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(HotelBook.TripProductCancellationDetailsRQ req);
+        System.Threading.Tasks.Task<BookingProxy.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(BookingProxy.TripProductCancellationDetailsRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/PriceTripFolder", ReplyAction="http://tavisca.com/TripsEngine/PriceTripFolderResponse")]
-        System.Threading.Tasks.Task<HotelBook.TripFolderPriceRS> PriceTripFolderAsync(HotelBook.TripFolderPriceRQ req);
+        System.Threading.Tasks.Task<BookingProxy.TripFolderPriceRS> PriceTripFolderAsync(BookingProxy.TripFolderPriceRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/PriceTripProduct", ReplyAction="http://tavisca.com/TripsEngine/PriceTripProductResponse")]
-        System.Threading.Tasks.Task<HotelBook.TripProductPriceRS> PriceTripProductAsync(HotelBook.TripProductPriceRQ req);
+        System.Threading.Tasks.Task<BookingProxy.TripProductPriceRS> PriceTripProductAsync(BookingProxy.TripProductPriceRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/RetrieveTripFolders", ReplyAction="http://tavisca.com/TripsEngine/RetrieveTripFoldersResponse")]
-        System.Threading.Tasks.Task<HotelBook.TripFolderRetrieveRS> RetrieveTripFoldersAsync(HotelBook.TripFolderRetrieveRQ req);
+        System.Threading.Tasks.Task<BookingProxy.TripFolderRetrieveRS> RetrieveTripFoldersAsync(BookingProxy.TripFolderRetrieveRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/RetrieveTripFoldersWithPaging", ReplyAction="http://tavisca.com/TripsEngine/RetrieveTripFoldersWithPagingResponse")]
-        System.Threading.Tasks.Task<HotelBook.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(HotelBook.TripFolderRetrieveRQWithPaging req);
+        System.Threading.Tasks.Task<BookingProxy.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(BookingProxy.TripFolderRetrieveRQWithPaging req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/SaveTripFolder", ReplyAction="http://tavisca.com/TripsEngine/SaveTripFolderResponse")]
-        System.Threading.Tasks.Task<HotelBook.TripFolderSaveRS> SaveTripFolderAsync(HotelBook.TripFolderSaveRQ req);
+        System.Threading.Tasks.Task<BookingProxy.TripFolderSaveRS> SaveTripFolderAsync(BookingProxy.TripFolderSaveRQ req);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public interface TripsEngineChannel : HotelBook.TripsEngine, System.ServiceModel.IClientChannel
+    public interface TripsEngineChannel : BookingProxy.TripsEngine, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public partial class TripsEngineClient : System.ServiceModel.ClientBase<HotelBook.TripsEngine>, HotelBook.TripsEngine
+    public partial class TripsEngineClient : System.ServiceModel.ClientBase<BookingProxy.TripsEngine>, BookingProxy.TripsEngine
     {
         
     /// <summary>
@@ -23568,57 +23568,57 @@ namespace HotelBook
         {
         }
         
-        public System.Threading.Tasks.Task<HotelBook.TripFolderAssignSeatRS> AssignAirSeatsAsync(HotelBook.TripFolderAssignSeatRQ req)
+        public System.Threading.Tasks.Task<BookingProxy.TripFolderAssignSeatRS> AssignAirSeatsAsync(BookingProxy.TripFolderAssignSeatRQ req)
         {
             return base.Channel.AssignAirSeatsAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelBook.TripFolderBookRS> BookTripFolderAsync(HotelBook.TripFolderBookRQ req)
+        public System.Threading.Tasks.Task<BookingProxy.TripFolderBookRS> BookTripFolderAsync(BookingProxy.TripFolderBookRQ req)
         {
             return base.Channel.BookTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelBook.CompleteBookingRS> CompleteBookingAsync(HotelBook.CompleteBookingRQ req)
+        public System.Threading.Tasks.Task<BookingProxy.CompleteBookingRS> CompleteBookingAsync(BookingProxy.CompleteBookingRQ req)
         {
             return base.Channel.CompleteBookingAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelBook.TripFolderCancelRS> CancelTripFolderAsync(HotelBook.TripFolderCancelRQ req)
+        public System.Threading.Tasks.Task<BookingProxy.TripFolderCancelRS> CancelTripFolderAsync(BookingProxy.TripFolderCancelRQ req)
         {
             return base.Channel.CancelTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelBook.TripFolderDeleteRS> DeleteTripFolderAsync(HotelBook.TripFolderDeleteRQ req)
+        public System.Threading.Tasks.Task<BookingProxy.TripFolderDeleteRS> DeleteTripFolderAsync(BookingProxy.TripFolderDeleteRQ req)
         {
             return base.Channel.DeleteTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelBook.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(HotelBook.TripProductCancellationDetailsRQ req)
+        public System.Threading.Tasks.Task<BookingProxy.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(BookingProxy.TripProductCancellationDetailsRQ req)
         {
             return base.Channel.GetProductCancellationDetailsAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelBook.TripFolderPriceRS> PriceTripFolderAsync(HotelBook.TripFolderPriceRQ req)
+        public System.Threading.Tasks.Task<BookingProxy.TripFolderPriceRS> PriceTripFolderAsync(BookingProxy.TripFolderPriceRQ req)
         {
             return base.Channel.PriceTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelBook.TripProductPriceRS> PriceTripProductAsync(HotelBook.TripProductPriceRQ req)
+        public System.Threading.Tasks.Task<BookingProxy.TripProductPriceRS> PriceTripProductAsync(BookingProxy.TripProductPriceRQ req)
         {
             return base.Channel.PriceTripProductAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelBook.TripFolderRetrieveRS> RetrieveTripFoldersAsync(HotelBook.TripFolderRetrieveRQ req)
+        public System.Threading.Tasks.Task<BookingProxy.TripFolderRetrieveRS> RetrieveTripFoldersAsync(BookingProxy.TripFolderRetrieveRQ req)
         {
             return base.Channel.RetrieveTripFoldersAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelBook.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(HotelBook.TripFolderRetrieveRQWithPaging req)
+        public System.Threading.Tasks.Task<BookingProxy.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(BookingProxy.TripFolderRetrieveRQWithPaging req)
         {
             return base.Channel.RetrieveTripFoldersWithPagingAsync(req);
         }
         
-        public System.Threading.Tasks.Task<HotelBook.TripFolderSaveRS> SaveTripFolderAsync(HotelBook.TripFolderSaveRQ req)
+        public System.Threading.Tasks.Task<BookingProxy.TripFolderSaveRS> SaveTripFolderAsync(BookingProxy.TripFolderSaveRQ req)
         {
             return base.Channel.SaveTripFolderAsync(req);
         }

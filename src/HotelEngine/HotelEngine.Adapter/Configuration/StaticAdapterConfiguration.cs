@@ -1,10 +1,11 @@
 ﻿using System;
-using HotelSearch;
+using Proxies;
 using HotelEngine.Adapter.Contracts;
 using HotelEngine.Contracts.Models;
 
 namespace HotelEngine.Adapter.Configuration
 {
+
     public class StaticAdapterConfiguration : IAdapterConfiguration
     {
         public HotelsAvailConfig GetHotelsAvailConfig(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)

@@ -1,20 +1,19 @@
 ﻿using HotelEngine.Contracts.Contracts;
 using HotelEngine.Contracts.Models;
-using HotelSearch;
-using HotelBook;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using HotelEngine.Adapter.Configuration;
 using HotelEngine.Adapter.Contracts;
+using BookingProxy;
 
 namespace HotelEngine.Adapter
 {
     public class HotelConnector : IHotelConnector
     {
         private IAdapterConfiguration _config;
-        private HotelEngineClient _hotelEngineClient = null;
+        private global::Proxies.HotelEngineClient _hotelEngineClient = null;
         private TripsEngineClient _tripEngineClient = null;
 
         public HotelConnector()
@@ -46,7 +45,7 @@ namespace HotelEngine.Adapter
             return roomPriceSearchRS;
         }
 
-        private RoomPriceSearchRS ParsePriceRS(HotelSearch.HotelRoomPriceRS hotelRoomPriceRS, Guid sessionId)
+        private RoomPriceSearchRS ParsePriceRS(global::Proxies.HotelRoomPriceRS hotelRoomPriceRS, Guid sessionId)
         {
             var roomPriceSearchRS = new RoomPriceSearchRS()
             {
@@ -59,12 +58,12 @@ namespace HotelEngine.Adapter
             return roomPriceSearchRS;
         }
 
-        private async Task<HotelSearch.HotelSearchRS> GetHotelsAsync(HotelSearch.HotelSearchRQ request)
+        private async Task<global::Proxies.HotelSearchRS> GetHotelsAsync(global::Proxies.HotelSearchRQ request)
         {
-            HotelSearch.HotelSearchRS hotelSearchRS;
+            global::Proxies.HotelSearchRS hotelSearchRS;
             try
             {
-                _hotelEngineClient = new HotelEngineClient();
+                _hotelEngineClient = new global::Proxies.HotelEngineClient();
                 hotelSearchRS = await _hotelEngineClient.HotelAvailAsync(request);
             }
             catch (Exception e)
@@ -78,12 +77,12 @@ namespace HotelEngine.Adapter
             return hotelSearchRS;
         }
 
-        private async Task<HotelSearch.HotelRoomAvailRS> GetRoomsAsync(HotelSearch.HotelRoomAvailRQ hotelRoomAvailRQ)
+        private async Task<global::Proxies.HotelRoomAvailRS> GetRoomsAsync(global::Proxies.HotelRoomAvailRQ hotelRoomAvailRQ)
         {
-            HotelSearch.HotelRoomAvailRS hotelRoomAvailRS;
+            global::Proxies.HotelRoomAvailRS hotelRoomAvailRS;
             try
             {
-                _hotelEngineClient = new HotelEngineClient();
+                _hotelEngineClient = new Proxies.HotelEngineClient();
                 hotelRoomAvailRS = await _hotelEngineClient.HotelRoomAvailAsync(hotelRoomAvailRQ);
             }
             catch (Exception e)
@@ -97,12 +96,12 @@ namespace HotelEngine.Adapter
             return hotelRoomAvailRS;
         }
 
-        public async Task<HotelSearch.HotelRoomPriceRS> GetRoomPrice(HotelSearch.HotelRoomPriceRQ hotelRoomPriceRQ)
+        public async Task<global::Proxies.HotelRoomPriceRS> GetRoomPrice(Proxies.HotelRoomPriceRQ hotelRoomPriceRQ)
         {
-            HotelSearch.HotelRoomPriceRS hotelRoomPriceRS = null;
+            global::Proxies.HotelRoomPriceRS hotelRoomPriceRS = null;
             try
             {
-                _hotelEngineClient = new HotelEngineClient();
+                _hotelEngineClient = new global::Proxies.HotelEngineClient();
                 hotelRoomPriceRS = await _hotelEngineClient.HotelRoomPriceAsync(hotelRoomPriceRQ);
             }
             catch (Exception e)
@@ -120,23 +119,23 @@ namespace HotelEngine.Adapter
         {
             try
             {
-                var roomBookRS = await _tripEngineClient.BookTripFolderAsync(new TripFolderBookRQ());
+                var roomBookRS = await _tripEngineClient.BookTripFolderAsync(new BookingProxy.TripFolderBookRQ());
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw new Exception("Connection Error");
             }
             finally
             {
-
+                await _tripEngineClient.CloseAsync();
             }
             throw new NotImplementedException();
-        }        
+        }
 
-        private HotelSearch.HotelSearchRQ ParseHotelRQ(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
+        private global::Proxies.HotelSearchRQ ParseHotelRQ(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
         {
             var hotelSettings = _config.GetHotelsAvailConfig(hotelSearchRQ);
-            var hotelSearchReq = new HotelSearch.HotelSearchRQ()
+            var hotelSearchReq = new global::Proxies.HotelSearchRQ()
             {
                 HotelSearchCriterion = hotelSettings.HotelSearchCriterion,
                 SessionId = hotelSearchRQ.SessionId.ToString(),
@@ -147,7 +146,7 @@ namespace HotelEngine.Adapter
             return hotelSearchReq;
         }
 
-        private HotelEngine.Contracts.Models.HotelSearchRS ParseHotelRS(HotelSearch.HotelSearchRS hotelSearchRS, Guid sessionId)
+        private HotelEngine.Contracts.Models.HotelSearchRS ParseHotelRS(Proxies.HotelSearchRS hotelSearchRS, Guid sessionId)
         {
             HotelEngine.Contracts.Models.HotelSearchRS hotelSearchResponse = null;
             var itineraries = hotelSearchRS.Itineraries;
@@ -220,10 +219,10 @@ namespace HotelEngine.Adapter
             return hotelSearchResponse;
         }
 
-        private HotelSearch.HotelRoomAvailRQ ParseRoomRQ(RoomSearchRQ roomSearchRQ)
+        private global::Proxies.HotelRoomAvailRQ ParseRoomRQ(RoomSearchRQ roomSearchRQ)
         {
             var roomsSettings = _config.GetRoomsAvailConfig(roomSearchRQ);
-            var hotelRoomAvailRQ = new HotelSearch.HotelRoomAvailRQ()
+            var hotelRoomAvailRQ = new global::Proxies.HotelRoomAvailRQ()
             {
                 HotelSearchCriterion = roomsSettings.SearchCriterion,
                 Itinerary = roomsSettings.HotelItinerary,
@@ -233,7 +232,7 @@ namespace HotelEngine.Adapter
             return hotelRoomAvailRQ;
         }
 
-        private RoomSearchRS ParseRoomRS(HotelSearch.HotelRoomAvailRS roomSearchResponse, Guid sessionId)
+        private RoomSearchRS ParseRoomRS(global::Proxies.HotelRoomAvailRS roomSearchResponse, Guid sessionId)
         {
             RoomSearchRS roomSearchRS = null;
             List<HotelEngine.Contracts.Models.Room> rooms = new List<HotelEngine.Contracts.Models.Room>();
@@ -260,11 +259,11 @@ namespace HotelEngine.Adapter
             return roomSearchRS;
         }
 
-        private async Task<HotelSearch.HotelRoomPriceRQ> ParsePriceRQ(RoomPriceSearchRQ roomPriceRQ)
+        private async Task<global::Proxies.HotelRoomPriceRQ> ParsePriceRQ(RoomPriceSearchRQ roomPriceRQ)
         {
             var roomAvailRQ = ParseRoomRQ(roomPriceRQ);
             var roomAvailRS = await GetRoomsAsync(roomAvailRQ);
-            var hotelRoomPriceRQ = new HotelSearch.HotelRoomPriceRQ()
+            var hotelRoomPriceRQ = new global::Proxies.HotelRoomPriceRQ()
             {
                 HotelSearchCriterion = roomAvailRQ.HotelSearchCriterion,
                 Itinerary = roomAvailRS.Itinerary,
@@ -274,6 +273,6 @@ namespace HotelEngine.Adapter
             return hotelRoomPriceRQ;
         }
 
-        
+
     }
 }
