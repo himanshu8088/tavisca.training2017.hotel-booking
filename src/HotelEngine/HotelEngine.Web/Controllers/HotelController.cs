@@ -37,5 +37,11 @@ namespace HotelEngine.Web.Controllers
             var price = await _hotelService.RoomPriceSearchAsync(priceRQ);
             return Ok(price);
         }
+        [HttpPost("book")]
+        public async Task<IActionResult> RoomBookAsync([FromBody] RoomBookRQ roomBookRQ)
+        {
+            var response = await _hotelService.RoomBookAsync(roomBookRQ);
+            return Ok(response);
+        }
     }
 }
