@@ -120,6 +120,7 @@ namespace HotelEngine.Adapter
             try
             {
                 var roomBookRS = await _tripEngineClient.BookTripFolderAsync(new BookingProxy.TripFolderBookRQ());
+                
             }
             catch (Exception e)
             {
