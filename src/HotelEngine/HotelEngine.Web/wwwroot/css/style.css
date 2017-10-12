@@ -52,7 +52,7 @@ nav > li > a {
 }
 
 .nav > li > a {
-    background-color: #1A8FC7;
+    background-color: #337ab7;
     color: white;
 }
 
@@ -62,11 +62,11 @@ nav > li > a {
 }
 
 .navbar-nav > li > .dropdown-menu {
-    background-color: #1A8FC7;
+    background-color: #337ab7;
 }
 
 .nav .open > a, .nav .open > a:hover {
-    background-color: #1A8FC7;
+    background-color: #337ab7;
     color: white;
     font-size: 15px;
 }
@@ -95,22 +95,18 @@ nav > li > a {
     margin-left: 10px;
 }
 
-.nav > li > a > span {
+.nav > li > a > span,i {
     margin-right: 4px;
     color: white;
 }
 
-.nav > li > a > i {
-    margin-right: 4px;
-    color: white;
-}
 .form-container {
     opacity: 0.8;
     background-color: black;
     font-size: 15px;
     border-radius: 4px;
     margin-top: 10px;
-    padding-top: 20px:
+    padding-top: 20px;
 }
 /*  datepicker tab  */
 [type="date"] {

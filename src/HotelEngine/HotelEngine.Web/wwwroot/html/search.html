@@ -11,10 +11,7 @@
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/dot-luv/jquery-ui.min.css" />
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/libraries/handlebars-v4.0.10.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.js" type="text/javascript"></script>
+    
 </head>
 <body>
     <!-- Header starts here   -->
@@ -65,12 +62,12 @@
         </div>
     </nav>
     <!--     Tab section starts here    -->
-    <div class="container-fluid bg-img">
+    <div class="container img-responsive bg-img">
         <div class="row" id="tabs">
             <div class="col-md-6 col-md-offset-3 tab-container">
                 <ul class="nav nav-pills">
                     <li id="btn-hotel">
-                        <a href="#hotel">
+                        <a href="search.html">
                             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>Hotel Search
                         </a>
                     </li>
@@ -150,7 +147,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-2">
-                                <button type="button" id="searchClick" class="btn btn-info margin-bottom">Search</button>
+                                <button type="button" id="searchClick" class="btn btn-primary margin-bottom">Search</button>
                             </div>
                         </div>
                     </form>
@@ -158,10 +155,28 @@
             </div>
         </div>
     </div>
-    <footer>Copyright &copy; Tavisca 2017</footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <img class="img-rounded img-responsive" src="../img/"/>
+                </div>
+            </div>
+            <div class="col-md-4">
 
-    <script src="../js/autosuggest.js" type="text/javascript" charset="utf-8" async defer></script>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="../js/libraries/bootstrap.min.js"></script>
+    <script src="../js/autosuggest.js" type="text/javascript" charset="utf-8" async defer></script>
+    
     <script src="../js/search.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

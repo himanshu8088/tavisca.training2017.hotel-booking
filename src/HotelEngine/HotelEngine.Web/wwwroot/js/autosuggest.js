@@ -1,7 +1,7 @@
 ﻿
 $('#destination').keyup(function () {
     var searchText = $('#destination').val();
-    if (searchText.length > 2) {
+    if (searchText.length > 1) {
         search(searchText);        
     }
 
@@ -24,8 +24,10 @@ function search(searchText) {
                 });
             }
             $("#destination").autocomplete({
+                autoFocus: true,
                 source: list,
-                select: function (ev, data) {
+                minLength:1,
+                selected: function (event, data) {
                     sessionStorage.setItem('selectedLocation', JSON.stringify(data));
                 }
             })

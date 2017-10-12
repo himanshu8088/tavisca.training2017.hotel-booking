@@ -41,11 +41,18 @@ function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRo
         "HotelId": hotelId            
     }
 };
+$('#ex1').slider({
+    formatter: function (value) {
+        return 'Current value: ' + value;
+    }
+});
 
-//$('#viewRooms').click(function () {
-    
-//});
-
+// Without JQuery
+var slider = new Slider('#ex1', {
+    formatter: function (value) {
+        return 'Current value: ' + value;
+    }
+});
 function roomClicked(hotelId,hotelName,sessionId) {
     var result = sessionStorage.getItem('hotelSearchCriteria');
     var searchCriteria = JSON.parse(result).data;
