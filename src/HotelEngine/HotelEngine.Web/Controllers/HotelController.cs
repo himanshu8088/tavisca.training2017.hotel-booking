@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using HotelEngine.Contracts.Contracts;
 using HotelEngine.Contracts.Models;
 using HotelEngine.Services;

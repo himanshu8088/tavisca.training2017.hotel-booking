@@ -17,9 +17,17 @@ namespace HotelEngine.Adapter.Configuration
         private int[] _ages;
         private int _qty;
 
-        public TripFolderBookConfig()
+        public TripFolderBookConfig(TripFolderBookSettings tripFolderBookSettings)
         {
-
+            _tripFolderName = tripFolderBookSettings.TripFolderName;
+            _age = tripFolderBookSettings.Age;
+            _birthdate = tripFolderBookSettings.Birthdate;
+            _amount = tripFolderBookSettings.Amount;
+            _sessionId = tripFolderBookSettings.SessionId;
+            _ages = tripFolderBookSettings.Ages;
+            _hotelItinerary = tripFolderBookSettings.HotelItinerary;
+            _hotelSearchCriterion = tripFolderBookSettings.HotelSearchCriterion;
+            _qty = tripFolderBookSettings.Qty;                        
         }
 
         public TripFolderBookRQ TripFolderBookRQ => new TripFolderBookRQ()
@@ -172,7 +180,7 @@ namespace HotelEngine.Adapter.Configuration
                            new StateBag{ Name ="IsLoginWhileSearching", Value="Y"},
                            new StateBag{ Name ="IsInsuranceSelected", Value="no"},
                        },
-                       Id=Guid.Parse("372c3e4b-7e20-4590-8e83-2a0c54f3303f"),
+                       /*Id=Guid.Parse("372c3e4b-7e20-4590-8e83-2a0c54f3303f"),*/
                        IsOnlyLeadPaxInfoRequired=true,
                        Owner=new User()
                        {

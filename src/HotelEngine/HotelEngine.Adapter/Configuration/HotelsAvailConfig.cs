@@ -77,7 +77,7 @@ namespace HotelEngine.Adapter.Configuration
             },
             MatrixResults = true,
             MaximumResults = 1500,
-            PriceCurrencyCode = "INR",
+            PriceCurrencyCode = "USD",
             Location = new Location()
             {
                 CodeContext = LocationCodeContext.GeoCode,
