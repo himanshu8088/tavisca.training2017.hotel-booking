@@ -27,7 +27,7 @@ function search(searchText) {
                 autoFocus: true,
                 source: list,
                 minLength:1,
-                selected: function (event, data) {
+                select: function (event, data) {
                     sessionStorage.setItem('selectedLocation', JSON.stringify(data));
                 }
             })

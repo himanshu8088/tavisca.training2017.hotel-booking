@@ -147,7 +147,7 @@
                                     </div>
                                     <div id="collapse2" class="panel-collapse collapse">
                                         <div class="panel-body">
-                                            <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" />
+                                            <input type="range" min="0" max="10" />
                                         </div>
                                     </div>
                                 </div>
@@ -155,59 +155,57 @@
                         </div>
                     </div>
                     <div class="col-md-9">
-                        
-                            {{#each hotels}} {{#unless hotels.images}}
-                            <div class="panel-group">
-                                <div class="panel panel-primary">
-                                    <div class="panel-body">
-                                        <div class="col-md-4">
-                                            <img src="{{ images.[0] }}" class="img-thumbnail" alt="Cinque Terre" id="hotel-img">
+                        {{#each hotels}} {{#unless hotels.images}}
+                        <div class="panel-group">
+                            <div class="panel panel-primary">
+                                <div class="panel-body">
+                                    <div class="col-md-4">
+                                        <img src="{{ images.[0] }}" class="img-thumbnail" alt="Cinque Terre" id="hotel-img">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="row">
+                                            <div class="col-md-12"><h4 class="text-primary">{{hotelName}}</h4></div>
                                         </div>
-                                        <div class="col-md-5">
-                                            <div class="row">
-                                                <div class="col-md-12"><h4 class="text-primary">{{hotelName}}</h4></div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    {{#times starRating}}
-                                                    <span class="glyphicon glyphicon-star blue-icon"></span>
-                                                    {{/times}}
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <h4><span class="glyphicon glyphicon-map-marker"></span> {{address}}</h4>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="col-md-3"><span class="glyphicon glyphicon-cutlery amenity"></span></div>
-                                                    <div class="col-md-3"><span class="glyphicon glyphicon-signal"></span></div>
-                                                    <div class="col-md-3"><span class="glyphicon glyphicon-bed"></span></div>
-                                                    <div class="col-md-3"><span class="glyphicon glyphicon-send"></span></div>
-                                                </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                {{#times starRating}}
+                                                <span class="glyphicon glyphicon-star blue-icon"></span>
+                                                {{/times}}
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    Starting From
-                                                    <h4>₹{{fare.amount}}</h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h4><span class="glyphicon glyphicon-map-marker"></span> {{address}}</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="col-md-3"><span class="glyphicon glyphicon-cutlery amenity"></span></div>
+                                                <div class="col-md-3"><span class="glyphicon glyphicon-signal"></span></div>
+                                                <div class="col-md-3"><span class="glyphicon glyphicon-bed"></span></div>
+                                                <div class="col-md-3"><span class="glyphicon glyphicon-send"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                Starting From
+                                                <h4>₹{{fare.amount}}</h4>
 
-                                                </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <button type="button" id="viewRooms" onclick="roomClicked('{{hotelId}}','{{hotelName}}','{{../sessionId}}')" class="btn btn-primary">View Rooms</button>
-                                                </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button type="button" id="viewRooms" onclick="roomClicked('{{hotelId}}','{{hotelName}}','{{../sessionId}}')" class="btn btn-primary">View Rooms</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            {{/unless}} {{/each}}
                         </div>
-                    
+                        {{/unless}} {{/each}}
+                    </div>
                 </div>
             </div>
         </script>
