@@ -16,9 +16,9 @@ namespace HotelEngine.Core.Implementation
         {
             _hotelConnector = new HotelConnector();
         }
-        public async Task<RoomBookRS> RoomBookAsync(RoomBookRQ roomBookRQ)
+        public async Task<RoomBookRS> BookAsync(RoomBookRQ roomBookRQ)
         {
-            var roomBookRS = await _hotelConnector.RoomBookAsync(roomBookRQ);
+            var roomBookRS = await _hotelConnector.BookRoomAsync(roomBookRQ);
             return roomBookRS;
         }
     }

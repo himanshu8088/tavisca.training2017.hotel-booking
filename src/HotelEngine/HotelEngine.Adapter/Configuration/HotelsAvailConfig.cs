@@ -7,14 +7,14 @@ namespace HotelEngine.Adapter.Configuration
 {
     public class HotelsAvailConfig
     {
-
         private DateTime _checkIn;
         private DateTime _checkOut;
         private int _posId;
         private int _passengerCount;
         private int _noOfRooms;
         private float _latitude;
-        private float _longitude;        
+        private float _longitude;
+        private string _sessionId;
 
         public HotelsAvailConfig(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
         {
@@ -25,6 +25,7 @@ namespace HotelEngine.Adapter.Configuration
             _latitude = hotelSearchRQ.Location.Latitude;
             _longitude = hotelSearchRQ.Location.Longitude;
             _noOfRooms = hotelSearchRQ.NoOfRooms;
+            _sessionId = hotelSearchRQ.SessionId.ToString();
         }
 
         public HotelsAvailConfig(HotelEngine.Contracts.Models.RoomSearchRQ roomSearchRQ)
@@ -118,6 +119,7 @@ namespace HotelEngine.Adapter.Configuration
             },
             Attributes = new StateBag[]
             {
+                new StateBag() { Name="API_SESSION_ID", Value=_sessionId},
                 new StateBag() { Name = "FareType", Value = "BaseFare" },
                 new StateBag() { Name = "ResetFiltersIfNoResults", Value = "true" },
                 new StateBag() { Name = "ReturnRestrictedRelevanceProperties", Value = "true" },

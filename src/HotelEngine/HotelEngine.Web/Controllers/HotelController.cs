@@ -18,29 +18,29 @@ namespace HotelEngine.Web.Controllers
         }
 
         [HttpPost("search")]
-        public async Task<IActionResult> SearchAsync([FromBody] HotelSearchRQ searchRQ)
+        public async Task<IActionResult> SearchHotelsAsync([FromBody] HotelSearchRQ searchRQ)
         {           
             var hotels = await _hotelService.SearchHotelsAsync(searchRQ);
             return Ok(hotels);
         }
 
         [HttpPost("roomsearch")]
-        public async Task<IActionResult> RoomSearchAsync([FromBody] RoomSearchRQ roomRQ)
+        public async Task<IActionResult> SearchRoomsAsync([FromBody] RoomSearchRQ roomRQ)
         {            
             var rooms = await _hotelService.RoomSearchAsync(roomRQ);
             return Ok(rooms);
         }
 
         [HttpPost("price")]
-        public async Task<IActionResult> RoomPriceSearchAsync([FromBody] RoomPriceSearchRQ priceRQ)
+        public async Task<IActionResult> SearchRoomPriceAsync([FromBody] RoomPriceSearchRQ priceRQ)
         {
             var price = await _hotelService.RoomPriceSearchAsync(priceRQ);
             return Ok(price);
         }
         [HttpPost("book")]
-        public async Task<IActionResult> RoomBookAsync([FromBody] RoomBookRQ roomBookRQ)
+        public async Task<IActionResult> BookRoomAsync([FromBody] RoomBookRQ roomBookRQ)
         {
-            var response = await _hotelService.RoomBookAsync(roomBookRQ);
+            var response = await _hotelService.BookRoomAsync(roomBookRQ);
             return Ok(response);
         }
     }

@@ -255,7 +255,7 @@ namespace HotelEngine.Adapter
             return hotelRoomPriceRQ;
         }
 
-        public Task<RoomBookRS> RoomBookAsync(RoomBookRQ roomBookRQ)
+        public Task<RoomBookRS> BookRoomAsync(RoomBookRQ roomBookRQ)
         {
             throw new NotImplementedException();
         }

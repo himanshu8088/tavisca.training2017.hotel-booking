@@ -12,7 +12,8 @@ namespace HotelEngine.Core.Factories
         {
             { typeof(IHotelSearch), new HotelSearch() },
             { typeof(IRoomSearch), new RoomSearch() },
-            { typeof(IPriceSearch), new PriceSearch()}
+            { typeof(IPriceSearch), new PriceSearch() },
+            { typeof(IRoomBook), new RoomBook() }
         };
 
         public static object Get<T>()

@@ -1,7 +1,7 @@
 ﻿using HotelEngine.Contracts.Models;
 using System.Threading.Tasks;
 
-namespace HotelEngine.Contracts
+namespace HotelEngine.Contracts.Contracts
 {
     public interface IPriceSearch
     {

@@ -8,6 +8,6 @@ namespace HotelEngine.Contracts.Contracts
 {
     public interface IRoomBook 
     {
-        Task<RoomBookRS> RoomBookAsync(RoomBookRQ roomBookRequest);
+        Task<RoomBookRS> BookAsync(RoomBookRQ roomBookRequest);
     }
 }

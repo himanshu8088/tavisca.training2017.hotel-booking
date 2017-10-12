@@ -13,12 +13,14 @@ namespace HotelEngine.Services
         private IHotelSearch _hotelSearch;
         private IRoomSearch _roomSearch;
         private IPriceSearch _priceSearch;
+        private IRoomBook _roomBook;
 
         public HotelService()
         {
             _hotelSearch = Factory.Get<IHotelSearch>() as IHotelSearch;
             _roomSearch = Factory.Get<IRoomSearch>() as IRoomSearch;
             _priceSearch = Factory.Get<IPriceSearch>() as IPriceSearch;
+            _roomBook = Factory.Get<IRoomBook>() as IRoomBook;
         }
 
         public async Task<HotelSearchRS> SearchHotelsAsync(HotelSearchRQ hotelSearchRequest)
@@ -38,6 +40,12 @@ namespace HotelEngine.Services
         {
             var priceSearchRS = await _priceSearch.SearchAsync(priceRQ);
             return priceSearchRS;
+        }
+
+        public async Task<RoomBookRS> BookRoomAsync(RoomBookRQ roomBookRQ)
+        {
+            var roomBookRS = await _roomBook.BookAsync(roomBookRQ);
+            return roomBookRS;
         }
     }
 }
