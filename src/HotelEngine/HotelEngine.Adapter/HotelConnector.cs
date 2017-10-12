@@ -1,6 +1,7 @@
 ﻿using HotelEngine.Contracts.Contracts;
 using HotelEngine.Contracts.Models;
 using HotelSearch;
+using HotelBook;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,7 +14,8 @@ namespace HotelEngine.Adapter
     public class HotelConnector : IHotelConnector
     {
         private IAdapterConfiguration _config;
-        private HotelEngineClient _client = null;
+        private HotelEngineClient _hotelEngineClient = null;
+        private TripsEngineClient _tripEngineClient = null;
 
         public HotelConnector()
         {
@@ -40,11 +42,11 @@ namespace HotelEngine.Adapter
         {
             var hotelRoomPriceRQ = await ParsePriceRQ(roomPriceRQ);
             var hotelRoomPriceRS = await GetRoomPrice(hotelRoomPriceRQ);
-            var roomPriceSearchRS = ParsePriceRS(hotelRoomPriceRS);
+            var roomPriceSearchRS = ParsePriceRS(hotelRoomPriceRS, roomPriceRQ.SessionId);
             return roomPriceSearchRS;
         }
 
-        private RoomPriceSearchRS ParsePriceRS(HotelRoomPriceRS hotelRoomPriceRS)
+        private RoomPriceSearchRS ParsePriceRS(HotelSearch.HotelRoomPriceRS hotelRoomPriceRS, Guid sessionId)
         {
             var roomPriceSearchRS = new RoomPriceSearchRS()
             {
@@ -52,47 +54,9 @@ namespace HotelEngine.Adapter
                 {
                     Amount = hotelRoomPriceRS.Itinerary.Fare.BaseFare.Amount
                 },
-                SessionId = hotelRoomPriceRS.SessionId
+                SessionId = sessionId.ToString()
             };
             return roomPriceSearchRS;
-        }
-
-        public async Task<HotelRoomPriceRS> GetRoomPrice(HotelRoomPriceRQ hotelRoomPriceRQ)
-        {
-            HotelRoomPriceRS hotelRoomPriceRS = null;
-            try
-            {
-                _client = new HotelEngineClient();
-                hotelRoomPriceRS = await _client.HotelRoomPriceAsync(hotelRoomPriceRQ);
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Connection Error");
-            }
-            finally
-            {
-                await _client.CloseAsync();
-            }
-            return hotelRoomPriceRS;
-        }
-
-        private async Task<HotelRoomAvailRS> GetRoomsAsync(HotelRoomAvailRQ hotelRoomAvailRQ)
-        {
-            HotelRoomAvailRS hotelRoomAvailRS;
-            try
-            {
-                _client = new HotelEngineClient();
-                hotelRoomAvailRS = await _client.HotelRoomAvailAsync(hotelRoomAvailRQ);
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Connection Error");
-            }
-            finally
-            {
-                await _client.CloseAsync();
-            }
-            return hotelRoomAvailRS;
         }
 
         private async Task<HotelSearch.HotelSearchRS> GetHotelsAsync(HotelSearch.HotelSearchRQ request)
@@ -100,19 +64,74 @@ namespace HotelEngine.Adapter
             HotelSearch.HotelSearchRS hotelSearchRS;
             try
             {
-                _client = new HotelEngineClient();
-                hotelSearchRS = await _client.HotelAvailAsync(request);
+                _hotelEngineClient = new HotelEngineClient();
+                hotelSearchRS = await _hotelEngineClient.HotelAvailAsync(request);
             }
             catch (Exception e)
             {
-                throw;
+                throw new Exception("Connection Error");
             }
             finally
             {
-                await _client.CloseAsync();
+                await _hotelEngineClient.CloseAsync();
             }
             return hotelSearchRS;
         }
+
+        private async Task<HotelSearch.HotelRoomAvailRS> GetRoomsAsync(HotelSearch.HotelRoomAvailRQ hotelRoomAvailRQ)
+        {
+            HotelSearch.HotelRoomAvailRS hotelRoomAvailRS;
+            try
+            {
+                _hotelEngineClient = new HotelEngineClient();
+                hotelRoomAvailRS = await _hotelEngineClient.HotelRoomAvailAsync(hotelRoomAvailRQ);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Connection Error");
+            }
+            finally
+            {
+                await _hotelEngineClient.CloseAsync();
+            }
+            return hotelRoomAvailRS;
+        }
+
+        public async Task<HotelSearch.HotelRoomPriceRS> GetRoomPrice(HotelSearch.HotelRoomPriceRQ hotelRoomPriceRQ)
+        {
+            HotelSearch.HotelRoomPriceRS hotelRoomPriceRS = null;
+            try
+            {
+                _hotelEngineClient = new HotelEngineClient();
+                hotelRoomPriceRS = await _hotelEngineClient.HotelRoomPriceAsync(hotelRoomPriceRQ);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Connection Error");
+            }
+            finally
+            {
+                await _hotelEngineClient.CloseAsync();
+            }
+            return hotelRoomPriceRS;
+        }
+
+        public async Task<RoomBookRS> BookRoomAsync(RoomBookRQ roomBookRQ)
+        {
+            try
+            {
+                var roomBookRS = await _tripEngineClient.BookTripFolderAsync(new TripFolderBookRQ());
+            }
+            catch(Exception e)
+            {
+                throw new Exception("Connection Error");
+            }
+            finally
+            {
+
+            }
+            throw new NotImplementedException();
+        }        
 
         private HotelSearch.HotelSearchRQ ParseHotelRQ(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
         {
@@ -201,10 +220,10 @@ namespace HotelEngine.Adapter
             return hotelSearchResponse;
         }
 
-        private HotelRoomAvailRQ ParseRoomRQ(RoomSearchRQ roomSearchRQ)
+        private HotelSearch.HotelRoomAvailRQ ParseRoomRQ(RoomSearchRQ roomSearchRQ)
         {
             var roomsSettings = _config.GetRoomsAvailConfig(roomSearchRQ);
-            var hotelRoomAvailRQ = new HotelRoomAvailRQ()
+            var hotelRoomAvailRQ = new HotelSearch.HotelRoomAvailRQ()
             {
                 HotelSearchCriterion = roomsSettings.SearchCriterion,
                 Itinerary = roomsSettings.HotelItinerary,
@@ -214,7 +233,7 @@ namespace HotelEngine.Adapter
             return hotelRoomAvailRQ;
         }
 
-        private RoomSearchRS ParseRoomRS(HotelRoomAvailRS roomSearchResponse, Guid sessionId)
+        private RoomSearchRS ParseRoomRS(HotelSearch.HotelRoomAvailRS roomSearchResponse, Guid sessionId)
         {
             RoomSearchRS roomSearchRS = null;
             List<HotelEngine.Contracts.Models.Room> rooms = new List<HotelEngine.Contracts.Models.Room>();
@@ -241,11 +260,11 @@ namespace HotelEngine.Adapter
             return roomSearchRS;
         }
 
-        private async Task<HotelRoomPriceRQ> ParsePriceRQ(RoomPriceSearchRQ roomPriceRQ)
+        private async Task<HotelSearch.HotelRoomPriceRQ> ParsePriceRQ(RoomPriceSearchRQ roomPriceRQ)
         {
             var roomAvailRQ = ParseRoomRQ(roomPriceRQ);
             var roomAvailRS = await GetRoomsAsync(roomAvailRQ);
-            var hotelRoomPriceRQ = new HotelRoomPriceRQ()
+            var hotelRoomPriceRQ = new HotelSearch.HotelRoomPriceRQ()
             {
                 HotelSearchCriterion = roomAvailRQ.HotelSearchCriterion,
                 Itinerary = roomAvailRS.Itinerary,
@@ -255,9 +274,6 @@ namespace HotelEngine.Adapter
             return hotelRoomPriceRQ;
         }
 
-        public Task<RoomBookRS> BookRoomAsync(RoomBookRQ roomBookRQ)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

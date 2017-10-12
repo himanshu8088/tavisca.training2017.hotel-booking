@@ -45,9 +45,9 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
             //Arrange           
             var priceSearchRQ = new RoomPriceSearchRQ()
             {
-                SessionId = Guid.Parse("943b6ebb-65a3-4abc-88c5-e65a02b16824"),
-                CheckInDate = DateTime.Now.AddDays(1),
-                CheckOutDate = DateTime.Now.AddDays(5),
+                SessionId = Guid.Parse("fbe2f93e-8d56-4cd8-9e76-24e01e8ea171"),
+                CheckInDate = DateTime.Parse("27-10-2017"),
+                CheckOutDate = DateTime.Parse("29-10-2017"),
                 GuestCount = 2,
                 HotelId = 252448,
                 Location = new HotelEngine.Contracts.Models.Location()

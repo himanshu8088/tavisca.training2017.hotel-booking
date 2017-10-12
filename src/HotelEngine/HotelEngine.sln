@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Connector.Tests", "Connector.Tests\Connector.Tests.csproj", "{C31FC104-EF57-4690-8315-D715C5455128}"
 EndProject
@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelEngine.Core", "HotelEn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelEngine.Adapter", "HotelEngine.Adapter\HotelEngine.Adapter.csproj", "{242E730A-C42C-4E54-AE10-E2B33F9B40AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelEngine.Contracts", "HotelEngine.Contracts\HotelEngine.Contracts.csproj", "{F4F7B0E6-15E5-4189-A039-53A772C23847}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelEngine.Contracts", "HotelEngine.Contracts\HotelEngine.Contracts.csproj", "{F4F7B0E6-15E5-4189-A039-53A772C23847}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
