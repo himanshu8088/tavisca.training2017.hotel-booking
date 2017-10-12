@@ -10,7 +10,7 @@ namespace HotelEngine.Core.Factories
     {
         private static Dictionary<Type, object> _mapping = new Dictionary<Type, object>()
         {
-            { typeof(IHotelSearch), new HotelSearch() },
+            { typeof(IHotelSearch), new Implementation.HotelSearch() },
             { typeof(IRoomSearch), new RoomSearch() },
             { typeof(IPriceSearch), new PriceSearch() },
             { typeof(IRoomBook), new RoomBook() }

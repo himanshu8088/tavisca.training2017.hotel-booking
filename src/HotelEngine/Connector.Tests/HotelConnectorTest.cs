@@ -1,7 +1,7 @@
 ﻿using HotelEngine.Adapter;
 using HotelEngine.Adapter.Configuration;
 using HotelEngine.Contracts.Models;
-using Proxies;
+using HotelSearch;
 using System;
 using System.Threading.Tasks;
 using Xunit;

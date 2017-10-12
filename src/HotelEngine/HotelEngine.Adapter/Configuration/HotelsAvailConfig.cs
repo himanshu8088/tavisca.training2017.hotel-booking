@@ -1,4 +1,4 @@
-﻿using Proxies;
+﻿using HotelSearch;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -81,13 +81,13 @@ namespace HotelEngine.Adapter.Configuration
             Location = new Location()
             {
                 CodeContext = LocationCodeContext.GeoCode,
-                GeoCode = new GeoCode() { Latitude = _latitude, Longitude = _longitude },                
+                GeoCode = new GeoCode() { Latitude = _latitude, Longitude = _longitude },
             },
             NoOfRooms = _noOfRooms,
             Guests = new PassengerTypeQuantity[]
             {
                 new PassengerTypeQuantity()
-                {                    
+                {
                     PassengerType = PassengerType.Adult,
                     Quantity = _passengerCount
                 }
@@ -103,7 +103,7 @@ namespace HotelEngine.Adapter.Configuration
                     PaxQuantities =  new PassengerTypeQuantity[]
                                      {
                                             new PassengerTypeQuantity()
-                                            {                                                
+                                            {
                                                 PassengerType = PassengerType.Adult,
                                                 Quantity = _passengerCount
                                             }
@@ -114,8 +114,8 @@ namespace HotelEngine.Adapter.Configuration
             StayPeriod = new DateTimeSpan()
             {
                 Duration = 0,
-                Start = _checkIn, 
-                End = _checkOut 
+                Start = _checkIn,
+                End = _checkOut
             },
             Attributes = new StateBag[]
             {

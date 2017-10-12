@@ -1,6 +1,6 @@
 ﻿using HotelEngine.Contracts.Contracts;
 using HotelEngine.Contracts.Models;
-using Proxies;
+using HotelSearch;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -95,9 +95,9 @@ namespace HotelEngine.Adapter
             return hotelRoomAvailRS;
         }
 
-        private async Task<Proxies.HotelSearchRS> GetHotelsAsync(Proxies.HotelSearchRQ request)
+        private async Task<HotelSearch.HotelSearchRS> GetHotelsAsync(HotelSearch.HotelSearchRQ request)
         {
-            Proxies.HotelSearchRS hotelSearchRS;
+            HotelSearch.HotelSearchRS hotelSearchRS;
             try
             {
                 _client = new HotelEngineClient();
@@ -114,10 +114,10 @@ namespace HotelEngine.Adapter
             return hotelSearchRS;
         }
 
-        private Proxies.HotelSearchRQ ParseHotelRQ(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
+        private HotelSearch.HotelSearchRQ ParseHotelRQ(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
         {
             var hotelSettings = _config.GetHotelsAvailConfig(hotelSearchRQ);
-            var hotelSearchReq = new Proxies.HotelSearchRQ()
+            var hotelSearchReq = new HotelSearch.HotelSearchRQ()
             {
                 HotelSearchCriterion = hotelSettings.HotelSearchCriterion,
                 SessionId = hotelSearchRQ.SessionId.ToString(),
@@ -128,7 +128,7 @@ namespace HotelEngine.Adapter
             return hotelSearchReq;
         }
 
-        private HotelEngine.Contracts.Models.HotelSearchRS ParseHotelRS(Proxies.HotelSearchRS hotelSearchRS, Guid sessionId)
+        private HotelEngine.Contracts.Models.HotelSearchRS ParseHotelRS(HotelSearch.HotelSearchRS hotelSearchRS, Guid sessionId)
         {
             HotelEngine.Contracts.Models.HotelSearchRS hotelSearchResponse = null;
             var itineraries = hotelSearchRS.Itineraries;

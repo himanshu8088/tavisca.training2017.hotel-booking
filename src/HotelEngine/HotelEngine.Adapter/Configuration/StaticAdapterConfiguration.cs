@@ -1,5 +1,5 @@
 ﻿using System;
-using Proxies;
+using HotelSearch;
 using HotelEngine.Adapter.Contracts;
 using HotelEngine.Contracts.Models;
 
