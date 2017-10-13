@@ -75,31 +75,31 @@
                     <div class="panel panel-primary">
                         <div class="panel-body">
                             <div class="col-md-4">
-                                <!--<img src="{{ images.[0] }}" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">-->
                                 <div id="sliderCarousel" class="carousel slide" data-ride="carousel">
-                                    <!-- Indicators -->
-                                    
+                                    <!-- Indicators -
                                     <ol class="carousel-indicators">
                                         <li data-target="#sliderCarousel" data-slide-to="0" class="active"></li>
                                         <li data-target="#sliderCarousel" data-slide-to="1"></li>
                                         <li data-target="#sliderCarousel" data-slide-to="2"></li>
                                     </ol>
-
-                                    <!-- Wrapper for slides -->
+                                        -->
+                                    
                                     <div class="carousel-inner">
-                                        <div class="item active">
-                                            <img src="{{ ../images.[0] }}" alt="room-image"  width="304" height="236">
-                                        </div>
-                                        {{#each images}}
-                                            {{@index}}:{{this}}
-                                            {{#ifCond @index 0 }}
+                                        
+                                        {{#each ../images}}
+                                        {{#ifCond @index 0 }}
                                             <div class="item">
-                                                <img src="{{images.[@index]}}" alt="Chicago"  width="304" height="236">
+                                                <img src="{{this}}" alt="room-img"  width="304" height="236">
                                             </div>
-                                            {{/ifCond}}
+                                            {{else}}
+                                            <div class="item active">
+                                                <img src="{{this}}" alt="room-img" width="304" height="236">
+                                            </div>
+                                        
+                                        {{/ifCond}}
                                         {{/each}}
                                     </div>
-
+                                    
                                     <!-- Left and right controls -->
                                     <a class="left carousel-control" href="#sliderCarousel" data-slide="prev">
                                         <span class="glyphicon glyphicon-chevron-left"></span>
