@@ -15,10 +15,12 @@ namespace HotelEngine.Adapter.Configuration
         private float _latitude;
         private float _longitude;
         private string _sessionId;
+        private string _priceCurrencyCode;
 
         public HotelsAvailConfig(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
         {
             _posId = 101;
+            _priceCurrencyCode = "USD";
             _checkIn = hotelSearchRQ.CheckInDate;
             _checkOut = hotelSearchRQ.CheckOutDate;
             _passengerCount = hotelSearchRQ.GuestCount;
@@ -26,18 +28,7 @@ namespace HotelEngine.Adapter.Configuration
             _longitude = hotelSearchRQ.Location.Longitude;
             _noOfRooms = hotelSearchRQ.NoOfRooms;
             _sessionId = hotelSearchRQ.SessionId.ToString();
-        }
-
-        public HotelsAvailConfig(HotelEngine.Contracts.Models.RoomSearchRQ roomSearchRQ)
-        {
-            _posId = 101;
-            _checkIn = roomSearchRQ.CheckInDate;
-            _checkOut = roomSearchRQ.CheckOutDate;
-            _passengerCount = roomSearchRQ.GuestCount;
-            _latitude = roomSearchRQ.Location.Latitude;
-            _longitude = roomSearchRQ.Location.Longitude;
-            _noOfRooms = roomSearchRQ.NoOfRooms;
-        }
+        }        
 
         public HotelFilter[] Filters => new HotelFilter[]
         {
@@ -77,7 +68,7 @@ namespace HotelEngine.Adapter.Configuration
             },
             MatrixResults = true,
             MaximumResults = 1500,
-            PriceCurrencyCode = "USD",
+            PriceCurrencyCode = _priceCurrencyCode,
             Location = new Location()
             {
                 CodeContext = LocationCodeContext.GeoCode,

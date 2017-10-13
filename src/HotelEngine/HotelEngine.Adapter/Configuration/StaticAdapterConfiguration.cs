@@ -17,11 +17,11 @@ namespace HotelEngine.Adapter.Configuration
             var hotelConfig = new HotelsAvailConfig(roomSearchRQ);
             return new RoomsAvailConfig(hotelConfig, roomSearchRQ);
         }
-        //public TripPriceConfig GetTripPriceConfig(RoomSearchRQ roomSearchRQ)
-        //{
-        //    var hotelConfig = new HotelsAvailConfig(roomSearchRQ);
-        //    var roomConfig= new RoomsAvailConfig(hotelConfig, roomSearchRQ);
-        //    return new TripPriceConfig(roomConfig);
-        //}
+        public TripProductConfig GetTripProductConfig(RoomPriceSearchRQ hotelRoomPriceRQ)
+        {
+            var roomsConfig=GetRoomsAvailConfig(hotelRoomPriceRQ);
+            var tripProductConfig = new TripProductConfig(roomsConfig.SearchCriterion, hotelRoomPriceRQ.HotelId, hotelRoomPriceRQ.RoomId);
+            return tripProductConfig;
+        }
     }
 }

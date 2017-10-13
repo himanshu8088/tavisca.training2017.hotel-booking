@@ -40,36 +40,84 @@ namespace HotelEngine.Adapter
 
         public async Task<RoomPriceSearchRS> SearchPriceAsync(RoomPriceSearchRQ roomPriceRQ)
         {
-            var hotelRoomPriceRQ = await ParsePriceRQ(roomPriceRQ);
-            var hotelRoomPriceRS = await GetRoomPrice(hotelRoomPriceRQ);
-            var roomPriceSearchRS = ParsePriceRS(hotelRoomPriceRS, roomPriceRQ.SessionId);
-            return roomPriceSearchRS;
-        }
-
-        private RoomPriceSearchRS ParsePriceRS(Proxies.HotelRoomPriceRS hotelRoomPriceRS, Guid sessionId)
-        {
             RoomPriceSearchRS roomPriceSearchRS = null;
             try
             {
-                roomPriceSearchRS = new RoomPriceSearchRS()
-                {
-                    ChargebleFare = new HotelEngine.Contracts.Models.Fare()
-                    {
-                        Currency = hotelRoomPriceRS.Itinerary.Fare.BaseFare.Currency,
-                        BaseFare= hotelRoomPriceRS.Itinerary.Fare.BaseFare.Amount                        
-                    },
-                    SessionId = sessionId.ToString(),
-                    HotelId = hotelRoomPriceRS.Itinerary.HotelProperty.Id                    
-                };
+                var tripProductPriceRQ = ParsePriceRQ(roomPriceRQ);
+                var tripProductPriceRS = await GetRoomPrice(tripProductPriceRQ);
+                roomPriceSearchRS = ParsePriceRS(tripProductPriceRS);
             }catch(Exception e)
             {
-                throw new Exception("Rooms Not Available");
+
             }
+          
+            return roomPriceSearchRS;
+        }
+
+        public async Task<BookingProxy.TripProductPriceRS> GetRoomPrice(TripProductPriceRQ tripProductPriceRQ)
+        {
+            TripProductPriceRS tripProductPriceRS = null;
+           
+            try
+            {
+                _tripEngineClient = new BookingProxy.TripsEngineClient();
+                tripProductPriceRS = await _tripEngineClient.PriceTripProductAsync(tripProductPriceRQ);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Connection Error");
+            }
+            finally
+            {
+                await _hotelEngineClient.CloseAsync();
+            }
+            return tripProductPriceRS;
+        }
+
+
+        private TripProductPriceRQ ParsePriceRQ(RoomPriceSearchRQ roomPriceRQ)
+        {
+            var settings = _config.GetTripProductConfig(roomPriceRQ);
+
+            TripProductPriceRQ tripProductPriceRQ = new TripProductPriceRQ()
+            {
+                 ResultRequested=ResponseType.Unknown,
+                 SessionId=roomPriceRQ.SessionId.ToString(),
+                 TripProduct=new HotelTripProduct()
+                 {
+                     HotelItinerary=settings.HotelItinerary,
+                     HotelSearchCriterion=settings.HotelSearchCriterion
+                 }
+            };            
+
+            return tripProductPriceRQ;
+        }
+
+        private RoomPriceSearchRS ParsePriceRS(TripProductPriceRS tripProductPriceRS)
+        {
+            RoomPriceSearchRS roomPriceSearchRS = null;
+            //tripProductPriceRS.TripProduct.
+            //try
+            //{
+            //    roomPriceSearchRS = new RoomPriceSearchRS()
+            //    {
+            //        ChargebleFare = new HotelEngine.Contracts.Models.Fare()
+            //        {
+            //            Currency = tripProductPriceRS.TripProduct..Itinerary.Fare.BaseFare.Currency,
+            //            BaseFare= tripProductPriceRS.Itinerary.Fare.BaseFare.Amount                        
+            //        },
+            //        SessionId = tripProductPriceRS.SessionId.ToString(),
+            //        HotelId = hotelRoomPriceRS.Itinerary.HotelProperty.Id                    
+            //    };
+            //}catch(Exception e)
+            //{
+            //    throw new Exception("Rooms Not Available");
+            //}
             
             return roomPriceSearchRS;
         }
 
-        private async Task<global::Proxies.HotelSearchRS> GetHotelsAsync(Proxies.HotelSearchRQ request)
+        private async Task<Proxies.HotelSearchRS> GetHotelsAsync(Proxies.HotelSearchRQ request)
         {
             global::Proxies.HotelSearchRS hotelSearchRS;
             try
@@ -88,9 +136,9 @@ namespace HotelEngine.Adapter
             return hotelSearchRS;
         }
 
-        private async Task<global::Proxies.HotelRoomAvailRS> GetRoomsAsync(Proxies.HotelRoomAvailRQ hotelRoomAvailRQ)
+        private async Task<Proxies.HotelRoomAvailRS> GetRoomsAsync(Proxies.HotelRoomAvailRQ hotelRoomAvailRQ)
         {
-            global::Proxies.HotelRoomAvailRS hotelRoomAvailRS;
+            Proxies.HotelRoomAvailRS hotelRoomAvailRS;
             try
             {
                 _hotelEngineClient = new Proxies.HotelEngineClient();
@@ -106,87 +154,68 @@ namespace HotelEngine.Adapter
             }
             return hotelRoomAvailRS;
         }
-
-        public async Task<global::Proxies.HotelRoomPriceRS> GetRoomPrice(Proxies.HotelRoomPriceRQ hotelRoomPriceRQ)
-        {
-            global::Proxies.HotelRoomPriceRS hotelRoomPriceRS = null;
-            try
-            {
-                _hotelEngineClient = new Proxies.HotelEngineClient();
-                hotelRoomPriceRS = await _hotelEngineClient.HotelRoomPriceAsync(hotelRoomPriceRQ);
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Connection Error");
-            }
-            finally
-            {
-                await _hotelEngineClient.CloseAsync();
-            }
-            return hotelRoomPriceRS;
-        }
-
-        public async Task<RoomBookRS> BookRoomAsync(RoomBookRQ roomBookRQ)
-        {
-            //try
-            //{
+      
+        //public async Task<RoomBookRS> BookRoomAsync(RoomBookRQ roomBookRQ)
+        //{
+        //    //try
+        //    //{
                 
-            //    var roomBookRS = await _tripEngineClient.BookTripFolderAsync(new BookingProxy.TripFolderBookRQ());
-            //}
-            //catch (Exception e)
-            //{
-            //    throw new Exception("Connection Error");
-            //}
-            //finally
-            //{
-            //    await _tripEngineClient.CloseAsync();
-            //}
-            throw new NotImplementedException();
-        }
+        //    //    var roomBookRS = await _tripEngineClient.BookTripFolderAsync(new BookingProxy.TripFolderBookRQ());
+        //    //}
+        //    //catch (Exception e)
+        //    //{
+        //    //    throw new Exception("Connection Error");
+        //    //}
+        //    //finally
+        //    //{
+        //    //    await _tripEngineClient.CloseAsync();
+        //    //}
+        //    throw new NotImplementedException();
+        //}
 
-        public async Task<RoomBookRS> BookRoomAsync(RoomPriceSearchRQ roomPriceSearchRQ/*RoomSearchRQ roomSearchRQ*/)
-        {
-            //var roomAvailRQ = ParseRoomRQ(roomSearchRQ);
-            //var roomAvailRS = await GetRoomsAsync(roomAvailRQ);
-            //BookingProxy.HotelItinerary itinerary = JsonConvert.DeserializeObject<BookingProxy.HotelItinerary>(JsonConvert.SerializeObject(roomAvailRS.Itinerary));
-            //BookingProxy.HotelSearchCriterion hotelSearchCriterion = JsonConvert.DeserializeObject<BookingProxy.HotelSearchCriterion>(JsonConvert.SerializeObject(roomAvailRQ.HotelSearchCriterion));
-            //BookingProxy.Money amount = JsonConvert.DeserializeObject<BookingProxy.Money>(JsonConvert.SerializeObject(roomAvailRS.Itinerary.Fare.AvgDailyRate));
+        //public async Task<RoomBookRS> BookRoomAsync(RoomPriceSearchRQ roomPriceSearchRQ/*RoomSearchRQ roomSearchRQ*/)
+        //{
+        //    //var roomAvailRQ = ParseRoomRQ(roomSearchRQ);
+        //    //var roomAvailRS = await GetRoomsAsync(roomAvailRQ);
+        //    //BookingProxy.HotelItinerary itinerary = JsonConvert.DeserializeObject<BookingProxy.HotelItinerary>(JsonConvert.SerializeObject(roomAvailRS.Itinerary));
+        //    //BookingProxy.HotelSearchCriterion hotelSearchCriterion = JsonConvert.DeserializeObject<BookingProxy.HotelSearchCriterion>(JsonConvert.SerializeObject(roomAvailRQ.HotelSearchCriterion));
+        //    //BookingProxy.Money amount = JsonConvert.DeserializeObject<BookingProxy.Money>(JsonConvert.SerializeObject(roomAvailRS.Itinerary.Fare.AvgDailyRate));
 
-            var hotelRoomPriceRQ = await ParsePriceRQ(roomPriceSearchRQ);
-            var hotelRoomPriceRS = await GetRoomPrice(hotelRoomPriceRQ);
-            BookingProxy.HotelItinerary itinerary = JsonConvert.DeserializeObject<BookingProxy.HotelItinerary>(JsonConvert.SerializeObject(hotelRoomPriceRS.Itinerary));
-            BookingProxy.HotelSearchCriterion hotelSearchCriterion = JsonConvert.DeserializeObject<BookingProxy.HotelSearchCriterion>(JsonConvert.SerializeObject(hotelRoomPriceRQ.HotelSearchCriterion));
-            BookingProxy.Money amount = JsonConvert.DeserializeObject<BookingProxy.Money>(JsonConvert.SerializeObject(/*hotelRoomPriceRS*/hotelRoomPriceRQ.Itinerary.Fare.AvgDailyRate));
+        //    var hotelRoomPriceRQ = await ParsePriceRQ(roomPriceSearchRQ);
+        //    var hotelRoomPriceRS = await GetRoomPrice(hotelRoomPriceRQ);
+        //    BookingProxy.HotelItinerary itinerary = JsonConvert.DeserializeObject<BookingProxy.HotelItinerary>(JsonConvert.SerializeObject(hotelRoomPriceRS.Itinerary));
+        //    BookingProxy.HotelSearchCriterion hotelSearchCriterion = JsonConvert.DeserializeObject<BookingProxy.HotelSearchCriterion>(JsonConvert.SerializeObject(hotelRoomPriceRQ.HotelSearchCriterion));
+        //    BookingProxy.Money amount = JsonConvert.DeserializeObject<BookingProxy.Money>(JsonConvert.SerializeObject(/*hotelRoomPriceRS*/hotelRoomPriceRQ.Itinerary.Fare.AvgDailyRate));
 
-            RoomBookRS rs = new RoomBookRS();
+        //    RoomBookRS rs = new RoomBookRS();
 
-            var setting = new TripFolderBookSettings()
-            {
-                HotelItinerary = itinerary,
-                Age=30,
-                Ages=new int[] { 30 },
-                Birthdate=DateTime.Now,
-                HotelSearchCriterion= hotelSearchCriterion,
-                SessionId= hotelRoomPriceRS.SessionId.ToString()/*roomSearchRQ.SessionId.ToString()*/,
-                TripFolderName=$"Trip{DateTime.Now.ToString()}",
-                Qty=1,
-                Amount= amount
-            };
-            var tripConfig=new TripFolderBookConfig(setting);
-            try
-            {
-                _tripEngineClient = new TripsEngineClient();
-                var res = await _tripEngineClient.BookTripFolderAsync(tripConfig.TripFolderBookRQ);
-            }catch(Exception e)
-            {
+        //    var setting = new TripFolderBookSettings()
+        //    {
+        //        HotelItinerary = itinerary,
+        //        Age=30,
+        //        Ages=new int[] { 30 },
+        //        Birthdate=DateTime.Now,
+        //        HotelSearchCriterion= hotelSearchCriterion,
+        //        SessionId= hotelRoomPriceRS.SessionId.ToString()/*roomSearchRQ.SessionId.ToString()*/,
+        //        TripFolderName=$"Trip{DateTime.Now.ToString()}",
+        //        Qty=1,
+        //        Amount= amount
+        //    };
+        //    var tripConfig=new TripFolderBookConfig(setting);
+        //    try
+        //    {
+        //        _tripEngineClient = new TripsEngineClient();
+        //        var res = await _tripEngineClient.BookTripFolderAsync(tripConfig.TripFolderBookRQ);
+        //    }catch(Exception e)
+        //    {
 
-            }
-            finally
-            {
+        //    }
+        //    finally
+        //    {
                 
-            }
-            return rs;
-        }
+        //    }
+        //    return rs;
+        //}
 
         private Proxies.HotelSearchRQ ParseHotelRQ(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
         {
@@ -218,7 +247,7 @@ namespace HotelEngine.Adapter
                     var room = new HotelEngine.Contracts.Models.Room()
                     {
                         Description = roomProp.RoomDescription,
-                        Id = roomProp.RoomId.ToString(),
+                        RoomId = roomProp.RoomId,
                         Fare = new HotelEngine.Contracts.Models.Fare()
                         {
                             BaseFare = roomProp.DisplayRoomRate.BaseFare.Amount,
@@ -283,7 +312,7 @@ namespace HotelEngine.Adapter
         private Proxies.HotelRoomAvailRQ ParseRoomRQ(RoomSearchRQ roomSearchRQ)
         {
             var roomsSettings = _config.GetRoomsAvailConfig(roomSearchRQ);
-            var hotelRoomAvailRQ = new global::Proxies.HotelRoomAvailRQ()
+            var hotelRoomAvailRQ = new Proxies.HotelRoomAvailRQ()
             {
                 HotelSearchCriterion = roomsSettings.SearchCriterion,
                 Itinerary = roomsSettings.HotelItinerary,
@@ -309,7 +338,7 @@ namespace HotelEngine.Adapter
                         BaseFare = roomResult.DisplayRoomRate.BaseFare.Amount,
                         Currency = roomResult.DisplayRoomRate.BaseFare.Currency
                     },
-                    Id = roomResult.RoomId.ToString(),
+                    RoomId = roomResult.RoomId,
                     Name = roomResult.RoomName,
                     Type = roomResult.RoomType
                 };
@@ -333,20 +362,9 @@ namespace HotelEngine.Adapter
             return roomSearchRS;
         }
 
-        private async Task<Proxies.HotelRoomPriceRQ> ParsePriceRQ(RoomPriceSearchRQ roomPriceRQ)
+        public Task<RoomBookRS> BookRoomAsync(RoomBookRQ roomBookRQ)
         {
-            var roomAvailRQ = ParseRoomRQ(roomPriceRQ);
-            var roomAvailRS = await GetRoomsAsync(roomAvailRQ);
-            var hotelRoomPriceRQ = new Proxies.HotelRoomPriceRQ()
-            {
-                HotelSearchCriterion = roomAvailRQ.HotelSearchCriterion,
-                Itinerary = roomAvailRS.Itinerary,
-                SessionId = roomAvailRS.SessionId,
-                ResultRequested = roomAvailRS.ResponseRecieved
-            };
-            return hotelRoomPriceRQ;
+            throw new NotImplementedException();
         }
-
-
     }
 }
