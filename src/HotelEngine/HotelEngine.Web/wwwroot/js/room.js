@@ -20,13 +20,7 @@ $(document).ready(function () {
         }
     });       
 });
-//var sampleResponse = {
-//    "hotelName": "Deshi Hotel",
-//    "completeAddress": "Address",
-//    "room": {
-//        "roomName": "Room Name",
-//        "bedType": "Bed Type",
-//        "baseFare": "Fare",
-//        "description": "description"
-//    }
-//} 
+
+function book(context) {
+    window.location = '../html/guestdetails.html';
+};
