@@ -53,11 +53,13 @@ namespace HotelEngine.Adapter
             {
                 roomPriceSearchRS = new RoomPriceSearchRS()
                 {
-                    Fare = new HotelEngine.Contracts.Models.Fare()
+                    ChargebleFare = new HotelEngine.Contracts.Models.Fare()
                     {
-                        Amount = hotelRoomPriceRS.Itinerary.Fare.BaseFare.Amount
+                        Currency = hotelRoomPriceRS.Itinerary.Fare.BaseFare.Currency,
+                        BaseFare= hotelRoomPriceRS.Itinerary.Fare.BaseFare.Amount                        
                     },
-                    SessionId = sessionId.ToString()
+                    SessionId = sessionId.ToString(),
+                    HotelId = hotelRoomPriceRS.Itinerary.HotelProperty.Id                    
                 };
             }catch(Exception e)
             {
@@ -217,7 +219,11 @@ namespace HotelEngine.Adapter
                     {
                         Description = roomProp.RoomDescription,
                         Id = roomProp.RoomId.ToString(),
-                        Fare = new HotelEngine.Contracts.Models.Fare() { Amount = roomProp.DisplayRoomRate.BaseFare.Amount },
+                        Fare = new HotelEngine.Contracts.Models.Fare()
+                        {
+                            BaseFare = roomProp.DisplayRoomRate.BaseFare.Amount,
+                            Currency= roomProp.DisplayRoomRate.BaseFare.Currency
+                        },
                         Name = roomProp.RoomName,
                         Type = roomProp.RoomType,
                         Bed = roomProp.BedType
@@ -248,7 +254,8 @@ namespace HotelEngine.Adapter
                     Address = hotelProp.Address.CompleteAddress,
                     Fare = new HotelEngine.Contracts.Models.Fare()
                     {
-                        Amount = itinerary.Fare.BaseFare.Amount
+                        Currency = itinerary.Fare.BaseFare.Currency,
+                        BaseFare= itinerary.Fare.BaseFare.Amount
                     },
                     HotelId = hotelProp.Id,
                     HotelName = hotelProp.Name,
@@ -297,7 +304,11 @@ namespace HotelEngine.Adapter
                 {
                     Bed = roomResult.BedType,
                     Description = roomResult.RoomDescription,
-                    Fare = new HotelEngine.Contracts.Models.Fare() { Amount = roomResult.DisplayRoomRate.BaseFare.Amount },
+                    Fare = new HotelEngine.Contracts.Models.Fare()
+                    {
+                        BaseFare = roomResult.DisplayRoomRate.BaseFare.Amount,
+                        Currency = roomResult.DisplayRoomRate.BaseFare.Currency
+                    },
                     Id = roomResult.RoomId.ToString(),
                     Name = roomResult.RoomName,
                     Type = roomResult.RoomType
@@ -305,10 +316,19 @@ namespace HotelEngine.Adapter
                 rooms.Add(room);
             }
 
+            var images = new List<Uri>();
+            foreach(var media in roomSearchResponse.Itinerary.HotelProperty.MediaContent)
+            {
+                var imgUri = new Uri(media.Url);
+                images.Add(imgUri);
+            }
+
             roomSearchRS = new RoomSearchRS()
             {
                 Rooms = rooms,
-                SessionId = sessionId.ToString()/*roomSearchRQ.SessionId.ToString()*/
+                SessionId = sessionId.ToString(),/*roomSearchRQ.SessionId.ToString()*/
+                HotelId= roomSearchResponse.Itinerary.HotelProperty.Id,   
+                Images= images
             };
             return roomSearchRS;
         }

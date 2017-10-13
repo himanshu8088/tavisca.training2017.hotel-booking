@@ -6,7 +6,8 @@ namespace HotelEngine.Contracts.Models
 {
     public class Fare
     {
-        public string FareType { get; set; }        
-        public decimal Amount { get; set; }
+        public decimal ExtraCharges { get; set; }     
+        public decimal BaseFare { get; set; }    
+        public string Currency { get; set; }
     }
 }
