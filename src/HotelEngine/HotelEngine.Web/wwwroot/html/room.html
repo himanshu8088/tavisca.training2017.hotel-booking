@@ -78,6 +78,7 @@
                                 <!--<img src="{{ images.[0] }}" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">-->
                                 <div id="sliderCarousel" class="carousel slide" data-ride="carousel">
                                     <!-- Indicators -->
+                                    
                                     <ol class="carousel-indicators">
                                         <li data-target="#sliderCarousel" data-slide-to="0" class="active"></li>
                                         <li data-target="#sliderCarousel" data-slide-to="1"></li>
@@ -87,16 +88,16 @@
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner">
                                         <div class="item active">
-                                            <img src="la.jpg" alt="Los Angeles"  width="304" height="236">
+                                            <img src="{{ ../images.[0] }}" alt="room-image"  width="304" height="236">
                                         </div>
-
-                                        <div class="item">
-                                            <img src="chicago.jpg" alt="Chicago"  width="304" height="236">
-                                        </div>
-
-                                        <div class="item">
-                                            <img src="ny.jpg" alt="New York"  width="304" height="236">
-                                        </div>
+                                        {{#each images}}
+                                            {{@index}}:{{this}}
+                                            {{#ifCond @index 0 }}
+                                            <div class="item">
+                                                <img src="{{images.[@index]}}" alt="Chicago"  width="304" height="236">
+                                            </div>
+                                            {{/ifCond}}
+                                        {{/each}}
                                     </div>
 
                                     <!-- Left and right controls -->
@@ -121,7 +122,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="col-md-12"><h4>{{fare.amount}}</h4></div>
+                                        <div class="col-md-12"><h4>{{fare.currency}}{{fare.amount}}</h4></div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -134,14 +135,12 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         Starting From
-                                        <h4>₹{{fare.amount}}</h4>
-                                        <!--<h4>{{hotelId}}</h4>-->
+                                        <h4>{{fare.amount}}</h4>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <!--onclick="roomClicked('{{hotelId}}','{{hotelName}}','{{../sessionId}}')"-->
-                                        <button type="button" id="book" class="btn btn-info" onclick="book(this)">Book</button>
+                                        <button type="button" id="book" class="btn btn-primary" onclick="book(this)">Book</button>
                                     </div>
                                 </div>
                             </div>
