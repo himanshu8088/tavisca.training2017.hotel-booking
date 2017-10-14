@@ -26,3 +26,7 @@ input {
 .amenity {
     margin-right: 5px;
 }
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+}

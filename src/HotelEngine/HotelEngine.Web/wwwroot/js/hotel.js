@@ -14,6 +14,8 @@ $(document).ready(function () {
         data: jsonData,
         contentType: "application/json",
         success: function (resp) {
+            var ab = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;
+            var sessionData = [resp, ab];
             var template = $('#hotel-item');
             var compiledTemplate = Handlebars.compile(template.html());
             var html = compiledTemplate(resp);

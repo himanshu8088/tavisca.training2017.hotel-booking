@@ -71,10 +71,47 @@
         </div>
         <script id="hotel-item" type="text/x-handlebars-template">
             <div class="col-md-10 col-md-offset-1">
-                <div class="row">
-                    <h1 class="text-primary">Search Results</h1>
+                <div class="panel-group">
+                    <div class="panel panel-default margin-top">
+                        <div class="panel-body">
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <span class="icon icon-hotels" aria-hidden="true"></span><h5>Destination</h5>
+                                </div>
+                                <div class="row">
+                                    <h5>{{sessionData.[1].SearchText}}</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="row">
+                                    <span class="icon icon-hotels" aria-hidden="true"></span><h5>Check-In</h5>
+                                </div>
+                                <div class="row">
+                                    <h5>{{sessionData.[1].CheckIn}}</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="row">
+                                    <span class="icon icon-hotels" aria-hidden="true"></span><h5>Check-Out</h5>
+                                </div>
+                                <div class="row">
+                                    <h5>{{sessionData.[1].CheckOut}}</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="row">
+                                    <span class="icon icon-hotels" aria-hidden="true"></span><h5>Rooms</h5>
+                                </div>
+                                <div class="row">
+                                    <h5>{{sessionData.[1].Rooms}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
+                <div class="row">
+                    <h1 class="text-primary">Search Results: ({{hotels.length}})</h1>
+                </div>
                 <div class="row">
                     <div class="col-md-3">
                         <div class="row">
@@ -97,38 +134,38 @@
                                                     <span class="glyphicon glyphicon-star"> </span>
                                                     <span class="glyphicon glyphicon-star"> </span>
                                                     <span class="glyphicon glyphicon-star"></span>
-                                                    <span class="glyphicon glyphicon-star blue-icon"></span>
-                                                    <span class="glyphicon glyphicon-star blue-icon"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
                                                 </label>
                                             </div>
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="checkbox" value="">
-                                                    <span class="glyphicon glyphicon-star blue-icon"> </span>
-                                                    <span class="glyphicon glyphicon-star blue-icon"> </span>
-                                                    <span class="glyphicon glyphicon-star blue-icon"></span>
-                                                    <span class="glyphicon glyphicon-star blue-icon"></span>
+                                                    <span class="glyphicon glyphicon-star"> </span>
+                                                    <span class="glyphicon glyphicon-star"> </span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
                                                 </label>
                                             </div>
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="checkbox" value="">
-                                                    <span class="glyphicon glyphicon-star blue-icon"> </span>
-                                                    <span class="glyphicon glyphicon-star blue-icon"> </span>
-                                                    <span class="glyphicon glyphicon-star blue-icon"></span>
+                                                    <span class="glyphicon glyphicon-star"> </span>
+                                                    <span class="glyphicon glyphicon-star"> </span>
+                                                    <span class="glyphicon glyphicon-star"></span>
                                                 </label>
                                             </div>
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="checkbox" value="">
-                                                    <span class="glyphicon glyphicon-star blue-icon"> </span>
-                                                    <span class="glyphicon glyphicon-star blue-icon"> </span>
+                                                    <span class="glyphicon glyphicon-star"> </span>
+                                                    <span class="glyphicon glyphicon-star"> </span>
                                                 </label>
                                             </div>
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="checkbox" value="">
-                                                    <span class="glyphicon glyphicon-star blue-icon"> </span>
+                                                    <span class="glyphicon glyphicon-star"> </span>
                                                 </label>
                                             </div>
                                         </div>
@@ -156,7 +193,7 @@
                         <div class="panel-group">
                             <div class="panel panel-primary">
                                 <div class="panel-body">
-                                    <div class="col-md-4" id="hotel-img">
+                                    <div class="col-md-4" id="">
                                         <img src="{{ images.[0] }}" class="img-thumbnail" alt="hotel-img" />
                                     </div>
                                     <div class="col-md-5">
@@ -172,26 +209,21 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h4><span class="glyphicon glyphicon-map-marker"></span> {{address}}</h4>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="col-md-3"><span class="glyphicon glyphicon-cutlery amenity"></span></div>
-                                                <div class="col-md-3"><span class="glyphicon glyphicon-signal"></span></div>
-                                                <div class="col-md-3"><span class="glyphicon glyphicon-bed"></span></div>
-                                                <div class="col-md-3"><span class="glyphicon glyphicon-send"></span></div>
+                                                <h4 class="text-primary"><span class="glyphicon glyphicon-map-marker"></span> {{address}}</h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                Starting From
-                                                <h4>{{fare.currency}}{{fare.baseFare}}</h4>
-
+                                                <h6>Starting From</h6>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-2"><h4 class="text-danger">{{fare.currency}}</h4></div>
+                                            <div class="col-md-4"><h4 class="text-danger">{{fare.baseFare}}</h4></div>
+                                            <div class="col-md-6"><h4>Per Night</h4></div>
+                                            </div>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <button type="button" id="viewRooms" onclick="roomClicked('{{hotelId}}','{{hotelName}}','{{../sessionId}}')" class="btn btn-primary">View Rooms</button>
