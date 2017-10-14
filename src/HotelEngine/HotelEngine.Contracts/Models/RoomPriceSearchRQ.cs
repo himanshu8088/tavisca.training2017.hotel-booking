@@ -7,5 +7,6 @@ namespace HotelEngine.Contracts.Models
     public class RoomPriceSearchRQ : RoomSearchRQ
     {
         public Guid RoomId { get; set; }
+        public string RoomName { get; set; }
     }
 }

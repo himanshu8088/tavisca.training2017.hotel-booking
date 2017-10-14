@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HotelEngine.Contracts.Models
 {
-    public class RoomBookRQ
+    public class RoomBookRQ:RoomPriceSearchRQ
     {
 
     }

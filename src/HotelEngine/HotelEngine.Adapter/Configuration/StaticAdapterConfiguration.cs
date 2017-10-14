@@ -2,6 +2,7 @@
 using Proxies;
 using HotelEngine.Adapter.Contracts;
 using HotelEngine.Contracts.Models;
+using Newtonsoft.Json;
 
 namespace HotelEngine.Adapter.Configuration
 {
@@ -17,10 +18,12 @@ namespace HotelEngine.Adapter.Configuration
             var hotelConfig = new HotelsAvailConfig(roomSearchRQ);
             return new RoomsAvailConfig(hotelConfig, roomSearchRQ);
         }
-        public TripProductConfig GetTripProductConfig(RoomPriceSearchRQ hotelRoomPriceRQ)
+        public TripProductConfig GetTripProductConfig(RoomPriceSearchRQ roomPriceSearchRQ, HotelRoomAvailRS hotelRoomAvailRS)
         {
-            var roomsConfig=GetRoomsAvailConfig(hotelRoomPriceRQ);
-            var tripProductConfig = new TripProductConfig(roomsConfig.SearchCriterion, hotelRoomPriceRQ.HotelId, hotelRoomPriceRQ.RoomId);
+            var roomsConfig=GetRoomsAvailConfig(roomPriceSearchRQ);
+            var hotelItinerary = JsonConvert.DeserializeObject<BookingProxy.HotelItinerary>(JsonConvert.SerializeObject(hotelRoomAvailRS.Itinerary));
+            var searchCriterion = JsonConvert.DeserializeObject<BookingProxy.HotelSearchCriterion>(JsonConvert.SerializeObject(roomsConfig.SearchCriterion));
+            var tripProductConfig = new TripProductConfig(searchCriterion, hotelItinerary, roomPriceSearchRQ);
             return tripProductConfig;
         }
     }

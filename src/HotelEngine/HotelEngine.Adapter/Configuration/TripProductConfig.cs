@@ -3,38 +3,44 @@ using System.Collections.Generic;
 using System.Text;
 using BookingProxy;
 using Newtonsoft.Json;
+using HotelEngine.Contracts.Models;
 
 namespace HotelEngine.Adapter.Configuration
 {
     public class TripProductConfig
     {
         private HotelItinerary _hotelItinerary;
-        private int _hotelId;
-        private Guid _roomId;
-        private HotelSearchCriterion _hotelSearchCriterion;
+        private HotelSearchCriterion _hotelSearchCriterion;               
 
-        public TripProductConfig(Proxies.HotelSearchCriterion searchCriterion, int hotelId, Guid roomId)
+        public TripProductConfig(HotelSearchCriterion hotelSearchCriterion,HotelItinerary hotelItinerary, RoomPriceSearchRQ roomPriceSearchRQ)
         {
-            _hotelSearchCriterion = JsonConvert.DeserializeObject<BookingProxy.HotelSearchCriterion>(JsonConvert.SerializeObject(searchCriterion));
-            _hotelId = hotelId;
-            _roomId = roomId;
+            _hotelItinerary = SelectRoomItinerary(hotelItinerary, roomPriceSearchRQ.RoomName);
+            _hotelSearchCriterion = hotelSearchCriterion;
+        }
+
+        private HotelItinerary SelectRoomItinerary(HotelItinerary itinerary, string roomName)
+        {
+            BookingProxy.Room selectedRoom = null;
+            HotelItinerary selectedItinerary = null;
+            foreach (var room in itinerary.Rooms)
+            {
+                if (room.RoomName.Equals(roomName))
+                {
+                    selectedRoom = room;
+                    break;
+                }
+            }
+            selectedItinerary = itinerary;
+            selectedItinerary.Rooms = null;
+            selectedItinerary.Rooms = new BookingProxy.Room[]
+            {
+                selectedRoom
+            };
+            return selectedItinerary;
         }
 
         public BookingProxy.HotelSearchCriterion HotelSearchCriterion => _hotelSearchCriterion;
-        public BookingProxy.HotelItinerary HotelItinerary => new HotelItinerary()
-        {
-            HotelProperty = new HotelProperty()
-            {
-                Id = _hotelId
-            },
-            Rooms = new BookingProxy.Room[]
-            {
-                new BookingProxy.Room()
-                {
-                    RoomId=_roomId
-                }
-            }
-        };
+        public BookingProxy.HotelItinerary HotelItinerary => _hotelItinerary;
             
     }
 }

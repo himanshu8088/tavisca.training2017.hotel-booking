@@ -12,6 +12,6 @@ namespace HotelEngine.Adapter.Contracts
     {
         HotelsAvailConfig GetHotelsAvailConfig(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ);
         RoomsAvailConfig GetRoomsAvailConfig(RoomSearchRQ roomSearchRQ);
-        TripProductConfig GetTripProductConfig(RoomPriceSearchRQ hotelRoomPriceRQ);
+        TripProductConfig GetTripProductConfig(RoomPriceSearchRQ roomPriceSearchRQ, HotelRoomAvailRS hotelRoomAvailRS);
     }
 }

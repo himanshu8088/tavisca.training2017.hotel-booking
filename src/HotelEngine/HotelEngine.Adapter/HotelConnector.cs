@@ -14,7 +14,7 @@ namespace HotelEngine.Adapter
     public class HotelConnector : IHotelConnector
     {
         private IAdapterConfiguration _config;
-        private global::Proxies.HotelEngineClient _hotelEngineClient = null;
+        private Proxies.HotelEngineClient _hotelEngineClient = null;
         private TripsEngineClient _tripEngineClient = null;
 
         public HotelConnector()
@@ -43,12 +43,12 @@ namespace HotelEngine.Adapter
             RoomPriceSearchRS roomPriceSearchRS = null;
             try
             {
-                var tripProductPriceRQ = ParsePriceRQ(roomPriceRQ);
+                var tripProductPriceRQ = await ParsePriceRQ(roomPriceRQ);
                 var tripProductPriceRS = await GetRoomPrice(tripProductPriceRQ);
                 roomPriceSearchRS = ParsePriceRS(tripProductPriceRS);
             }catch(Exception e)
             {
-
+                throw new Exception();
             }
           
             return roomPriceSearchRS;
@@ -75,17 +75,19 @@ namespace HotelEngine.Adapter
         }
 
 
-        private TripProductPriceRQ ParsePriceRQ(RoomPriceSearchRQ roomPriceRQ)
-        {
-            var settings = _config.GetTripProductConfig(roomPriceRQ);
+        private async Task<TripProductPriceRQ> ParsePriceRQ(RoomPriceSearchRQ roomPriceSearchRQ)
+        {            
+            var roomAvailRQ = ParseRoomRQ(roomPriceSearchRQ);
+            var roomAvailRS = await GetRoomsAsync(roomAvailRQ);
+            var settings = _config.GetTripProductConfig(roomPriceSearchRQ, roomAvailRS);           
 
             TripProductPriceRQ tripProductPriceRQ = new TripProductPriceRQ()
             {
                  ResultRequested=ResponseType.Unknown,
-                 SessionId=roomPriceRQ.SessionId.ToString(),
+                 SessionId= roomPriceSearchRQ.SessionId.ToString(),
                  TripProduct=new HotelTripProduct()
                  {
-                     HotelItinerary=settings.HotelItinerary,
+                     HotelItinerary= settings.HotelItinerary,
                      HotelSearchCriterion=settings.HotelSearchCriterion
                  }
             };            
@@ -96,24 +98,22 @@ namespace HotelEngine.Adapter
         private RoomPriceSearchRS ParsePriceRS(TripProductPriceRS tripProductPriceRS)
         {
             RoomPriceSearchRS roomPriceSearchRS = null;
-            //tripProductPriceRS.TripProduct.
-            //try
-            //{
-            //    roomPriceSearchRS = new RoomPriceSearchRS()
-            //    {
-            //        ChargebleFare = new HotelEngine.Contracts.Models.Fare()
-            //        {
-            //            Currency = tripProductPriceRS.TripProduct..Itinerary.Fare.BaseFare.Currency,
-            //            BaseFare= tripProductPriceRS.Itinerary.Fare.BaseFare.Amount                        
-            //        },
-            //        SessionId = tripProductPriceRS.SessionId.ToString(),
-            //        HotelId = hotelRoomPriceRS.Itinerary.HotelProperty.Id                    
-            //    };
-            //}catch(Exception e)
-            //{
-            //    throw new Exception("Rooms Not Available");
-            //}
-            
+            var hotel = (HotelTripProduct)tripProductPriceRS.TripProduct;
+            var room = hotel.HotelItinerary.Rooms[0];
+            var hotelId = hotel.HotelItinerary.HotelProperty.Id;
+
+            roomPriceSearchRS = new RoomPriceSearchRS()
+            {
+                ChargebleFare = new HotelEngine.Contracts.Models.Fare()
+                {
+                    BaseFare= room.DisplayRoomRate.BaseFare.Amount,
+                    Currency=room.DisplayRoomRate.BaseFare.Currency,
+                    TotalFare=room.DisplayRoomRate.TotalFare.Amount
+                },
+                SessionId= tripProductPriceRS.SessionId,
+                HotelId= hotelId
+            };
+
             return roomPriceSearchRS;
         }
 
@@ -154,68 +154,100 @@ namespace HotelEngine.Adapter
             }
             return hotelRoomAvailRS;
         }
-      
-        //public async Task<RoomBookRS> BookRoomAsync(RoomBookRQ roomBookRQ)
-        //{
-        //    //try
-        //    //{
-                
-        //    //    var roomBookRS = await _tripEngineClient.BookTripFolderAsync(new BookingProxy.TripFolderBookRQ());
-        //    //}
-        //    //catch (Exception e)
-        //    //{
-        //    //    throw new Exception("Connection Error");
-        //    //}
-        //    //finally
-        //    //{
-        //    //    await _tripEngineClient.CloseAsync();
-        //    //}
-        //    throw new NotImplementedException();
-        //}
+       
+        public async Task<RoomBookRS> BookRoomAsync(RoomBookRQ roomBookRQ)
+        {
+            var tripFolderBookRS= await GetTripFolderBook(roomBookRQ);
+            var rq = ParseCompleteBookingRQ(tripFolderBookRS);
+            try
+            {
+                _tripEngineClient = new TripsEngineClient();
+                var rs = await _tripEngineClient.CompleteBookingAsync(rq);
 
-        //public async Task<RoomBookRS> BookRoomAsync(RoomPriceSearchRQ roomPriceSearchRQ/*RoomSearchRQ roomSearchRQ*/)
-        //{
-        //    //var roomAvailRQ = ParseRoomRQ(roomSearchRQ);
-        //    //var roomAvailRS = await GetRoomsAsync(roomAvailRQ);
-        //    //BookingProxy.HotelItinerary itinerary = JsonConvert.DeserializeObject<BookingProxy.HotelItinerary>(JsonConvert.SerializeObject(roomAvailRS.Itinerary));
-        //    //BookingProxy.HotelSearchCriterion hotelSearchCriterion = JsonConvert.DeserializeObject<BookingProxy.HotelSearchCriterion>(JsonConvert.SerializeObject(roomAvailRQ.HotelSearchCriterion));
-        //    //BookingProxy.Money amount = JsonConvert.DeserializeObject<BookingProxy.Money>(JsonConvert.SerializeObject(roomAvailRS.Itinerary.Fare.AvgDailyRate));
+            }catch(Exception e)
+            {
+                throw new Exception("Connection Error");
+            }
+            finally
+            {
+                await _tripEngineClient.CloseAsync();
+            }
+            return new RoomBookRS();
+        }
+        
+        private async Task<TripFolderBookRS> GetTripFolderBook(RoomBookRQ roomBook)
+        {
+            TripFolderBookRS tripFolderBookRS = null;
+            var tripProductPriceRQ = await ParsePriceRQ(roomBook);
+            var tripProductPriceRS = await GetRoomPrice(tripProductPriceRQ);
+            var tripProduct = (HotelTripProduct)tripProductPriceRS.TripProduct;
 
-        //    var hotelRoomPriceRQ = await ParsePriceRQ(roomPriceSearchRQ);
-        //    var hotelRoomPriceRS = await GetRoomPrice(hotelRoomPriceRQ);
-        //    BookingProxy.HotelItinerary itinerary = JsonConvert.DeserializeObject<BookingProxy.HotelItinerary>(JsonConvert.SerializeObject(hotelRoomPriceRS.Itinerary));
-        //    BookingProxy.HotelSearchCriterion hotelSearchCriterion = JsonConvert.DeserializeObject<BookingProxy.HotelSearchCriterion>(JsonConvert.SerializeObject(hotelRoomPriceRQ.HotelSearchCriterion));
-        //    BookingProxy.Money amount = JsonConvert.DeserializeObject<BookingProxy.Money>(JsonConvert.SerializeObject(/*hotelRoomPriceRS*/hotelRoomPriceRQ.Itinerary.Fare.AvgDailyRate));
+            var setting = new TripFolderBookSettings()
+            {
+                HotelItinerary = tripProduct.HotelItinerary,
+                Age = 30,
+                Ages = new int[] { 30 },
+                Birthdate = DateTime.Now,
+                HotelSearchCriterion = tripProduct.HotelSearchCriterion,
+                SessionId = tripProductPriceRS.SessionId.ToString(),
+                TripFolderName = $"Trip{DateTime.Now.ToString()}",
+                Qty = roomBook.GuestCount,
+                Amount = tripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare
+            };
+            var tripConfig = new TripFolderBookConfig(setting);
+            try
+            {
+                _tripEngineClient = new TripsEngineClient();
+                tripFolderBookRS = await _tripEngineClient.BookTripFolderAsync(tripConfig.TripFolderBookRQ);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Failed to Create Book Folder");
+            }
+            finally
+            {
+                await _tripEngineClient.CloseAsync();
+            }
+            return tripFolderBookRS;
+        } 
 
-        //    RoomBookRS rs = new RoomBookRS();
+        public CompleteBookingRQ ParseCompleteBookingRQ(TripFolderBookRS tripFolderBookRS)
+        {
+            var fare = ((HotelTripProduct)tripFolderBookRS.TripFolder.Products[0]).HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare;
+            var payment = tripFolderBookRS.TripFolder.Payments[0];
+            var creditCard = (CreditCardPayment)tripFolderBookRS.TripFolder.Payments[0];
 
-        //    var setting = new TripFolderBookSettings()
-        //    {
-        //        HotelItinerary = itinerary,
-        //        Age=30,
-        //        Ages=new int[] { 30 },
-        //        Birthdate=DateTime.Now,
-        //        HotelSearchCriterion= hotelSearchCriterion,
-        //        SessionId= hotelRoomPriceRS.SessionId.ToString()/*roomSearchRQ.SessionId.ToString()*/,
-        //        TripFolderName=$"Trip{DateTime.Now.ToString()}",
-        //        Qty=1,
-        //        Amount= amount
-        //    };
-        //    var tripConfig=new TripFolderBookConfig(setting);
-        //    try
-        //    {
-        //        _tripEngineClient = new TripsEngineClient();
-        //        var res = await _tripEngineClient.BookTripFolderAsync(tripConfig.TripFolderBookRQ);
-        //    }catch(Exception e)
-        //    {
-
-        //    }
-        //    finally
-        //    {
-                
-        //    }
-        //    return rs;
-        //}
+            var rq = new CompleteBookingRQ()
+            {
+                TripFolderId= tripFolderBookRS.TripFolder.Id,
+                SessionId=tripFolderBookRS.SessionId,
+                ExternalPayment=new CreditCardPayment()
+                {
+                    Amount= fare,
+                    Attributes=new StateBag[]
+                    {
+                            new StateBag() { Name="API_SESSION_ID", Value=tripFolderBookRS.SessionId},
+                            new StateBag(){ Name="PointOfSaleRule"},
+                            new StateBag(){ Name="SectorRule"},
+                            new StateBag(){ Name="_AttributeRule_Rovia_Username"},
+                            new StateBag(){ Name="_AttributeRule_Rovia_Password"},
+                            new StateBag(){ Name="AmountToAuthorize",Value=fare.Amount.ToString()},
+                            new StateBag(){ Name="PaymentStatus",Value="Authorization successful"},
+                            new StateBag(){ Name="AuthorizationTransactionId",Value="975b4c93-228d-41dd-97ed-7d0b7b8c445b" },
+                            new StateBag(){ Name="ProviderAuthorizationTransactionId",Value="1F3FE4A1-0AB1-491E-BC18-20E71EFCDF7B" }
+                    },
+                    BillingAddress= payment.BillingAddress,
+                    CardMake=creditCard.CardMake,
+                    CardType= creditCard.CardType,
+                    ExpiryMonthYear=creditCard.ExpiryMonthYear,
+                    NameOnCard=creditCard.NameOnCard,
+                    IsThreeDAuthorizeRequired=false,
+                    Number=creditCard.Number
+                },                   
+                ResultRequested= tripFolderBookRS.ResponseRecieved                
+            };
+            return rq;
+        }
 
         private Proxies.HotelSearchRQ ParseHotelRQ(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
         {
@@ -362,9 +394,6 @@ namespace HotelEngine.Adapter
             return roomSearchRS;
         }
 
-        public Task<RoomBookRS> BookRoomAsync(RoomBookRQ roomBookRQ)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

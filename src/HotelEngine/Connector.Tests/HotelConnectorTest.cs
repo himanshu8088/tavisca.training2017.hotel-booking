@@ -76,15 +76,17 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
                 CheckInDate = DateTime.Parse("21-11-2017"),
                 CheckOutDate = DateTime.Parse("22-11-2017"),
                 GuestCount = 2,
-                HotelId = 460779,
+                HotelId = 258057,
                 Location = new HotelEngine.Contracts.Models.Location()
                 {
-                    Latitude = 27.1517582f,
-                    Longitude = 27.1517582f
+                    Latitude = 27.16084f,
+                    Longitude = 27.16084f
                 },
                 NoOfRooms = 1,
                 SearchText = "Pune",
-                RoomId = Guid.Parse("a4184f5e-a7e2-4167-8582-b7b56e1d3825")
+                RoomId = Guid.Parse("a4184f5e-a7e2-4167-8582-b7b56e1d3825"),
+                RoomName= "Superior Room"
+
             };
             HotelConnector hotelConnector = new HotelConnector();
 
@@ -95,31 +97,34 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
             Assert.NotNull(response);
         }
 
-        //[Fact]
-        //public async void Booking_Test()
-        //{
-        //    //Arrange           
-        //    var priceSearchRQ = new RoomPriceSearchRQ()
-        //    {
-        //        SessionId = Guid.Parse("ceeb0417-fba9-4e73-ac81-275f700cc7e1"),
-        //        CheckInDate = DateTime.Parse("28-10-2017"),
-        //        CheckOutDate = DateTime.Parse("29-10-2017"),
-        //        GuestCount = 2,
-        //        HotelId = 252448,
-        //        Location = new HotelEngine.Contracts.Models.Location()
-        //        {
-        //            Latitude = 36.1362847f,
-        //            Longitude = -115.1514119f
-        //        },
-        //        NoOfRooms = 1,                                
-        //    };
-        //    HotelConnector hotelConnector = new HotelConnector();
+        [Fact]
+        public async void Booking_Test()
+        {
+            //Arrange           
+            var roomBookRQ = new RoomBookRQ()
+            {
+                SessionId = Guid.Parse("ba317ee7-b8ba-4af6-aa0a-a17dba95ecaa"),
+                CheckInDate = DateTime.Parse("2017-10-25T00:00:00"),
+                CheckOutDate = DateTime.Parse("2017-10-26T00:00:00"),
+                GuestCount = 2,
+                HotelId = 88359,
+                Location = new HotelEngine.Contracts.Models.Location()
+                {
+                    Latitude = 36.1732178f,
+                    Longitude = -115.144829f
+                },
+                NoOfRooms = 1,
+                SearchText = "California Hotel and Casino",
+                RoomId = Guid.Parse("a4184f5e-a7e2-4167-8582-b7b56e1d3825"),
+                RoomName = "Deluxe"
+            };
+            HotelConnector hotelConnector = new HotelConnector();
 
-        //    //Act
-        //    var response = await hotelConnector.BookRoomAsync(priceSearchRQ);
+            //Act
+            var response = await hotelConnector.BookRoomAsync(roomBookRQ);
 
-        //    //Assert
-        //    Assert.NotNull(response);
-        //}
+            //Assert
+            Assert.NotNull(response);
+        }
     }
 }

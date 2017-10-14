@@ -16,6 +16,7 @@ namespace HotelEngine.Adapter.Configuration
         private HotelSearchCriterion _hotelSearchCriterion;
         private int[] _ages;
         private int _qty;
+        private decimal _fareToAuthorise;
 
         public TripFolderBookConfig(TripFolderBookSettings tripFolderBookSettings)
         {
@@ -27,7 +28,9 @@ namespace HotelEngine.Adapter.Configuration
             _ages = tripFolderBookSettings.Ages;
             _hotelItinerary = tripFolderBookSettings.HotelItinerary;
             _hotelSearchCriterion = tripFolderBookSettings.HotelSearchCriterion;
-            _qty = tripFolderBookSettings.Qty;                        
+            _qty = tripFolderBookSettings.Qty;
+            _fareToAuthorise = _hotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
+            
         }
 
         public TripFolderBookRQ TripFolderBookRQ => new TripFolderBookRQ()
@@ -135,10 +138,16 @@ namespace HotelEngine.Adapter.Configuration
                         Amount=_amount,
                         Attributes=new StateBag[]
                         {
+                            new StateBag() { Name="API_SESSION_ID", Value=_sessionId},
                             new StateBag(){ Name="PointOfSaleRule"},
                             new StateBag(){ Name="SectorRule"},
                             new StateBag(){ Name="_AttributeRule_Rovia_Username"},
                             new StateBag(){ Name="_AttributeRule_Rovia_Password"},
+
+                            //new StateBag(){ Name="AmountToAuthorize",Value=_fareToAuthorise.ToString()},
+                            //new StateBag(){ Name="PaymentStatus",Value="Authorization successful"},
+                            //new StateBag(){ Name="AuthorizationTransactionId",Value="975b4c93-228d-41dd-97ed-7d0b7b8c445b" },
+                            //new StateBag(){ Name="ProviderAuthorizationTransactionId",Value="1F3FE4A1-0AB1-491E-BC18-20E71EFCDF7B" },
                         },
                         BillingAddress=new Address()
                         {
@@ -161,10 +170,10 @@ namespace HotelEngine.Adapter.Configuration
                             Name="VISA"
                         },
                         CardType=CreditCardType.Personal,
-                        ExpiryMonthYear=DateTime.Parse("2022-01-01T00:00:00"),
+                        ExpiryMonthYear=DateTime.Parse("2020-12-01T00:00:00"),
                         IsThreeDAuthorizeRequired=false,
-                        NameOnCard="Test Card TF",
-                        Number="4444333322221111",
+                        NameOnCard="test card",
+                        Number="0000000000001111",
                         SecurityCode="123"
                     }
                 },
