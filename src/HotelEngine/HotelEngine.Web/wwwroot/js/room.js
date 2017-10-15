@@ -37,8 +37,10 @@ function price(hotelId,roomName) {
         data: jsonData,
         contentType: "application/json",
         success: function (resp) {
-            $("#priceModal").modal().find('#price').html();
-            
+            var template = $('#price-modal');
+            var compiledTemplate = Handlebars.compile(template.html());
+            var html = compiledTemplate(resp);
+            $("#priceModal").modal('show').html(html);
         },
         error: function (xhr) {
             _roomResponse = {};

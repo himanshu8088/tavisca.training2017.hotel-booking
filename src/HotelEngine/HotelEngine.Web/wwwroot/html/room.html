@@ -141,16 +141,28 @@
                 </div>
             </div>
            {{/each}}
+        </script>
+
+        <script id="price-modal" type="text/x-handlebars-template">
+            <div class="row">
+                <h4 class="text-primary" id="baseFare">{{chargebleFare.baseFare}}</h4>
+            </div>
+            <div class="row">
+                <h4 class="text-primary" id="tax">{{chargebleFare.totalFare}}</h4>
+            </div>
+            <p id="price"></p>
+        </script>
+
             <div class="modal fade" id="priceModal" role="dialog">
                 <div class="modal-dialog">
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" data-target="modal-values"></button>
-                            <h4 class="modal-title">Prices have been updated</h4>
+                            <h4 class="modal-title text-primary">Prices have been updated</h4>
                         </div>
                         <div class="modal-body">
-                            <p id="price"></p>
+                            
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -160,7 +172,7 @@
 
                 </div>
             </div>
-        </script>
+      
     </div>
     <script src="../js/libraries/handlebars-v4.0.10.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
