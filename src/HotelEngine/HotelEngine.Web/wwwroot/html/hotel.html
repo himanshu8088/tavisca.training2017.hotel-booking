@@ -78,8 +78,8 @@
                                 <div class="row">
                                     <span class="icon icon-hotels" aria-hidden="true"></span><h5>Destination</h5>
                                 </div>
-                                <div class="row">
-                                    <h5>{{sessionData.[1].SearchText}}</h5>
+                                <div class="row">                                    
+                                    <h5>{{searchData.SearchText}}</h5>
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -87,7 +87,7 @@
                                     <span class="icon icon-hotels" aria-hidden="true"></span><h5>Check-In</h5>
                                 </div>
                                 <div class="row">
-                                    <h5>{{sessionData.[1].CheckIn}}</h5>
+                                    <h5>{{searchData.}}</h5>
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -95,7 +95,7 @@
                                     <span class="icon icon-hotels" aria-hidden="true"></span><h5>Check-Out</h5>
                                 </div>
                                 <div class="row">
-                                    <h5>{{sessionData.[1].CheckOut}}</h5>
+                                    <h5>{{searchData.CheckOutDate}}</h5>
                                 </div>
                             </div>
                             <div class="col-md-5">
@@ -103,14 +103,14 @@
                                     <span class="icon icon-hotels" aria-hidden="true"></span><h5>Rooms</h5>
                                 </div>
                                 <div class="row">
-                                    <h5>{{sessionData.[1].Rooms}}</h5>
+                                    <h5>{{searchData.NoOfRooms}}</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <h1 class="text-primary">Search Results: ({{hotels.length}})</h1>
+                    <h1 class="text-primary">Search Results: ({{apiResponseData.hotels.length}})</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
@@ -189,7 +189,7 @@
                         </div>
                     </div>
                     <div class="col-md-9">
-                        {{#each hotels}} {{#unless hotels.images}}
+                        {{#each apiResponseData.hotels}} {{#unless apiResponseData.hotels.images}}
                         <div class="panel-group">
                             <div class="panel panel-primary">
                                 <div class="panel-body">
