@@ -1,0 +1,19 @@
+﻿.tab-content {
+    background-color: black;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px 5px #141414;
+}
+
+.fa {    
+    width: 80px;
+}
+
+.nav {
+    font-size:15px;
+}
+
+.main{
+    margin-top:60px;
+    margin-bottom:60px;
+}
