@@ -67,7 +67,7 @@
         <script id="room-item" type="text/x-handlebars-template">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1 class="text-primary">Search Results</h1>
+                    <h1 class="text-primary">Search Results: ({{rooms.length}})</h1>
                 </div>
             </div>
             {{#each rooms}} 
@@ -103,34 +103,36 @@
                             </div>
                             <div class="col-md-5">
                                 <div class="row">
-                                    <div class="col-md-12"><h4>{{name}}</h4></div>
-                                </div>
-                                <div class="row">
                                     <div class="col-md-12">
-                                        <div class="col-md-12"><h4>{{bed}}</h4></div>
+                                        <h4 class="text-primary">{{name}}</h4>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="col-md-12"><h4>{{fare.baseFare}}</h4></div>
+                                        <h4 class="text-primary">Bed Type: {{bed}}</h4>
                                     </div>
                                 </div>
+                                
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="col-md-12">{{{description}}}</div>
+                                        <h6>{{{description}}}</h6>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        Starting From
-                                        <h4>{{fare.amount}}</h4>
+                                        <h6>Starting From</h6>
                                     </div>
                                 </div>
                                 <div class="row">
+                                    <div class="col-md-2"><h4 class="text-danger">{{fare.currency}}</h4></div>
+                                    <div class="col-md-4"><h4 class="text-danger">{{fare.baseFare}}</h4></div>
+                                    <div class="col-md-6"><h6 class="margin-top">Per Night</h6></div>
+                                </div>
+                                <div class="row">
                                     <div class="col-md-12">
-                                        <button type="button" id="book" class="btn btn-primary" onclick="book(this)">Book</button>
+                                        <button type="button" class="btn btn-primary" onclick="price('{{../hotelId}}','{{name}}')">Book</button>
                                     </div>
                                 </div>
                             </div>
@@ -139,9 +141,27 @@
                 </div>
             </div>
            {{/each}}
+            <div class="modal fade" id="priceModal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" data-target="modal-values"></button>
+                            <h4 class="modal-title">Prices have been updated</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="price"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </script>
     </div>
-    <!--<footer>Copyright &copy; Tavisca 2017</footer>-->
     <script src="../js/libraries/handlebars-v4.0.10.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>

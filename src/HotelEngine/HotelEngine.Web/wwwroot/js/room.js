@@ -8,7 +8,6 @@
 $(document).ready(function () {
     var searchCriteria = JSON.parse(sessionStorage.getItem('roomSearchCriteria')).data;
     var jsonData = JSON.stringify(searchCriteria);
-  
     $.ajax({
         url: "../hotel/roomsearch",
         type: "POST",
@@ -26,7 +25,27 @@ $(document).ready(function () {
         }
     });       
 });
+function price(hotelId,roomName) {
+    var priceRQ = JSON.parse(sessionStorage.getItem('roomSearchCriteria')).data;
+    $.extend(priceRQ, {
+        "RoomName" :roomName
+    });
+    var jsonData = JSON.stringify(priceRQ);
+    $.ajax({
+        url: "../hotel/price",
+        type: "POST",
+        data: jsonData,
+        contentType: "application/json",
+        success: function (resp) {
+            $("#priceModal").modal().find('#price').html();
+            
+        },
+        error: function (xhr) {
+            _roomResponse = {};
+        }
+    });
+};
+function book(hotelId) {
 
-function book(context) {
-    window.location = '../html/guestdetails.html';
+    $("#priceModal").modal();
 };
