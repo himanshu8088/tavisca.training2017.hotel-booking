@@ -87,7 +87,7 @@
                                     <span class="icon icon-hotels" aria-hidden="true"></span><h5>Check-In</h5>
                                 </div>
                                 <div class="row">
-                                    <h5>{{searchData.}}</h5>
+                                    <h5>{{searchData.CheckInDate}}</h5>
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -188,7 +188,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-9">    
+                        <label id="sessionId" hidden>{{apiResponseData.sessionId}}</label>
                         {{#each apiResponseData.hotels}} {{#unless apiResponseData.hotels.images}}
                         <div class="panel-group">
                             <div class="panel panel-primary">
@@ -226,7 +227,7 @@
                                             </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <button type="button" id="viewRooms" onclick="roomClicked('{{hotelId}}','{{hotelName}}','{{../sessionId}}')" class="btn btn-primary">View Rooms</button>
+                                                <button type="button" id="viewRooms" onclick="roomClicked('{{hotelId}}','{{hotelName}}')" class="btn btn-primary">View Rooms</button>
                                             </div>
                                         </div>
                                     </div>

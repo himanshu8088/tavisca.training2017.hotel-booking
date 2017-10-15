@@ -34,6 +34,10 @@ namespace HotelEngine.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+            DefaultFilesOptions options = new DefaultFilesOptions();
+            options.DefaultFileNames.Clear();
+            options.DefaultFileNames.Add("html/search.html");
+            app.UseDefaultFiles(options);
             app.UseStaticFiles();
             app.UseMvc();
             
