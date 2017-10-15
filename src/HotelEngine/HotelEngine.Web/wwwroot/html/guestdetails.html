@@ -4,23 +4,66 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Guest Details</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/guestdetails.css">
+    <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-    <div class="main">
-        <header>
-            <a><img src="../img/logo.png" alt=""></a>
-        </header>
-
+    <nav class="navbar navbar-default no-margin">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="../img/logo.png" alt="tavisca-logo" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">Create An Account</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">My Lists</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage Trips <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Itineries</a></li>
+                            <li><a href="#">Manage My Hotel</a></li>
+                            <li><a href="#">Manage My Flight</a></li>
+                            <li><a href="#">Web Check-in and Baggage</a></li>
+                            <li><a href="#">Price Gurantee</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Customer Support</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main margin-top margin-bottom">
         <div class="container">
             <ul class="nav nav-pills">
                 <li class="active">
                     <a data-toggle="tab" href="#guest-tab">
-                        <div class="fa fa-user"> Guest</div>
+                        <div class="fa fa-user tab-font"> Guest</div>
                     </a>
                 </li>
                 <li>
@@ -32,40 +75,73 @@
             <div class="tab-content">
                 <div id="guest-tab" class="tab-pane fade in active">
                     <div class="form-group guest-control">
-                        <div class="col-md-8">
-                            <label for="name">Guest</label>
-                            <input class="form-control" id="name" type="text" placeholder="Guest Name">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="col-md-6">
+                                    <h5 class="font-white">First Name</h5>
+                                    <input class="form-control" id="fname" type="text" placeholder="First Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="font-white">
+                                        Last Name
+                                    </h5>
+                                    <input class="form-control" id="lname" type="text" placeholder="Last Name">
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-8">
-                            <label for="mobile">Mobile</label>
-                            <input class="form-control" id="mobile" type="number" placeholder="Mobile Number">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="col-md-3">
+                                    <h5 class="font-white">
+                                        Date of Birth
+                                    </h5>
+                                    <input class="form-control" id="dob" type="date" placeholder="Date of Birth">
+                                </div>
+                                <div class="col-md-3">
+                                    <h5 class="font-white">
+                                        Mobile
+                                    </h5>
+                                    <input class="form-control" id="mobile" type="text" placeholder="Mobile Number">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="font-white">
+                                        Email ID
+                                    </h5>
+                                    <input class="form-control" id="email" type="email" placeholder="EmailID">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="control">
-                        <button class="form-control" id="procceed">Procceed</button>
+
+                        <div class="col-md-4 col-md-offset-4 margin-top">
+                            <button class="form-control" id="procceed">Procceed</button>
+                        </div>
                     </div>
                 </div>
 
-                <div id="pay-tab" class="tab-pane fade">                    
+                <div id="pay-tab" class="tab-pane fade">
                     <div class="form-group pay-control">
-                        <div class="col-md-8">
-                            <label for="card-holder">Card Holder</label>
-                            <input class="form-control" id="card-holder" type="text" placeholder="Card Holder Name">
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-1">
+                                <h5 class="font-white">Card Holder Name</h5>
+                                <input class="form-control" id="card-holder" type="text" placeholder="Card Holder Name">
+                            </div>
+                            <div class="col-md-5 col-md-offset-1">
+                                <h5 class="font-white">Card Number</h5>
+                                <input class="form-control" id="card-number" type="number" placeholder="Card Number">
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <label for="Expiry Date">Date</label>
-                            <input class="form-control" id="expiry-date" type="date" placeholder="Card Expiry Date">
-                        </div> 
-                        <div class="col-md-9">
-                            <label for="card-number">Card Number</label>
-                            <input class="form-control" id="card-number" type="number" placeholder="Card Number">
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-1">
+                                <h5 class="font-white">Card Expiry Date</h5>
+                                <input class="form-control" id="expiry-date" type="date" placeholder="Card Expiry Date">
+                            </div>
+                            <div class="col-md-1 col-md-offset-1">
+                                <h5 class="font-white">CVV</h5>
+                                <input class="form-control" id="cvv" type="text" placeholder="CVV" max="999">
+                            </div>
                         </div>
-                        <div class="col-md-offset-1 col-md-2">
-                            <label for="cvv">CVV</label>
-                            <input class="form-control" id="cvv" type="number" placeholder="CVV" max="999">
-                        </div>
-                    </div>                   
-                    <div class="control">
+                    </div>
+                    <div class="col-md-4 col-md-offset-4 margin-top">
                         <button class="form-control" id="pay">Pay</button>
                     </div>
                 </div>
@@ -73,5 +149,7 @@
 
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/libraries/bootstrap.min.js"></script>
 </body>
 </html>

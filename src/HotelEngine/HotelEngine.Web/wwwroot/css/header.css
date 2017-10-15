@@ -69,6 +69,10 @@ nav > li > a {
     font-size: 15px;
 }
 
+.navbar-default .navbar-nav>li>a {
+    color:white;
+}
+
 .navbar-nav > li > .dropdown-menu {
     background-color: #337ab7;
 }
