@@ -1,54 +1,68 @@
-﻿var userDetail = {};
+﻿
+function getUserDetail() {
+    var firstName = $('#fname').html();
+    var lastName = $('#lname').html();
+    var dob = $('#dob').val();
+    var mobile = $('#mobile').html();
+    var emailId = $('#email').html();
 
-function setUserDetail(firstName, lastName,dob, mobile, emailId) {
-    this.userDetail = {
+    userDetail = {
         "FirstName": firstName, 
         "LastName": lastName, 
         "DOB": dob,
         "MobileNo": mobile,
         "EmailId": emailId
     }
+    return userDetail;
 };
 
-function setCardDetail(cardHolderName, cardNumber, expiryDate, cvv) {
-    this.cardDetail = {
+function getCardDetail() {
+    var cardHolderName = $('#card-holder').html();
+    var cardNumber = $('#card-number').html();
+    var expiryDate = $('#expiry-date').html();
+    var cvv = $('#cvv').html();
+
+    cardDetail = {
         "CardHolderName": cardHolderName,
         "CardNumber": cardNumber,
         "ExpiryDate": expiryDate,
         "CVV": cvv,        
     }
+    return cardDetail;
 }
 
-function setBookingDetail(journeyDetail,userDetail,cardDetail) {
-    bookDetail = journeyDetail;
-    $.extend(bookDetail, {
-        "GuestDetail": userDetail,
-        "CardDetail": cardDetail
-    });
-}
-
-$('#procceed').click(function () {
-    var fname = $('#fname').html();
-    var lname = $('#lname').html();
-    var dob = $('#dob').html();
-    var mobile = $('#mobile').html();
-    var email = $('#email').html();
-    this.userDetail = new setUserDetail(fname, lname, dob, mobile, email);
-    
+$('#procceed').click(function () {    
+    $('a[href="#pay-tab"]').tab('show');    
 });
 
     
 $('#pay').click(function () {
 
-    var cardHolderName = $('#card-holder').html();
-    var cardNumber = $('#card-number').html();
-    var expiryDate = $('#expiry-date').html();
-    var cvv = $('#cvv').html();
-    var cardDetail = new setCardDetail(cardHolderName, cardNumber, expiryDate, cvv);
-    var journeyDetail = Json.parse(sessionStorage.getItem('roomSearchCriteria'));
-    var bookingDetail = new setBookingDetail(journeyDetail, this.userDetail, bookDetail);
+    var userDetail = getUserDetail();
+    var cardDetail = getCardDetail();
+    var bookDetail = JSON.parse(sessionStorage.getItem('roomSearchCriteria')).data;
 
-    var jsonData = JSON.stringify(bookingDetail);
+    //var journeyDetail = JSON.parse(sessionStorage.getItem('roomSearchCriteria')).data;    
+    //var bookDetail = {
+    //    "SessionId": journeyDetail.SessionId,
+    //    "SearchText": journeyDetail.SearchText,
+    //    "CheckInDate": journeyDetail.CheckInDate,
+    //    "CheckOutDate": journeyDetail.CheckOutDate,
+    //    "Location": {
+    //        "Latitude": journeyDetail.Latitude,
+    //        "Longitude": journeyDetail.Longitude
+    //    },
+    //    "NoOfRooms": parseInt(journeyDetail.NoOfRooms),
+    //    "GuestCount": parseInt(journeyDetail.GuestCount),
+    //    "HotelId": parseInt(journeyDetail.HotelId) 
+    //}
+
+    $.extend(bookDetail, {
+        "GuestDetail": userDetail,
+        "CardDetail": cardDetail
+    });
+
+    var jsonData = JSON.stringify(bookDetail);
 
     $.ajax({
         url: "../hotel/book",

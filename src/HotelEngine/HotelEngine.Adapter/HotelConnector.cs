@@ -158,13 +158,12 @@ namespace HotelEngine.Adapter
 
         public async Task<RoomBookRS> BookRoomAsync(RoomBookRQ roomBookRQ)
         {
-            var tripFolderBookRS = await GetTripFolderBook(roomBookRQ);
-            var rq = ParseCompleteBookingRQ(tripFolderBookRS,roomBookRQ.SessionId.ToString());
+            var tripFolderBookRS = await GetTripFolderBookRS(roomBookRQ);
+            var rq = ParseCompleteBookingRQ(tripFolderBookRS,roomBookRQ.SessionId);
             try
             {
                 _tripEngineClient = new TripsEngineClient();
                 var rs = await _tripEngineClient.CompleteBookingAsync(rq);
-
             }
             catch (Exception e)
             {
@@ -177,26 +176,13 @@ namespace HotelEngine.Adapter
             return new RoomBookRS();
         }
 
-        private async Task<TripFolderBookRS> GetTripFolderBook(RoomBookRQ roomBook)
+        private async Task<TripFolderBookRS> GetTripFolderBookRS(RoomBookRQ roomBookRQ)
         {
             TripFolderBookRS tripFolderBookRS = null;
-            var tripProductPriceRQ = await ParsePriceRQ(roomBook);
+            var tripProductPriceRQ = await ParsePriceRQ(roomBookRQ);
             var tripProductPriceRS = await GetRoomPrice(tripProductPriceRQ);
-            var tripProduct = (HotelTripProduct)tripProductPriceRS.TripProduct;
-
-            var setting = new TripFolderBookSettings()
-            {
-                HotelItinerary = tripProduct.HotelItinerary,
-                Age = 30,
-                Ages = new int[] { 30 },
-                Birthdate = DateTime.Now,
-                HotelSearchCriterion = tripProduct.HotelSearchCriterion,
-                SessionId = tripProductPriceRS.SessionId.ToString(),
-                TripFolderName = $"TripFolder{DateTime.Now.Date}",
-                Qty = roomBook.GuestCount,
-                Amount = tripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare
-            };
-            var tripConfig = new TripFolderBookConfig(setting);
+            var tripProduct = (HotelTripProduct)tripProductPriceRS.TripProduct;                      
+            var tripConfig = new TripFolderBookConfig(tripProduct,roomBookRQ);
             try
             {
                 _tripEngineClient = new TripsEngineClient();
@@ -213,43 +199,14 @@ namespace HotelEngine.Adapter
             return tripFolderBookRS;
         }
 
-        public CompleteBookingRQ ParseCompleteBookingRQ(TripFolderBookRS tripFolderBookRS,string id)
+        public CompleteBookingRQ ParseCompleteBookingRQ(TripFolderBookRS tripFolderBookRS,Guid sessionId)
         {
-            var fare = ((HotelTripProduct)tripFolderBookRS.TripFolder.Products[0]).HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare;
-            var payment = tripFolderBookRS.TripFolder.Payments[0];
-            var creditCard = (CreditCardPayment)tripFolderBookRS.TripFolder.Payments[0];
-
+            var settings = _config.GetCompleteBookConfig(tripFolderBookRS, sessionId);
             var rq = new CompleteBookingRQ()
             {
                 TripFolderId = tripFolderBookRS.TripFolder.Id,
-                SessionId = /*tripFolderBookRS.SessionId*/ id,
-                ExternalPayment = new CreditCardPayment()
-                {
-                    Amount = fare,
-                    Attributes = new StateBag[]
-                    {
-                            new StateBag() { Name="API_SESSION_ID", Value=/*tripFolderBookRS.SessionId*/id},
-                            new StateBag(){ Name="PointOfSaleRule"},
-                            new StateBag(){ Name="SectorRule"},
-                            new StateBag(){ Name="_AttributeRule_Rovia_Username"},
-                            new StateBag(){ Name="_AttributeRule_Rovia_Password"},
-                            new StateBag(){ Name="AmountToAuthorize",Value=fare.Amount.ToString()},
-                            new StateBag(){ Name="PaymentStatus",Value="Authorization successful"},
-                            new StateBag(){ Name="AuthorizationTransactionId",Value=Guid.NewGuid().ToString()},
-                            new StateBag(){ Name="ProviderAuthorizationTransactionId",Value=Guid.NewGuid().ToString()},
-                            new StateBag(){ Name="PointOfSaleRule"},
-                            new StateBag(){ Name="SectorRule"},
-                            new StateBag(){ Name="_AttributeRule_Rovia_Username"},
-                            new StateBag(){ Name="_AttributeRule_Rovia_Password"}
-                    },
-                    BillingAddress = payment.BillingAddress,
-                    CardMake = creditCard.CardMake,
-                    CardType = creditCard.CardType,
-                    ExpiryMonthYear = creditCard.ExpiryMonthYear,
-                    NameOnCard = creditCard.NameOnCard,
-                    IsThreeDAuthorizeRequired = false,
-                    Number = creditCard.Number
-                },
+                SessionId = sessionId.ToString(),
+                ExternalPayment=settings.ExternalPayment,
                 ResultRequested = tripFolderBookRS.ResponseRecieved
             };
             return rq;

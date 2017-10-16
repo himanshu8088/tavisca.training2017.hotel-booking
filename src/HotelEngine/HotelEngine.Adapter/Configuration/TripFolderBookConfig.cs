@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using BookingProxy;
+using HotelEngine.Contracts.Models;
 
 namespace HotelEngine.Adapter.Configuration
 {
@@ -18,19 +19,18 @@ namespace HotelEngine.Adapter.Configuration
         private int _qty;
         private decimal _fareToAuthorise;
 
-        public TripFolderBookConfig(TripFolderBookSettings tripFolderBookSettings)
+        public TripFolderBookConfig(HotelTripProduct tripProduct, RoomBookRQ roomBookRQ)
         {
-            _tripFolderName = tripFolderBookSettings.TripFolderName;
-            _age = tripFolderBookSettings.Age;
-            _birthdate = tripFolderBookSettings.Birthdate;
-            _amount = tripFolderBookSettings.Amount;
-            _sessionId = tripFolderBookSettings.SessionId;
-            _ages = tripFolderBookSettings.Ages;
-            _hotelItinerary = tripFolderBookSettings.HotelItinerary;
-            _hotelSearchCriterion = tripFolderBookSettings.HotelSearchCriterion;
-            _qty = tripFolderBookSettings.Qty;
+            _hotelItinerary = tripProduct.HotelItinerary;
+            _age = DateTime.Now.Year - roomBookRQ.GuestDetail.DOB.Year;
+            _birthdate = roomBookRQ.GuestDetail.DOB;
+            _hotelSearchCriterion = tripProduct.HotelSearchCriterion;
+            _sessionId = roomBookRQ.SessionId.ToString();
+            _tripFolderName = $"TripFolder{DateTime.Now.Date}";
+            _qty = roomBookRQ.GuestCount;
+            _amount = tripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare;
+            _ages = new int[] { _age };
             _fareToAuthorise = _hotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
-            
         }
 
         public TripFolderBookRQ TripFolderBookRQ => new TripFolderBookRQ()

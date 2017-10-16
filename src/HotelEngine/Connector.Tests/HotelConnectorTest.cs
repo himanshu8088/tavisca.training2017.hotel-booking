@@ -55,7 +55,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
                     Longitude = 78.042068f
                 },
                 NoOfRooms = 1,
-                SearchText = "Pune",               
+                SearchText = "Pune",
             };
             HotelConnector hotelConnector = new HotelConnector();
 
@@ -83,8 +83,8 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
                     Longitude = 27.16084f
                 },
                 NoOfRooms = 1,
-                SearchText = "Pune",                
-                RoomName= "Superior Room"
+                SearchText = "Pune",
+                RoomName = "Superior Room"
 
             };
             HotelConnector hotelConnector = new HotelConnector();
@@ -102,19 +102,47 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
             //Arrange           
             var roomBookRQ = new RoomBookRQ()
             {
+                //SessionId = Guid.Parse("ba317ee7-b8ba-4af6-aa0a-a17dba95ecaa"),
+                //CheckInDate = DateTime.Parse("21-11-2017"),
+                //CheckOutDate = DateTime.Parse("22-11-2017"),
+                //GuestCount = 2,
+                //HotelId = 252448,
+                //Location = new HotelEngine.Contracts.Models.Location()
+                //{
+                //    Latitude = 27.16084f,
+                //    Longitude = 27.16084f
+                //},
+                //NoOfRooms = 1,
+                //SearchText = "Pune",
+                //RoomName = "DOUBLE STANDARD - BED AND BREAKFAST",
                 SessionId = Guid.Parse("ba317ee7-b8ba-4af6-aa0a-a17dba95ecaa"),
-                CheckInDate = DateTime.Parse("2017-10-25T00:00:00"),
-                CheckOutDate = DateTime.Parse("2017-10-26T00:00:00"),
+                CheckInDate = DateTime.Parse("21-11-2017"),
+                CheckOutDate = DateTime.Parse("22-11-2017"),
                 GuestCount = 2,
-                HotelId = 88359,
+                HotelId = 258057,
                 Location = new HotelEngine.Contracts.Models.Location()
                 {
-                    Latitude = 36.1732178f,
-                    Longitude = -115.144829f
+                    Latitude = 27.16084f,
+                    Longitude = 27.16084f
                 },
                 NoOfRooms = 1,
-                SearchText = "California Hotel and Casino",                
-                RoomName = "Deluxe"
+                SearchText = "Pune",
+                RoomName = "Superior Room",
+                GuestDetail = new UserDetail()
+                {
+                    DOB = DateTime.Parse("21-11-1994"),
+                    EmailId = "test@gmail.com",
+                    FirstName = "test",
+                    LastName = "user",
+                    MobileNo = "12345"
+                },
+                CardDetail = new CardDetail()
+                {
+                    CardHolderName = "test user",
+                    CardNumber = "123456789012345",
+                    CVV = 123,
+                    ExpiryDate = DateTime.Parse("21-11-2022")
+                }
             };
             HotelConnector hotelConnector = new HotelConnector();
 
