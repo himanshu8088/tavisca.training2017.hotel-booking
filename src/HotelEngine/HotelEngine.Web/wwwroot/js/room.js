@@ -37,10 +37,17 @@ function price(hotelId,roomName) {
         data: jsonData,
         contentType: "application/json",
         success: function (resp) {
-            var template = $('#price-modal');
+            var extraCharge = resp.chargebleFare.totalFare - resp.chargebleFare.baseFare;
+            var rondedValue = extraCharge.toFixed(2);
+            $.extend(resp.chargebleFare, {
+                "rondedValue": rondedValue
+            });
+            var template = $('#price-template');
             var compiledTemplate = Handlebars.compile(template.html());
             var html = compiledTemplate(resp);
-            $("#priceModal").modal('show').html(html);
+            $(".modal .modal-title").html("Price Summary :");
+            $(".modal .modal-body").html(html);
+            $(".modal").modal("show");
         },
         error: function (xhr) {
             _roomResponse = {};
