@@ -22,7 +22,7 @@ function setCardDetail(cardHolderName, cardNumber, expiryDate, cvv) {
 function setBookingDetail(journeyDetail,userDetail,cardDetail) {
     bookDetail = journeyDetail;
     $.extend(bookDetail, {
-        "UserDetail": userDetail,
+        "GuestDetail": userDetail,
         "CardDetail": cardDetail
     });
 }
