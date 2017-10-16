@@ -83,8 +83,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
                     Longitude = 27.16084f
                 },
                 NoOfRooms = 1,
-                SearchText = "Pune",
-                RoomId = Guid.Parse("a4184f5e-a7e2-4167-8582-b7b56e1d3825"),
+                SearchText = "Pune",                
                 RoomName= "Superior Room"
 
             };
@@ -114,8 +113,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
                     Longitude = -115.144829f
                 },
                 NoOfRooms = 1,
-                SearchText = "California Hotel and Casino",
-                RoomId = Guid.Parse("a4184f5e-a7e2-4167-8582-b7b56e1d3825"),
+                SearchText = "California Hotel and Casino",                
                 RoomName = "Deluxe"
             };
             HotelConnector hotelConnector = new HotelConnector();
