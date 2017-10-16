@@ -48,13 +48,12 @@ function price(hotelId,roomName) {
             $(".modal .modal-title").html("Price Summary :");
             $(".modal .modal-body").html(html);
             $(".modal").modal("show");
+            $('#proceed').click(function () {
+                window.location = '../html/book.html';   
+            });
         },
         error: function (xhr) {
             _roomResponse = {};
         }
     });
-};
-function book(hotelId) {
-
-    $("#priceModal").modal();
 };
