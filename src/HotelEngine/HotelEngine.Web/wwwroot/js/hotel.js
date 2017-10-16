@@ -51,12 +51,12 @@ $('#ex1').slider({
 function roomClicked(hotelId,hotelName) {
     var result = sessionStorage.getItem('hotelSearchCriteria');
     var searchCriteria = JSON.parse(result).data;
-    var sessionId=$('#sessionId').text();
+    var sessionId = $('#sessionId').text();
+    var amenitiesId = $('#amenities' + sessionId);
+    sessionStorage.setItem(amenitiesId, $(amenitiesId).html());   
     var roomSearchObj = new roomSearchRQ(searchCriteria.CheckInDate, searchCriteria.CheckOutDate, searchCriteria.Location.Latitude, searchCriteria.Location.Longitude, searchCriteria.GuestCount, searchCriteria.NoOfRooms, hotelId, hotelName, sessionId);
-    storeOnSession(roomSearchObj);    
-    window.location = '../html/room.html';
+    sessionStorage.setItem('roomSearchCriteria', JSON.stringify(roomSearchObj));   
+    window.location = '../html/rooms.html';
 };
 
-function storeOnSession(roomSearchObj) {    
-    sessionStorage.setItem('roomSearchCriteria', JSON.stringify(roomSearchObj));
-}
+

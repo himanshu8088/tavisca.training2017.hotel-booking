@@ -19,6 +19,10 @@ $(document).ready(function () {
             var html = compiledTemplate(resp);
             $('#roomList-container').html(html);
             $('#hotel-name').html(searchCriteria.SearchText);
+            var amenityId = "amenities";/* + resp.sessionId;*/
+            var amenitiesData = sessionStorage.getItem(amenityId);
+            var am = JSON.parse(amenitiesData);
+            $('#amenities').html();
         },
         error: function (xhr) {
             _searchResponse = {};
@@ -30,6 +34,7 @@ function price(hotelId,roomName) {
     $.extend(priceRQ, {
         "RoomName" :roomName
     });
+    sessionStorage.setItem('roomPriceSearchCriteria', JSON.stringify(priceRQ));
     var jsonData = JSON.stringify(priceRQ);
     $.ajax({
         url: "../hotel/price",

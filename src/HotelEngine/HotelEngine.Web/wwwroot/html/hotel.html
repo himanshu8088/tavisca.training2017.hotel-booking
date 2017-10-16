@@ -191,6 +191,9 @@
                     <div class="col-md-9">    
                         <label id="sessionId" hidden>{{apiResponseData.sessionId}}</label>
                         {{#each apiResponseData.hotels}} {{#unless apiResponseData.hotels.images}}
+                        <div id="amenities{{sessionId}}" hidden>
+                            {{amenities}}
+                        </div>
                         <div class="panel-group">
                             <div class="panel panel-primary">
                                 <div class="panel-body">
@@ -238,6 +241,7 @@
                     </div>
                 </div>
             </div>
+            
         </script>
     </div>
     <script src="../js/hotel.js"></script>
