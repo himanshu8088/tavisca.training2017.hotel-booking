@@ -6,6 +6,7 @@ namespace HotelEngine.Contracts.Models
 {
     public class RoomBookRQ:RoomPriceSearchRQ
     {
-
+        UserDetail GuestDetail { get; set; }
+        CardDetail CardDetail { get; set; }
     }
 }
