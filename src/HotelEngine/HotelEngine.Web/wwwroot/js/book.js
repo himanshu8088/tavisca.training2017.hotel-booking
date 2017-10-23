@@ -1,79 +1,83 @@
-﻿
-function getUserDetail() {
-    var firstName = $('#fname').html();
-    var lastName = $('#lname').html();
-    var dob = $('#dob').val();
-    var mobile = $('#mobile').html();
-    var emailId = $('#email').html();
+﻿var roomPriceRQ = {};
 
-    userDetail = {
+
+$(document).ready(function () {    
+    $('#dob').datepicker({
+        dateFormat: "yy-mm-dd",       
+    });
+    $('#expiry-date').datepicker({
+        dateFormat: "yy-mm-dd"
+    });
+    restoreSessionData();
+});
+
+function restoreSessionData() {
+    roomPriceRQ = JSON.parse(sessionStorage.getItem('roomPriceSearchCriteria'));
+}
+
+function guest() {
+    var firstName = $('#fname').val();
+    var lastName = $('#lname').val();
+    var dob = $('#dob').val();
+    var mobile = $('#mobile').val();
+    var emailId = $('#email').val();
+
+    this.detail = {
         "FirstName": firstName, 
         "LastName": lastName, 
         "DOB": dob,
         "MobileNo": mobile,
         "EmailId": emailId
     }
-    return userDetail;
 };
 
-function getCardDetail() {
-    var cardHolderName = $('#card-holder').html();
-    var cardNumber = $('#card-number').html();
-    var expiryDate = $('#expiry-date').html();
-    var cvv = $('#cvv').html();
+function paymentCard() {
+    var cardHolderName = $('#card-holder').val();
+    var cardNumber = $('#card-number').val();
+    var expiryDate = $('#expiry-date').val();
+    var cvv = $('#cvv').val();
 
-    cardDetail = {
+    this.detail = {
         "CardHolderName": cardHolderName,
         "CardNumber": cardNumber,
         "ExpiryDate": expiryDate,
         "CVV": cvv,        
-    }
-    return cardDetail;
+    }    
 }
 
 $('#procceed').click(function () {    
     $('a[href="#pay-tab"]').tab('show');    
 });
 
+
+function createBookingRQ() {
+    var guestDetail = (new guest()).detail;
+    var cardDetail = (new paymentCard()).detail;
+    var bookingRQ = roomPriceRQ;
+
+    $.extend(bookingRQ, {
+        "GuestDetail": guestDetail,
+        "CardDetail": cardDetail
+    });
+    return bookingRQ;
+}
     
 $('#pay').click(function () {
 
-    var userDetail = getUserDetail();
-    var cardDetail = getCardDetail();
-    var bookDetail = JSON.parse(sessionStorage.getItem('roomSearchCriteria')).data;
-
-    //var journeyDetail = JSON.parse(sessionStorage.getItem('roomSearchCriteria')).data;    
-    //var bookDetail = {
-    //    "SessionId": journeyDetail.SessionId,
-    //    "SearchText": journeyDetail.SearchText,
-    //    "CheckInDate": journeyDetail.CheckInDate,
-    //    "CheckOutDate": journeyDetail.CheckOutDate,
-    //    "Location": {
-    //        "Latitude": journeyDetail.Latitude,
-    //        "Longitude": journeyDetail.Longitude
-    //    },
-    //    "NoOfRooms": parseInt(journeyDetail.NoOfRooms),
-    //    "GuestCount": parseInt(journeyDetail.GuestCount),
-    //    "HotelId": parseInt(journeyDetail.HotelId) 
-    //}
-
-    $.extend(bookDetail, {
-        "GuestDetail": userDetail,
-        "CardDetail": cardDetail
-    });
-
-    var jsonData = JSON.stringify(bookDetail);
+    var bookingRQ=createBookingRQ();
+    var bookingRQString = JSON.stringify(bookingRQ);    
 
     $.ajax({
         url: "../hotel/book",
         type: "POST",
-        data: jsonData,
+        data: bookingRQString,
         contentType: "application/json",
-        success: function (resp) {
-            alert('Booking confirmed')
+        success: function (bookingResponse) {
+            sessionStorage.setItem('bookConfirmationInfo', JSON.stringify(bookingResponse));
+            window.location = '../html/confirmation.html';
         },
         error: function (xhr) {       
-            alert('Sorry payment failed')
+            alert('Sorry payment failed');
         }
     });       
 });

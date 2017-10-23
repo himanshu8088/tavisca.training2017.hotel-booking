@@ -173,7 +173,10 @@ namespace HotelEngine.Adapter
             {
                 await _tripEngineClient.CloseAsync();
             }
-            return new RoomBookRS();
+            return new RoomBookRS
+            {
+                ConfirmationNo = tripFolderBookRS.TripFolder.ConfirmationNumber                
+            };
         }
 
         private async Task<TripFolderBookRS> GetTripFolderBookRS(RoomBookRQ roomBookRQ)

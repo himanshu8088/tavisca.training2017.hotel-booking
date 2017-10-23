@@ -28,7 +28,7 @@ namespace HotelEngine.Adapter.Configuration
             _longitude = hotelSearchRQ.Location.Longitude;
             _noOfRooms = hotelSearchRQ.NoOfRooms;
             _sessionId = hotelSearchRQ.SessionId.ToString();
-        }        
+        }
 
         public HotelFilter[] Filters => new HotelFilter[]
         {
@@ -80,7 +80,11 @@ namespace HotelEngine.Adapter.Configuration
                 new PassengerTypeQuantity()
                 {
                     PassengerType = PassengerType.Adult,
-                    Quantity = _passengerCount
+                    Quantity = _passengerCount,
+                    Ages=new int[]
+                    {
+                        30
+                    }
                 }
             },
             ProcessingInfo = new HotelSearchProcessingInfo()
@@ -91,14 +95,20 @@ namespace HotelEngine.Adapter.Configuration
             {
                 new RoomOccupancyType()
                 {
+
                     PaxQuantities =  new PassengerTypeQuantity[]
                                      {
                                             new PassengerTypeQuantity()
                                             {
                                                 PassengerType = PassengerType.Adult,
-                                                Quantity = _passengerCount
+                                                Quantity = _passengerCount,
+                                                 Ages=new int[]
+                                                {
+                                                    30
+                                                }
                                             }
                                      }
+
                 }
             },
             SearchType = HotelSearchType.City,
@@ -136,9 +146,9 @@ namespace HotelEngine.Adapter.Configuration
         };
         public PagingInfo PagingInfo => new PagingInfo()
         {
-            Enabled = true,
-            EndNumber = 120,
-            StartNumber = 100,
+            Enabled = false,
+            EndNumber = 0,
+            StartNumber = 0,
             TotalRecordsBeforeFiltering = 0,
             TotalResults = 0
         };

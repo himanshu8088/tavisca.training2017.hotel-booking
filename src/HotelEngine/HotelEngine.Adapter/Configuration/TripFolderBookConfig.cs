@@ -143,11 +143,6 @@ namespace HotelEngine.Adapter.Configuration
                             new StateBag(){ Name="SectorRule"},
                             new StateBag(){ Name="_AttributeRule_Rovia_Username"},
                             new StateBag(){ Name="_AttributeRule_Rovia_Password"},
-
-                            //new StateBag(){ Name="AmountToAuthorize",Value=_fareToAuthorise.ToString()},
-                            //new StateBag(){ Name="PaymentStatus",Value="Authorization successful"},
-                            //new StateBag(){ Name="AuthorizationTransactionId",Value="975b4c93-228d-41dd-97ed-7d0b7b8c445b" },
-                            //new StateBag(){ Name="ProviderAuthorizationTransactionId",Value="1F3FE4A1-0AB1-491E-BC18-20E71EFCDF7B" },
                         },
                         BillingAddress=new Address()
                         {
