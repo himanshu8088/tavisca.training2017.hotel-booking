@@ -1,4 +1,6 @@
-﻿Handlebars.registerHelper('times', function (n, block) {
+﻿var hotelItinerary = {};
+var hotelRQ={};
+Handlebars.registerHelper('times', function (n, block) {
     var accum = '';
     for (var i = 0; i < n; ++i)
         accum += block.fn(i);
@@ -6,27 +8,34 @@
 });
 
 $(document).ready(function () {
-    var searchData = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;    
-    var jsonData = JSON.stringify(searchData);
+    
+    hotelRQ = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;    
+    var jsonData = JSON.stringify(hotelRQ);
+
+    
+
     $.ajax({
         url: "../hotel/search",
         type: "POST",
         data: jsonData,
         contentType: "application/json",
-        success: function (apiResponseData) {             
-            var templateData = { searchData, apiResponseData };
-            var template = $('#hotel-item');
-            var compiledTemplate = Handlebars.compile(template.html());
-            var html = compiledTemplate(templateData);
-            $('#hotelList-container').html(html);
+        success: function (hotels) {
+            hotelItinerary = hotels;
+            hotelListing(hotelItinerary);
         },
         error: function (xhr) {
             _searchResponse = {};
         }
     });
-
+    $('#filters').tooltip();
 });
 
+function filterHotels() {
+    filterByStarRating();
+};
+//$('#filterHotels').click(function () {
+//    filterByStarRating();
+//});
 function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRooms, hotelId,hotelName,sessionId) {
     this.data = {    
         "SessionId": sessionId,
@@ -47,7 +56,13 @@ $('#ex1').slider({
         return 'Current value: ' + value;
     }
 });
-
+function hotelListing(hotelItinerary) {
+    var templateData = { hotelRQ, hotelItinerary };
+    var template = $('#hotel-item');
+    var compiledTemplate = Handlebars.compile(template.html());
+    var html = compiledTemplate(templateData);
+    $('#hotelList-container').html(html);
+}
 function roomClicked(hotelId,hotelName) {
     var result = sessionStorage.getItem('hotelSearchCriteria');
     var searchCriteria = JSON.parse(result).data;
@@ -58,5 +73,27 @@ function roomClicked(hotelId,hotelName) {
     sessionStorage.setItem('roomSearchCriteria', JSON.stringify(roomSearchObj));   
     window.location = '../html/rooms.html';
 };
+function filterByStarRating() {
+    var hotels = [];
+    var selectedRatings=[]
+    $('input[type="checkbox"]:checked').each(function() {
+        selectedRatings.push($(this).val());       
+    });
 
+    for (var hotelIndex = 0; hotelIndex < hotelItinerary.hotels.length; hotelIndex++) {
+        var hotel = hotelItinerary.hotels[hotelIndex];
+        for (var ratingIndex = 0; ratingIndex < selectedRatings.length; ratingIndex++) {
+            if (hotel.starRating == selectedRatings[ratingIndex]) {
+                hotels.push(hotel);
+            }
+        }            
+    }
+
+    var sessionId = hotelItinerary.sessionId;
+    filteredHotelItinerary = {
+        "sessionId": sessionId,
+        "hotels": hotels
+    }
+    hotelListing(filteredHotelItinerary);
+}
 

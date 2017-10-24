@@ -79,7 +79,7 @@
                                     <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Destination</h4>
                                 </div>
                                 <div class="row">                                    
-                                    <h5>{{searchData.SearchText}}</h5>
+                                    <h5>{{hotelRQ.SearchText}}</h5>
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -87,7 +87,7 @@
                                     <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Check-In</h4>
                                 </div>
                                 <div class="row">
-                                    <h5>{{searchData.CheckInDate}}</h5>
+                                    <h5>{{hotelRQ.CheckInDate}}</h5>
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -95,7 +95,7 @@
                                     <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Check-Out</h4>
                                 </div>
                                 <div class="row">
-                                    <h5>{{searchData.CheckOutDate}}</h5>
+                                    <h5>{{hotelRQ.CheckOutDate}}</h5>
                                 </div>
                             </div>
                             <div class="col-md-5">
@@ -103,14 +103,14 @@
                                     <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Rooms</h4>
                                 </div>
                                 <div class="row">
-                                    <h5>{{searchData.NoOfRooms}}</h5>
+                                    <h5>{{hotelRQ.NoOfRooms}}</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <h1 class="text-primary">Search Results: ({{apiResponseData.hotels.length}})</h1>
+                    <h1 class="text-primary">Search Results: ({{hotelItinerary.hotels.length}})</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
@@ -119,18 +119,18 @@
                         </div>
                         <div class="row">
                             <div class="panel-group" id="accordion">
-                                <div class="panel panel-primary">
+                                <div class="panel panel-primary"  id="filters" data-container="body" data-toggle="tooltip" data-placement="top" title="Select multiple checkboxes">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                                                Property Class
+                                                Star Rating
                                             </a>
                                         </h4>
                                     </div>
                                     <div id="collapse1" class="panel-collapse collapse in">
                                         <div class="panel-body">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">
+                                                <label><input type="checkbox" name="starRating" value="5" id="fiveStar">
                                                     <span class="glyphicon glyphicon-star"> </span>
                                                     <span class="glyphicon glyphicon-star"> </span>
                                                     <span class="glyphicon glyphicon-star"></span>
@@ -140,7 +140,7 @@
                                             </div>
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" value="">
+                                                    <input type="checkbox" name="starRating" value="4" id-="fourStar">
                                                     <span class="glyphicon glyphicon-star"> </span>
                                                     <span class="glyphicon glyphicon-star"> </span>
                                                     <span class="glyphicon glyphicon-star"></span>
@@ -149,7 +149,7 @@
                                             </div>
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" value="">
+                                                    <input type="checkbox" name="starRating" value="3" id="threeStar">
                                                     <span class="glyphicon glyphicon-star"> </span>
                                                     <span class="glyphicon glyphicon-star"> </span>
                                                     <span class="glyphicon glyphicon-star"></span>
@@ -157,19 +157,21 @@
                                             </div>
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" value="">
+                                                    <input type="checkbox" name="starRating" value="2" id="twoStar">
                                                     <span class="glyphicon glyphicon-star"> </span>
                                                     <span class="glyphicon glyphicon-star"> </span>
                                                 </label>
                                             </div>
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" value="">
+                                                    <input type="checkbox" name="starRating" value="1" id="oneStar">
                                                     <span class="glyphicon glyphicon-star"> </span>
                                                 </label>
                                             </div>
+                                           
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-info" onclick="filterHotels()">Modify</button>
                                 </div>
                                 <div class="panel panel-primary">
                                     <div class="panel-heading">
@@ -189,8 +191,8 @@
                         </div>
                     </div>
                     <div class="col-md-9">    
-                        <label id="sessionId" hidden>{{apiResponseData.sessionId}}</label>
-                        {{#each apiResponseData.hotels}} {{#unless apiResponseData.hotels.images}}
+                        <label id="sessionId" hidden>{{hotelItinerary.sessionId}}</label>
+                        {{#each hotelItinerary.hotels}} {{#unless hotelItinerary.hotels.images}}
                         <div id="amenities{{sessionId}}" hidden>
                             {{amenities}}
                         </div>
@@ -245,6 +247,7 @@
         </script>
     </div>
     <script src="../js/hotel.js"></script>
+    <script type="text/javascript" src="../js/libraries/tether.min.js"></script>
     <script type="text/javascript" src="../js/libraries/bootstrap.min.js"></script>
 </body>
 </html>
