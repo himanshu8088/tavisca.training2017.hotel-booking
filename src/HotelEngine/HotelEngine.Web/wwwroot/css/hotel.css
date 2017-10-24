@@ -3,9 +3,14 @@
     height:230px;
 }
 
-#ex1Slider .slider-selection {
+/*#ex1Slider .slider-selection {
     background: #337ab7;
+}*/
+
+#ex1Slider .slider-selection {
+	background: #BABABA;
 }
+
 
 #load {
     position: absolute;

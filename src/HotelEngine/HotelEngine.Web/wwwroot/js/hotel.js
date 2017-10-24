@@ -11,9 +11,6 @@ $(document).ready(function () {
     
     hotelRQ = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;    
     var jsonData = JSON.stringify(hotelRQ);
-
-    
-
     $.ajax({
         url: "../hotel/search",
         type: "POST",
@@ -33,9 +30,7 @@ $(document).ready(function () {
 function filterHotels() {
     filterByStarRating();
 };
-//$('#filterHotels').click(function () {
-//    filterByStarRating();
-//});
+
 function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRooms, hotelId,hotelName,sessionId) {
     this.data = {    
         "SessionId": sessionId,
