@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Connector.Tests", "Connector.Tests\Connector.Tests.csproj", "{C31FC104-EF57-4690-8315-D715C5455128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelEngine.Adapter.Tests", "Connector.Tests\HotelEngine.Adapter.Tests.csproj", "{C31FC104-EF57-4690-8315-D715C5455128}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B184B1A8-0F6B-4B83-931E-959CB8BF436D}"
 EndProject

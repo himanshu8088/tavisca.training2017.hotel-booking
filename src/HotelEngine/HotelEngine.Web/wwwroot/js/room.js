@@ -29,13 +29,17 @@ $(document).ready(function () {
         }
     });       
 });
-function price(hotelId,roomName) {
+function price(hotelId, roomName) {
+    $(".modal-body").html('<img id="load" src="../img/loader.gif" alt="loading..." />');
+    $(".modal-footer").hide();
+    $(".modal").modal("show");
     var priceRQ = JSON.parse(sessionStorage.getItem('roomSearchCriteria')).data;
     $.extend(priceRQ, {
         "RoomName" :roomName
     });
     sessionStorage.setItem('roomPriceSearchCriteria', JSON.stringify(priceRQ));
     var jsonData = JSON.stringify(priceRQ);
+    
     $.ajax({
         url: "../hotel/price",
         type: "POST",
@@ -43,16 +47,17 @@ function price(hotelId,roomName) {
         contentType: "application/json",
         success: function (resp) {
             var extraCharge = resp.chargebleFare.totalFare - resp.chargebleFare.baseFare;
-            var rondedValue = extraCharge.toFixed(2);
+            var roundedValue = extraCharge.toFixed(2);
             $.extend(resp.chargebleFare, {
-                "rondedValue": rondedValue
+                "roundedValue": roundedValue
             });
             var template = $('#price-template');
             var compiledTemplate = Handlebars.compile(template.html());
             var html = compiledTemplate(resp);
             $(".modal .modal-title").html("Price Summary :");
-            $(".modal .modal-body").html(html);
+            $(".modal .modal-body").html(html);            
             $(".modal").modal("show");
+            $(".modal-footer").show();
             $('#proceed').click(function () {
                 window.location = '../html/book.html';   
             });

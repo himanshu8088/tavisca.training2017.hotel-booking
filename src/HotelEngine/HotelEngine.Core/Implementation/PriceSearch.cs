@@ -9,11 +9,11 @@ namespace HotelEngine.Core.Implementation
 {
     public class PriceSearch : IPriceSearch
     {       
-        private IHotelConnector _hotelConnector;
+        private IHotelAdapter _hotelConnector;
 
         public PriceSearch()
         {
-            _hotelConnector = new HotelConnector();
+            _hotelConnector = new HotelAdapter();
         }
 
         public async Task<RoomPriceSearchRS> SearchAsync(RoomPriceSearchRQ priceRQ)

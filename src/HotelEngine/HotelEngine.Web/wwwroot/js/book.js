@@ -63,21 +63,7 @@ function createBookingRQ() {
 }
     
 $('#pay').click(function () {
-
-    var bookingRQ=createBookingRQ();
-    var bookingRQString = JSON.stringify(bookingRQ);    
-
-    $.ajax({
-        url: "../hotel/book",
-        type: "POST",
-        data: bookingRQString,
-        contentType: "application/json",
-        success: function (bookingResponse) {
-            sessionStorage.setItem('bookConfirmationInfo', JSON.stringify(bookingResponse));
-            window.location = '../html/confirmation.html';
-        },
-        error: function (xhr) {       
-            alert('Sorry payment failed');
-        }
-    });       
+    var bookingRQ=createBookingRQ();    
+    sessionStorage.setItem('bookingRQ', JSON.stringify(bookingRQ));
+    window.location = '../html/confirmation.html';   
 });

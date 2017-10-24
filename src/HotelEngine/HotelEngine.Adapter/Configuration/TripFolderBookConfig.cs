@@ -22,13 +22,14 @@ namespace HotelEngine.Adapter.Configuration
         public TripFolderBookConfig(HotelTripProduct tripProduct, RoomBookRQ roomBookRQ)
         {
             _hotelItinerary = tripProduct.HotelItinerary;
-            _age = DateTime.Now.Year - roomBookRQ.GuestDetail.DOB.Year;
+            _age = 30;/*DateTime.Now.Year - roomBookRQ.GuestDetail.DOB.Year;*/
             _birthdate = roomBookRQ.GuestDetail.DOB;
             _hotelSearchCriterion = tripProduct.HotelSearchCriterion;
             _sessionId = roomBookRQ.SessionId.ToString();
             _tripFolderName = $"TripFolder{DateTime.Now.Date}";
             _qty = roomBookRQ.GuestCount;
             _amount = tripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare;
+            _amount.DisplayCurrency = "USD";
             _ages = new int[] { _age };
             _fareToAuthorise = _hotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
         }
@@ -216,7 +217,7 @@ namespace HotelEngine.Adapter.Configuration
                        {
                            new PaymentBreakup()
                            {
-                               Amount=_amount
+                               Amount=_amount                               
                            }
                        },
                        PaymentOptions=new PaymentType[]

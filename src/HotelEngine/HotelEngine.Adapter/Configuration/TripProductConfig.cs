@@ -10,12 +10,12 @@ namespace HotelEngine.Adapter.Configuration
     public class TripProductConfig
     {
         private HotelItinerary _hotelItinerary;
-        private HotelSearchCriterion _hotelSearchCriterion;               
+        private HotelSearchCriterion _hotelSearchCriterion;   
 
         public TripProductConfig(HotelSearchCriterion hotelSearchCriterion,HotelItinerary hotelItinerary, RoomPriceSearchRQ roomPriceSearchRQ)
         {
             _hotelItinerary = SelectRoomItinerary(hotelItinerary, roomPriceSearchRQ.RoomName);
-            _hotelSearchCriterion = hotelSearchCriterion;
+            _hotelSearchCriterion = hotelSearchCriterion;            
         }
 
         private HotelItinerary SelectRoomItinerary(HotelItinerary itinerary, string roomName)
@@ -27,6 +27,7 @@ namespace HotelEngine.Adapter.Configuration
                 if (room.RoomName.Equals(roomName))
                 {
                     selectedRoom = room;
+                    selectedRoom.DisplayRoomRate.TotalFare.DisplayCurrency = "USD";
                     break;
                 }
             }

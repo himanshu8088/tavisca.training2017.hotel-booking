@@ -9,5 +9,7 @@ namespace HotelEngine.Contracts.Models
        public string SessionId { get; set; }
        public string ConfirmationNo { get; set; }
        public Status Status { get; set; }
+       public Fare FareCharged { get; set; }
+       public DateTime TransactionDateTime { get; set;}
     }
 }
