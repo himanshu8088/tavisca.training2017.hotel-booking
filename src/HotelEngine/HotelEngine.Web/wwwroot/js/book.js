@@ -46,7 +46,12 @@ function paymentCard() {
 }
 
 $('#procceed').click(function () {    
-    $('a[href="#pay-tab"]').tab('show');    
+    var isValidGuestDetail = validateGuestDetails();
+    if (isValidGuestDetail == true) {
+        $('a[href="#pay-tab"]').tab('show');
+    }
+      
+    
 });
 
 
@@ -63,7 +68,29 @@ function createBookingRQ() {
 }
     
 $('#pay').click(function () {
-    var bookingRQ=createBookingRQ();    
-    sessionStorage.setItem('bookingRQ', JSON.stringify(bookingRQ));
-    window.location = '../html/confirmation.html';   
+    var isValidCardDetail = validateCardDetails();
+    if (isValidCardDetail == true) {
+        var bookingRQ = createBookingRQ();
+        sessionStorage.setItem('bookingRQ', JSON.stringify(bookingRQ));
+        window.location = '../html/confirmation.html';  
+    }
+     
 });
+function validateGuestDetails() {
+    var isValid = true;
+    var guestDetail = (new guest()).detail;
+    if (guestDetail.FirstName == "" || guestDetail.LastName == "" || guestDetail.MobileNo == "" || guestDetail.EmailId == "" || guestDetail.DOB == "") {
+        alert("Please fill all required fields .");
+        isValid = false;
+    }
+    return isValid;
+}
+function validateCardDetails() {
+    var isValid = true;
+    var cardDetails = (new paymentCard()).detail;
+    if (cardDetails.CardHolderName == "" || cardDetails.CardNumber == "" || cardDetails.ExpiryDate == "" || cardDetails.CVV == "") {
+        alert("Please fill all card details .");
+        isValid = false;
+    }
+    return isValid;
+}

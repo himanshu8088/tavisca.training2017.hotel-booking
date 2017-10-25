@@ -68,6 +68,32 @@
     
     <!--     Tab section starts here    -->
     <div class="container-fluid">
+       
+        <div id="hotelList-container" class="col-md-9 col-xs-12 col-sm-12" >
+            <img id="load" src="../img/loader.gif" alt="loading..." />
+        </div>       
+    </div>
+    
+    <!--Footer starts here-->
+    <div id="footer">
+        <div class="container">
+            <div class="footer-block margin-top">
+                <div class="row margin-top">
+                    <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4">
+                        <h3>Tavisca Solutions</h3>
+                    </div>
+                </div>
+                <div class="row margin-top">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 margin-top">
+                        <div class="col-md-4 col-xs-6"><h6><img src="../img/logo-white.PNG" /></h6></div>
+                        <div class="col-md-8 col-xs-6 margin-top"><h6>© 2017 Tavisca Solutions Pvt. Ltd. </h6></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <script id="hotel-item" type="text/x-handlebars-template">
         <div class="col-md-3">
             <div class="row">
                 <h3 class="text-primary">Filter search by: </h3>
@@ -160,34 +186,8 @@
                 <button type="button" class="btn btn-primary" id="clearFilter">Clear All Filters</button>
             </div>
         </div>
-        <div id="hotelList-container" class="col-md-9 col-xs-12 col-sm-12" >
-            <!--<img id="load" src="../img/loader.gif" alt="loading..." />-->
-            <div class="loader"></div>
-        </div>       
-    </div>
-    
-    <!--Footer starts here-->
-    <div id="footer">
-        <div class="container">
-            <div class="footer-block margin-top">
-                <div class="row margin-top">
-                    <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4">
-                        <h3>Tavisca Solutions</h3>
-                    </div>
-                </div>
-                <div class="row margin-top">
-                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 margin-top">
-                        <div class="col-md-4 col-xs-6"><h6><img src="../img/logo-white.PNG" /></h6></div>
-                        <div class="col-md-8 col-xs-6 margin-top"><h6>© 2017 Tavisca Solutions Pvt. Ltd. </h6></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>  
-
-    <script id="hotel-item" type="text/x-handlebars-template">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel-group">
+        <div class="col-md-9">
+            <div class="panel-group hidden-xs hidden-lg hidden-sm">
                 <div class="panel panel-primary margin-top mt-lg">
                     <div class="panel-body">
                         <div class="col-md-3">
@@ -226,11 +226,10 @@
                 </div>
             </div>
             <div class="row">
-                <h1 class="text-primary">Search Results: ({{hotelItinerary.hotels.length}})</h1>
+                <div class="col-md-12"><h1 class="text-primary">Search Results: ({{hotelItinerary.hotels.length}})</h1></div>
             </div>
             <div class="row">
-
-                <div class="">
+                <div class="col-md-12">
                     <label id="sessionId" hidden>{{hotelItinerary.sessionId}}</label>
                     {{#each hotelItinerary.hotels}} {{#unless hotelItinerary.hotels.images}}
                     <div id="amenities{{sessionId}}" hidden>
