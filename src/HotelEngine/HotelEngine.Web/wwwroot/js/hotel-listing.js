@@ -7,6 +7,7 @@ Handlebars.registerHelper('times', function (n, block) {
     return accum;
 });
 
+
 $(document).ready(function () {
 
     hotelRQ = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;
@@ -21,7 +22,8 @@ $(document).ready(function () {
             hotelListing(hotelItinerary);
         },
         error: function (xhr) {
-            _searchResponse = {};
+            alert("Sorry server doesn't responding. Please try again.");
+            window.location = '../html/search.html';
         }
     });
     $('#filters').tooltip();

@@ -20,8 +20,11 @@ $(document).ready(function () {
                 $('#success').show();
             else
                 $('#fail').show();
-
             $('#confirmation-section').html(html);
+        },
+        error: function (xhr) {
+            alert("Sorry server doesn't responding. Please try again.");
+            window.location = '../html/book.html';
         }
     });
 });

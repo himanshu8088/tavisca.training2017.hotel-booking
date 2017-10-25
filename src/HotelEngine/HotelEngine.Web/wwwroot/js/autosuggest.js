@@ -13,8 +13,8 @@ function search(searchText) {
         url: "http://portal.dev-rovia.com/Services/api/Content/GetAutoCompleteDataGroups?type=city%7Cairport%7Cpoi&query=" + searchText,
         dataType: "jsonp",
         crossDomain: true,
-        success: function (resp) {
-            var poi = resp[2].ItemList;
+        success: function (autoSuggestResults) {
+            var poi = autoSuggestResults[2].ItemList;
             var list = new Array();
             for (var i = 0; i < poi.length; i++) {
                 var data = poi[i];
@@ -33,7 +33,8 @@ function search(searchText) {
             })
         },
         error: function (xhr) {
-            _searchResponse = {};
+            alert("Sorry server doesn't responding. Please try again.");
+            window.location = '../html/search.html';
         }
     });
 }

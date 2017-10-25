@@ -25,7 +25,8 @@ $(document).ready(function () {
             $('#amenities').html();
         },
         error: function (xhr) {
-            _searchResponse = {};
+            alert("Sorry server doesn't responding. Please try again.");
+            window.location = '../html/hotel-listing.html';
         }
     });
 });
