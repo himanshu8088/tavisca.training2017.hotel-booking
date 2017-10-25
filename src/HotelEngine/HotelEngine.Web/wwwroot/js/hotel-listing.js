@@ -66,7 +66,7 @@ function roomClicked(hotelId, hotelName) {
     sessionStorage.setItem(amenitiesId, $(amenitiesId).html());
     var roomSearchObj = new roomSearchRQ(searchCriteria.CheckInDate, searchCriteria.CheckOutDate, searchCriteria.Location.Latitude, searchCriteria.Location.Longitude, searchCriteria.GuestCount, searchCriteria.NoOfRooms, hotelId, hotelName, sessionId);
     sessionStorage.setItem('roomSearchCriteria', JSON.stringify(roomSearchObj));
-    window.location = '../html/rooms.html';
+    window.location = '../html/room-listing.html';
 };
 function filterByStarRating() {
     var hotels = [];
@@ -108,6 +108,8 @@ function filterByStarRating() {
         } else if (priceRange.length != 0 && priceFlag == true) {
             hotels.push(hotel);
         } else if (selectedRatings.length != 0  && ratingFlag == true) {
+            hotels.push(hotel);
+        } else if (priceRange.length == 0 && selectedRatings.length == 0) {
             hotels.push(hotel);
         }
     }

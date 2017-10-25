@@ -14,7 +14,7 @@ function hotelSearchRQ(searchText, checkIn, checkOut, latitude, longitude, guest
 };
 $("#searchClick").click(function () {
     saveSearchCriteriaInSession();
-    window.location = '../html/hotel.html';
+    window.location = '../html/hotel-listing.html';
 });
 
 function saveSearchCriteriaInSession() {
