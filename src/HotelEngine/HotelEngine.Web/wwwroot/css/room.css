@@ -1,4 +1,4 @@
-﻿#load {
+﻿#load{
     position: absolute;
     width: 300px;
     height: 200px;
@@ -7,11 +7,18 @@
     left: 50%;
     margin: -100px 0 0 -150px;
 }
-.img{
+/*.img{
     max-width:100%;
     max-height:100%;
-}
+}*/
 .carousel-inner > .item > img {
     margin: 0 auto;
 }
 
+#priceModal {
+    height: 400px;
+}
+
+.modal-body{
+    
+}

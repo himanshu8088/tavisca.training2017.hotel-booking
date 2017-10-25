@@ -33,6 +33,10 @@ label {
     margin-top:40px;
 }
 
+.mt-xl{
+    margin-top:150px;
+}
+
 .navbar-brand {
     padding: 0px;
     margin-left: 10px;
@@ -133,4 +137,31 @@ nav > li > a {
 .glyphicon {
     color: #337ab7;
     font-size: 18px;
+}
+.footer {
+    /*position:absolute;
+    bottom:0;*/
+    background-color: #141418;
+    color: #ffffff;
+}
+html {
+    min-height: 100%;
+    position: relative;
+}    
+ 
+
+body {
+    margin-bottom: 250px;
+}
+
+
+#footer {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background-color: #141418;
+    color: #ffffff;
+}
+.footer-block {
+    margin: 20px 0;
 }
