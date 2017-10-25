@@ -16,10 +16,14 @@ namespace HotelEngine.Adapter
         private IAdapterConfiguration _config;
         private Proxies.HotelEngineClient _hotelEngineClient = null;
         private TripsEngineClient _tripEngineClient = null;
+        private string[] _hotelFareSource;
 
         public HotelAdapter()
         {
             _config = new StaticAdapterConfiguration();
+            _hotelFareSource = new string[]{
+                "HotelBeds Test", "TouricoTGSTest"
+            }; ;            
         }
 
         public async Task<HotelEngine.Contracts.Models.HotelSearchRS> SearchHotelsAsync(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
@@ -191,63 +195,67 @@ namespace HotelEngine.Adapter
             foreach (var itinerary in itineraries)
             {
                 var hotelProp = itinerary.HotelProperty;
-                foreach (var roomProp in itinerary.Rooms)
-                {
-                    var room = new HotelEngine.Contracts.Models.Room()
+
+              
+                    foreach (var roomProp in itinerary.Rooms)
                     {
-                        Description = roomProp.RoomDescription,
-                        RoomId = roomProp.RoomId,
+                        var room = new HotelEngine.Contracts.Models.Room()
+                        {
+                            Description = roomProp.RoomDescription,
+                            RoomId = roomProp.RoomId,
+                            Fare = new HotelEngine.Contracts.Models.Fare()
+                            {
+                                BaseFare = roomProp.DisplayRoomRate.BaseFare.Amount,
+                                Currency = roomProp.DisplayRoomRate.BaseFare.Currency
+                            },
+                            Name = roomProp.RoomName,
+                            Type = roomProp.RoomType,
+                            Bed = roomProp.BedType
+                        };
+                        rooms.Add(room);
+                    }
+
+                    List<Uri> urls = new List<Uri>();
+                    foreach (var media in hotelProp.MediaContent)
+                    {
+                        var url = new Uri(media.Url);
+                        urls.Add(url);
+                    }
+
+                    List<HotelEngine.Contracts.Models.Amenity> amenities = new List<HotelEngine.Contracts.Models.Amenity>();
+                    foreach (var hotelAmenity in hotelProp.Amenities)
+                    {
+                        var amenity = new HotelEngine.Contracts.Models.Amenity()
+                        {
+                            Name = hotelAmenity.Name,
+                            Id = hotelAmenity.Id,
+                        };
+                        amenities.Add(amenity);
+                    }
+
+                    var hotel = new Hotel()
+                    {
+                        Address = hotelProp.Address.CompleteAddress,
                         Fare = new HotelEngine.Contracts.Models.Fare()
                         {
-                            BaseFare = roomProp.DisplayRoomRate.BaseFare.Amount,
-                            Currency = roomProp.DisplayRoomRate.BaseFare.Currency
+                            Currency = itinerary.Fare.BaseFare.Currency,
+                            BaseFare = itinerary.Fare.BaseFare.Amount
                         },
-                        Name = roomProp.RoomName,
-                        Type = roomProp.RoomType,
-                        Bed = roomProp.BedType
+                        HotelId = hotelProp.Id,
+                        HotelName = hotelProp.Name,
+                        Location = new HotelEngine.Contracts.Models.Location()
+                        {
+                            Latitude = hotelProp.Address.GeoCode.Latitude,
+                            Longitude = hotelProp.Address.GeoCode.Latitude
+                        },
+                        Rooms = rooms,
+                        StarRating = hotelProp.HotelRating.Rating,
+                        Images = urls,
+                        Amenities = amenities
                     };
-                    rooms.Add(room);
-                }
-
-                List<Uri> urls = new List<Uri>();
-                foreach (var media in hotelProp.MediaContent)
-                {
-                    var url = new Uri(media.Url);
-                    urls.Add(url);
-                }
-
-                List<HotelEngine.Contracts.Models.Amenity> amenities = new List<HotelEngine.Contracts.Models.Amenity>();
-                foreach (var hotelAmenity in hotelProp.Amenities)
-                {
-                    var amenity = new HotelEngine.Contracts.Models.Amenity()
-                    {
-                        Name = hotelAmenity.Name,
-                        Id = hotelAmenity.Id,
-                    };
-                    amenities.Add(amenity);
-                }
-
-                var hotel = new Hotel()
-                {
-                    Address = hotelProp.Address.CompleteAddress,
-                    Fare = new HotelEngine.Contracts.Models.Fare()
-                    {
-                        Currency = itinerary.Fare.BaseFare.Currency,
-                        BaseFare = itinerary.Fare.BaseFare.Amount
-                    },
-                    HotelId = hotelProp.Id,
-                    HotelName = hotelProp.Name,
-                    Location = new HotelEngine.Contracts.Models.Location()
-                    {
-                        Latitude = hotelProp.Address.GeoCode.Latitude,
-                        Longitude = hotelProp.Address.GeoCode.Latitude
-                    },
-                    Rooms = rooms,
-                    StarRating = hotelProp.HotelRating.Rating,
-                    Images = urls,
-                    Amenities = amenities
-                };
-                hotels.Add(hotel);
+                    hotels.Add(hotel);
+                
+                
             }
 
             hotelSearchResponse = new HotelEngine.Contracts.Models.HotelSearchRS()
@@ -278,20 +286,24 @@ namespace HotelEngine.Adapter
 
             foreach (var roomResult in roomSearchResponse.Itinerary.Rooms)
             {
-                var room = new HotelEngine.Contracts.Models.Room()
+                HotelEngine.Contracts.Models.Room room = null;
+                if (roomResult.HotelFareSource.Name.Equals(_hotelFareSource[0]) || roomResult.HotelFareSource.Name.Equals(_hotelFareSource[1]))
                 {
-                    Bed = roomResult.BedType,
-                    Description = roomResult.RoomDescription,
-                    Fare = new HotelEngine.Contracts.Models.Fare()
+                    room = new HotelEngine.Contracts.Models.Room()
                     {
-                        BaseFare = roomResult.DisplayRoomRate.BaseFare.Amount,
-                        Currency = roomResult.DisplayRoomRate.BaseFare.Currency
-                    },
-                    RoomId = roomResult.RoomId,
-                    Name = roomResult.RoomName,
-                    Type = roomResult.RoomType
-                };
-                rooms.Add(room);
+                        Bed = roomResult.BedType,
+                        Description = roomResult.RoomDescription,
+                        Fare = new HotelEngine.Contracts.Models.Fare()
+                        {
+                            BaseFare = roomResult.DisplayRoomRate.BaseFare.Amount,
+                            Currency = roomResult.DisplayRoomRate.BaseFare.Currency
+                        },
+                        RoomId = roomResult.RoomId,
+                        Name = roomResult.RoomName,
+                        Type = roomResult.RoomType
+                    };
+                    rooms.Add(room);
+                }                             
             }
 
             var images = new List<Uri>();

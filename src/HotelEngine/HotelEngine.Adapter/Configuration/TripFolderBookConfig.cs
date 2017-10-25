@@ -22,6 +22,44 @@ namespace HotelEngine.Adapter.Configuration
         public TripFolderBookConfig(HotelTripProduct tripProduct, RoomBookRQ roomBookRQ)
         {
             _hotelItinerary = tripProduct.HotelItinerary;
+            BookingProxy.Room room=_hotelItinerary.Rooms[0];
+
+            room.DisplayRoomRate.BaseFare.DisplayCurrency = room.DisplayRoomRate.BaseFare.Currency;
+            room.DisplayRoomRate.BaseFare.DisplayAmount = room.DisplayRoomRate.BaseFare.Amount;
+            room.DisplayRoomRate.TotalFare.DisplayAmount = room.DisplayRoomRate.TotalFare.Amount;
+            room.DisplayRoomRate.TotalFare.DisplayCurrency = room.DisplayRoomRate.TotalFare.Currency;
+            room.DisplayRoomRate.DailyRates[0].DisplayCurrency = room.DisplayRoomRate.DailyRates[0].Currency;
+            room.DisplayRoomRate.DailyRates[0].DisplayAmount = room.DisplayRoomRate.DailyRates[0].Amount;
+            room.DisplayRoomRate.Taxes[0].DisplayAmount = room.DisplayRoomRate.Taxes[0].Amount;
+            room.DisplayRoomRate.Taxes[0].DisplayCurrency = room.DisplayRoomRate.Taxes[0].Currency;
+            room.DisplayRoomRate.TotalCommission.DisplayCurrency = room.DisplayRoomRate.TotalCommission.Currency;
+            room.DisplayRoomRate.TotalCommission.DisplayAmount = room.DisplayRoomRate.TotalCommission.Amount;
+            room.DisplayRoomRate.TotalDiscount.DisplayCurrency = room.DisplayRoomRate.TotalDiscount.Currency;
+            room.DisplayRoomRate.TotalDiscount.DisplayAmount = room.DisplayRoomRate.TotalDiscount.Amount;
+            room.DisplayRoomRate.TotalFare.DisplayCurrency = room.DisplayRoomRate.TotalFare.Currency;
+            room.DisplayRoomRate.TotalFare.DisplayAmount = room.DisplayRoomRate.TotalFare.Amount;
+            room.DisplayRoomRate.TotalTax.DisplayCurrency = room.DisplayRoomRate.TotalTax.Currency;
+            room.DisplayRoomRate.TotalTax.DisplayAmount = room.DisplayRoomRate.TotalTax.Amount;
+            
+            _hotelItinerary.Fare.AvgDailyRate.DisplayAmount = _hotelItinerary.Fare.AvgDailyRate.Amount;
+            _hotelItinerary.Fare.AvgDailyRate.DisplayCurrency = _hotelItinerary.Fare.AvgDailyRate.Currency;
+            _hotelItinerary.Fare.BaseFare.DisplayAmount = _hotelItinerary.Fare.BaseFare.Amount;
+            _hotelItinerary.Fare.BaseFare.DisplayCurrency = _hotelItinerary.Fare.BaseFare.Currency;
+            _hotelItinerary.Fare.MaxDailyRate.DisplayAmount = _hotelItinerary.Fare.MaxDailyRate.Amount;
+            _hotelItinerary.Fare.MaxDailyRate.DisplayCurrency = _hotelItinerary.Fare.MaxDailyRate.Currency;
+            _hotelItinerary.Fare.MinDailyRate.DisplayAmount = _hotelItinerary.Fare.MinDailyRate.Amount;
+            _hotelItinerary.Fare.MinDailyRate.DisplayCurrency = _hotelItinerary.Fare.MinDailyRate.Currency;
+            _hotelItinerary.Fare.TotalCommission.DisplayAmount = _hotelItinerary.Fare.TotalCommission.Amount;
+            _hotelItinerary.Fare.TotalCommission.DisplayCurrency = _hotelItinerary.Fare.TotalCommission.Currency;
+            _hotelItinerary.Fare.TotalDiscount.DisplayAmount = _hotelItinerary.Fare.TotalDiscount.Amount;
+            _hotelItinerary.Fare.TotalDiscount.DisplayCurrency = _hotelItinerary.Fare.TotalDiscount.Currency;
+            _hotelItinerary.Fare.TotalFare.DisplayAmount = _hotelItinerary.Fare.TotalFare.Amount;
+            _hotelItinerary.Fare.TotalFare.DisplayCurrency = _hotelItinerary.Fare.TotalFare.Currency;
+            _hotelItinerary.Fare.TotalFee.DisplayAmount = _hotelItinerary.Fare.TotalFee.Amount;
+            _hotelItinerary.Fare.TotalFee.DisplayCurrency = _hotelItinerary.Fare.TotalFee.Currency;
+            _hotelItinerary.Fare.TotalTax.DisplayAmount = _hotelItinerary.Fare.TotalTax.Amount;
+            _hotelItinerary.Fare.TotalTax.DisplayCurrency = _hotelItinerary.Fare.TotalTax.Currency;
+
             _age = 30;/*DateTime.Now.Year - roomBookRQ.GuestDetail.DOB.Year;*/
             _birthdate = roomBookRQ.GuestDetail.DOB;
             _hotelSearchCriterion = tripProduct.HotelSearchCriterion;
@@ -31,7 +69,7 @@ namespace HotelEngine.Adapter.Configuration
             _amount = tripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare;
             _amount.DisplayCurrency = "USD";
             _ages = new int[] { _age };
-            _fareToAuthorise = _hotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
+            _fareToAuthorise = this._hotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
         }
 
         public TripFolderBookRQ TripFolderBookRQ => new TripFolderBookRQ()
