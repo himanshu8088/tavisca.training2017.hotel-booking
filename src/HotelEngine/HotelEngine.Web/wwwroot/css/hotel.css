@@ -3,10 +3,6 @@
     height:230px;
 }
 
-/*#ex1Slider .slider-selection {
-    background: #337ab7;
-}*/
-
 #load {
     position: absolute;
     width: 300px;
@@ -14,7 +10,7 @@
     z-index: 15;
     top: 50%;
     left: 50%;
-    margin: -100px 0 0 -150px;            
+    margin: 100px 0 0 -150px;            
 }
 .font-big{
     font-size:15px;
