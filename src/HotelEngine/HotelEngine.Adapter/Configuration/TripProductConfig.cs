@@ -27,7 +27,6 @@ namespace HotelEngine.Adapter.Configuration
                 if (room.RoomName.Equals(roomName))
                 {
                     selectedRoom = room;
-                    selectedRoom.DisplayRoomRate.TotalFare.DisplayCurrency = "USD";
                     break;
                 }
             }
