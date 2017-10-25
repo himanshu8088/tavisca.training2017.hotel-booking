@@ -7,11 +7,6 @@
     background: #337ab7;
 }*/
 
-#ex1Slider .slider-selection {
-	background: #BABABA;
-}
-
-
 #load {
     position: absolute;
     width: 300px;
@@ -20,5 +15,8 @@
     top: 50%;
     left: 50%;
     margin: -100px 0 0 -150px;            
+}
+.font-big{
+    font-size:15px;
 }
 

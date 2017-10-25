@@ -20,12 +20,19 @@ label {
 .margin-bottom {
     margin-bottom: 10px;
 }
+
 .ml-5{
     margin-left:5px;
 }
+
+.mt-lg{
+    margin-top:57px;
+}
+
 .mt-20{
     margin-top:40px;
 }
+
 .navbar-brand {
     padding: 0px;
     margin-left: 10px;
