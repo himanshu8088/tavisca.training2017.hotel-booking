@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
     <link href="../css/bootstrap.css" rel="stylesheet" />
-    <link href="../css/header.css" rel="stylesheet" />
+    <link href="../css/header.css" rel="stylesheet" />    
+    <link href="../css/confirmation.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Header starts here   -->
@@ -58,71 +59,88 @@
             </div>
         </div>
     </nav>
-    <!--     Tab section starts here    -->
-    <div class="container">
+    
+    <!--    Main content section starts here    -->
+    <div class="container" id="confirmation-section">
+        <img id="load" src="../img/loader.gif" alt="loading..." />        
+    </div>
+
+    <!--Footer starts here-->
+    <div id="footer">
+        <div class="container">
+            <div class="footer-block margin-top">
+                <div class="row margin-top">
+                    <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4">
+                        <h3>Tavisca Solutions</h3>
+                    </div>
+                </div>
+                <div class="row margin-top">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 margin-top">
+                        <div class="col-md-4 col-xs-6"><h6><img src="../img/logo-white.PNG" /></h6></div>
+                        <div class="col-md-8 col-xs-6 margin-top"><h6>© 2017 Tavisca Solutions Pvt. Ltd. </h6></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <script id="confirmation-template" type="text/x-handlebars-template">       
         <div class="row">
             <div class="panel panel-primary mt-20">
                 <div class="panel-heading"><h3>Booking Details</h3></div>
                 <div class="panel-body">
-                    <div class="container" id="confirmation-section">
-                        <img id="load" src="../img/loader.gif" alt="loading..." />
+                    <div class="row">
+                        <div class="col-md-12"><h4>Your Payment Information.</h4></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="success" hidden>
+                            <h5>Thank you. Your (ACH/Credit Card) payment has been successfully processed.</h5>
+                            <h5>This payment transaction will appear on your Bank/Credit Card statement.</h5>
+                        </div>
+                        <div class="col-md-12" id="fail" hidden>
+                            <h5>Sorry transaction failed.</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Booking/Transaction Id: </h5>
+                        </div>
+                        <div class="col-md-9">
+                            <h5>{{confirmationNo}}</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Total Amount: </h5>
+                        </div>
+                        <div class="col-md-9">
+                            <h5>{{fareCharged.totalFare}} {{fareCharged.currency}}</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Transaction Date: </h5>
+                        </div>
+                        <div class="col-md-9">
+                            <h5>{{transactionDateTime}}</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button type="button" class="btn btn-primary margin-bottom" onclick="printBookingTicket()">Print</button>
+                                </div>
+                                <div class="col-md-8">
+                                    <button type="button" class="btn btn-primary" onclick="home()">Back to home</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script id="confirmation-template" type="text/x-handlebars-template">
-        <div class="row">
-            <div class="col-md-12"><h4>Your Payment Information.</h4></div>
-        </div>
-        <div class="row">
-            <div class="col-md-12" id="success" hidden>
-                <h5>Thank you. Your (ACH/Credit Card) payment has been successfully processed.</h5>
-                <h5>This payment transaction will appear on your Bank/Credit Card statement.</h5>
-            </div>
-            <div class="col-md-12" id="fail" hidden>
-                <h5>Sorry transaction failed.</h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <h5>Booking/Transaction Id: </h5>
-            </div>
-            <div class="col-md-9">
-                <h5>{{confirmationNo}}</h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <h5>Total Amount: </h5>
-            </div>
-            <div class="col-md-9">
-                <h5>{{fareCharged.totalFare}} {{fareCharged.currency}}</h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <h5>Transaction Date: </h5>
-            </div>
-            <div class="col-md-9">
-                <h5>{{transactionDateTime}}</h5>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="row">
-                    <div class="col-md-4">
-                        <button type="button" class="btn btn-primary margin-bottom" onclick="printBookingTicket()">Print</button>
-                    </div>
-                    <div class="col-md-8">
-                        <button type="button" class="btn btn-primary" onclick="home()">Back to home</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
     </script>
     <script src="../js/libraries/handlebars-v4.0.10.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
