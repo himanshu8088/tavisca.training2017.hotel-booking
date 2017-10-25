@@ -196,7 +196,8 @@ namespace HotelEngine.Adapter
             {
                 var hotelProp = itinerary.HotelProperty;
 
-              
+                if (itinerary.HotelFareSource.Name.Equals(_hotelFareSource[0]) || itinerary.HotelFareSource.Name.Equals(_hotelFareSource[1]))
+                {
                     foreach (var roomProp in itinerary.Rooms)
                     {
                         var room = new HotelEngine.Contracts.Models.Room()
@@ -254,8 +255,7 @@ namespace HotelEngine.Adapter
                         Amenities = amenities
                     };
                     hotels.Add(hotel);
-                
-                
+                }
             }
 
             hotelSearchResponse = new HotelEngine.Contracts.Models.HotelSearchRS()

@@ -10,7 +10,7 @@ namespace HotelEngine.Adapter.Configuration
     {
         private string _tripFolderName;
         private int _age;
-        private DateTime _birthdate;
+        private UserDetail _userDetail;
         private Money _amount;
         private string _sessionId;
         private HotelItinerary _hotelItinerary;
@@ -61,7 +61,7 @@ namespace HotelEngine.Adapter.Configuration
             _hotelItinerary.Fare.TotalTax.DisplayCurrency = _hotelItinerary.Fare.TotalTax.Currency;
 
             _age = 30;/*DateTime.Now.Year - roomBookRQ.GuestDetail.DOB.Year;*/
-            _birthdate = roomBookRQ.GuestDetail.DOB;
+            _userDetail = roomBookRQ.GuestDetail;
             _hotelSearchCriterion = tripProduct.HotelSearchCriterion;
             _sessionId = roomBookRQ.SessionId.ToString();
             _tripFolderName = $"TripFolder{DateTime.Now.Date}";
@@ -153,20 +153,20 @@ namespace HotelEngine.Adapter.Configuration
                     new Passenger()
                     {
                         Age=_age,
-                        BirthDate=_birthdate,
+                        BirthDate=_userDetail.DOB,
                         CustomFields=new StateBag[]
                         {
                             new StateBag(){ Name="Boyd Gaming"},
                             new StateBag(){ Name="IsPassportRequired" , Value="false"}
                         },
-                        Email="rsarda@tavisca.com",
-                        FirstName="Sandbox",
+                        Email=_userDetail.EmailId,
+                        FirstName=_userDetail.FirstName,
                         Gender=Gender.Male,
-                        KnownTravelerNumber="789456",
-                        LastName="Test",
+                        KnownTravelerNumber=_userDetail.MobileNo,
+                        LastName=_userDetail.LastName,
                         PassengerType=PassengerType.Adult,
-                        PhoneNumber="1111111111",
-                        UserName="rsarda@tavisca.com"
+                        PhoneNumber=_userDetail.MobileNo,
+                        UserName=_userDetail.EmailId
                     }
                 },
                 Payments = new CreditCardPayment[]
