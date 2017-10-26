@@ -50,8 +50,6 @@ $('#procceed').click(function () {
     if (isValidGuestDetail == true) {
         $('a[href="#pay-tab"]').tab('show');
     }
-      
-    
 });
 
 
