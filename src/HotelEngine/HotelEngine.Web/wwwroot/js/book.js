@@ -5,9 +5,14 @@ $(document).ready(function () {
     $('#dob').datepicker({
         dateFormat: "yy-mm-dd",       
     });
+
+    $('#dob').datepicker('setDate', new Date("1990-01-01"));
+
     $('#expiry-date').datepicker({
         dateFormat: "yy-mm-dd"
     });
+
+    $('#expiry-date').datepicker('setDate', new Date("2022-01-01"));
     restoreSessionData();
 });
 
@@ -45,10 +50,10 @@ function paymentCard() {
     }    
 }
 
-$('#procceed').click(function () {    
+$('.payment-procced').click(function () {    
     var isValidGuestDetail = validateGuestDetails();
-    if (isValidGuestDetail == true) {
-        $('a[href="#pay-tab"]').tab('show');
+    if (isValidGuestDetail == true) {        
+        $('a[href="#pay-tab"]').tab('show');      
     }
 });
 
@@ -162,7 +167,8 @@ function validateGuestDetails() {
         $('#error').html("");
         $('#mobile').removeClass("error");
     }
-    if (guestDetail.EmailId == "") {
+    var isValidEmail = validateEmail(guestDetail.EmailId);
+    if (isValidEmail==false) {
         showErrorMsg();
         $('#email').addClass("error");
         isValid = false;
@@ -173,7 +179,14 @@ function validateGuestDetails() {
     }
     return isValid;
 }
+
+function validateEmail(email) {
+    var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+    return $.trim(email).match(pattern) ? true : false;
+}
+
 function showErrorMsg() {
-    $('#error').html("<h6>Please enter all fields.</h6>").css({ "color": "red" });
+    $('#error').html("<h6>All fields are mandatory. Provide valid values</h6>").css({ "color": "red" });
     $('#error').show();
 }
