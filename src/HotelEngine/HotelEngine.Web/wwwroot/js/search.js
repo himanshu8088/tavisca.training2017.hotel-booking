@@ -27,7 +27,10 @@ function saveSearchRQ() {
 }
 
 function getSearchValues() {
-    var searchLocation = JSON.parse(sessionStorage.getItem('selectedLocation')).item;
+    var searchLocation = { "data": { "Latitude": "" }, "data": { "Longitude": "" }};
+    var location = JSON.parse(sessionStorage.getItem('selectedLocation'));
+    if(location!=null)
+        searchLocation = location.item;    
     var _searchText = $('#destination').val();
     var _checkIn = $('#check-in').val();
     var _checkOut = $('#check-out').val();

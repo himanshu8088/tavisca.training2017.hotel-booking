@@ -20,6 +20,7 @@ $(document).ready(function () {
         success: function (hotels) {
             hotelItinerary = hotels;
             hotelListing(hotelItinerary);
+            loadMap(hotelRQ.Location.Latitude, hotelRQ.Location.Longitude);
         },
         error: function (xhr) {
             alert("Sorry server doesn't responding. Please try again.");
@@ -53,6 +54,12 @@ $('#ex1').slider({
         return 'Current value: ' + value;
     }
 });
+
+function loadMap(latitude, longitude) {
+    var url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCIYzzzQZGLWDSOSovKWaq2UsyX1dQ796c&q="+ latitude+"," + longitude;
+   $("#map").attr("src", url);  
+}
+
 function hotelListing(hotelItinerary) {
     var templateData = { hotelRQ, hotelItinerary };
     var template = $('#hotel-item');
@@ -123,10 +130,9 @@ function filterByStarRating() {
     }
     hotelListing(filteredHotelItinerary);
 }
-$('#clearFilter').click(function () {
+function clearFilter(){
     hotelListing(hotelItinerary);
     $('input[type="radio"]').prop("checked", false);
     $('input[type="checkbox"]').prop("checked", false);
-});
-
+};
 

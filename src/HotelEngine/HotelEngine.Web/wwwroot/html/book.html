@@ -63,91 +63,98 @@
     <!----Main starts here-->
     <div class="main margin-bottom">
         <div class="container margin-top margin-bottom">
-            <ul class="nav nav-pills">
-                <li class="active">
-                    <a data-toggle="tab" href="#guest-tab" id="1">
-                        <div class="fa fa-user"> Guest</div>
-                    </a>
-                </li>
-                <li>
-                    <a data-toggle="tab" href="#pay-tab" id="2">
-                        <div class="fa fa-credit-card payment"> Payment</div>
-                    </a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div id="guest-tab" class="tab-pane fade in active">
-                    <div class="form-group guest-control">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="col-md-6">
-                                    <h5 class="font-white">First Name</h5>
-                                    <input class="form-control" id="fname" type="text" placeholder="First Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <h5 class="font-white">
-                                        Last Name
-                                    </h5>
-                                    <input class="form-control" id="lname" type="text" placeholder="Last Name" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="col-md-3">
-                                    <h5 class="font-white">
-                                        Date of Birth
-                                    </h5>
-                                    <input class="form-control" id="dob" type="text" placeholder="Date of Birth" required>
-                                </div>
-                                <div class="col-md-3">
-                                    <h5 class="font-white">
-                                        Mobile
-                                    </h5>
-                                    <input class="form-control" id="mobile" type="text" placeholder="Mobile Number" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <h5 class="font-white">
-                                        Email ID
-                                    </h5>
-                                    <input class="form-control" id="email" type="email" placeholder="EmailID" required>
+            <div class="row" hidden id="error">
+
+            </div>
+            <div class="row">
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a data-toggle="tab" href="#guest-tab" id="1">
+                            <div class="fa fa-user"> Guest</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#pay-tab" id="2">
+                            <div class="fa fa-credit-card payment"> Payment</div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="guest-tab" class="tab-pane fade in active">
+                        <div class="form-group guest-control">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="col-md-6">
+                                        <h5 class="font-white">First Name</h5>
+                                        <input class="form-control" id="fname" type="text" placeholder="First Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="font-white">
+                                            Last Name
+                                        </h5>
+                                        <input class="form-control" id="lname" type="text" placeholder="Last Name" required>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="col-md-3">
+                                        <h5 class="font-white">
+                                            Date of Birth
+                                        </h5>
+                                        <input class="form-control" id="dob" type="text" placeholder="Date of Birth" required>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h5 class="font-white">
+                                            Mobile
+                                        </h5>
+                                        <input class="form-control" id="mobile" type="text" placeholder="Mobile Number" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="font-white">
+                                            Email ID
+                                        </h5>
+                                        <input class="form-control" id="email" type="email" placeholder="EmailID" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-md-offset-4 margin-top">
+                                <button class="btn btn-primary" id="procceed">Procceed</button>
+                            </div>
                         </div>
-                        <div class="col-md-4 col-md-offset-4 margin-top">
-                            <button class="btn btn-primary" id="procceed">Procceed</button>
+                    </div>
+
+                    <div id="pay-tab" class="tab-pane fade">
+                        <div class="form-group pay-control">
+                            <div class="row">
+                                <div class="col-md-3 col-md-offset-1">
+                                    <h5 class="font-white">Card Holder Name</h5>
+                                    <input class="form-control" id="card-holder" type="text" placeholder="Card Holder Name" required>
+                                </div>
+                                <div class="col-md-5 col-md-offset-1">
+                                    <h5 class="font-white">Card Number</h5>
+                                    <input class="form-control" id="card-number" type="text" placeholder="Card Number" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-md-offset-1">
+                                    <h5 class="font-white">Card Expiry Date</h5>
+                                    <input class="form-control" id="expiry-date" type="text" placeholder="Card Expiry Date" required>
+                                </div>
+                                <div class="col-md-1 col-md-offset-1">
+                                    <h5 class="font-white">CVV</h5>
+                                    <input class="form-control" id="cvv" type="text" placeholder="CVV" max="999" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-md-offset-4 margin-top">
+                                <button class="btn btn-primary payment" id="pay">Pay</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div id="pay-tab" class="tab-pane fade">
-                    <div class="form-group pay-control">
-                        <div class="row">
-                            <div class="col-md-3 col-md-offset-1">
-                                <h5 class="font-white">Card Holder Name</h5>
-                                <input class="form-control" id="card-holder" type="text" placeholder="Card Holder Name" required>
-                            </div>
-                            <div class="col-md-5 col-md-offset-1">
-                                <h5 class="font-white">Card Number</h5>
-                                <input class="form-control" id="card-number" type="number" placeholder="Card Number" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 col-md-offset-1">
-                                <h5 class="font-white">Card Expiry Date</h5>
-                                <input class="form-control" id="expiry-date" type="text" placeholder="Card Expiry Date" required>
-                            </div>
-                            <div class="col-md-1 col-md-offset-1">
-                                <h5 class="font-white">CVV</h5>
-                                <input class="form-control" id="cvv" type="text" placeholder="CVV" max="999" required>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-md-offset-4 margin-top">
-                            <button class="btn btn-primary payment" id="pay">Pay</button>
-                        </div>
-                    </div>                   
-                </div>
             </div>
+            
+
         </div>
     </div>
 

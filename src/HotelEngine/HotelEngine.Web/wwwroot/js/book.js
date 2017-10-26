@@ -72,25 +72,108 @@ $('#pay').click(function () {
         sessionStorage.setItem('bookingRQ', JSON.stringify(bookingRQ));
         window.location = '../html/confirmation.html';  
     }
-     
 });
-function validateGuestDetails() {
-    var isValid = true;
-    var guestDetail = (new guest()).detail;
-    if (guestDetail.FirstName == "" || guestDetail.LastName == "" || guestDetail.MobileNo == "" || guestDetail.EmailId == "" || guestDetail.DOB == "") {
 
-        alert("Please fill all required fields .");
+function validateCardDetails() {
+    //var isValid = true;
+    //var cardDetails = (new paymentCard()).detail;
+    //if (cardDetails.CardHolderName == "" || cardDetails.CardNumber == "" || cardDetails.ExpiryDate == "" || cardDetails.CVV == "") {
+
+    //    alert("Please fill all card details .");
+    //    isValid = false;
+    //}
+    //return isValid;
+    isValid = true;
+    var cardDetails = (new paymentCard()).detail;
+    if (cardDetails.CardHolderName == "") {
+        showErrorMsg();
+        $('#card-holder').addClass("error");
         isValid = false;
+    }
+    else {
+        $('#error').html("");
+        $('#card-holder').removeClass("error");
+    }
+    if (cardDetails.CardNumber.length!=16) {
+        showErrorMsg();
+        $('#card-number').addClass("error");
+        isValid = false;
+    }
+    else {
+        $('#error').html("");
+        $('#card-number').removeClass("error");
+    }
+    if (cardDetails.ExpiryDate == "") {
+        showErrorMsg();
+        $('#expiry-date').addClass("error");
+        isValid = false;
+    }
+    else {
+        $('#error').html("");
+        $('#expiry-date').removeClass("error");
+    }
+    if (cardDetails.CVV.length!=3) {
+        showErrorMsg();
+        $('#cvv').addClass("error");
+        isValid = false;
+    }
+    else {
+        $('#error').html("");
+        $('#cvv').removeClass("error");
     }
     return isValid;
 }
-function validateCardDetails() {
-    var isValid = true;
-    var cardDetails = (new paymentCard()).detail;
-    if (cardDetails.CardHolderName == "" || cardDetails.CardNumber == "" || cardDetails.ExpiryDate == "" || cardDetails.CVV == "") {
-
-        alert("Please fill all card details .");
+function validateGuestDetails() {
+    isValid = true;
+    var guestDetail = (new guest()).detail;
+    if (guestDetail.FirstName == "") {
+        showErrorMsg();
+        $('#fname').addClass("error");
         isValid = false;
     }
+    else {
+        $('#error').html("");
+        $('#fname').removeClass("error");
+    }
+    if (guestDetail.LastName == "") {
+        showErrorMsg();
+        $('#lname').addClass("error");
+        isValid = false;
+    }
+    else {
+        $('#error').html("");
+        $('#lname').removeClass("error");
+    }
+    if (guestDetail.DOB == "") {
+        showErrorMsg();
+        $('#dob').addClass("error");
+        isValid = false;
+    }
+    else {
+        $('#error').html("");
+        $('#dob').removeClass("error");
+    }
+    if (guestDetail.MobileNo.length!=10) {
+        showErrorMsg();
+        $('#mobile').addClass("error");
+        isValid = false;
+    }
+    else {
+        $('#error').html("");
+        $('#mobile').removeClass("error");
+    }
+    if (guestDetail.EmailId == "") {
+        showErrorMsg();
+        $('#email').addClass("error");
+        isValid = false;
+    }
+    else {
+        $('#error').html("");
+        $('#email').removeClass("error");
+    }
     return isValid;
+}
+function showErrorMsg() {
+    $('#error').html("<h6>Please enter all fields.</h6>").css({ "color": "red" });
+    $('#error').show();
 }
