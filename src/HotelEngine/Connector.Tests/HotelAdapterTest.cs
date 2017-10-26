@@ -18,16 +18,16 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
             var hotelSearchRQ = new HotelEngine.Contracts.Models.HotelSearchRQ()
             {
                 SessionId = Guid.NewGuid(),
-                CheckInDate = DateTime.Parse("24-10-2017"),
-                CheckOutDate = DateTime.Parse("25-10-2017"),
+                CheckInDate = DateTime.Now.AddDays(15),
+                CheckOutDate = DateTime.Now.AddDays(17),
                 GuestCount = 1,                
                 Location = new HotelEngine.Contracts.Models.Location()
                 {
-                    Latitude = 36.110931f,
-                    Longitude = -115.169346f
+                    Latitude = 18.5967712f,
+                    Longitude = 73.74219f
                 },
                 NoOfRooms = 1,
-                SearchText = ""
+                SearchText = "Orritel Hotel Pune"
             };
             HotelAdapter hotelConnector = new HotelAdapter();
 
@@ -44,18 +44,18 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
             //Arrange           
             var roomSearchRQ = new RoomSearchRQ()
             {
-                SessionId = Guid.Parse("b7f8e952-9825-4d44-9262-2d5907f5d600"),
-                CheckInDate = DateTime.Now.AddDays(1),
-                CheckOutDate = DateTime.Now.AddDays(5),
+                SessionId = Guid.NewGuid(),
+                CheckInDate = DateTime.Now.AddDays(15),
+                CheckOutDate = DateTime.Now.AddDays(17),
                 GuestCount = 1,
-                HotelId = 258057,
+                HotelId = 287948,
                 Location = new HotelEngine.Contracts.Models.Location()
                 {
-                    Latitude = 27.16973f,
-                    Longitude = 78.042068f
+                    Latitude = 18.5967712f,
+                    Longitude = 73.74219f
                 },
                 NoOfRooms = 1,
-                SearchText = "Pune",
+                SearchText = "Orritel Hotel Pune",
             };
             HotelAdapter hotelConnector = new HotelAdapter();
 
@@ -73,18 +73,18 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
             var priceSearchRQ = new RoomPriceSearchRQ()
             {
                 SessionId = Guid.NewGuid(),
-                CheckInDate = DateTime.Parse("14-11-2017"),
-                CheckOutDate = DateTime.Parse("15-11-2017"),
+                CheckInDate = DateTime.Now.AddDays(15),
+                CheckOutDate = DateTime.Now.AddDays(17),
                 GuestCount = 1,
+                HotelId = 287948,
                 Location = new HotelEngine.Contracts.Models.Location()
                 {
-                    Latitude = 13.1918249f,
-                    Longitude = 77.64561f
+                    Latitude = 18.5967712f,
+                    Longitude = 73.74219f
                 },
                 NoOfRooms = 1,
-                SearchText = "",
-                HotelId = 2038272,
-                RoomName = "SINGLE SUPERIOR - BED AND BREAKFAST"
+                SearchText = "Orritel Hotel Pune",
+                RoomName = "Suite"
             };
             HotelAdapter hotelConnector = new HotelAdapter();
 
@@ -100,26 +100,26 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
         {
             //Arrange           
             var roomBookRQ = new RoomBookRQ()
-            {               
-                SessionId = Guid.NewGuid(),
-                CheckInDate = DateTime.Parse("25-10-2017"),
-                CheckOutDate = DateTime.Parse("26-10-2017"),
+            {
+                SessionId =Guid.NewGuid(),
+                CheckInDate = DateTime.Now.AddDays(15),
+                CheckOutDate = DateTime.Now.AddDays(17),
                 GuestCount = 1,
+                HotelId = 287948,
                 Location = new HotelEngine.Contracts.Models.Location()
                 {
-                    Latitude = 35.68855f,
-                    Longitude = -105.9421f
+                    Latitude = 18.5967712f,
+                    Longitude = 73.74219f
                 },
                 NoOfRooms = 1,
-                SearchText = "",
-                HotelId= 60982,
-                RoomName = "Standard",
+                SearchText = "Orritel Hotel Pune",
+                RoomName = "Suite",
                 GuestDetail = new UserDetail()
                 {
                     DOB = DateTime.Parse("21-11-1994"),
-                    EmailId = "test@gmail.com",
-                    FirstName = "test",
-                    LastName = "user",
+                    EmailId = "hsoni@tavisca.com",
+                    FirstName = "testFName",
+                    LastName = "testLName",
                     MobileNo = "12345"
                 },
                 CardDetail = new CardDetail()
