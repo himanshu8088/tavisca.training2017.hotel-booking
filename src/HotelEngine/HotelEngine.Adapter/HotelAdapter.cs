@@ -196,7 +196,7 @@ namespace HotelEngine.Adapter
             {
                 var hotelProp = itinerary.HotelProperty;
 
-               // if (itinerary.HotelFareSource.Name.Equals(_hotelFareSource[0]) || itinerary.HotelFareSource.Name.Equals(_hotelFareSource[1]))
+                if (itinerary.HotelFareSource.Name.Equals(_hotelFareSource[0]) || itinerary.HotelFareSource.Name.Equals(_hotelFareSource[1]))
                 {
                     foreach (var roomProp in itinerary.Rooms)
                     {
@@ -287,7 +287,7 @@ namespace HotelEngine.Adapter
             foreach (var roomResult in roomSearchResponse.Itinerary.Rooms)
             {
                 HotelEngine.Contracts.Models.Room room = null;
-               // if (roomResult.HotelFareSource.Name.Equals(_hotelFareSource[0]) || roomResult.HotelFareSource.Name.Equals(_hotelFareSource[1]))
+                if (roomResult.HotelFareSource.Name.Equals(_hotelFareSource[0]) || roomResult.HotelFareSource.Name.Equals(_hotelFareSource[1]))
                 {
                     room = new HotelEngine.Contracts.Models.Room()
                     {
