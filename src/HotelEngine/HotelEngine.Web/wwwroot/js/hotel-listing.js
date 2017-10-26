@@ -1,5 +1,8 @@
 ﻿var hotelItinerary = {};
 var hotelRQ = {};
+var perPageItemCount = 10;
+var totalPageCount;
+
 Handlebars.registerHelper('times', function (n, block) {
     var accum = '';
     for (var i = 0; i < n; ++i)
@@ -8,8 +11,7 @@ Handlebars.registerHelper('times', function (n, block) {
 });
 
 
-$(document).ready(function () {
-
+$(document).ready(function () {      
     hotelRQ = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;
     var jsonData = JSON.stringify(hotelRQ);
     $.ajax({
@@ -20,7 +22,19 @@ $(document).ready(function () {
         success: function (hotels) {
             hotelItinerary = hotels;
             hotelListing(hotelItinerary);
-            loadMap(hotelRQ.Location.Latitude, hotelRQ.Location.Longitude);
+            totalPageCount = Math.ceil(hotelItinerary.hotels.length / perPageItemCount);
+            
+            $('.pagination').twbsPagination({
+                totalPages: totalPageCount,
+                visiblePages: perPageItemCount,
+                onPageClick: function (event, page) {
+                    var hotelArr = jQuery.makeArray(hotelItinerary.hotels);
+                    var firstInd = (perPageItemCount * page) - perPageItemCount;
+                    var lastInd = (perPageItemCount * page)-1;
+                    var perPageHotels = hotelArr.slice(firstInd, lastInd);
+                    hotelListing(hotelItinerary);
+                }
+            });
         },
         error: function (xhr) {
             alert("Sorry server doesn't responding. Please try again.");
@@ -33,6 +47,7 @@ $(document).ready(function () {
 function filterHotels() {
     filterByStarRating();
 };
+
 
 function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRooms, hotelId, hotelName, sessionId) {
     this.data = {
@@ -49,16 +64,11 @@ function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRo
         "HotelId": hotelId
     }
 };
-$('#ex1').slider({
-    formatter: function (value) {
-        return 'Current value: ' + value;
-    }
-});
 
-function loadMap(latitude, longitude) {
-    var url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCIYzzzQZGLWDSOSovKWaq2UsyX1dQ796c&q="+ latitude+"," + longitude;
-   $("#map").attr("src", url);  
-}
+//function loadMap(latitude, longitude) {
+//    var url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCIYzzzQZGLWDSOSovKWaq2UsyX1dQ796c&q="+ latitude+"," + longitude;
+//   $("#map").attr("src", url);  
+//}
 
 function hotelListing(hotelItinerary) {
     var templateData = { hotelRQ, hotelItinerary };
@@ -67,6 +77,7 @@ function hotelListing(hotelItinerary) {
     var html = compiledTemplate(templateData);
     $('#hotelList-container').html(html);
 }
+
 function roomClicked(hotelId, hotelName) {
     var result = sessionStorage.getItem('hotelSearchCriteria');
     var searchCriteria = JSON.parse(result).data;
