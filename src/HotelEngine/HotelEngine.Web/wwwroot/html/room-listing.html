@@ -65,22 +65,21 @@
             <img id="load" src="../img/loading.svg" alt="loading..." />
         </div>
         <script id="room-item" type="text/x-handlebars-template">
-            <div class="col-md-10 col-md-offset-1" >
+            <div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2" >
                 <div class="row">
                     <h1 class="text-primary">Search Results: ({{rooms.length}})</h1>
                 </div>
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="col-md-4 col-md-offset-4">
-                        <div id="sliderCarousel" class="carousel slide" data-ride="carousel">
+                <div class="col-md-8 col-md-offset-2 hidden-xs hidden-sm">
+                     <div id="sliderCarousel" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 {{#each images}}
                                 {{#ifCond @index 0 }}
-                                <div class="item" style="width:320px; height:300px;">
-                                    <img src="{{this}}" alt="room-img" style="width:100%;height:100%;">
+                                <div class="item" style="width:920px; height:400px;">
+                                    <img src="{{this}}" alt="room-img" style="width:100%;height:100%;" class="img-responsive">
                                 </div>
                                 {{else}}
-                                <div class="item active" style="width:320px; height:300px;">
-                                    <img src="{{this}}" alt="room-img" style="width:100%;height:100%;">
+                                <div class="item active" style="width:920px; height:400px;">
+                                    <img src="{{this}}" alt="room-img" style="width:100%;height:100%;" class="img-responsive">
                                 </div>
                                 {{/ifCond}}
                                 {{/each}}
@@ -94,50 +93,48 @@
                                 <span class="glyphicon glyphicon-chevron-right"></span>
                                 <span class="sr-only">Next</span>
                             </a>
-                        </div>
-                    </div>
+                        </div> 
                 </div>
                 <div class="row mt-20">                
-                    <div class="col-md-8 col-md-offset-2 mt-20">
+                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 mt-20">
                         {{#each rooms}}
                         <div class="panel-group">
                             <div class="panel panel-primary">
                                 <div class="panel-body">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-xs-12 col-sm-12">
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-md-12 col-xs-12">
                                                 <h4 class="text-primary">{{name}}</h4>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-md-12 col-xs-12">
                                                 <h4 class="text-primary">Bed Type: {{bed}}</h4>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-md-12 col-xs-12">
                                                 <h5>{{{description}}}</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-xs-12 col-sm-12">
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-md-12 col-xs-12">
                                                 <h6>Starting From</h6>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-2"><h4 class="text-danger">{{fare.currency}}</h4></div>
-                                            <div class="col-md-4"><h4 class="text-danger">{{fare.baseFare}}</h4></div>
-                                            <div class="col-md-6"><h6 class="margin-top">Per Night</h6></div>
+                                            <div class="col-md-2 col-xs-2"><h4 class="text-danger">{{fare.currency}}</h4></div>
+                                            <div class="col-md-4 col-xs-4"><h4 class="text-danger">{{fare.baseFare}}</h4></div>
+                                            <div class="col-md-6 col-xs-6"><h6 class="margin-top">Per Night</h6></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-md-12 col-xs-12">
                                                 <button type="button" class="btn btn-primary" onclick="price('{{../hotelId}}','{{name}}')">Book</button>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
