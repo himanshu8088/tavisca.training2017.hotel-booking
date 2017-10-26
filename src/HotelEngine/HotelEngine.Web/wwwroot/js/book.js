@@ -80,6 +80,7 @@ function validateGuestDetails() {
     var isValid = true;
     var guestDetail = (new guest()).detail;
     if (guestDetail.FirstName == "" || guestDetail.LastName == "" || guestDetail.MobileNo == "" || guestDetail.EmailId == "" || guestDetail.DOB == "") {
+
         alert("Please fill all required fields .");
         isValid = false;
     }
@@ -89,6 +90,7 @@ function validateCardDetails() {
     var isValid = true;
     var cardDetails = (new paymentCard()).detail;
     if (cardDetails.CardHolderName == "" || cardDetails.CardNumber == "" || cardDetails.ExpiryDate == "" || cardDetails.CVV == "") {
+
         alert("Please fill all card details .");
         isValid = false;
     }
