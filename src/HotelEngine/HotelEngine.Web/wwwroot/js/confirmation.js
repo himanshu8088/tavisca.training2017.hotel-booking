@@ -16,11 +16,15 @@ $(document).ready(function () {
         success: function (bookingRS) {
             var compiledTemplate = Handlebars.compile($('#confirmation-template').html());
             var html = compiledTemplate(bookingRS);
-            if (bookingRS.status == 0)
+            $('#confirmation-section').html(html);
+            if (bookingRS.status == 0) {
                 $('#success').show();
+                $('#msg').show();
+            }
+                
             else
                 $('#fail').show();
-            $('#confirmation-section').html(html);
+            
         },
         error: function (xhr) {
             alert("Sorry server doesn't responding. Please try again.");

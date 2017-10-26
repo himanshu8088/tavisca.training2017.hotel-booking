@@ -64,7 +64,7 @@ namespace HotelEngine.Adapter
             var tripFolderBookRS = await GetTripFolderBookAsync(roomBookRQ);
             var rq = ParseCompleteBookingRQ(tripFolderBookRS, roomBookRQ.SessionId);
             var rs = await CompleteBookingAsync(rq);
-            RoomBookRS roomBookRS = ParseRoomBookRS(rs, tripFolderBookRS);
+            RoomBookRS roomBookRS = ParseRoomBookRS(rs);
             return roomBookRS;
         }
 
@@ -378,15 +378,16 @@ namespace HotelEngine.Adapter
             return rq;
         }
 
-        private RoomBookRS ParseRoomBookRS(CompleteBookingRS completeBookingRS, TripFolderBookRS tripFolderBookRS)
+        private RoomBookRS ParseRoomBookRS(CompleteBookingRS completeBookingRS)
         {
-            var tripFolder = tripFolderBookRS.TripFolder;
+            var tripFolder = completeBookingRS.TripFolder;
             var fare = tripFolder.Products[0].PaymentBreakups[0].Amount;
             var status = completeBookingRS.ServiceStatus.Status.ToString();
 
             return new RoomBookRS
             {
-                ConfirmationNo = tripFolder.ConfirmationNumber,
+                BookingId = tripFolder.ConfirmationNumber,
+                ConfirmationNo = completeBookingRS.TripFolder.Products[0].PassengerSegments[0].VendorConfirmationNumber,
                 FareCharged = new HotelEngine.Contracts.Models.Fare()
                 {
                     TotalFare = fare.Amount,

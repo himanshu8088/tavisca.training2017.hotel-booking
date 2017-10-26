@@ -11,5 +11,6 @@ namespace HotelEngine.Contracts.Models
        public Status Status { get; set; }
        public Fare FareCharged { get; set; }
        public DateTime TransactionDateTime { get; set;}
+       public string BookingId { get; set; }
     }
 }

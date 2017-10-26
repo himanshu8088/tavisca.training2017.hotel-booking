@@ -31,9 +31,10 @@ $(document).ready(function () {
     });
 });
 function price(hotelId, roomName) {
-    $(".modal-body").css({ "height": "300px" });
-    $(".modal-footer").hide();
-    $(".modal-body").html('<img id="load" src="../img/loader.gif" alt="loading..." />');    
+    $(".modal-body").css({ "height": "170px" });
+    //$(".modal-footer").hide();
+    $('.btn-default').hide();
+    $(".modal-body").html('<img id="load" src="../img/loading.svg" alt="loading..." />');    
     $(".modal").modal("show");
     var priceRQ = JSON.parse(sessionStorage.getItem('roomSearchCriteria')).data;
     $.extend(priceRQ, {
@@ -61,6 +62,7 @@ function price(hotelId, roomName) {
             $(".modal-body").css({ "height": "auto" });
             $(".modal").modal("show");
             $(".modal-footer").show();
+            $('.btn-default').show();
             $('#proceed').click(function () {
                 window.location = '../html/book.html';
             });
