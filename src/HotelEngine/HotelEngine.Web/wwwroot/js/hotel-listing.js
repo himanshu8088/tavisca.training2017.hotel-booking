@@ -43,9 +43,8 @@ $(document).ready(function () {
 });
 
 function hotelsPagination(hotelItinerary) {
-    if (totalHotelsCount != 0)
+    
         $('.pagination-section').show();
-
         pagination=$('.pagination').twbsPagination({
         totalPages: totalPageCount,
         visiblePages: perPageItemCount,
