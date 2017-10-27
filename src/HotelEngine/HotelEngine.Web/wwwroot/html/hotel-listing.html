@@ -69,7 +69,7 @@
     <!--     Tab section starts here    -->
     <div class="container-fluid">               
         <div id="hotelList-container" class="col-md-12 col-xs-12 col-sm-12" >
-            <img id="load" src="../img/loader.gif" alt="loading..." />
+            <img id="load" src="../img/loading.svg" alt="loading..." />
         </div>       
         <div class="row pagination-section" hidden>
             <div class="col-md-4 col-md-offset-4  col-sm-8 col-sm-offset-2 font-big">
@@ -103,97 +103,104 @@
     <script id="hotel-item" type="text/x-handlebars-template">
         <div class="col-md-3">
             <div class="row">
-                <h3 class="text-primary">Filter search by: </h3>
+                <div class="col-md-12">
+                    <h3 class="text-primary">Filter search by: </h3>
+                </div>
             </div>
             <div class="row">
-                <div class="panel-group" id="accordion">
-                    <div class="panel panel-primary" id="filters" data-container="body" data-toggle="tooltip" data-placement="top" title="Select multiple checkboxes">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                                    Star Rating
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse1" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="starRating" value="5" id="fiveStar">
-                                        <span class="glyphicon glyphicon-star"> </span>
-                                        <span class="glyphicon glyphicon-star"> </span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="starRating" value="4" id-="fourStar">
-                                        <span class="glyphicon glyphicon-star"> </span>
-                                        <span class="glyphicon glyphicon-star"> </span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="starRating" value="3" id="threeStar">
-                                        <span class="glyphicon glyphicon-star"> </span>
-                                        <span class="glyphicon glyphicon-star"> </span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="starRating" value="2" id="twoStar">
-                                        <span class="glyphicon glyphicon-star"> </span>
-                                        <span class="glyphicon glyphicon-star"> </span>
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="starRating" value="1" id="oneStar">
-                                        <span class="glyphicon glyphicon-star"> </span>
-                                    </label>
+                <div class="col-md-12">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-primary" id="filters" data-container="body" data-toggle="tooltip" data-placement="top" title="Select multiple checkboxes">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                        Star Rating
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="starRating" value="5" id="fiveStar">
+                                            <span class="glyphicon glyphicon-star"> </span>
+                                            <span class="glyphicon glyphicon-star"> </span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="starRating" value="4" id-="fourStar">
+                                            <span class="glyphicon glyphicon-star"> </span>
+                                            <span class="glyphicon glyphicon-star"> </span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="starRating" value="3" id="threeStar">
+                                            <span class="glyphicon glyphicon-star"> </span>
+                                            <span class="glyphicon glyphicon-star"> </span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="starRating" value="2" id="twoStar">
+                                            <span class="glyphicon glyphicon-star"> </span>
+                                            <span class="glyphicon glyphicon-star"> </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="starRating" value="1" id="oneStar">
+                                            <span class="glyphicon glyphicon-star"> </span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                                    Price Per Night
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse2" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <div class="radio">
-                                    <label class="text-primary font-big"><input type="radio" value="0-100" id="1" name="priceRange">0-100</label>
-                                </div>
-                                <div class="radio">
-                                    <label class="text-primary font-big"><input type="radio" value="100-200" id="2" name="priceRange">100-200</label>
-                                </div>
-                                <div class="radio">
-                                    <label class="text-primary font-big"><input type="radio" value="200-300" id="3" name="priceRange">200-300</label>
-                                </div>
-                                <div class="radio">
-                                    <label class="text-primary font-big"><input type="radio" value="300-400" id="4" name="priceRange">300-400</label>
-                                </div>
-                                <div class="radio">
-                                    <label class="text-primary font-big"><input type="radio" value="400-500" id="5" name="priceRange">400-500</label>
-                                </div>
-                                <div class="radio">
-                                    <label class="text-primary font-big"><input type="radio" value="500-10000" id="5" name="priceRange">500 & above</label>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                        Price Per Night
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="radio">
+                                        <label class="text-primary font-big"><input type="radio" value="0-100" id="1" name="priceRange">0-100</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label class="text-primary font-big"><input type="radio" value="100-200" id="2" name="priceRange">100-200</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label class="text-primary font-big"><input type="radio" value="200-300" id="3" name="priceRange">200-300</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label class="text-primary font-big"><input type="radio" value="300-400" id="4" name="priceRange">300-400</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label class="text-primary font-big"><input type="radio" value="400-500" id="5" name="priceRange">400-500</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label class="text-primary font-big"><input type="radio" value="500-10000" id="5" name="priceRange">500 & above</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="filterHotelsClicked()">Filter</button>
-                <button type="button" class="btn btn-primary" onclick="clearFilterClicked()">Clear All Filters</button>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" onclick="filterHotelsClicked()">Filter</button>
+                    <button type="button" class="btn btn-primary" onclick="clearFilterClicked()">Clear All Filters</button>
+                </div>
+                
             </div>
             <!--<div class="row mt-20">
                 <div class="container-fluid">
@@ -202,39 +209,43 @@
             </div>-->
         </div>
         <div class="col-md-9">
-            <div class="panel-group">
-                <div class="panel panel-primary margin-top mt-lg">
-                    <div class="panel-body">
-                        <div class="col-md-3">
-                            <div class="row">
-                                <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Destination</h4>
-                            </div>
-                            <div class="row">
-                                <h5>{{hotelRQ.SearchText}}</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="row">
-                                <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Check-In</h4>
-                            </div>
-                            <div class="row">
-                                <h5>{{hotelRQ.CheckInDate}}</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="row">
-                                <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Check-Out</h4>
-                            </div>
-                            <div class="row">
-                                <h5>{{hotelRQ.CheckOutDate}}</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="row">
-                                <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Rooms</h4>
-                            </div>
-                            <div class="row">
-                                <h5>{{hotelRQ.NoOfRooms}}</h5>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-group">
+                        <div class="panel panel-primary margin-top mt-lg">
+                            <div class="panel-body">
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Destination</h4>
+                                    </div>
+                                    <div class="row">
+                                        <h5>{{hotelRQ.SearchText}}</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="row">
+                                        <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Check-In</h4>
+                                    </div>
+                                    <div class="row">
+                                        <h5>{{hotelRQ.CheckInDate}}</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="row">
+                                        <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Check-Out</h4>
+                                    </div>
+                                    <div class="row">
+                                        <h5>{{hotelRQ.CheckOutDate}}</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="row">
+                                        <span class="icon icon-hotels" aria-hidden="true"></span><h4 class="text-primary">Rooms</h4>
+                                    </div>
+                                    <div class="row">
+                                        <h5>{{hotelRQ.NoOfRooms}}</h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
