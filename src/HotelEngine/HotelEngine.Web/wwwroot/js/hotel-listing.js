@@ -31,8 +31,9 @@ $(document).ready(function () {
             if (totalHotelsCount != 0) {               
                 totalPageCount = Math.ceil(totalHotelsCount / perPageItemCount);
                 hotelsPagination(hotelItinerary);   
-            }
-            hotelListing(hotelItinerary);
+            } else {
+                hotelListing(hotelItinerary);
+            }            
         },
         error: function (xhr) {
             alert("Sorry server doesn't responding. Please try again.");
