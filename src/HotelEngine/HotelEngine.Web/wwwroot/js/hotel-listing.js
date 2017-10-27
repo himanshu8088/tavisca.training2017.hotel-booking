@@ -1,5 +1,10 @@
 ﻿var hotelItinerary = {};
 var hotelRQ = {};
+var perPageItemCount = 10;
+var totalPageCount;
+var totalHotelsCount;
+var pagination;
+
 Handlebars.registerHelper('times', function (n, block) {
     var accum = '';
     for (var i = 0; i < n; ++i)
@@ -8,8 +13,7 @@ Handlebars.registerHelper('times', function (n, block) {
 });
 
 
-$(document).ready(function () {
-
+$(document).ready(function () {      
     hotelRQ = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;
     var jsonData = JSON.stringify(hotelRQ);
     $.ajax({
@@ -18,9 +22,13 @@ $(document).ready(function () {
         data: jsonData,
         contentType: "application/json",
         success: function (hotels) {
-            hotelItinerary = hotels;
-            hotelListing(hotelItinerary);
-            loadMap(hotelRQ.Location.Latitude, hotelRQ.Location.Longitude);
+            hotelItinerary = hotels;    
+            totalHotelsCount = hotelItinerary.hotels.length;
+            $.extend(hotelItinerary, {
+                "hotelsCount": totalHotelsCount
+            });
+            totalPageCount = Math.ceil(totalHotelsCount / perPageItemCount);            
+            hotelsPagination(hotelItinerary);               
         },
         error: function (xhr) {
             alert("Sorry server doesn't responding. Please try again.");
@@ -30,9 +38,39 @@ $(document).ready(function () {
     $('#filters').tooltip();
 });
 
-function filterHotels() {
-    filterByStarRating();
-};
+function hotelsPagination(hotelItinerary) {
+    if (totalHotelsCount != 0)
+        $('.pagination-section').show();
+
+        pagination=$('.pagination').twbsPagination({
+        totalPages: totalPageCount,
+        visiblePages: perPageItemCount,
+        onPageClick: function (event, page) {
+            var hotelArr = jQuery.makeArray(hotelItinerary.hotels);
+            var firstInd = (perPageItemCount * page) - perPageItemCount;
+            var lastInd = (perPageItemCount * page);
+            var hotelItineraryArr = hotelArr.slice(firstInd, lastInd);
+            var itinerary = {
+                "sessionId": hotelItinerary.sessionId,
+                "hotels": hotelItineraryArr,
+                "hotelsCount": totalHotelsCount
+            };
+            function getOnPageClickContext()
+            {
+                return this.onPageClick;
+            }
+            hotelListing(itinerary);
+        }
+    });
+}
+
+function hotelListing(hotelItinerary) {
+    var templateData = { hotelRQ, hotelItinerary };
+    var template = $('#hotel-item');
+    var compiledTemplate = Handlebars.compile(template.html());
+    var html = compiledTemplate(templateData);
+    $('#hotelList-container').html(html);
+}
 
 function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRooms, hotelId, hotelName, sessionId) {
     this.data = {
@@ -49,24 +87,13 @@ function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRo
         "HotelId": hotelId
     }
 };
-$('#ex1').slider({
-    formatter: function (value) {
-        return 'Current value: ' + value;
-    }
-});
 
-function loadMap(latitude, longitude) {
-    var url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCIYzzzQZGLWDSOSovKWaq2UsyX1dQ796c&q="+ latitude+"," + longitude;
-   $("#map").attr("src", url);  
-}
+//function loadMap(latitude, longitude) {
+//    var url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCIYzzzQZGLWDSOSovKWaq2UsyX1dQ796c&q="+ latitude+"," + longitude;
+//   $("#map").attr("src", url);  
+//}
 
-function hotelListing(hotelItinerary) {
-    var templateData = { hotelRQ, hotelItinerary };
-    var template = $('#hotel-item');
-    var compiledTemplate = Handlebars.compile(template.html());
-    var html = compiledTemplate(templateData);
-    $('#hotelList-container').html(html);
-}
+
 function roomClicked(hotelId, hotelName) {
     var result = sessionStorage.getItem('hotelSearchCriteria');
     var searchCriteria = JSON.parse(result).data;
@@ -77,12 +104,14 @@ function roomClicked(hotelId, hotelName) {
     sessionStorage.setItem('roomSearchCriteria', JSON.stringify(roomSearchObj));
     window.location = '../html/room-listing.html';
 };
-function filterByStarRating() {
+
+function filterHotelsClicked() {
+
     var hotels = [];
     var selectedRatings = [];
     var priceRange=[];
 
-    // Get Value from UI component
+    // Get checked values from UI component
     $('input[type="checkbox"]:checked').each(function () {
         selectedRatings.push($(this).val());
     });
@@ -126,12 +155,15 @@ function filterByStarRating() {
     var sessionId = hotelItinerary.sessionId;
     filteredHotelItinerary = {
         "sessionId": sessionId,
-        "hotels": hotels
+        "hotels": hotels,
+        "hotelsCount": hotels.length
     }
-    hotelListing(filteredHotelItinerary);
+    hotelListing(filteredHotelItinerary); 
+    $('.pagination-section').hide();
 }
-function clearFilter(){
-    hotelListing(hotelItinerary);
+function clearFilterClicked() {
+    hotelListing(hotelItinerary); 
+    $('.pagination-section').show();
     $('input[type="radio"]').prop("checked", false);
     $('input[type="checkbox"]').prop("checked", false);
 };
