@@ -27,8 +27,12 @@ $(document).ready(function () {
             $.extend(hotelItinerary, {
                 "hotelsCount": totalHotelsCount
             });
-            totalPageCount = Math.ceil(totalHotelsCount / perPageItemCount);            
-            hotelsPagination(hotelItinerary);               
+
+            if (totalHotelsCount != 0) {               
+                totalPageCount = Math.ceil(totalHotelsCount / perPageItemCount);
+                hotelsPagination(hotelItinerary);   
+            }
+            hotelListing(hotelItinerary);
         },
         error: function (xhr) {
             alert("Sorry server doesn't responding. Please try again.");
