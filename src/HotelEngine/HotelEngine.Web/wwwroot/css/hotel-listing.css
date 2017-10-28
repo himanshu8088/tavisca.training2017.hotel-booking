@@ -48,3 +48,9 @@
         transform: rotate(360deg);
     }
 }
+.btn-primary{
+    width:100%;
+}
+.glyphicon-star {
+    color: #e4c72e;
+}

@@ -200,20 +200,26 @@
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <button type="button" class="btn btn-primary" onclick="filterHotelsClicked()">Filter</button>
-                        <button type="button" class="btn btn-primary margin-top" onclick="clearFilterClicked()">Clear Filters</button>
+                        <div class="row margin-bottom">
+                            <div class="col-md-6 col-xs-6 col-sm-6">
+                                <button type="button" class="btn btn-primary" onclick="filterHotelsClicked()">Filter</button>
+                            </div>
+                            <div class="col-md-6 col-xs-6 col-sm-6">
+                                <button type="button" class="btn btn-primary" onclick="clearFilterClicked()">Clear Filters</button>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
                 <!--<div class="row mt-20">
-            <div class="container-fluid">
-                <iframe id="map" class="map-bottom" src="" allowfullscreen width="300" height="260"></iframe>
-            </div>
-        </div>-->
+                    <div class="container-fluid">
+                        <iframe id="map" class="map-bottom" src="" allowfullscreen width="300" height="260"></iframe>
+                    </div>
+                </div>-->
             </div>
             <div class="col-md-9 col-sm-9 col-xs-12">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 col-xs-12 col-sm-12">
                         <div class="panel-group">
                             <div class="panel panel-primary">
                                 <div class="panel-body">
@@ -255,10 +261,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12"><h1 class="text-primary">Search Results: ({{hotelItinerary.hotelsCount}})</h1></div>
+                    <div class="col-md-12 col-xs-12 col-sm-12"><h1 class="text-primary">Search Results: ({{hotelItinerary.hotelsCount}})</h1></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12" id="panel-login">
+                    <div class="col-md-12 col-xs-12 col-sm-12" id="panel-login">
                         <label id="sessionId" hidden>{{hotelItinerary.sessionId}}</label>
                         {{#each hotelItinerary.hotels}} {{#unless hotelItinerary.hotels.images}}
                         <div id="amenities{{sessionId}}" hidden>
@@ -300,7 +306,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <button type="button" id="viewRooms" onclick="roomClicked('{{hotelId}}','{{hotelName}}')" class="btn btn-primary">View Rooms</button>
+                                                <button type="button" id="viewRooms" onclick="roomClicked('{{hotelId}}','{{hotelName}}')" class="btn btn-success">View Rooms</button>
                                             </div>
                                         </div>
                                     </div>
