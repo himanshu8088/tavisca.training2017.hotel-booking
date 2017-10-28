@@ -1,23 +1,25 @@
-﻿var roomPriceRQ = {};
+﻿var _roomPriceRQ = {};
 
 
 $(document).ready(function () {    
-    $('#dob').datepicker({
-        dateFormat: "yy-mm-dd",       
-    });
+    setCalender();
+    restoreRoomPriceRQ();
+});
 
+function setCalender() {
+    $('#dob').datepicker({
+        dateFormat: "yy-mm-dd",
+    });
     $('#dob').datepicker('setDate', new Date("1990-01-01"));
 
     $('#expiry-date').datepicker({
         dateFormat: "yy-mm-dd"
     });
-
     $('#expiry-date').datepicker('setDate', new Date("2022-01-01"));
-    restoreSessionData();
-});
+}
 
-function restoreSessionData() {
-    roomPriceRQ = JSON.parse(sessionStorage.getItem('roomPriceSearchCriteria'));
+function restoreRoomPriceRQ() {
+    _roomPriceRQ = JSON.parse(sessionStorage.getItem('roomPriceSearchCriteria'));
 }
 
 function guest() {
@@ -61,7 +63,7 @@ $('.payment-procced').click(function () {
 function createBookingRQ() {
     var guestDetail = (new guest()).detail;
     var cardDetail = (new paymentCard()).detail;
-    var bookingRQ = roomPriceRQ;
+    var bookingRQ = _roomPriceRQ;
 
     $.extend(bookingRQ, {
         "GuestDetail": guestDetail,
@@ -80,14 +82,7 @@ $('#pay').click(function () {
 });
 
 function validateCardDetails() {
-    //var isValid = true;
-    //var cardDetails = (new paymentCard()).detail;
-    //if (cardDetails.CardHolderName == "" || cardDetails.CardNumber == "" || cardDetails.ExpiryDate == "" || cardDetails.CVV == "") {
-
-    //    alert("Please fill all card details .");
-    //    isValid = false;
-    //}
-    //return isValid;
+    
     isValid = true;
     var cardDetails = (new paymentCard()).detail;
     if (cardDetails.CardHolderName == "") {

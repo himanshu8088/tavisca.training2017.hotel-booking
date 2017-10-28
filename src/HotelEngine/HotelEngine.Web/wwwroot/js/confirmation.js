@@ -1,12 +1,12 @@
 ﻿
 var bookingRQ = {};
 
-function restoreSessionData() {
+function restoreRoomPriceRQ() {
     bookingRQ = JSON.parse(sessionStorage.getItem('bookingRQ'));
 }
 
 $(document).ready(function () {
-    restoreSessionData();
+    restoreRoomPriceRQ();
 
     $.ajax({
         url: "../hotel/book",

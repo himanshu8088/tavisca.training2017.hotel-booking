@@ -12,12 +12,12 @@ Handlebars.registerHelper('times', function (n, block) {
 });
 
 $(document).ready(function () {
-    restoreSessionData();
+    restoreRoomPriceRQ();
     searchHotels(JSON.stringify(_hotelSearchRQ));
     $('#filters').tooltip();
 });
 
-function restoreSessionData() {
+function restoreRoomPriceRQ() {
     _hotelSearchRQ = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;
 }
 

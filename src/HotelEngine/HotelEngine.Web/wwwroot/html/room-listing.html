@@ -131,7 +131,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-xs-12">
-                                                <button type="button" class="btn btn-primary" onclick="price('{{../hotelId}}','{{name}}')">Book</button>
+                                                <button type="button" class="btn btn-primary" onclick="priceBtnClicked('{{../hotelId}}','{{name}}')">Book</button>
                                             </div>
                                         </div>
                                     </div>
@@ -174,7 +174,7 @@
                     <h4>Extra Charges: </h4>
                 </div>
                 <div class="col-md-8">
-                    <h4>{{chargebleFare.currency}} {{chargebleFare.roundedValue}}</h4>
+                    <h4>{{chargebleFare.currency}} {{chargebleFare.extraCharge}}</h4>
                 </div>
             </div>
             <div class="row">
