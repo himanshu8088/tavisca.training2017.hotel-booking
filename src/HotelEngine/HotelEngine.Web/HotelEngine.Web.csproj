@@ -43,7 +43,6 @@
     <None Include="wwwroot\js\autosuggest.js" />
     <None Include="wwwroot\js\hotel-listing.js" />
     <None Include="wwwroot\js\libraries\bootstrap.js" />
-    <None Include="wwwroot\js\libraries\bootstrap.min.js" />
     <None Include="wwwroot\js\libraries\handlebars-v4.0.10.js" />
     <None Include="wwwroot\js\room-listing.js" />
     <None Include="wwwroot\js\search.js" />
