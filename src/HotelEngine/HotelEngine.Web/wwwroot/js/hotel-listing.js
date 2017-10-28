@@ -91,7 +91,7 @@ function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRo
         "SearchText": hotelName,
         "CheckInDate": checkIn,
         "CheckOutDate": checkOut,
-        "Location": {
+        "GeoCode": {
             "Latitude": latitude,
             "Longitude": longitude
         },
@@ -112,10 +112,26 @@ function roomClicked(hotelId, hotelName) {
     var sessionId = $('#sessionId').text();
     var amenitiesId = $('#amenities' + sessionId);
     sessionStorage.setItem(amenitiesId, $(amenitiesId).html());
-    var roomSearchObj = new roomSearchRQ(searchCriteria.CheckInDate, searchCriteria.CheckOutDate, searchCriteria.Location.Latitude, searchCriteria.Location.Longitude, searchCriteria.GuestCount, searchCriteria.NoOfRooms, hotelId, hotelName, sessionId);
+    var roomSearchObj = new roomSearchRQ(searchCriteria.CheckInDate, searchCriteria.CheckOutDate, searchCriteria.GeoCode.Latitude, searchCriteria.GeoCode.Longitude, searchCriteria.GuestCount, searchCriteria.NoOfRooms, hotelId, hotelName, sessionId);
     sessionStorage.setItem('roomSearchCriteria', JSON.stringify(roomSearchObj));
     window.location = '../html/room-listing.html';
 };
+
+function getRatings() {
+    var selectedRatings = [];
+    $('input[type="checkbox"]:checked').each(function () {
+        selectedRatings.push($(this).val());
+    });
+    return selectedRatings;
+}
+
+function getPriceRange() {
+    var priceRange = [];
+    var checkedPriceRange = $('input[name="priceRange"]:checked').val();
+
+    if (checkedPriceRange != null)
+        priceRange = checkedPriceRange.split("-");
+}
 
 function filterHotelsClicked() {
 
@@ -124,13 +140,8 @@ function filterHotelsClicked() {
     var priceRange = [];
 
     // Get checked values from UI component
-    $('input[type="checkbox"]:checked').each(function () {
-        selectedRatings.push($(this).val());
-    });
-    var checkedPriceRange = $('input[name="priceRange"]:checked').val();
-
-    if (checkedPriceRange != null)
-        priceRange = checkedPriceRange.split("-");
+    selectedRatings = getRatings();
+    priceRange = getPriceRange();
 
     //Match according to filter
     for (var hotelIndex = 0; hotelIndex < _hotelSearchRS.hotels.length; hotelIndex++) {
@@ -164,19 +175,22 @@ function filterHotelsClicked() {
         }
     }
 
+    renderPaginationSection();
+    _paginationArgument.totalPages = Math.ceil(hotels.length / _perPageHotels);
+    renderPaginatedHotels(hotels, hotels.length, _perPageHotels);        
+}
+
+function renderPaginationSection() {
     var html = '<div class="col-md-4 col-md-offset-4  col-sm-8 col-sm-offset-2 font-big"><nav aria-label="Page navigation"><ul class="pagination"></ul></nav></div>';
     $(".pagination-section").html(html);    
-    _paginationArgument.totalPages = Math.ceil(hotels.length / _perPageHotels);
-    renderPaginatedHotels(hotels, hotels.length, _perPageHotels);    
-    
 }
 
 function clearFilterClicked() {
-    var html = '<div class="col-md-4 col-md-offset-4  col-sm-8 col-sm-offset-2 font-big"><nav aria-label="Page navigation"><ul class="pagination"></ul></nav></div>';
-    $(".pagination-section").html(html);
+    renderPaginationSection();
     _paginationArgument.totalPages = Math.ceil(_hotelSearchRS.hotels.length / _perPageHotels);
     renderPaginatedHotels(_hotelSearchRS.hotels, _hotelSearchRS.hotels.length, _perPageHotels);                
     $('input[type="radio"]').prop("checked", false);
-    $('input[type="checkbox"]').prop("checked", false);
+    $('input[type="checkbox"]').prop("checked", false);    
 };
+
 

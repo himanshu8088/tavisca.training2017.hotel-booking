@@ -30,7 +30,7 @@ namespace HotelEngine.Adapter
         {
             var hotelAvailRQ = ParseHotelRQ(hotelSearchRQ);
             var hotelAvailRS = await GetHotelsAsync(hotelAvailRQ);
-            var hotelSearchRS = ParseHotelRS(hotelAvailRS, hotelSearchRQ.SessionId);
+            var hotelSearchRS = ParseHotelSearchRS(hotelAvailRS, hotelSearchRQ.SessionId);
             return hotelSearchRS;
         }
 
@@ -184,7 +184,7 @@ namespace HotelEngine.Adapter
             return hotelSearchReq;
         }
 
-        private HotelEngine.Contracts.Models.HotelSearchRS ParseHotelRS(Proxies.HotelSearchRS hotelSearchRS, Guid sessionId)
+        private HotelEngine.Contracts.Models.HotelSearchRS ParseHotelSearchRS(Proxies.HotelSearchRS hotelSearchRS, Guid sessionId)
         {
             HotelEngine.Contracts.Models.HotelSearchRS hotelSearchResponse = null;
             var itineraries = hotelSearchRS.Itineraries;
@@ -234,6 +234,17 @@ namespace HotelEngine.Adapter
                         amenities.Add(amenity);
                     }
 
+                    List<HotelEngine.Contracts.Models.HotelDescription> hotelDescriptions = new List<HotelEngine.Contracts.Models.HotelDescription>();
+                    foreach(var description in hotelProp.Descriptions)
+                    {
+                        var hotelDescription = new HotelEngine.Contracts.Models.HotelDescription()
+                        {
+                            Type= description.Type,
+                            Description= description.Description
+                        };
+                        hotelDescriptions.Add(hotelDescription);
+                    }
+
                     var hotel = new Hotel()
                     {
                         Address = hotelProp.Address.CompleteAddress,
@@ -244,7 +255,7 @@ namespace HotelEngine.Adapter
                         },
                         HotelId = hotelProp.Id,
                         HotelName = hotelProp.Name,
-                        Location = new HotelEngine.Contracts.Models.Location()
+                        GeoCode = new HotelEngine.Contracts.Models.GeoCode()
                         {
                             Latitude = hotelProp.Address.GeoCode.Latitude,
                             Longitude = hotelProp.Address.GeoCode.Latitude
@@ -252,7 +263,8 @@ namespace HotelEngine.Adapter
                         Rooms = rooms,
                         StarRating = hotelProp.HotelRating.Rating,
                         Images = urls,
-                        Amenities = amenities
+                        Amenities = amenities,
+                       HotelDescriptions= hotelDescriptions
                     };
                     hotels.Add(hotel);
                 }

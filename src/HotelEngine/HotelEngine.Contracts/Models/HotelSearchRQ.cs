@@ -12,7 +12,7 @@ namespace HotelEngine.Contracts.Models
 
         public DateTime CheckOutDate { get; set; }
         
-        public Location Location { get; set; }
+        public GeoCode GeoCode { get; set; }
 
         public int GuestCount { get; set; }
 

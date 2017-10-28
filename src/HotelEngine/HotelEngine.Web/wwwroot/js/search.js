@@ -5,7 +5,7 @@ function hotelSearchRQ(searchText, checkIn, checkOut, latitude, longitude, guest
         "SearchText": searchText,
         "CheckInDate": checkIn,
         "CheckOutDate": checkOut,
-        "Location": {
+        "GeoCode": {
             "Latitude": latitude,
             "Longitude": longitude
         },
@@ -31,12 +31,14 @@ function getSearchValues() {
     var location = JSON.parse(sessionStorage.getItem('selectedLocation'));
     if(location!=null)
         searchLocation = location.item;    
-    var _searchText = $('#destination').val();
-    var _checkIn = $('#check-in').val();
-    var _checkOut = $('#check-out').val();
-    var _guestCount = $('#guest').find(":selected").text();
-    var _roomCount = $('#room').find(":selected").text();
-    var hotelSearchObj = new hotelSearchRQ(_searchText, _checkIn, _checkOut, searchLocation.data.Latitude, searchLocation.data.Longitude, _guestCount, _roomCount);
+    var searchText = $('#destination').val();
+    var checkIn = $('#check-in').val();
+    var checkOut = $('#check-out').val();
+    var guestCount = $('#guest').find(":selected").text();
+    var roomCount = $('#room').find(":selected").text();
+    if (roomCount == '9+')
+        roomCount = 9;
+    var hotelSearchObj = new hotelSearchRQ(searchText, checkIn, checkOut, searchLocation.data.Latitude, searchLocation.data.Longitude, guestCount, roomCount);
     return hotelSearchObj;
 }
 

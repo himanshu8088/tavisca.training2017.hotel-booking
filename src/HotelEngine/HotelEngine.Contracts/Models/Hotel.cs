@@ -10,9 +10,10 @@ namespace HotelEngine.Contracts.Models
         public string Address { get; set; }
         public float StarRating { get; set; }
         public Fare Fare { get; set; }
-        public Location Location { get; set; }
+        public GeoCode GeoCode { get; set; }
         public List<Uri> Images { get; set; }
         public List<Room> Rooms { get; set; }
         public List<Amenity> Amenities { get; set; } 
+        public List<HotelDescription> HotelDescriptions { get; set; }
     }
 }

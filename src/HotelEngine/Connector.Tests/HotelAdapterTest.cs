@@ -21,7 +21,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
                 CheckInDate = DateTime.Now.AddDays(15),
                 CheckOutDate = DateTime.Now.AddDays(17),
                 GuestCount = 1,                
-                Location = new HotelEngine.Contracts.Models.Location()
+                GeoCode = new HotelEngine.Contracts.Models.GeoCode()
                 {
                     Latitude = 18.5967712f,
                     Longitude = 73.74219f
@@ -49,7 +49,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
                 CheckOutDate = DateTime.Now.AddDays(17),
                 GuestCount = 1,
                 HotelId = 287948,
-                Location = new HotelEngine.Contracts.Models.Location()
+                GeoCode = new HotelEngine.Contracts.Models.GeoCode()
                 {
                     Latitude = 18.5967712f,
                     Longitude = 73.74219f
@@ -77,7 +77,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
                 CheckOutDate = DateTime.Now.AddDays(17),
                 GuestCount = 1,
                 HotelId = 287948,
-                Location = new HotelEngine.Contracts.Models.Location()
+                GeoCode = new HotelEngine.Contracts.Models.GeoCode()
                 {
                     Latitude = 18.5967712f,
                     Longitude = 73.74219f
@@ -106,7 +106,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
                 CheckOutDate = DateTime.Now.AddDays(17),
                 GuestCount = 1,
                 HotelId = 287948,
-                Location = new HotelEngine.Contracts.Models.Location()
+                GeoCode = new HotelEngine.Contracts.Models.GeoCode()
                 {
                     Latitude = 18.5967712f,
                     Longitude = 73.74219f

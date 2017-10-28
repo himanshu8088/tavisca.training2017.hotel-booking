@@ -24,8 +24,8 @@ namespace HotelEngine.Adapter.Configuration
             _checkIn = hotelSearchRQ.CheckInDate;
             _checkOut = hotelSearchRQ.CheckOutDate;
             _passengerCount = hotelSearchRQ.GuestCount;
-            _latitude = hotelSearchRQ.Location.Latitude;
-            _longitude = hotelSearchRQ.Location.Longitude;
+            _latitude = hotelSearchRQ.GeoCode.Latitude;
+            _longitude = hotelSearchRQ.GeoCode.Longitude;
             _noOfRooms = hotelSearchRQ.NoOfRooms;
             _sessionId = hotelSearchRQ.SessionId.ToString();
         }
