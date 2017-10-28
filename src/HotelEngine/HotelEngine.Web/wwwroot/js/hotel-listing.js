@@ -1,9 +1,8 @@
-﻿var hotelItinerary = {};
-var hotelRQ = {};
-var perPageItemCount = 10;
-var totalPageCount;
-var totalHotelsCount;
-var pagination;
+﻿var _hotelSearchRS = {};
+var _hotelSearchRQ = {};
+var _perPageHotels = 10;
+var _totalHotels;
+var _paginationArgument;
 
 Handlebars.registerHelper('times', function (n, block) {
     var accum = '';
@@ -12,68 +11,78 @@ Handlebars.registerHelper('times', function (n, block) {
     return accum;
 });
 
+$(document).ready(function () {
+    restoreSessionData();
+    searchHotels(JSON.stringify(_hotelSearchRQ));
+    $('#filters').tooltip();
+});
 
-$(document).ready(function () {      
-    hotelRQ = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;
-    var jsonData = JSON.stringify(hotelRQ);
+function restoreSessionData() {
+    _hotelSearchRQ = JSON.parse(sessionStorage.getItem('hotelSearchCriteria')).data;
+}
+
+function searchHotels(hotelSearchRQ) {
     $.ajax({
         url: "../hotel/search",
         type: "POST",
-        data: jsonData,
+        data: hotelSearchRQ,
         contentType: "application/json",
-        success: function (hotels) {
-            hotelItinerary = hotels;    
-            totalHotelsCount = hotelItinerary.hotels.length;
-            $.extend(hotelItinerary, {
-                "hotelsCount": totalHotelsCount
-            });
-
-            if (totalHotelsCount != 0) {               
-                totalPageCount = Math.ceil(totalHotelsCount / perPageItemCount);
-                hotelsPagination(hotelItinerary);   
-            } else {
-                hotelListing(hotelItinerary);
-            }            
+        success: function (hotelSearchRS) {
+            _hotelSearchRS = hotelSearchRS;
+            _totalHotels = hotelSearchRS.hotels.length;            
+            $.extend(_hotelSearchRS, {
+                "hotelsCount": _totalHotels
+            });             
+            renderPaginatedHotels(_hotelSearchRS.hotels, _totalHotels, _perPageHotels);
         },
         error: function (xhr) {
             alert("Sorry server doesn't responding. Please try again.");
             window.location = '../html/search.html';
         }
     });
-    $('#filters').tooltip();
-});
-
-function hotelsPagination(hotelItinerary) {
-    
-        $('.pagination-section').show();
-        pagination=$('.pagination').twbsPagination({
-        totalPages: totalPageCount,
-        visiblePages: perPageItemCount,
-        onPageClick: function (event, page) {
-            var hotelArr = jQuery.makeArray(hotelItinerary.hotels);
-            var firstInd = (perPageItemCount * page) - perPageItemCount;
-            var lastInd = (perPageItemCount * page);
-            var hotelItineraryArr = hotelArr.slice(firstInd, lastInd);
-            var itinerary = {
-                "sessionId": hotelItinerary.sessionId,
-                "hotels": hotelItineraryArr,
-                "hotelsCount": totalHotelsCount
-            };
-            function getOnPageClickContext()
-            {
-                return this.onPageClick;
-            }
-            hotelListing(itinerary);
-        }
-    });
 }
 
-function hotelListing(hotelItinerary) {
+function renderPaginatedHotels(hotels, totalHotels, perPageHotels) {
+    
+    _paginationArgument = {
+        totalPages: Math.ceil(totalHotels / perPageHotels),
+        visiblePages: perPageHotels,
+        onPageClick: function (event, page) {
+            var currentPageHotels = selectHotelsByPageNo(hotels, perPageHotels, page);
+            renderHotelSection(_hotelSearchRQ, currentPageHotels, _hotelSearchRS.sessionId, totalHotels);
+        }
+    };
+
+    if (totalHotels != 0) {
+        $('.pagination-section').show();
+        $('.pagination').twbsPagination(_paginationArgument);
+    } else {
+        renderHotelSection(_hotelSearchRQ, _hotelSearchRQ.hotels, _hotelSearchRS.sessionId, totalHotels);
+    }
+    
+}
+
+function selectHotelsByPageNo(hotels, perPageHotels, pageNo) {
+    var firstIndex = (perPageHotels * pageNo) - perPageHotels;
+    var lastIndex = (perPageHotels * pageNo);
+    var currentPageHotels = hotels.slice(firstIndex, lastIndex);
+    return currentPageHotels;
+}
+
+function renderHotelSection(hotelRQ, hotels, sessionId, hotelCount) {
+
+    var hotelItinerary = {
+        "sessionId": sessionId,
+        "hotels": hotels,
+        "hotelsCount": hotelCount
+    };
+
     var templateData = { hotelRQ, hotelItinerary };
     var template = $('#hotel-item');
     var compiledTemplate = Handlebars.compile(template.html());
     var html = compiledTemplate(templateData);
     $('#hotelList-container').html(html);
+
 }
 
 function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRooms, hotelId, hotelName, sessionId) {
@@ -97,7 +106,6 @@ function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRo
 //   $("#map").attr("src", url);  
 //}
 
-
 function roomClicked(hotelId, hotelName) {
     var result = sessionStorage.getItem('hotelSearchCriteria');
     var searchCriteria = JSON.parse(result).data;
@@ -113,24 +121,24 @@ function filterHotelsClicked() {
 
     var hotels = [];
     var selectedRatings = [];
-    var priceRange=[];
+    var priceRange = [];
 
     // Get checked values from UI component
     $('input[type="checkbox"]:checked').each(function () {
         selectedRatings.push($(this).val());
     });
     var checkedPriceRange = $('input[name="priceRange"]:checked').val();
-    
-    if (checkedPriceRange !=null)
+
+    if (checkedPriceRange != null)
         priceRange = checkedPriceRange.split("-");
 
     //Match according to filter
-    for (var hotelIndex = 0; hotelIndex < hotelItinerary.hotels.length; hotelIndex++) {
-        var hotel = hotelItinerary.hotels[hotelIndex];
+    for (var hotelIndex = 0; hotelIndex < _hotelSearchRS.hotels.length; hotelIndex++) {
+        var hotel = _hotelSearchRS.hotels[hotelIndex];
         var ratingFlag = false;
         var priceFlag = false;
 
-        if (selectedRatings.length != 0 ) {
+        if (selectedRatings.length != 0) {
             for (var ratingIndex = 0; ratingIndex < selectedRatings.length; ratingIndex++) {
                 if (hotel.starRating == selectedRatings[ratingIndex]) {
                     ratingFlag = true;
@@ -144,30 +152,30 @@ function filterHotelsClicked() {
             }
         }
         //Save matched result
-        if (priceRange.length != 0 && selectedRatings.length != 0 ) {
+        if (priceRange.length != 0 && selectedRatings.length != 0) {
             if (ratingFlag == true && priceFlag == true)
                 hotels.push(hotel);
         } else if (priceRange.length != 0 && priceFlag == true) {
             hotels.push(hotel);
-        } else if (selectedRatings.length != 0  && ratingFlag == true) {
+        } else if (selectedRatings.length != 0 && ratingFlag == true) {
             hotels.push(hotel);
         } else if (priceRange.length == 0 && selectedRatings.length == 0) {
             hotels.push(hotel);
         }
     }
 
-    var sessionId = hotelItinerary.sessionId;
-    filteredHotelItinerary = {
-        "sessionId": sessionId,
-        "hotels": hotels,
-        "hotelsCount": hotels.length
-    }
-    hotelListing(filteredHotelItinerary); 
-    $('.pagination-section').hide();
+    var html = '<div class="col-md-4 col-md-offset-4  col-sm-8 col-sm-offset-2 font-big"><nav aria-label="Page navigation"><ul class="pagination"></ul></nav></div>';
+    $(".pagination-section").html(html);    
+    _paginationArgument.totalPages = Math.ceil(hotels.length / _perPageHotels);
+    renderPaginatedHotels(hotels, hotels.length, _perPageHotels);    
+    
 }
+
 function clearFilterClicked() {
-    hotelListing(hotelItinerary); 
-    $('.pagination-section').show();
+    var html = '<div class="col-md-4 col-md-offset-4  col-sm-8 col-sm-offset-2 font-big"><nav aria-label="Page navigation"><ul class="pagination"></ul></nav></div>';
+    $(".pagination-section").html(html);
+    _paginationArgument.totalPages = Math.ceil(_hotelSearchRS.hotels.length / _perPageHotels);
+    renderPaginatedHotels(_hotelSearchRS.hotels, _hotelSearchRS.hotels.length, _perPageHotels);                
     $('input[type="radio"]').prop("checked", false);
     $('input[type="checkbox"]').prop("checked", false);
 };
