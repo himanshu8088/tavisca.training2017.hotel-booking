@@ -41,6 +41,7 @@ namespace HotelEngine.Adapter.Configuration
 
         public BookingProxy.HotelSearchCriterion HotelSearchCriterion => _hotelSearchCriterion;
         public BookingProxy.HotelItinerary HotelItinerary => _hotelItinerary;
+        public BookingProxy.ResponseType ResultRequested => ResponseType.Unknown;
             
     }
 }

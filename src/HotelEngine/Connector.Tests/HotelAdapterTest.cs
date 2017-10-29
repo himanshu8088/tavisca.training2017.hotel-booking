@@ -89,7 +89,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
             HotelAdapter hotelConnector = new HotelAdapter();
 
             //Act
-            var response = await hotelConnector.SearchPriceAsync(priceSearchRQ);
+            var response = await hotelConnector.SearchRoomPriceAsync(priceSearchRQ);
 
             //Assert
             Assert.NotNull(response);

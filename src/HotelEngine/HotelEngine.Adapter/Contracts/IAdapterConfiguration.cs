@@ -11,9 +11,10 @@ namespace HotelEngine.Adapter.Contracts
 {
     public interface IAdapterConfiguration
     {
-        HotelsAvailConfig GetHotelsAvailConfig(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ);
-        RoomsAvailConfig GetRoomsAvailConfig(RoomSearchRQ roomSearchRQ);
+        HotelsAvailConfig GetMultiAvailConfig(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ);
+        RoomsAvailConfig GetSingleAvailConfig(RoomSearchRQ roomSearchRQ);
         TripProductConfig GetTripProductConfig(RoomPriceSearchRQ roomPriceSearchRQ, Proxies.HotelRoomAvailRS hotelRoomAvailRS);
         CompleteBookConfig GetCompleteBookConfig(TripFolderBookRS tripFolderBookRS, Guid sessionId);
+        TripFolderBookConfig GetTripFolderBookConfig(HotelTripProduct hotelTripProduct, RoomBookRQ roomBookRQ);
     }
 }
