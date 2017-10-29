@@ -1,13 +1,9 @@
 ﻿using HotelEngine.Contracts.Contracts;
 using HotelEngine.Contracts.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using HotelEngine.Adapter.Configuration;
 using HotelEngine.Adapter.Contracts;
 using BookingProxy;
-using Newtonsoft.Json;
 using HotelEngine.Adapter.Parser;
 using Proxies;
 using HotelEngine.Adapter.Implementation;
@@ -171,11 +167,6 @@ namespace HotelEngine.Adapter
             }
             return completeBookingRS;
         }
-
-
-      
-
         
-
     }
 }

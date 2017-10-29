@@ -9,7 +9,7 @@ using System.Text;
 
 namespace HotelEngine.Adapter.Contracts
 {
-    public interface IAdapterConfiguration
+    internal interface IAdapterConfiguration
     {
         HotelsAvailConfig GetMultiAvailConfig(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ);
         RoomsAvailConfig GetSingleAvailConfig(RoomSearchRQ roomSearchRQ);

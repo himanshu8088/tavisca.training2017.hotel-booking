@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HotelEngine.Adapter.Parser
 {
-    public class ResponseParser
+    internal class ResponseParser
     {
         private string[] _hotelFareSource;
         public ResponseParser()

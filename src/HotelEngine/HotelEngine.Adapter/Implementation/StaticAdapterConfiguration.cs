@@ -9,7 +9,7 @@ using HotelEngine.Adapter.Configuration;
 namespace HotelEngine.Adapter.Implementation
 {
 
-    public class StaticAdapterConfiguration : IAdapterConfiguration
+    internal class StaticAdapterConfiguration : IAdapterConfiguration
     {
         public HotelsAvailConfig GetMultiAvailConfig(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
         {

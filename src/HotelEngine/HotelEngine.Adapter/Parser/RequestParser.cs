@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HotelEngine.Adapter.Parser
 {
-    public class RequestParser
+    internal class RequestParser
     {
         private IAdapterConfiguration _config;
         public RequestParser(IAdapterConfiguration adapterConfiguration)
