@@ -131,6 +131,7 @@ function getPriceRange() {
 
     if (checkedPriceRange != null)
         priceRange = checkedPriceRange.split("-");
+    return priceRange;
 }
 
 function filterHotelsClicked() {
