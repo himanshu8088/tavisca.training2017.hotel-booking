@@ -1,11 +1,7 @@
 ﻿using HotelEngine.Adapter;
-using HotelEngine.Adapter.Configuration;
 using HotelEngine.Contracts.Models;
-using Proxies;
 using System;
-using System.Threading.Tasks;
 using Xunit;
-
 
 namespace Tavisca.Training2017.HotelBookingWeb.Tests
 {
