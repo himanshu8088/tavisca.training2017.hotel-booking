@@ -81,8 +81,7 @@ $('#pay').click(function () {
     }
 });
 
-function validateCardDetails() {
-    
+function validateCardDetails() {    
     isValid = true;
     var cardDetails = (new paymentCard()).detail;
     if (cardDetails.CardHolderName == "") {
@@ -94,7 +93,9 @@ function validateCardDetails() {
         $('#error').html("");
         $('#card-holder').removeClass("error");
     }
-    if (cardDetails.CardNumber.length!=16) {
+
+    var isValidCardNumber = validationCardNumber(cardDetails.CardNumber);
+    if (isValidCardNumber==false) {
         showErrorMsg();
         $('#card-number').addClass("error");
         isValid = false;
@@ -112,7 +113,7 @@ function validateCardDetails() {
         $('#error').html("");
         $('#expiry-date').removeClass("error");
     }
-    if (cardDetails.CVV.length!=3) {
+    if (cardDetails.CVV.length!=4) {
         showErrorMsg();
         $('#cvv').addClass("error");
         isValid = false;
@@ -179,6 +180,58 @@ function validateEmail(email) {
     var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
     return $.trim(email).match(pattern) ? true : false;
+}
+
+function validationCardNumber(cardNumber) {
+    /*
+        Luhn algorithm:
+        Starting at the last digit in the cardNumber (the check digit),
+        double every other digit’s value.
+        If any of the doubled digits are greater than nine,
+        then the number is divided by 10 and the remainder is added to one.
+        This value is added together with the appropriate values for every other digit to get a sum.
+        If this sum can be equally divisible by 10, then the number is valid.
+        The check digit serves the purpose of ensuring that the identifier will by equally divisible by 10.
+     */
+    var sum = 0,
+        alt = false,
+        i = cardNumber.length - 1,
+        num;
+
+    if (cardNumber.length < 13 || cardNumber.length > 19) {
+        return false;
+    }
+
+    while (i >= 0) {
+
+        //get the next digit
+        num = parseInt(cardNumber.charAt(i), 10);
+
+        //if it's not a valid number, abort
+        if (isNaN(num)) {
+            return false;
+        }
+
+        //if it's an alternate number...
+        if (alt) {
+            num *= 2;
+            if (num > 9) {
+                num = (num % 10) + 1;
+            }
+        }
+
+        //flip the alternate bit
+        alt = !alt;
+
+        //add to the rest of the sum
+        sum += num;
+
+        //go to next digit
+        i--;
+    }
+
+    //determine if it's valid
+    return (sum % 10 == 0);
 }
 
 function showErrorMsg() {
