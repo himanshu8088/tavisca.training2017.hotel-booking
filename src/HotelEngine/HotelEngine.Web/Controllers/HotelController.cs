@@ -26,6 +26,10 @@ namespace HotelEngine.Web.Controllers
             _hotelService = new HotelService();           
         }
 
+        /// <summary>
+        /// Search hotels asynchronously
+        /// </summary>
+        
         [HttpPost("search")]
         public async Task<IActionResult> SearchHotelsAsync([FromBody] HotelSearchRQ hotelSearchRQ)
         {
@@ -44,9 +48,14 @@ namespace HotelEngine.Web.Controllers
             return Ok(hotelSearchRS);
         }
 
+
+        /// <summary>
+        /// Search rooms within hotels asynchronously
+        /// </summary>        
+
         [HttpPost("roomsearch")]
         public async Task<IActionResult> SearchRoomsAsync([FromBody] RoomSearchRQ roomSearchRQ)
-        {
+        {            
             RoomSearchRS roomSearchRS = null;
             roomSearchRS=await _hotelService.RoomSearchAsync(roomSearchRQ);
             try
@@ -63,9 +72,13 @@ namespace HotelEngine.Web.Controllers
             return Ok(roomSearchRS);
         }
 
+        /// <summary>
+        /// Search hotel room price asynchronously
+        /// </summary>        
+
         [HttpPost("price")]
         public async Task<IActionResult> SearchRoomPriceAsync([FromBody] RoomPriceSearchRQ roomPriceSearchRQ)
-        {
+        {            
             RoomPriceSearchRS roomPriceSearchRS = null;           
             try
             {
@@ -80,10 +93,14 @@ namespace HotelEngine.Web.Controllers
             }
             return Ok(roomPriceSearchRS);     
         }
+
+        /// <summary>
+        /// Book selected room asynchronously
+        /// </summary>
+
         [HttpPost("book")]
         public async Task<IActionResult> BookRoomAsync([FromBody] RoomBookRQ roomBookRQ)
-        {
-
+        {            
             RoomBookRS roomBookRS = null;
             try
             {
