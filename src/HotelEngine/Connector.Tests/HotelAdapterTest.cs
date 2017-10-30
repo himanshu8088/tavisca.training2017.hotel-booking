@@ -31,7 +31,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
             var response = await hotelConnector.SearchHotelsAsync(hotelSearchRQ);
 
             //Assert
-            Assert.NotNull(response);
+            Assert.NotNull(response);            
         }
 
         [Fact]

@@ -198,7 +198,8 @@ namespace HotelEngine.Adapter.Parser
                     Currency = fare.Currency
                 },
                 TransactionDateTime = DateTime.Now,
-
+                SessionId= completeBookingRS.SessionId,
+                Status= (Status)Enum.Parse(typeof(Status),status)
             };
         }
     }

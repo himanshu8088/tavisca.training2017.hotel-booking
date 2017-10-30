@@ -94,10 +94,10 @@
                             <div class="col-md-12 col-xs-12"><h4>Your Payment Information.</h4></div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 col-xs-12" id="success" hidden>
+                            <div class="col-md-12 col-xs-12 success"  hidden>
                                 <h4 class="text-justify">Thank you. Your (ACH/Credit Card) payment has been successfully processed.This payment transaction will appear on your Bank/Credit Card statement.</h4>
                             </div>
-                            <div class="col-md-12 col-xs-12" id="fail" hidden>
+                            <div class="col-md-12 col-xs-12 fail" hidden>
                                 <h4>Sorry transaction failed.</h4>
                             </div>
                         </div>
@@ -108,15 +108,7 @@
                             <div class="col-md-9 col-xs-6">
                                 <h5>{{bookingId}}</h5>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 col-xs-6">
-                                <h5>Confirmation No: </h5>
-                            </div>
-                            <div class="col-md-9 col-xs-6">
-                                <h5>{{confirmationNo}}</h5>
-                            </div>
-                        </div>
+                        </div>                      
                         <div class="row">
                             <div class="col-md-3 col-xs-6">
                                 <h5>Total Amount: </h5>
@@ -133,14 +125,20 @@
                                 <h5>{{transactionDateTime}}</h5>
                             </div>
                         </div>
-                        <div class="row">
-                            
-                                <div class="col-md-12 col-xs-12">
-                                    <h4 class="text-success" id="msg" hidden>You've successfully booked a room.Please check your email to see the notification.</h4>
-                                </div>
-                            
+                        <div class="row confirmation-row" hidden>
+                            <div class="col-md-3 col-xs-6">
+                                <h5>Confirmation No: </h5>
+                            </div>
+                            <div class="col-md-9 col-xs-6">
+                                <h5>{{confirmationNo}}</h5>
+                            </div>
                         </div>
-                        <div class="row">
+                        <div class="row success" hidden>
+                            <div class="col-md-12 col-xs-12" >
+                                <h4 class="text-success">You've successfully booked a room.Please check your email to see the notification.</h4>
+                            </div>
+                        </div>                        
+                        <div class="row no-print">
                             <div class="col-md-2 col-md-offset-5 col-xs-10 col-xs-offset-1">
                                 <div class="row">
                                     <div class="col-md-6 col-xs-6">

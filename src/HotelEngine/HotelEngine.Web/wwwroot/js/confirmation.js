@@ -18,12 +18,11 @@ $(document).ready(function () {
             var html = compiledTemplate(bookingRS);
             $('#confirmation-section').html(html);
             if (bookingRS.status == 0) {
-                $('#success').show();
-                $('#msg').show();
-            }
-                
+                $('.success').show();                
+                $('.confirmation-row').show();
+            }                
             else
-                $('#fail').show();
+                $('.fail').show();
             
         },
         error: function (xhr) {

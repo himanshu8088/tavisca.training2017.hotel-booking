@@ -113,7 +113,7 @@ function validateCardDetails() {
         $('#error').html("");
         $('#expiry-date').removeClass("error");
     }
-    if (cardDetails.CVV.length!=4) {
+    if (cardDetails.CVV.length != 4 && cardDetails.CVV.length != 3) {
         showErrorMsg();
         $('#cvv').addClass("error");
         isValid = false;
