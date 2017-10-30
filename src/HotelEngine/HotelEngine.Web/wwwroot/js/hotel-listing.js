@@ -12,9 +12,10 @@ Handlebars.registerHelper('times', function (n, block) {
 });
 
 $(document).ready(function () {
+    var loader = '<img id="load" src="../img/loading.svg" alt="loading..." />';
+    $('#loading-img').html(loader);
     restoreRoomPriceRQ();
     searchHotels(JSON.stringify(_hotelSearchRQ));
-    $('#filters').tooltip();
 });
 
 function restoreRoomPriceRQ() {
@@ -33,10 +34,12 @@ function searchHotels(hotelSearchRQ) {
             $.extend(_hotelSearchRS, {
                 "hotelsCount": _totalHotels
             });             
+            $('#loading-img').hide();
             renderPaginatedHotels(_hotelSearchRS.hotels, _totalHotels, _perPageHotels);
+            showFilterSection();
         },
         error: function (xhr) {
-            alert("Sorry server doesn't responding. Please try again.");
+            alert("Sorry server is not responding. Please try again.");
             window.location = '../html/search.html';
         }
     });
@@ -52,14 +55,12 @@ function renderPaginatedHotels(hotels, totalHotels, perPageHotels) {
             renderHotelSection(_hotelSearchRQ, currentPageHotels, _hotelSearchRS.sessionId, totalHotels);
         }
     };
-
     if (totalHotels != 0) {
         $('.pagination-section').show();
         $('.pagination').twbsPagination(_paginationArgument);
     } else {
         renderHotelSection(_hotelSearchRQ, _hotelSearchRQ.hotels, _hotelSearchRS.sessionId, totalHotels);
     }
-    
 }
 
 function selectHotelsByPageNo(hotels, perPageHotels, pageNo) {
@@ -70,19 +71,16 @@ function selectHotelsByPageNo(hotels, perPageHotels, pageNo) {
 }
 
 function renderHotelSection(hotelRQ, hotels, sessionId, hotelCount) {
-
     var hotelItinerary = {
         "sessionId": sessionId,
         "hotels": hotels,
         "hotelsCount": hotelCount
     };
-
     var templateData = { hotelRQ, hotelItinerary };
     var template = $('#hotel-item');
     var compiledTemplate = Handlebars.compile(template.html());
     var html = compiledTemplate(templateData);
     $('#hotelList-container').html(html);
-
 }
 
 function roomSearchRQ(checkIn, checkOut, latitude, longitude, guestCount, noOfRooms, hotelId, hotelName, sessionId) {
@@ -175,7 +173,6 @@ function filterHotelsClicked() {
             hotels.push(hotel);
         }
     }
-
     renderPaginationSection();
     _paginationArgument.totalPages = Math.ceil(hotels.length / _perPageHotels);
     renderPaginatedHotels(hotels, hotels.length, _perPageHotels);        
@@ -194,4 +191,8 @@ function clearFilterClicked() {
     $('input[type="checkbox"]').prop("checked", false);    
 };
 
-
+function showFilterSection() {
+    $('#filterHeading').show();
+    $('#filterColumn').show();
+    $('#filters').tooltip();
+}
