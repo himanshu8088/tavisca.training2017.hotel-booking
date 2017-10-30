@@ -4,22 +4,20 @@ using HotelEngine.Contracts.Contracts;
 using HotelEngine.Contracts.Models;
 using HotelEngine.Services;
 using System;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace HotelEngine.Web.Controllers
 {
     [Route("[controller]")]
     public class HotelController : Controller
-    {
+    {        
         private IHotelService _hotelService;
-        private ILoggerFactory _loggerFactory;
         private ILogger _logger;
 
         public HotelController(ILoggerFactory loggerFactory)
         {
-            _loggerFactory = loggerFactory;
-            _loggerFactory.AddFile($"Log/log-{Guid.NewGuid()}.txt");            
+            loggerFactory.AddFile($"../Logs/{Guid.NewGuid()}.log");
+            _logger = loggerFactory.CreateLogger("HostLogger");
             _hotelService = new HotelService();           
         }
 
@@ -29,16 +27,13 @@ namespace HotelEngine.Web.Controllers
             HotelSearchRS hotelSearchRS=null;
             try
             {
-                _logger = _loggerFactory.CreateLogger<HotelSearchRQ>();
-                _logger.LogInformation("{@info}", hotelSearchRQ);
+                _logger.LogInformation("{@info}", hotelSearchRQ);                
                 hotelSearchRS = await _hotelService.SearchHotelsAsync(hotelSearchRQ);
-                _logger = _loggerFactory.CreateLogger<HotelSearchRS>();
                 _logger.LogInformation("{@info}", hotelSearchRS);
             }
             catch (Exception e)
             {
-                _logger = _loggerFactory.CreateLogger<Exception>();
-                _logger.LogError("{@exception}", e);
+                _logger.LogError("{@error}", e);
                 return StatusCode(500);
             }            
             return Ok(hotelSearchRS);
@@ -51,31 +46,31 @@ namespace HotelEngine.Web.Controllers
             roomSearchRS=await _hotelService.RoomSearchAsync(roomSearchRQ);
             try
             {
-                _logger = _loggerFactory.CreateLogger<RoomSearchRQ>();
                 _logger.LogInformation("{@info}", roomSearchRQ);
                 roomSearchRS = await _hotelService.RoomSearchAsync(roomSearchRQ);
-                _logger = _loggerFactory.CreateLogger<RoomSearchRS>();
                 _logger.LogInformation("{@info}", roomSearchRS);
             }
             catch (Exception e)
             {
-                _logger = _loggerFactory.CreateLogger<Exception>();
-                _logger.LogError("{@exception}", e);
+                _logger.LogError("{@error}", e);
                 return StatusCode(500);
             }
             return Ok(roomSearchRS);
         }
 
         [HttpPost("price")]
-        public async Task<IActionResult> SearchRoomPriceAsync([FromBody] RoomPriceSearchRQ priceRQ)
+        public async Task<IActionResult> SearchRoomPriceAsync([FromBody] RoomPriceSearchRQ roomPriceSearchRQ)
         {
             RoomPriceSearchRS roomPriceSearchRS = null;           
             try
             {
-                roomPriceSearchRS = await _hotelService.RoomPriceSearchAsync(priceRQ);
+                _logger.LogInformation("{@info}", roomPriceSearchRQ);
+                roomPriceSearchRS = await _hotelService.RoomPriceSearchAsync(roomPriceSearchRQ);
+                _logger.LogInformation( "{@info}", roomPriceSearchRS);
             }
             catch (Exception e)
             {
+                _logger.LogError("{@error}", e);
                 return StatusCode(500);
             }
             return Ok(roomPriceSearchRS);     
@@ -87,10 +82,13 @@ namespace HotelEngine.Web.Controllers
             RoomBookRS roomBookRS = null;
             try
             {
+                _logger.LogInformation( "{@info}", roomBookRQ);
                 roomBookRS = await _hotelService.BookRoomAsync(roomBookRQ);
+                _logger.LogInformation( "{@info}", roomBookRS);
             }
             catch(Exception e)
             {
+                _logger.LogError( "{@error}", e);
                 return StatusCode(500);
             }            
             return Ok(roomBookRS);
