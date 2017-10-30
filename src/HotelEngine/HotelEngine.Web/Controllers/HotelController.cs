@@ -5,6 +5,8 @@ using HotelEngine.Contracts.Models;
 using HotelEngine.Services;
 using System;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace HotelEngine.Web.Controllers
 {
@@ -14,9 +16,12 @@ namespace HotelEngine.Web.Controllers
         private IHotelService _hotelService;
         private ILogger _logger;
 
-        public HotelController(ILoggerFactory loggerFactory)
+        public HotelController(ILoggerFactory loggerFactory, IConfiguration configuration)
         {
-            loggerFactory.AddFile($"../Logs/{Guid.NewGuid()}.log");
+            var logFilePath=configuration.GetSection("LogFilePath").Value;
+            var logfileName = $"Logs\\{Guid.NewGuid()}.log";
+            var logFile = Path.Combine(logFilePath, logfileName);
+            loggerFactory.AddFile(logFile);
             _logger = loggerFactory.CreateLogger("HostLogger");
             _hotelService = new HotelService();           
         }
