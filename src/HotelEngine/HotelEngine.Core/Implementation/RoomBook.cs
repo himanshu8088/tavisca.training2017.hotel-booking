@@ -10,15 +10,15 @@ namespace HotelEngine.Core.Implementation
 {
     public class RoomBook : IRoomBook
     {
-        private IHotelAdapter _hotelConnector;
+        private IHotelAdapter _hotelAdapter;
 
-        public RoomBook()
+        public RoomBook(IHotelAdapter hotelAdapter)
         {
-            _hotelConnector = new HotelAdapter();
+            _hotelAdapter = hotelAdapter;
         }
         public async Task<RoomBookRS> BookAsync(RoomBookRQ roomBookRQ)
         {
-            var roomBookRS = await _hotelConnector.BookRoomAsync(roomBookRQ);
+            var roomBookRS = await _hotelAdapter.BookRoomAsync(roomBookRQ);
             return roomBookRS;
          }
     }

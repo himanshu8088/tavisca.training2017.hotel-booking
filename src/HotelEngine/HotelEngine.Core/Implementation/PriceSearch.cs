@@ -9,16 +9,16 @@ namespace HotelEngine.Core.Implementation
 {
     public class PriceSearch : IPriceSearch
     {       
-        private IHotelAdapter _hotelConnector;
+        private IHotelAdapter _hotelAdapter;
 
-        public PriceSearch()
+        public PriceSearch(IHotelAdapter hotelAdapter)
         {
-            _hotelConnector = new HotelAdapter();
+            _hotelAdapter = hotelAdapter;
         }
 
         public async Task<RoomPriceSearchRS> SearchAsync(RoomPriceSearchRQ priceRQ)
         {
-            var priceSearchRS = await _hotelConnector.SearchRoomPriceAsync(priceRQ);
+            var priceSearchRS = await _hotelAdapter.SearchRoomPriceAsync(priceRQ);
             return priceSearchRS;
         }
     }
