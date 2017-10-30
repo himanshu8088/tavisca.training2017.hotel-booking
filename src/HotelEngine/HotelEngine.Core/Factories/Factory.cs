@@ -1,5 +1,4 @@
 ﻿using HotelEngine.Adapter;
-using HotelEngine.Contracts;
 using HotelEngine.Contracts.Contracts;
 using HotelEngine.Core.Implementation;
 using System;
@@ -11,7 +10,7 @@ namespace HotelEngine.Core.Factories
     {
         private static Dictionary<Type, object> _mapping = new Dictionary<Type, object>()
         {
-            { typeof(IHotelSearch), new Implementation.HotelSearch(new HotelAdapter()) },
+            { typeof(IHotelSearch), new HotelSearch(new HotelAdapter()) },
             { typeof(IRoomSearch), new RoomSearch(new HotelAdapter()) },
             { typeof(IPriceSearch), new PriceSearch(new HotelAdapter()) },
             { typeof(IRoomBook), new RoomBook(new HotelAdapter()) }
