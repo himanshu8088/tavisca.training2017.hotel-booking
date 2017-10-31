@@ -196,3 +196,38 @@ function showFilterSection() {
     $('#filterColumn').show();
     $('#filters').tooltip();
 }
+
+function searchClick() {
+    renderSearchBox();
+}
+
+function renderSearchBox() {
+    var template = $('#search-template');
+    var compiledTemplate = Handlebars.compile(template.html());
+    var html = compiledTemplate();
+    $(".modal .modal-title").html("Modify your search :");
+    $(".modal .modal-body").html(html);
+    $(".modal-body").css({ "height": "auto" });
+    $(".modal").modal("show");
+    $(".modal-footer").show();
+    $('.btn-default').show();
+    
+    //$("#check-in").datepicker({
+    //    dateFormat: "yy-mm-dd",
+    //    minDate: 0,
+    //    onSelect: function () {
+    //        var checkOutDate = $('#check-out');
+    //        var startDate = $(this).datepicker('getDate');
+    //        startDate.setDate(startDate.getDate() + 1);
+    //        var minDate = $(this).datepicker('getDate');
+    //        checkOutDate.datepicker('setDate', startDate);
+    //        checkOutDate.datepicker('option', 'minDate', minDate);
+    //    }
+    //});
+    //$('#check-out').datepicker({
+    //    dateFormat: "yy-mm-dd"
+    //});
+    $('#proceed').click(function () {
+        window.location = '../html/hotel-listing.html';
+    });
+}
