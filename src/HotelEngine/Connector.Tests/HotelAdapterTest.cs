@@ -8,7 +8,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
     public class HotelAdapterTest
     {
         [Fact]
-        public async void Hotel_Search_Test()
+        public async void SearchHotelsAsync_Should_Not_Give_Empty_Response()
         {
             //Arrange           
             var hotelSearchRQ = new HotelEngine.Contracts.Models.HotelSearchRQ()
@@ -35,7 +35,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
         }
 
         [Fact]
-        public async void Room_Search_Test()
+        public async void SearchRoomsAsync_Should_Not_Give_Empty_Response()
         {
             //Arrange           
             var roomSearchRQ = new RoomSearchRQ()
@@ -63,7 +63,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
         }
 
         [Fact]
-        public async void Price_Search_Test()
+        public async void SearchRoomPriceAsync_Should_Not_Give_Empty_Response()
         {
             //Arrange           
             var priceSearchRQ = new RoomPriceSearchRQ()
@@ -92,7 +92,7 @@ namespace Tavisca.Training2017.HotelBookingWeb.Tests
         }
 
         [Fact]
-        public async void Booking_Test()
+        public async void BookRoomAsync_Should_Not_Give_Empty_Response()
         {
             //Arrange           
             var roomBookRQ = new RoomBookRQ()
