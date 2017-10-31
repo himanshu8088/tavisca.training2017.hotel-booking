@@ -10,8 +10,8 @@ namespace HotelEngine.Adapter.Parser
 {
     internal class RequestParser
     {
-        private IAdapterConfiguration _config;
-        public RequestParser(IAdapterConfiguration adapterConfiguration)
+        private IRoviaProxyConfiguration _config;
+        public RequestParser(IRoviaProxyConfiguration adapterConfiguration)
         {
             _config = adapterConfiguration;
         }

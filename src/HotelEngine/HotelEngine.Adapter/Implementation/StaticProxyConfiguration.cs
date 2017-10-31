@@ -8,7 +8,7 @@ using HotelEngine.Adapter.Configuration;
 
 namespace HotelEngine.Adapter.Implementation
 {
-    internal class StaticAdapterConfiguration : IAdapterConfiguration
+    internal class StaticProxyConfiguration : IRoviaProxyConfiguration
     {
         public HotelsAvailConfig GetMultiAvailConfig(HotelEngine.Contracts.Models.HotelSearchRQ hotelSearchRQ)
         {

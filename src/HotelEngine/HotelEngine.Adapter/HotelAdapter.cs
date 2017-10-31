@@ -12,7 +12,7 @@ namespace HotelEngine.Adapter
 {
     public class HotelAdapter : IHotelAdapter
     {
-        private IAdapterConfiguration _config;
+        private IRoviaProxyConfiguration _config;
         private RequestParser _requestParser;
         private ResponseParser _responseParser;
         private Engines.HotelEngine _hotelEngine;
@@ -20,7 +20,7 @@ namespace HotelEngine.Adapter
 
         public HotelAdapter()
         {
-            _config = new StaticAdapterConfiguration();           
+            _config = new StaticProxyConfiguration();           
             _requestParser = new RequestParser(_config);
             _responseParser = new ResponseParser();
             _hotelEngine = new Engines.HotelEngine();
