@@ -112,6 +112,7 @@ function roomClicked(hotelId, hotelName) {
     sessionStorage.setItem(amenitiesId, $(amenitiesId).html());
     var roomSearchObj = new roomSearchRQ(searchCriteria.CheckInDate, searchCriteria.CheckOutDate, searchCriteria.GeoCode.Latitude, searchCriteria.GeoCode.Longitude, searchCriteria.GuestCount, searchCriteria.NoOfRooms, hotelId, hotelName, sessionId);
     sessionStorage.setItem('roomSearchCriteria', JSON.stringify(roomSearchObj));
+
     window.location = '../html/room-listing.html';
 };
 
@@ -205,12 +206,12 @@ function renderSearchBox() {
     var template = $('#search-template');
     var compiledTemplate = Handlebars.compile(template.html());
     var html = compiledTemplate();
-    $(".modal .modal-title").html("Modify your search :");
+    $(".modal .modal-title").html("Heading :");
     $(".modal .modal-body").html(html);
     $(".modal-body").css({ "height": "auto" });
     $(".modal").modal("show");
-    $(".modal-footer").show();
-    $('.btn-default').show();
+    //$(".modal-footer").show();
+    //$('.btn-default').show();
     
     //$("#check-in").datepicker({
     //    dateFormat: "yy-mm-dd",
@@ -230,4 +231,7 @@ function renderSearchBox() {
     $('#proceed').click(function () {
         window.location = '../html/hotel-listing.html';
     });
+}
+function modifySearchClick() {
+    var location = $('#destination').val();
 }

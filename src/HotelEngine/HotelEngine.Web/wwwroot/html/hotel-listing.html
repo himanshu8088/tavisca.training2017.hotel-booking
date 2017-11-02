@@ -276,7 +276,7 @@
                                     <div class="col-md-3 col-xs-12 col-sm-12">
                                         <div class="row">
                                             <div class="col-md-12 col-xs-12 col-sm-12">
-                                                <button type="button" onclick="searchClick()" class="btn btn-primary">Modify</button>
+                                                <button type="button" onclick="searchClick()" class="btn btn-primary">Click</button>
                                             </div>
                                         </div>
                                     </div>
@@ -348,7 +348,7 @@
                 </div>
             </div>
     </script>
-    <div class="modal fade mt-xl" id="priceModal" role="dialog">
+    <div class="modal fade mt-xl" id="searchModal" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
@@ -390,6 +390,12 @@
                     <input type="text" id="check-out" class="form-control" name="check-out" placeholder="mm/dd/yyyy">
                 </div>
             </div>
+        </div>
+        <div class="row margin-top">
+            <div class="col-md-6 col-md-offset-3">
+                <button type="button" class="btn btn-primary" onclick="modifySearchClick()">Search</button>
+            </div>
+            
         </div>
     </script>
     <script src="../js/libraries/handlebars-v4.0.10.js"></script>

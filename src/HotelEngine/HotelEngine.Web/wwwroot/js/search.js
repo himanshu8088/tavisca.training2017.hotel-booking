@@ -13,7 +13,7 @@ function hotelSearchRQ(searchText, checkIn, checkOut, latitude, longitude, guest
         "NoOfRooms": roomCount
     }
 };
-$("#searchClick").click(function () {  
+$("#search").click(function () {
     var isValid = validateSearchCriteria();
     if (isValid == true) {
         saveSearchRQ();
